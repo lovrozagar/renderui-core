@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noImplicitAny": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+export * from '@/components/tooltip/components/tooltip'
+export * from '@/components/tooltip/components/tooltip-content'
+export * from '@/components/tooltip/components/tooltip-trigger'
+export * from '@/components/tooltip/types/tooltip'
+export * from '@/components/tooltip/types/tooltip-content'
+export * from '@/components/tooltip/types/tooltip-trigger'
