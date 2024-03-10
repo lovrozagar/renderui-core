@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+scripts/
+public/
+build/
+dist/
+temp/
+tmp/
+*.min.js
+*.d.ts
+postcss.config.js
+tailwind.config.ts
+tsconfig.json

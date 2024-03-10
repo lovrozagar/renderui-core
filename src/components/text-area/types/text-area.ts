@@ -23,6 +23,12 @@ type TextAreaCustomProps = {
   onValueChange?: (value: string) => void
 }
 
-type TextAreaProps = Simplify<TextAreaHTMLProps & TextAreaCustomProps & AsChildProp>
+type TextVariantProps = {
+  variant?: 'solid' | 'outline'
+}
+
+type TextAreaProps = Simplify<
+  TextAreaHTMLProps & TextAreaCustomProps & TextVariantProps & AsChildProp
+>
 
 export type { TextAreaProps, TextAreaRef }

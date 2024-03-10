@@ -33,6 +33,15 @@ const COMMAND_ITEM_CLASSNAME_SELECTOR = '.render-ui-command-item'
 
 const SEARCH_PAUSE_DURATION = 750
 
+const SEARCH_OBSERVER_OPTIONS = {
+  childList: true,
+  subtree: true,
+  attributeOldValue: false,
+  characterData: false,
+  attributes: false,
+  characterDataOldValue: false,
+} as const
+
 export {
   COMMAND_ATTRIBUTE,
   COMMAND_DIALOG_COMMAND_CLASSNAME,
@@ -48,4 +57,5 @@ export {
   DEFAULT_COMMAND_LIST_CLASSNAME,
   RADIX_FOCUS_GUARD_ATTRUBUTE,
   SEARCH_PAUSE_DURATION,
+  SEARCH_OBSERVER_OPTIONS,
 }

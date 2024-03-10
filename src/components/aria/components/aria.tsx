@@ -13,7 +13,7 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
   const { ariaProps, nonAriaProps } = splitAriaProps(props)
 
   const internalRef = React.useRef<HTMLElement>(null)
-  const mergedRefCallback = useMergedRef([internalRef, ref])
+  const mergedRefCallback = useMergedRef<HTMLElement>([internalRef, ref])
 
   const {
     isPressDisabled,
@@ -47,7 +47,7 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
 
   return (
     <Component
-      ref={mergedRefCallback}
+      ref={mergedRefCallback as (instance: HTMLDivElement | null) => void}
       className={cn(DEFAULT_ARIA_CLASSNAME, className)}
       data-disabled={isDisabled}
       {...restNonAriaProps}

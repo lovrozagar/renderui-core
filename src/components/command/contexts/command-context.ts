@@ -1,3 +1,5 @@
+'use client'
+
 import { initializeContext } from '@renderui/utils'
 
 import { CommandContext } from '@/components/command/types/command-context'

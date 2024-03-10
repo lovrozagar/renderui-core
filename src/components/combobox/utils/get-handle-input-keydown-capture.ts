@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 import { ACTIVE_ITEM_CLASSNAME } from '@/components/combobox/constants/constants'
@@ -25,6 +27,8 @@ function getHandleInputKeyDownCapture(args: GetHandleInputKeyDownCaptureArgs) {
 
     if (key === ' ') {
       event.preventDefault()
+
+      if (!document) return
 
       const activeItem = document.querySelector(ACTIVE_ITEM_CLASSNAME)
 

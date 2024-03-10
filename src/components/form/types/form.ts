@@ -14,4 +14,4 @@ type FormRenderUIProps = {
 
 type FormProps = Simplify<FormPrimitiveProps & FormRenderUIProps & AsChildProp>
 
-export { FormProps, FormRef }
+export type { FormProps, FormRef }

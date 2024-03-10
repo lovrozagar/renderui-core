@@ -38,7 +38,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
     hasDefaultFocusVisibleStyles = true,
     hasDefaultPressedStyles = true,
     hasRingOnAnyFocus = false,
-    hasLowerOpacityOnLoading = false,
+    hasLowerOpacityOnLoading = true,
     hasContentOnLoading = true,
     onClick,
     ...restProps

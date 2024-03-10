@@ -28,6 +28,7 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     inputContainerProps,
     onChange,
     onValueChange,
+    variant = 'solid',
     defaultValue = '',
     ...restProps
   } = props
@@ -59,13 +60,13 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       data-slot='base'
       className={cx(
         buttonClasses({
-          variant: 'solid',
+          variant,
           hasDefaultHoverStyles: false,
           hasDefaultPressedStyles: false,
           hasLoaderOnLoading: false,
           hasLowerOpacityOnLoading: false,
         }),
-        inputContainerClasses(),
+        inputContainerClasses({ variant }),
         DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
         inputContainerClassName,
       )}

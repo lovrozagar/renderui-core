@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@renderui/utils'
 import { CommandItem as CommandItemPrimitive } from 'cmdk'
 import React from 'react'

@@ -1,6 +1,4 @@
 /* eslint-disable max-lines */
-'use client'
-
 import React, { useState } from 'react'
 import { toast } from 'sonner'
 
@@ -25,7 +23,6 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  Kbd,
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -53,7 +50,6 @@ import {
 } from '@/components'
 import { Field } from '@/components/_shared/components/field/field/field'
 import { FieldLabel } from '@/components/_shared/components/field/field-label/field-label'
-import { FieldMessage } from '@/components/_shared/components/field/field-message/field-message'
 import {
   Accordion,
   AccordionContent,
@@ -399,7 +395,7 @@ const App = () => {
         <Box className='max-w-[300px]'>
           <Command>
             <CommandInput />
-            <CommandEmpty>No results.</CommandEmpty>
+            {/* <CommandEmpty>No results.</CommandEmpty> */}
             <CommandList>
               <CommandGroup>
                 <CommandItem value='command1' className='p-0'>
@@ -442,7 +438,7 @@ const App = () => {
         <Box>
           <Combobox>
             <ComboboxTrigger placeholder='Select an option' className='w-[200px]' />
-            <ComboboxContent emptyContent='No results.'>
+            <ComboboxContent emptyContent=''>
               <ComboboxItem value='value 1'>Item 1</ComboboxItem>
               <ComboboxItem value='value 2'>Item 2</ComboboxItem>
               <ComboboxItem value='value 3'>Item 3</ComboboxItem>
@@ -452,11 +448,16 @@ const App = () => {
         <Box>
           <Label htmlFor='select'>Select</Label>
           <Select>
-            <SelectTrigger id='select' placeholder='Select an option' className='w-[200px]' />
+            <SelectTrigger
+              variant='outline'
+              id='select'
+              placeholder='Select an option'
+              className='w-[200px] text-mode-accent-foreground'
+            />
             <SelectContent hasScroll>
               <SelectItem value='item 1'>Item 1</SelectItem>
               <SelectItem value='item 2'>item 2</SelectItem>
-              <SelectItem value='item 3'>Item 3</SelectItem>
+              <SelectItem value='item 13'>Item 3</SelectItem>
               <SelectItem value='item 4'>Item 4</SelectItem>
               <SelectItem value='item 5'>Item 5</SelectItem>
               <SelectItem value='item 6'>item 6</SelectItem>
@@ -470,12 +471,11 @@ const App = () => {
               <SelectItem value='item 14'>Item 15</SelectItem>
               <SelectItem value='item 15'>item 16</SelectItem>
               <SelectItem value='item 16'>Item 17</SelectItem>
-              <SelectItem value='item 17'>Item 18</SelectItem>
             </SelectContent>
           </Select>
         </Box>
         <Box className='w-fit'>
-          <Kbd
+          {/* <Kbd
             onKeyCombinationMatch={() => console.log('afe')}
             keyCombination={['Control', 'k']}
             keyCombinationOptions={{
@@ -483,7 +483,7 @@ const App = () => {
             }}
           >
             Shift + 3
-          </Kbd>
+          </Kbd> */}
         </Box>
         <Box>
           <Label htmlFor='text'>Text input</Label>
@@ -496,6 +496,7 @@ const App = () => {
         <Box>
           <Label htmlFor='number'>Number input</Label>
           <NumberInput
+            variant='outline'
             id='number'
             placeholder='Input number here...'
             inputContainerProps={{ className: 'max-w-[200px]' }}
@@ -504,6 +505,7 @@ const App = () => {
         <Box>
           <Label htmlFor='number'>Number input</Label>
           <TextArea
+            variant='outline'
             id='number'
             placeholder='Input number here...'
             inputContainerProps={{ className: 'max-w-[200px]' }}
@@ -634,6 +636,12 @@ const App = () => {
         </Field>
       </Grid>
       <Box>Content shift</Box>
+      <Collapsible>
+        <CollapsibleTrigger>Collapse</CollapsibleTrigger>
+        <CollapsibleContent>
+          <Box className='pt-1'>Some text about something</Box>
+        </CollapsibleContent>
+      </Collapsible>
     </div>
   )
 }

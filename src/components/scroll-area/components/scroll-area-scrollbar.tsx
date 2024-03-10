@@ -30,7 +30,7 @@ const ScrollAreaScrolllbar = React.forwardRef<ScrollAreaScrollbarRef, ScrollArea
     const { className: thumbClassName, ...restThumbProps } = getOptionalObject(thumbProps)
 
     const handleClickFocus = () => {
-      const isViewportFocused = viewportRef?.current !== document.activeElement
+      const isViewportFocused = viewportRef?.current !== document?.activeElement
 
       if (!isViewportFocused) return
 

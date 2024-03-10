@@ -1,3 +1,5 @@
+'use client'
+
 import {
   DialogContent as SheetContentPrimitive,
   DialogPortal as SheetPortalPrimitive,

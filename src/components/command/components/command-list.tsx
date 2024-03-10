@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@renderui/utils'
 import { CommandList as CommandListPrimitive } from 'cmdk'
 import React from 'react'

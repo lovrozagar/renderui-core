@@ -8,7 +8,10 @@ import { buttonClasses } from '@/components/button'
 import {
   DEFAULT_NUMBER_INPUT_CLASSNAME,
   DEFAULT_NUMBER_INPUT_CONTAINER_CLASSNAME,
+  DEFAULT_NUMBER_INPUT_DECREMENT_BUTTON_CLASSNAME,
+  DEFAULT_NUMBER_INPUT_INCREMENT_BUTTON_CLASSNAME,
   DFEAULT_NUMBER_INPUT_SPIN_BUTTON_CONTAINER_CLASSNAME,
+  SEPARATOR_OUTLINE_CLASSNAME,
 } from '@/components/number-input/constants/constants'
 import { useNumberSpin } from '@/components/number-input/hooks/use-number-spin'
 import { getOnChange } from '@/components/number-input/hooks/use-on-change'
@@ -46,6 +49,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     value: valueProp,
     step = '1',
     size = 'md',
+    variant = 'solid',
     defaultValue = '',
     ...restProps
   } = props
@@ -116,6 +120,10 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     ...restDecrementButtonClassName
   } = getOptionalObject(decrementButtonProps)
 
+  const { className: separatorClassName, ...restSeparatorProps } = getOptionalObject(separatorProps)
+
+  const forcedVariant = variant === 'outline' ? 'outline' : 'solid'
+
   return {
     inputContainerProps: {
       isTextInput,
@@ -129,13 +137,13 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       'className': cx(
         DEFAULT_NUMBER_INPUT_CONTAINER_CLASSNAME,
         buttonClasses({
-          variant: 'solid',
+          variant: forcedVariant,
           hasDefaultHoverStyles: false,
           hasDefaultPressedStyles: false,
           hasLoaderOnLoading: false,
           hasLowerOpacityOnLoading: false,
         }),
-        inputContainerClasses({ size }),
+        inputContainerClasses({ size, variant: forcedVariant }),
         inputContainerClassName,
       ),
       'onPointerDown': chain(
@@ -196,6 +204,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     spinButtonContainerProps: {
       'className': cn(
         DFEAULT_NUMBER_INPUT_SPIN_BUTTON_CONTAINER_CLASSNAME,
+        forcedVariant === 'outline' ? 'border-mode-accent' : 'border-separator',
         spinButtonContainerClassName,
       ),
       'data-slot': 'spin-button-container',
@@ -204,7 +213,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     incrementButtonProps: {
       'action': 'increment',
       'data-slot': 'increment-button',
-      'className': cx(incrementButtonClassName),
+      'className': cx(DEFAULT_NUMBER_INPUT_INCREMENT_BUTTON_CLASSNAME, incrementButtonClassName),
       'onPress': chain(increment, incrementButtonOnPress),
       'onLongPress': chain(incrementWithVariableSpeed, incrementOnLongPress),
       'onPointerUp': chain(stopIncrementing, incrementOnPointerUp),
@@ -215,7 +224,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     decrementButtonProps: {
       'action': 'decrement',
       'data-slot': 'decrement-button',
-      'className': cx(decrementButtonClassName),
+      'className': cx(DEFAULT_NUMBER_INPUT_DECREMENT_BUTTON_CLASSNAME, decrementButtonClassName),
       'onPress': chain(decrement, decrementButtonOnPress),
       'onLongPress': chain(decrementWithVariableSpeed, decrementOnLongPress),
       'onPointerUp': chain(stopDecrementing, decrementOnPointerUp),
@@ -223,7 +232,14 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       'onPointerCancel': chain(stopDecrementing, decrementOnPointerCancel),
       ...restDecrementButtonClassName,
     } as const,
-    separatorProps,
+    separatorProps: {
+      'data-slot': 'separator',
+      'className': cx(
+        forcedVariant === 'outline' ? SEPARATOR_OUTLINE_CLASSNAME : '',
+        separatorClassName,
+      ),
+      ...restSeparatorProps,
+    },
     utilityProps: {
       startContent: functionCallOrValue(startContent, value),
       children: functionCallOrValue(children, value),

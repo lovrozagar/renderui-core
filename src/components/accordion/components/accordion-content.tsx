@@ -1,3 +1,5 @@
+'use client'
+
 import { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
 import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'

@@ -16,7 +16,7 @@ type UseDataScrollOverflowProps = {
   isEnabled?: boolean
   offset?: number
   children?: React.ReactNode
-  onVisibilityChange?: (overflow: ScrollShadowVisibility) => void
+  onVisibilityChange?: ScrollAreaProps['onScrollShadowVisiblityChange']
 }
 
 function useDataScrollOverflow(props: UseDataScrollOverflowProps) {

@@ -44,6 +44,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     onPointerDown,
     onValueChange,
     onChange: nativeOnChange,
+    variant = 'solid',
     size = 'md',
     type = 'text',
     ...restProps
@@ -113,6 +114,8 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     setValue(event.target.value)
   }
 
+  const forcedVariant = variant === 'outline' ? 'outline' : 'solid'
+
   return {
     inputContainerProps: {
       isTextInput,
@@ -126,13 +129,13 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
       'className': cx(
         DEFAULT_TEXT_INPUT_CONTAINER_CLASSNAME,
         buttonClasses({
-          variant: 'solid',
+          variant: forcedVariant,
           hasDefaultHoverStyles: false,
           hasDefaultPressedStyles: false,
           hasLoaderOnLoading: false,
           hasLowerOpacityOnLoading: false,
         }),
-        inputContainerClasses({ size }),
+        inputContainerClasses({ size, variant: forcedVariant }),
         inputContainerClassName,
       ),
       'onPointerDown': chain(

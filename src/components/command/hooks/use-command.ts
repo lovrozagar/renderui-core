@@ -1,9 +1,12 @@
+'use client'
+
+import { cn } from '@renderui/utils'
 import React from 'react'
 
-import { DEFAULT_COMMAND_CLASSNAME } from '@/packages/components/command/constants/constants'
-import { CommandProps, CommandRef } from '@/packages/components/command/types/command'
-import { defaultFilter } from '@/packages/components/command/utils/default-filter'
-import { cn } from '@/packages/utils/cn'
+import { DEFAULT_COMMAND_CLASSNAME } from '@/components/command/constants/constants'
+import { CommandProps, CommandRef } from '@/components/command/types/command'
+import { defaultFilter } from '@/components/command/utils/default-filter'
+
 
 function useCommand(props: CommandProps, ref: React.ForwardedRef<CommandRef>) {
   const { className, onValueChange, filter, ...restProps } = props

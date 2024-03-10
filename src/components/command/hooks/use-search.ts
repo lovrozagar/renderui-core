@@ -1,3 +1,5 @@
+'use client'
+
 import { ZERO } from '@renderui/constants'
 import { useMutationObserver } from '@renderui/hooks'
 import React from 'react'
@@ -6,15 +8,13 @@ import {
   COMMAND_ATTRIBUTE,
   COMMAND_ITEM_CLASSNAME_SELECTOR,
   RADIX_FOCUS_GUARD_ATTRUBUTE,
+  SEARCH_OBSERVER_OPTIONS,
   SEARCH_PAUSE_DURATION,
 } from '@/components/command/constants/constants'
 import { useCommandContext } from '@/components/command/contexts/command-context'
 import { lowercaseBinarySearch } from '@/components/command/utils/lowercase-binary-search'
 
-function useSearch(
-  value: string,
-  setValue: React.Dispatch<React.SetStateAction<string | undefined>>,
-) {
+function useSearch(value: string, setValue: React.Dispatch<React.SetStateAction<string>>) {
   const dataValueMapRef = React.useRef<Map<string, string>>(new Map())
   const dataValueArrayRef = React.useRef<string[]>([])
   const timeoutIdRef = React.useRef<NodeJS.Timeout | null>(null)
@@ -23,10 +23,12 @@ function useSearch(
 
   const { type, setValue: setRootValue } = useCommandContext()
 
+  const htmlDocument = typeof document !== 'undefined' ? document : null
+
   const storeCommandItems = React.useCallback(() => {
     /* check if the focus guard exists and the command root exists */
-    const focusGuardExists = document.querySelector(RADIX_FOCUS_GUARD_ATTRUBUTE) !== null
-    const cmdkRoot = document.querySelector(COMMAND_ATTRIBUTE)
+    const focusGuardExists = htmlDocument?.querySelector(RADIX_FOCUS_GUARD_ATTRUBUTE) !== null
+    const cmdkRoot = htmlDocument?.querySelector(COMMAND_ATTRIBUTE)
 
     if (!focusGuardExists || !cmdkRoot) return
 
@@ -53,14 +55,11 @@ function useSearch(
     )
   }, [])
 
-  useMutationObserver(document.documentElement, storeCommandItems, {
-    childList: true,
-    subtree: true,
-    attributeOldValue: false,
-    characterData: false,
-    attributes: false,
-    characterDataOldValue: false,
-  })
+  useMutationObserver(
+    htmlDocument?.documentElement ?? null,
+    storeCommandItems,
+    SEARCH_OBSERVER_OPTIONS,
+  )
 
   React.useEffect(() => {
     setTimeout(storeCommandItems, ZERO)
@@ -69,8 +68,6 @@ function useSearch(
   const handleValueChangeWithSearch = (searchValue: string) => {
     /* initial check */
     if (!setValue) return
-
-    console.log(searchValue)
 
     let currentSearchValue = searchValue
 

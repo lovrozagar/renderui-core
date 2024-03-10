@@ -1,3 +1,5 @@
+'use client'
+
 import { NavigationMenuContent as NavigationMenuContentPrimitive } from '@radix-ui/react-navigation-menu'
 import { cn } from '@renderui/utils'
 import React from 'react'

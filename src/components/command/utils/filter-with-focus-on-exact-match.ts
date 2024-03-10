@@ -1,3 +1,5 @@
+'use client'
+
 import { ONE, ZERO } from '@renderui/constants'
 import React from 'react'
 

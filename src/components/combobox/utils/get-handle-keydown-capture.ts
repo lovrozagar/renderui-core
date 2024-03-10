@@ -1,3 +1,5 @@
+'use client'
+
 import { ZERO } from '@renderui/constants'
 
 import { ACTIVE_ITEM_CLASSNAME } from '@/components/combobox/constants/constants'
@@ -24,7 +26,7 @@ function getHandleKeyDownCapture(props: GetHandleKeyDownCaptureArgs) {
     if (!canNextItemBeSet) return
 
     timeoutIdRef.current = setTimeout(() => {
-      if (!(event.key === 'ArrowDown' || event.key === 'ArrowUp')) return
+      if (!(event.key === 'ArrowDown' || event.key === 'ArrowUp' || !document)) return
 
       const activeItem = document.querySelector(ACTIVE_ITEM_CLASSNAME)
 

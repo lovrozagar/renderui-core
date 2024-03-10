@@ -1,3 +1,5 @@
+'use client'
+
 import { TabsContent as TabsContentPrimitive } from '@radix-ui/react-tabs'
 import { cn } from '@renderui/utils'
 import React from 'react'

@@ -5,9 +5,10 @@ import { ButtonProps, ButtonRef } from '@/components/button'
 
 type ComboboxTriggerRef = ButtonRef
 
-type ComboboxTriggerButtonProps = Omit<ButtonProps, 'children'>
+type ComboboxTriggerButtonProps = Omit<ButtonProps, 'children' | 'variant'>
 
 type ComboboxTriggerCustomProps = {
+  variant?: 'solid' | 'outline'
   placeholder?: string
   hasTruncatedText?: boolean
   children?: React.ReactNode

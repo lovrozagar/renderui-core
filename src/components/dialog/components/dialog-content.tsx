@@ -1,3 +1,5 @@
+'use client'
+
 import {
   DialogContent as DialogContentPrimitive,
   DialogPortal as DialogPortalPrimitive,
@@ -51,11 +53,7 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
             <Button
               variant={variant}
               color={color}
-              className={cx(
-                DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME,
-                closeButtonClassName,
-                className,
-              )}
+              className={cx(DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME, closeButtonClassName, className)}
               {...restCloseButtonProps}
             >
               <Cross2Icon

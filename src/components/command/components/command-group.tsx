@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@renderui/utils'
 import { CommandGroup as CommandGroupPrimitive } from 'cmdk'
 import React from 'react'

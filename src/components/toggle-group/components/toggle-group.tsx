@@ -8,19 +8,21 @@ import React from 'react'
 import { DEFAULT_TOGGLE_GROUP_CLASSNAME } from '@/components/toggle-group/constants/constants'
 import { ToggleGroupProvider } from '@/components/toggle-group/contexts/toggle-group-context'
 import { ToggleGroupProps, ToggleGroupRef } from '@/components/toggle-group/types/toggle-group'
+import { EMPTY_ARRAY } from '@renderui/constants'
 
 const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, ref) => {
   const {
     onValueChange: onValueChangeProp,
     value: valueProp,
-    defaultValue,
     className,
     children,
+    defaultValue = EMPTY_ARRAY as string[],
+    type = 'multiple',
     ...restProps
   } = props
 
-  const [value, onValueChange] = useControllableState<ToggleGroupProps['value']>({
-    onChange: onValueChangeProp as ((state: ToggleGroupProps['value']) => void) | undefined,
+  const [value, onValueChange] = useControllableState<string[]>({
+    onChange: onValueChangeProp,
     defaultProp: defaultValue,
     prop: valueProp,
   })
@@ -28,8 +30,8 @@ const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, r
   return (
     <ToggleGroupPrimitive
       ref={ref}
-      type='multiple'
       value={value}
+      type={type as any}
       onValueChange={onValueChange}
       className={cn(DEFAULT_TOGGLE_GROUP_CLASSNAME, className)}
       {...restProps}

@@ -162,6 +162,14 @@ const config: Config = {
           '0%': { height: 'var(--radix-accordion-content-height)' },
           '100%': { height: '0' },
         },
+        'collapsible-down': {
+          '0%': { height: '0', opacity: '0%' },
+          '100%': { height: 'var(--radix-collapsible-content-height)', opacity: '100%' },
+        },
+        'collapsible-up': {
+          '0%': { height: 'var(--radix-collapsible-content-height)', opacity: '100%' },
+          '100%': { height: '0', opacity: '0%' },
+        },
         'tooltip-down-fade': {
           '0%': { opacity: '0', transform: 'translateY(-3px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
@@ -324,6 +332,8 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down var(--duration-fast-medium) ease-out',
         'accordion-up': 'accordion-up var(--duration-fast-medium) ease-out',
+        'collapsible-down': 'collapsible-down var(--duration-fast-medium) ease-out',
+        'collapsible-up': 'collapsible-up var(--duration-fast-medium) ease-out',
         'tooltip-down-fade':
           'tooltip-down-fade var(--duration-medium-slower) var(--timing-function)',
         'tooltip-left-fade':

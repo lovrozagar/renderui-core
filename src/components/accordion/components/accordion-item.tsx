@@ -1,3 +1,5 @@
+'use client'
+
 import { AccordionItem as AccordionItemPrimitive } from '@radix-ui/react-accordion'
 import { cn } from '@renderui/utils'
 import React from 'react'

@@ -1,0 +1,125 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "hardcore",
+    "hardcore/react",
+    "hardcore/react-performance",
+    "hardcore/react-testing-library",
+    "hardcore/jest",
+    "hardcore/fp"
+  ],
+  // "overrides": [
+  //   {
+  //     "files": ["*.tsx"],
+  //     "rules": {
+  //       "max-lines": ["error", { "max": 300, "skipBlankLines": false, "skipComments": false }]
+  //     }
+  //   }
+  // ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
+  "plugins": ["no-relative-import-paths", "@typescript-eslint"],
+  "rules": {
+    // "@arthurgeron/react-usememo/require-usememo": "off",
+    // "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    // "complexity": ["error", 15],
+    // "curly": "off",
+    // "ext/lines-between-object-properties": "off",
+    // "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    // "functional/functional-parameters": "off",
+    // "functional/immutable-data": "off",
+    // "functional/no-let": "off",
+    // "functional/no-loop-statements": "off",
+    // "id-length": ["error", { "exceptions": ["a", "b", "x", "y", "z", "p", "m", "_"] }],
+    // "import/extensions": "off",
+    // "import/max-dependencies": "off",
+    // "import/named": "off",
+    // "import/no-extraneous-dependencies": "off",
+    // "import/no-unresolved": "off",
+    // "import/unambiguous": "off",
+    // "jsx-a11y/prefer-tag-over-role": "off",
+    // "jsx-quotes": ["error", "prefer-single"],
+    // "lines-around-comment": "off",
+    // "logical-assignment-operators": "off",
+    // "max-len": "off",
+    // "max-lines": "off",
+    // "max-statements": ["error", 20],
+    // "multiline-comment-style": "off",
+    // "no-console": ["warn"],
+    // "no-magic-numbers": ["error"],
+    // "no-relative-import-paths/no-relative-import-paths": [
+    //   "warn",
+    //   { "allowSameFolder": false, "prefix": "@", "rootDir": "src" }
+    // ],
+    // "no-restricted-syntax": [
+    //   "error",
+    //   {
+    //     "message": "Do not use inline exports. Declare before exporting.",
+    //     "selector": "ExportNamedDeclaration[declaration]"
+    //   }
+    // ],
+    // "no-shadow": "off",
+    // "no-undef": "off",
+    // "no-undef-init": "off",
+    // "perfectionist/sort-interfaces": "off",
+    // "perfectionist/sort-jsx-props": "off",
+    // "perfectionist/sort-object-types": "off",
+    // "perfectionist/sort-objects": "off",
+    // "prefer-destructuring": ["error", { "array": false, "object": true }],
+    // "prefer-named-capture-group": "off",
+    // "putout/putout": "off",
+    // "quotes": ["error", "single", { "avoidEscape": true }],
+    // "react-perf/jsx-no-new-array-as-prop": "off",
+    // "react-perf/jsx-no-new-function-as-prop": "off",
+    // "react-perf/jsx-no-new-object-as-prop": "off",
+    // "react/destructuring-assignment": "off",
+    // "react/forbid-component-props": "off",
+    // "react/function-component-definition": "off",
+    // "react/jsx-no-bind": "off",
+    // "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary", "coerce"] }],
+    // "react/jsx-props-no-spreading": "off",
+    // "react/no-array-index-key": "off",
+    // "react/no-unstable-nested-components": [
+    //   "error",
+    //   {
+    //     "allowAsProps": false,
+    //     "customValidators": []
+    //   }
+    // ],
+    // "react/prop-types": "off",
+    // "regexp/no-unused-capturing-group": "off",
+    // "regexp/prefer-named-capture-group": "off",
+    // "regexp/require-unicode-regexp": "off",
+    // "regexp/require-unicode-sets-regexp": "off",
+    // "sonar/new-cap": "off",
+    // "sonar/no-wildcard-import": "off",
+    // "sonarjs/cognitive-complexity": ["error", 20],
+    // "sonarjs/elseif-without-else": "off",
+    // "tailwindcss/no-custom-classname": "off",
+    // "unicorn/no-null": "off",
+    // "unicorn/no-unnecessary-polyfills": "off",
+    // "unicorn/prevent-abbreviations": [
+    //   "error",
+    //   {
+    //     "allowList": {
+    //       "Args": true,
+    //       "Prop": true,
+    //       "Props": true,
+    //       "Ref": true,
+    //       "Refs": true,
+    //       "args": true,
+    //       "prop": true,
+    //       "props": true,
+    //       "ref": true,
+    //       "refs": true
+    //     }
+    //   }
+    // ],
+    // "unicorn/switch-case-braces": "off"
+  }
+}

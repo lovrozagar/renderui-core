@@ -2,4 +2,4 @@ type AsChildProp = {
   asChild?: boolean
 }
 
-export { AsChildProp }
+export type { AsChildProp }

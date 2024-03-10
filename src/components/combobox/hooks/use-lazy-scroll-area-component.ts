@@ -1,10 +1,10 @@
-/* eslint-disable react/hook-use-state */
 import React from 'react'
 
 import { ComboboxContentProps } from '@/components/combobox/types/combobox-content'
+import { ScrollArea } from '@/components/scroll-area'
 
 function useLazyScrollAreaComponent(hasScroll: ComboboxContentProps['hasScroll']) {
-  const [ScrollAreaComponent, setScrollComponent] = React.useState(null)
+  const [ScrollAreaComponent, setScrollComponent] = React.useState<typeof ScrollArea | null>(null)
 
   React.useEffect(() => {
     const loadComponent = async () => {

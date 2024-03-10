@@ -10,6 +10,7 @@ import React from 'react'
 
 import {
   DEFAULT_POPOVER_ARROW_CLASSNAME,
+  DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
   DEFAULT_POPOVER_CONTENT_CLASSNAME,
   POPOVER_CONTENT_TRIGGER_HEIGHT_CLASSNAME,
   POPOVER_CONTENT_TRIGGER_MAX_HEIGHT_CLASSNAME,
@@ -63,10 +64,21 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
       >
         {children}
         {hasArrow ? (
-          <PopoverArrowPrimitive
-            className={cn(DEFAULT_POPOVER_ARROW_CLASSNAME, arrowClassName)}
-            {...restArrowProps}
-          />
+          <PopoverArrowPrimitive asChild>
+            <span data-slot='arrow-container' className={DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME}>
+              <svg
+                data-slot='arrow'
+                className={DEFAULT_POPOVER_ARROW_CLASSNAME}
+                width='10'
+                height='5'
+                viewBox='0 0 30 10'
+                preserveAspectRatio='none'
+                {...restArrowProps}
+              >
+                <polygon points='0,0 30,0 15,10'></polygon>
+              </svg>
+            </span>
+          </PopoverArrowPrimitive>
         ) : null}
       </PopoverContentPrimitive>
     </PopoverPortalPrimitive>

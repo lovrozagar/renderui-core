@@ -1,4 +1,3 @@
-import { Separator } from '@radix-ui/react-select'
 import { Simplify } from '@renderui/types'
 import React from 'react'
 
@@ -7,6 +6,7 @@ import { AsChildProp } from '@/components/_shared/types/as-child'
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import { Aria } from '@/components/aria'
 import { ButtonProps } from '@/components/button'
+import { SeparatorProps } from '@/components/separator'
 
 type NumberInputRef = React.ElementRef<'input'>
 
@@ -27,7 +27,7 @@ type NumberInputCustomProps = {
   spinButtonContainerProps?: Simplify<React.ComponentPropsWithoutRef<'div'> & AsChildProp>
   incrementButtonProps?: ButtonProps
   decrementButtonProps?: ButtonProps
-  separatorProps?: React.ComponentPropsWithoutRef<typeof Separator>
+  separatorProps?: SeparatorProps
   precision?: number | 'smart'
   onValueChange?: (value: string) => void
   onSpin?: (value: string) => void

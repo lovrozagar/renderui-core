@@ -1,18 +1,24 @@
 import { HUNDRED, ONE, ZERO } from '@renderui/constants'
+import { ProgressProps } from '..'
 
-type GetTranslateXStyleByValueProps = {
-  isIndeterminate: boolean
-  orientation: string
-  variant: string
-  value: number
+type GetTranslateXStyleByValueProps = Pick<
+  ProgressProps,
+  'isIndeterminate' | 'orientation' | 'variant' | 'value' | 'spotCount'
+> & {
   definedValue: number
-  spotCount: number
   indicatorStyle: Record<string, string>
 }
 
 const getTranslateXStyleByValue = (props: GetTranslateXStyleByValueProps) => {
-  const { isIndeterminate, orientation, variant, value, definedValue, spotCount, indicatorStyle } =
-    props
+  const {
+    isIndeterminate,
+    orientation,
+    variant,
+    definedValue,
+    indicatorStyle,
+    spotCount = 1,
+    value = 0,
+  } = props
 
   if (isIndeterminate) return indicatorStyle
 

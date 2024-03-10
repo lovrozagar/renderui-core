@@ -1,3 +1,5 @@
+'use client'
+
 import { DialogClose as DialogClosePrimitive } from '@radix-ui/react-dialog'
 import { cn } from '@renderui/utils'
 import React from 'react'

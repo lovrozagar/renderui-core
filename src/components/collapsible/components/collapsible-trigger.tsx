@@ -1,3 +1,5 @@
+'use client'
+
 import { CollapsibleTrigger as CollapsibleTriggerPrimitive } from '@radix-ui/react-collapsible'
 import { cx } from '@renderui/utils'
 import React from 'react'

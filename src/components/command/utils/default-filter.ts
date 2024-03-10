@@ -1,3 +1,5 @@
+'use client'
+
 import { ONE, ZERO } from '@renderui/constants'
 
 function defaultFilter(value: string, search: string) {

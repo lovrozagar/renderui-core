@@ -1,8 +1,5 @@
 /* Components */
 export * from '@/components'
 
-/* Plugin */
-export * from '@/plugin'
-
-/* Providers */
+// /* Providers */
 export * from '@/providers'

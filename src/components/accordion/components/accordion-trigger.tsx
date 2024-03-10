@@ -1,3 +1,5 @@
+'use client'
+
 import {
   AccordionHeader as AccordionHeaderPrimitive,
   AccordionTrigger as AccordionTriggerPrimitive,

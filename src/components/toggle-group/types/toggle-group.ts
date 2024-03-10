@@ -12,9 +12,10 @@ type ToggleGroupPrimitiveProps = Omit<
 >
 
 type ToggleGroupCustomProps = {
+  type?: 'single' | 'multiple'
   value?: string[]
   defaultValue?: string[]
-  onValueChange?: (value: string[]) => void
+  onValueChange?: (value: string[] | undefined) => void
 }
 
 type ToggleGroupProps = Simplify<ToggleGroupPrimitiveProps & ToggleGroupCustomProps>

@@ -2,8 +2,8 @@
 
 import { NEGATIVE_ONE } from '@renderui/constants'
 import { useControllableState } from '@renderui/hooks'
-import React, { useState } from 'react'
-import { chain } from 'react-aria'
+import { chain } from '@renderui/utils'
+import React from 'react'
 
 import { ComboboxProvider } from '@/components/combobox/contexts/combobox-context'
 import { ComboboxProps } from '@/components/combobox/types/combobox'
@@ -43,7 +43,7 @@ const Combobox = (props: ComboboxProps) => {
     onChange: onValueChange,
   })
 
-  const [focusValue, setFocusValue] = useState<string>('')
+  const [focusValue, setFocusValue] = React.useState<string>('')
 
   const [label, setLabel] = React.useState<string>('')
 

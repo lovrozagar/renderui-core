@@ -1,3 +1,5 @@
+'use client'
+
 import { ONE, TWO, ZERO } from '@renderui/constants'
 
 function lowercaseBinarySearch(array: string[], target: string): string | undefined {

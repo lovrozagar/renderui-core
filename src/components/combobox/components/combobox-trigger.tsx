@@ -6,6 +6,9 @@ import { chain, cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import {
+  COMBOBOX_TRIGGER_OUTLINE_CLASSNAME,
+  COMBOBOX_TRIGGER_SOLID_CLASSNAME,
+  COMBOBOX_TRUNCATED_TEXT_CHILD_CLASSNAME,
   DEFAULT_COMBOBOX_TRIGGER_CLASSNAME,
   DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME,
 } from '@/components/combobox/constants/constants'
@@ -23,6 +26,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     children,
     placeholder,
     iconProps,
+    onKeyDownCapture,
     role = 'combobox',
     'aria-haspopup': ariaHasPopup = 'listbox',
     variant = 'solid',
@@ -30,9 +34,10 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     hasTruncatedText = false,
     hasDefaultPressedStyles = false,
     hasRipple = false,
-    onKeyDownCapture,
     ...restProps
   } = props
+
+  const { className: iconClassName } = getOptionalObject(iconProps)
 
   const {
     label,
@@ -47,6 +52,8 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     setFocusValue,
   } = useComboboxContext()
 
+  const forcedVariant = variant === 'outline' ? 'outline' : 'solid'
+
   const mergedRefCallaback = useMergedRef<ComboboxTriggerRef>([triggerRef, ref])
 
   const timeoutIdRef = React.useRef<NodeJS.Timeout | null>(null)
@@ -59,8 +66,6 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     },
     [],
   )
-
-  const { className: iconClassName } = getOptionalObject(iconProps)
 
   const content = (
     <>
@@ -87,11 +92,18 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
       data-invalid={isInvalid}
       data-required={isRequired}
       isDisabled={isDisabled}
-      variant={variant}
+      variant={forcedVariant}
       color={color}
       hasDefaultPressedStyles={hasDefaultPressedStyles}
       hasRipple={hasRipple}
-      className={cx(DEFAULT_COMBOBOX_TRIGGER_CLASSNAME, className, 'relative')}
+      className={cx(
+        DEFAULT_COMBOBOX_TRIGGER_CLASSNAME,
+        forcedVariant === 'outline'
+          ? COMBOBOX_TRIGGER_OUTLINE_CLASSNAME
+          : COMBOBOX_TRIGGER_SOLID_CLASSNAME,
+        className,
+        'relative',
+      )}
       onKeyDownCapture={chain(
         onKeyDownCapture,
         getHandleKeyDownCapture({
@@ -105,7 +117,9 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
       {...restProps}
     >
       {hasTruncatedText ? (
-        <span className='inline-block min-w-0 truncate'>{content}</span>
+        <span data-slot='truncated-text' className={COMBOBOX_TRUNCATED_TEXT_CHILD_CLASSNAME}>
+          {content}
+        </span>
       ) : (
         content
       )}

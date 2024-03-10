@@ -1,7 +1,7 @@
 import { cva } from '@renderui/utils'
 
 const buttonClasses = cva(
-  'render-ui-button group relative box-border inline-flex cursor-pointer select-none appearance-none items-center justify-center gap-3 whitespace-nowrap rounded text-sm font-medium outline-none ring-ring-color ring-offset-background transition-[box-shadow,color,background-color,transform,opacity] duration-fast disabled:cursor-not-allowed disabled:opacity-40 data-[loading=true]:cursor-default [&_.render-ui-loader]:opacity-0',
+  'render-ui-button group relative box-border inline-flex cursor-pointer select-none appearance-none items-center justify-center gap-3 whitespace-nowrap rounded text-sm font-medium outline-none ring-ring-color ring-offset-background transition-[box-shadow,background-color,transform,opacity] duration-fast disabled:cursor-not-allowed disabled:opacity-40 data-[loading=true]:cursor-default [&_.render-ui-loader]:opacity-0',
   {
     variants: {
       variant: {
