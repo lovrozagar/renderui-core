@@ -1,6 +1,7 @@
 'use client'
 
-import { functionCallOrValue, polymorphic } from '@renderui/utils'
+import { polymorphic } from '@renderui/utils/polymorphic'
+import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
 import React from 'react'
 
 import { useButton } from '@/components/button/hooks/use-button'

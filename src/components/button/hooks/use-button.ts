@@ -1,5 +1,6 @@
 import { useMergedRef } from '@renderui/hooks'
-import { chain, cn } from '@renderui/utils'
+import { chain } from '@renderui/utils/chain'
+import { cn } from '@renderui/utils/cn'
 import React from 'react'
 
 import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'

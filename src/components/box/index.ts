@@ -1,2 +1,2 @@
-export * from '@/components/box/components/box'
-export * from '@/components/box/types/box'
+export { Box } from '@/components/box/components/box'
+export type { BoxProps, BoxRef } from '@/components/box/types/box'

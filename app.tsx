@@ -89,6 +89,7 @@ import { Slider, SliderThumb } from '@/components/slider'
 import { Text } from '@/components/text'
 import { Toaster } from '@/components/toast'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip'
+import { ModeProvider, setMode, toggleMode } from '@/providers/mode-provider'
 
 const App = () => {
   console.log('App')
@@ -642,6 +643,11 @@ const App = () => {
           <Box className='pt-1'>Some text about something</Box>
         </CollapsibleContent>
       </Collapsible>
+      <ModeProvider defaultMode='system' modeLocalStorageKey='app-mode'>
+        <Grid className='bg-mode' onClick={() => toggleMode(true, 'app-mode')}>
+          aefaef
+        </Grid>
+      </ModeProvider>
     </div>
   )
 }
