@@ -1,4 +1,4 @@
-import { useMergedRef } from '@renderui/hooks'
+import { useMergedRef } from '@renderui/hooks/use-merged-ref'
 import { chain } from '@renderui/utils/chain'
 import { cn } from '@renderui/utils/cn'
 import React from 'react'
