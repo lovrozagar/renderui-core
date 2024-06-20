@@ -5,7 +5,7 @@ import { ButtonProps, ButtonRef } from '@/components/button'
 type ToggleGroupItemRef = ButtonRef
 
 type ToggleGroupItemControlProps = {
-  value: string
+  value: string | number
 }
 
 type ToggleGroupItemProps = Simplify<Omit<ButtonProps, 'value'> & ToggleGroupItemControlProps>

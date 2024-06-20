@@ -3,12 +3,11 @@ import { Simplify } from '@renderui/types'
 
 import { ButtonProps } from '@/components/button'
 
-
 type PasswordToggleCustomProps = {
-  isPassword: boolean | undefined
+  type: React.ComponentPropsWithoutRef<'input'>['type']
   passwordToggleIconProps?: React.ComponentPropsWithoutRef<typeof EyeOpenIcon>
 }
 
-type PasswordToggleProps = Simplify<ButtonProps & PasswordToggleCustomProps>
+type PasswordToggleProps = Simplify<Omit<ButtonProps, 'type'> & PasswordToggleCustomProps>
 
 export type { PasswordToggleProps }

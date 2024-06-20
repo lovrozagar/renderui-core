@@ -5,7 +5,7 @@ import { ButtonProps, ButtonRef } from '@/components/button'
 
 type ComboboxTriggerRef = ButtonRef
 
-type ComboboxTriggerButtonProps = Omit<ButtonProps, 'children' | 'variant'>
+type ComboboxTriggerButtonProps = Omit<ButtonProps, 'children' | 'variant' | 'size'>
 
 type ComboboxTriggerCustomProps = {
   variant?: 'solid' | 'outline'

@@ -26,11 +26,11 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
   const { value: rootValue } = useToggleGroupContext()
 
   return (
-    <ToggleGroupItemPrimitive asChild value={value} className={cn(className)}>
+    <ToggleGroupItemPrimitive asChild value={value as string} className={cn(className)}>
       <Button
         ref={ref}
         color={color}
-        variant={variant ?? (rootValue?.includes(value) ? 'solid' : 'plain')}
+        variant={variant ?? (rootValue?.includes(value as never) ? 'solid' : 'plain')}
         hasRipple={hasRipple}
         className={cn(DEFAUL_TOGGLE_CLASSNAME, className)}
         {...restProps}

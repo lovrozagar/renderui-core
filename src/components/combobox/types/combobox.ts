@@ -8,7 +8,7 @@ type ComboboxPopoverProps = PopoverProps
 type ComboboxCustomProps = {
   type?: 'select' | 'combobox'
   name?: string
-  value?: string
+  value?: string | number
   defaultValue?: string
   inputProps?: React.ComponentPropsWithoutRef<'input'>
   triggerRef?: React.RefObject<ButtonRef>
@@ -17,7 +17,7 @@ type ComboboxCustomProps = {
   isInvalid?: boolean | undefined
   isReadonly?: boolean | undefined
   isRequired?: boolean | undefined
-  onValueChange?: React.Dispatch<React.SetStateAction<string | undefined>>
+  onValueChange?: React.Dispatch<React.SetStateAction<string | number | undefined>>
 }
 
 type ComboboxProps = Simplify<ComboboxPopoverProps & ComboboxCustomProps>

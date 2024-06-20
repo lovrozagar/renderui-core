@@ -12,7 +12,7 @@ import { PasswordToggleProps } from '@/components/text-input/types/password-togg
 const PasswordToggle = (props: PasswordToggleProps) => {
   const {
     className,
-    isPassword,
+    type,
     variant = 'plain',
     passwordToggleIconProps,
     ...restProps
@@ -30,7 +30,7 @@ const PasswordToggle = (props: PasswordToggleProps) => {
       <EyeOpenIcon
         className={cn(
           DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
-          isPassword ? 'opacity-100' : 'opacity-0',
+          type === 'password' ? 'opacity-100' : 'opacity-0',
           passwordToggleIconClassName,
         )}
         {...restPasswordToggleIconProps}
@@ -38,7 +38,7 @@ const PasswordToggle = (props: PasswordToggleProps) => {
       <EyeNoneIcon
         className={cn(
           DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
-          isPassword ? 'opacity-0' : 'opacity-100',
+          type === 'password' ? 'opacity-0' : 'opacity-100',
           passwordToggleIconClassName,
         )}
         {...restPasswordToggleIconProps}

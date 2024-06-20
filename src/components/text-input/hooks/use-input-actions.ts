@@ -7,21 +7,17 @@ import { TextInputProps, TextInputRef } from '@/components/text-input/types/text
 type UseInputActionsArgs = {
   type: TextInputProps['type']
   onClear: TextInputProps['onClear']
-  setValue: React.Dispatch<React.SetStateAction<string | undefined>>
+  setValue: React.Dispatch<React.SetStateAction<string>>
 }
 
 const useInputActions = (args: UseInputActionsArgs, inputRef: React.RefObject<TextInputRef>) => {
   const { type, onClear, setValue } = args
 
-  const [isPassword, setIsPassword] = React.useState(type === 'password')
+  const originalNonPasswordType = React.useRef(!type || type === 'password' ? 'text' : type)
+
+  const [inputType, setInputType] = React.useState(type ?? 'text')
 
   const clickTimeout = React.useRef<NodeJS.Timeout | null>(null)
-
-  const getInputType = () => {
-    if (type === 'password') return 'password'
-
-    return isPassword ? 'password' : type
-  }
 
   const focusInputOnClickTimeout = () => {
     if (clickTimeout.current) {
@@ -47,7 +43,13 @@ const useInputActions = (args: UseInputActionsArgs, inputRef: React.RefObject<Te
   }
 
   const handlePasswordToggle = () => {
-    setIsPassword((previousPassword) => !previousPassword)
+    setInputType((previousType) => {
+      if (previousType === 'password') {
+        return originalNonPasswordType.current
+      }
+
+      return 'password'
+    })
 
     if (inputRef.current) focusInputOnClickTimeout()
   }
@@ -60,8 +62,7 @@ const useInputActions = (args: UseInputActionsArgs, inputRef: React.RefObject<Te
   }
 
   return {
-    isPassword,
-    inputType: getInputType(),
+    inputType,
     handleClear,
     clearTimeouts,
     handleInputFocusOnContainerClick,

@@ -37,7 +37,7 @@ const Combobox = (props: ComboboxProps) => {
     onChange: onOpenChange,
   })
 
-  const [value, setValue] = useControllableState<string>({
+  const [value, setValue] = useControllableState<string | number>({
     defaultProp: defaultValue,
     prop: valueProp,
     onChange: onValueChange,

@@ -7,9 +7,13 @@ type RadioGroupItemPrimitive = typeof ToggleGroupItem
 
 type RadioGroupItemRef = React.ElementRef<RadioGroupItemPrimitive>
 
-type RadioGroupItemPrimitiveProps = Omit<React.ComponentProps<RadioGroupItemPrimitive>, 'children'>
+type RadioGroupItemPrimitiveProps = Omit<
+  React.ComponentProps<RadioGroupItemPrimitive>,
+  'value' | 'children'
+>
 
 type RadioGroupItemCustomProps = {
+  value: string | number
   children?: React.ReactNode | ((isChecked: boolean) => React.ReactNode)
   indicatorProps?: Simplify<React.ComponentPropsWithoutRef<'span'> & AsChildProp>
 }

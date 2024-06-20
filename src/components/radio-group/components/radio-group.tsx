@@ -27,7 +27,7 @@ const RadioGroup = React.forwardRef<RadioGroupRef, RadioGroupProps>((props, ref)
     ...restProps
   } = props
 
-  const [value, setValue] = useControllableState<string>({
+  const [value, setValue] = useControllableState<string | number>({
     prop: valueProp,
     defaultProp: defaultValue,
     onChange: onValueChange,

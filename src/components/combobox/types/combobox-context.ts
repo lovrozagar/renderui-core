@@ -16,7 +16,7 @@ type ComboboxContext = {
   isReadonly: boolean | undefined
   isRequired: boolean | undefined
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
-  setValue: React.Dispatch<React.SetStateAction<string>>
+  setValue: React.Dispatch<React.SetStateAction<string | number>>
   setFocusValue: React.Dispatch<React.SetStateAction<string>>
   setLabel: React.Dispatch<React.SetStateAction<string>>
 }

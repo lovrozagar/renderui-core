@@ -7,7 +7,7 @@ type ComboboxItemRef = CommandItemRef
 type ComboboxItemCommandItemProps = Omit<CommandItemProps, 'value' | 'children'>
 
 type ComboboxItemCustomProps = {
-  value: string
+  value: string | number
   children: React.ReactNode
   startContent?: React.ReactNode
   endContent?: React.ReactNode

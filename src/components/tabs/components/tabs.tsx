@@ -26,7 +26,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
 
   const layoutId = React.useId()
 
-  const [activeTab, setActiveTab] = useControllableState({
+  const [activeTab, setActiveTab] = useControllableState<string | number>({
     prop: value,
     defaultProp: defaultValue,
     onChange: onValueChange,
@@ -38,7 +38,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
     <TabsPrimitive
       ref={ref}
       data-slot='root'
-      value={value}
+      value={value as string | undefined}
       onValueChange={setActiveTab}
       orientation={orientation}
       activationMode={type === 'focus' ? 'automatic' : 'manual'}

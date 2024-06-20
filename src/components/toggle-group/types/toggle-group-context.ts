@@ -1,5 +1,5 @@
 type ToggleGroupContext = {
-  value: string[]
+  value: string[] | number[]
 }
 
 export type { ToggleGroupContext }

@@ -28,11 +28,10 @@ type NumberInputCustomProps = {
   incrementButtonProps?: ButtonProps
   decrementButtonProps?: ButtonProps
   separatorProps?: SeparatorProps
-  precision?: number | 'smart'
-  onValueChange?: (value: string) => void
-  onSpin?: (value: string) => void
-  onSpinIncrement?: (value: string) => void
-  onSpinDecrement?: (value: string) => void
+  onValueChange?: (value: string | undefined) => void
+  onSpin?: (value: string | undefined) => void
+  onSpinIncrement?: (value: string | undefined) => void
+  onSpinDecrement?: (value: string | undefined) => void
 }
 
 type NumberInputVariantProps = NonNullableVariantProps<typeof inputContainerClasses>

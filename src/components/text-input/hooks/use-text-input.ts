@@ -50,7 +50,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     ...restProps
   } = props
 
-  const [value, setValue] = useControllableState({
+  const [value, setValue] = useControllableState<string>({
     prop: valueProp as string,
     defaultProp: defaultValue as string,
     onChange: onValueChange,
@@ -61,7 +61,6 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
 
   const {
     inputType,
-    isPassword,
     clearTimeouts,
     handleClear,
     handleInputFocusOnContainerClick,
@@ -192,7 +191,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
       ...restClearButtonIconProps,
     },
     passwordToggleProps: {
-      isPassword,
+      'type': inputType,
       'data-slot': 'password-toggle',
       'onPress': chain(handlePasswordToggle, passwordToggleOnPress),
       'className': cn(DEFAULT_TEXT_INPUT_PASSWORD_TOGGLE_CLASSNAME, passwordToggleClassName),

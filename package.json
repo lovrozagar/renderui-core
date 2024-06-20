@@ -1,6 +1,6 @@
 {
   "name": "@renderui/core",
-  "version": "0.8.3",
+  "version": "1.0.9",
   "private": false,
   "description": "React UI library with highly modular and ready-out-of-the-box components",
   "license": "MIT",
@@ -9,17 +9,17 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "build": "bunchee -m",
     "dev": "vite dev"
@@ -44,6 +44,7 @@
     "@renderui/types": "^0.0.2",
     "@renderui/utils": "^0.1.8",
     "cmdk": "^0.2.1",
+    "next-themes": "^0.3.0",
     "react-aria": "^3.32.1",
     "sonner": "^1.4.3"
   },

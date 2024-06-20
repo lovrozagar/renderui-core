@@ -42,7 +42,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
   const isActive = activeTab === value
 
   return (
-    <TabsTriggerPrimitive asChild disabled={isDisabled} value={value}>
+    <TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>
       <Button
         ref={ref}
         data-slot='trigger'
@@ -51,7 +51,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         hasRipple={hasRipple}
         hasDefaultHoverStyles={hasDefaultHoverStyles}
         hasDefaultPressedStyles={hasDefaultPressedStyles}
-        onPress={chain(onPress, getHandleTriggerPress(type, value, setActiveTab))}
+        onPress={chain(onPress, getHandleTriggerPress(type, value as string | number, setActiveTab))}
         className={cx(
           DEFAULT_TABS_TRIGGER_CLASSNAME,
           isActive ? '' : INACTIVE_TABS_TRIGGER_CLASSNAME,

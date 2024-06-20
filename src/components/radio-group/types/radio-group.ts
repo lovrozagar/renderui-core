@@ -13,13 +13,13 @@ type RadioGroupPrimitiveProps = Omit<
 >
 
 type RadioGroupCustomProps = {
-  startContent?: React.ReactNode | ((value: string | undefined) => React.ReactNode)
-  children?: React.ReactNode | ((value: string | undefined) => React.ReactNode)
-  endContent?: React.ReactNode | ((value: string | undefined) => React.ReactNode)
+  startContent?: React.ReactNode | ((value: string | number | undefined) => React.ReactNode)
+  children?: React.ReactNode | ((value: string | number | undefined) => React.ReactNode)
+  endContent?: React.ReactNode | ((value: string | number | undefined) => React.ReactNode)
   name?: string
   value?: string
-  defaultValue?: string | undefined
-  onValueChange?: (value: string | undefined) => void
+  defaultValue?: string | number | undefined
+  onValueChange?: (value: string | number | undefined) => void
   isDisabled?: boolean
   isReadOnly?: boolean
   isInvalid?: boolean

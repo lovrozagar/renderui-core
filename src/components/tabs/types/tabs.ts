@@ -9,11 +9,16 @@ type TabsPrimitiveType = typeof TabsPrimitive
 
 type TabsRef = React.ElementRef<TabsPrimitiveType>
 
-type TabsPrimitiveProps = Omit<React.ComponentProps<TabsPrimitiveType>, 'activationMode'>
+type TabsPrimitiveProps = Omit<
+  React.ComponentProps<TabsPrimitiveType>,
+  'value' | 'onValueChange' | 'activationMode'
+>
 
 type TabsCustomProps = {
   type?: 'focus' | 'click'
   color?: ButtonProps['color']
+  value?: string | number
+  onValueChange?: ((value: string | number) => void) | undefined
 }
 
 type TabsVariantProps = NonNullableVariantProps<typeof tabsCursorClasses>

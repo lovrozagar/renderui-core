@@ -8,7 +8,7 @@ type TabsTriggerRef = ButtonRef
 type TabsTriggerButtonProps = Omit<ButtonProps, 'children'>
 
 type TabsTriggerTriggerProps = {
-  value: string
+  value: string | number
   children?: React.ReactNode
   childrenContainerProps?: React.ComponentPropsWithoutRef<'span'>
 }

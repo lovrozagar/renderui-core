@@ -20,8 +20,17 @@ type UseNumberSpinArgs = {
 }
 
 function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLInputElement>) {
-  const { value, min, max, step, pattern, setValue, onSpin, onSpinIncrement, onSpinDecrement } =
-    args
+  const {
+    value,
+    min,
+    max,
+    step,
+    pattern,
+    setValue,
+    onSpin,
+    onSpinIncrement,
+    onSpinDecrement,
+  } = args
 
   // track current value with a ref, used to be able to access the current value
   // without the setValue callback function, safer access to current value as
@@ -57,11 +66,15 @@ function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLIn
       currentValueRef.current === undefined ? ZERO : Number(currentValueRef.current)
 
     const getNewValue = () => {
+      const previousValueString = previousValue.toString()
+      const decimalIndex = previousValueString.indexOf('.')
+      const decimalPlaces = decimalIndex >= 0 ? previousValueString.length - decimalIndex - 1 : 0
+
       if (action === 'decrement') {
-        return (previousValue - Number(step)).toString()
+        return (previousValue - Number(step)).toFixed(decimalPlaces)
       }
 
-      return (previousValue + Number(step)).toString()
+      return (previousValue + Number(step)).toFixed(decimalPlaces)
     }
 
     const newValue = getNewValue()

@@ -23,7 +23,6 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     min,
     max,
     pattern,
-    precision,
     className,
     children,
     startContent,
@@ -54,7 +53,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     ...restProps
   } = props
 
-  const [value, setValue] = useControllableState({
+  const [value, setValue] = useControllableState<string | undefined>({
     prop: valueProp as string,
     defaultProp: defaultValue as string,
     onChange: onValueChange,
@@ -177,7 +176,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       'disabled': isDisabled,
       'readOnly': isReadOnly,
       'className': cn(DEFAULT_NUMBER_INPUT_CLASSNAME, className),
-      'onChange': getOnChange({ min, max, pattern, precision, setValue, onChange: nativeOnChange }),
+      'onChange': getOnChange({ min, max, pattern, setValue, onChange: nativeOnChange }),
       'onPointerDown': chain(onPointerDown, (event: React.PointerEvent<HTMLInputElement>) =>
         event.stopPropagation(),
       ),
@@ -241,9 +240,9 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       ...restSeparatorProps,
     },
     utilityProps: {
-      startContent: functionCallOrValue(startContent, value),
-      children: functionCallOrValue(children, value),
-      endContent: functionCallOrValue(endContent, value),
+      startContent: functionCallOrValue(startContent, value ?? ''),
+      children: functionCallOrValue(children, value ?? ''),
+      endContent: functionCallOrValue(endContent, value ?? ''),
     },
   } as const
 }

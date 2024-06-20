@@ -93,7 +93,7 @@ const ComboboxContent = React.forwardRef<ComboboxContentRef, ComboboxContentProp
         loop={loop}
         data-command-popover-root
         data-slot='command'
-        value={focusValue}
+        value={focusValue as string}
         onValueChange={setFocusValue}
         className={cx(DEFAULT_COMBOBOX_COMMAND_CLASSNAME, commandClassName)}
         {...restCommandProps}
