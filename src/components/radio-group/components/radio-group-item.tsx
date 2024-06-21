@@ -23,16 +23,16 @@ const RadioGroupItem = React.forwardRef<RadioGroupItemRef, RadioGroupItemProps>(
     className,
     children,
     value,
-    color,
     variant,
     indicatorProps,
     onClick,
     role = 'radio',
+    color = 'primary',
     hasRipple = false,
     ...restProps
   } = props
 
-  const { name, value: rootValue, setValue } = useRadioGroupContext()
+  const { name, isInvalid, value: rootValue, setValue } = useRadioGroupContext()
 
   const {
     asChild: indicatorAsChild,
@@ -50,14 +50,18 @@ const RadioGroupItem = React.forwardRef<RadioGroupItemRef, RadioGroupItemProps>(
       ref={ref}
       role={role}
       value={value as string}
-      color={color ?? 'primary'}
+      color={isInvalid ? 'destructive' : color}
       variant={variant ?? isChecked ? 'solid' : 'outline'}
       hasRipple={hasRipple}
       aria-checked={isChecked}
       data-state={isChecked ? 'checked' : 'unchecked'}
       data-slot='item'
       onPress={chain(onClick, () => setValue(value))}
-      className={cx(DEFAULT_RADIO_GROUP_ITEM_CLASSNAME, className)}
+      className={cx(
+        DEFAULT_RADIO_GROUP_ITEM_CLASSNAME,
+        isInvalid ? 'ring-destructive' : '',
+        className,
+      )}
       {...restProps}
     >
       {functionCallOrValue(children, isChecked)}

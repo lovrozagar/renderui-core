@@ -1,6 +1,6 @@
 {
   "name": "@renderui/core",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "private": false,
   "description": "React UI library with highly modular and ready-out-of-the-box components",
   "license": "MIT",

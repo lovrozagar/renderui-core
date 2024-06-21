@@ -24,7 +24,7 @@ type CheckboxCustomProps = {
   isInvalid?: boolean
   isRequired?: boolean
   defaultChecked?: boolean
-  onCheckedChange?: React.Dispatch<React.SetStateAction<boolean | undefined>>
+  onCheckedChange?: React.Dispatch<React.SetStateAction<boolean>>
   hasIconContentWhenUnchecked?: boolean
 }
 

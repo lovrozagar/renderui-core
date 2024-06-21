@@ -30,6 +30,7 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
     children,
     onCheckedChange,
     onPress,
+    color = 'primary',
     hasRipple = false,
     hasIconContentWhenUnchecked = true,
     ...restProps
@@ -59,7 +60,7 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
       ref={ref}
       role='checkbox'
       variant='outline'
-      color='primary'
+      color={isInvalid ? 'destructive' : color}
       value={checked ? 'on' : 'off'}
       aria-checked={checked}
       aria-disabled={isDisabled}

@@ -1,7 +1,7 @@
 import { cva } from '@renderui/utils'
 
 const inputContainerClasses = cva(
-  'flex min-w-0 cursor-text items-center gap-2 overflow-hidden ring-ring-color ring-offset-0 data-[focus-within=true]:ring-[2px] data-[hover=true]:data-[focus-within=true]:ring-[2px] data-[hover=true]:ring-[1px]',
+  'flex min-w-0 cursor-text items-center gap-2 overflow-hidden ring-ring-color ring-offset-0 data-[focus-within=true]:ring-[2px] data-[hover=true]:data-[focus-within=true]:ring-[2px] data-[hover=true]:ring-[1px] data-[invalid=true]:ring-destructive',
   {
     variants: {
       variant: {

@@ -1,5 +1,5 @@
 const DEFAULT_COMBOBOX_TRIGGER_CLASSNAME =
-  'render-ui-combobox-trigger group justify-between min-h-[40px] transition-[background-color,box-shadow] data-[empty=true]:text-mode-foreground/50 aria-[expanded=true]:ring-ring-color aria-[expanded=true]:ring-[1px] ring-offset-0 data-[focus-visible]:ring-offset-0 data-[hover=true]:ring-[1px] data-[expanded=true]:ring-[2px] data-[expanded=true]:data-[hover=true]:ring-[2px]'
+  'render-ui-combobox-trigger group justify-between min-h-[40px] transition-[background-color,box-shadow] data-[empty=true]:text-mode-foreground/50 aria-[expanded=true]:ring-ring-color aria-[expanded=true]:ring-[1px] ring-offset-0 data-[focus-visible]:ring-offset-0 data-[hover=true]:ring-[1px] data-[expanded=true]:ring-[2px] data-[hover=true]:data-[focus-visible=true]:ring-[2px] data-[expanded=true]:data-[hover=true]:ring-[2px] data-[invalid=true]:data-[expanded=true]:ring-destructive data-[invalid=true]:ring-destructive'
 
 const COMBOBOX_TRIGGER_SOLID_CLASSNAME = 'after:hidden before:hidden'
 

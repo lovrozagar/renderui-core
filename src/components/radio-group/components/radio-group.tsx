@@ -49,7 +49,7 @@ const RadioGroup = React.forwardRef<RadioGroupRef, RadioGroupProps>((props, ref)
       className={cx(DEFAULT_RADIO_GROUP_CLASSNAME, className)}
       {...restProps}
     >
-      <RadioGroupProvider value={{ name, value, setValue }}>
+      <RadioGroupProvider value={{ name, isInvalid, value, setValue }}>
         {functionCallOrValue(startContent, value)}
         {functionCallOrValue(children, value)}
         {functionCallOrValue(endContent, value)}
