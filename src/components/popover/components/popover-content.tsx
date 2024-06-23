@@ -8,6 +8,7 @@ import {
 import { cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   DEFAULT_POPOVER_ARROW_CLASSNAME,
   DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
@@ -23,8 +24,9 @@ import { PopoverContentProps, PopoverContentRef } from '@/components/popover/typ
 
 const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>((props, ref) => {
   const {
-    className,
     children,
+    style,
+    className,
     portalContainer,
     forceMount,
     hasTriggerHeight,
@@ -34,6 +36,9 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
     hasTriggerMaxWidth,
     hasTriggerMaxHeight,
     arrowProps,
+    animationDuration,
+    animationInDuration,
+    animationOutDuration,
     hasArrow = true,
     align = 'center',
     sideOffset = 4,
@@ -60,6 +65,16 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
           hasTriggerMaxWidth ? POPOVER_CONTENT_TRIGGER_MAX_WIDTH_CLASSNAME : undefined,
           className,
         )}
+        style={{
+          ...getAnimationStyleVariables({
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            defaultAnimationInDuration: 150,
+            defaultAnimationOutDuration: 150,
+          }),
+          ...style,
+        }}
         {...restProps}
       >
         {children}

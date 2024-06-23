@@ -9,6 +9,7 @@ import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { Button } from '@/components/button'
 import { Overlay } from '@/components/overlay'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
@@ -22,11 +23,15 @@ import { VisuallyHidden } from '@/components/visually-hidden'
 const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props, ref) => {
   const {
     className,
+    style,
     children,
     portalProps,
     overlayProps,
     closeButtonProps,
     closeButtonIconProps,
+    animationDuration,
+    animationInDuration,
+    animationOutDuration,
     hasCloseButton = true,
     side = 'right',
     ...restProps
@@ -49,6 +54,16 @@ const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props
       <SheetContentPrimitive
         ref={ref}
         className={cn(sheetClasses({ side }), className)}
+        style={{
+          ...getAnimationStyleVariables({
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            defaultAnimationInDuration: 200,
+            defaultAnimationOutDuration: 200,
+          }),
+          ...style,
+        }}
         {...restProps}
       >
         {children}

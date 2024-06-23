@@ -8,6 +8,7 @@ import { Cross2Icon } from '@radix-ui/react-icons'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { Button } from '@/components/button/components/button'
 import { DialogClose } from '@/components/dialog/components/dialog-close'
 import {
@@ -22,9 +23,13 @@ import { VisuallyHidden } from '@/components/visually-hidden/components/visually
 const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((props, ref) => {
   const {
     className,
+    style,
     children,
     closeButtonProps,
     closeButtonIconProps,
+    animationInDuration,
+    animationOutDuration,
+    animationDuration,
     hasCloseButton = true,
     ...restProps
   } = props
@@ -46,6 +51,16 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
       <DialogContentPrimitive
         ref={ref}
         className={cn(DFEAULT_DIALOG_CONTENT_CLASSNAME, className)}
+        style={{
+          ...getAnimationStyleVariables({
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            defaultAnimationInDuration: 200,
+            defaultAnimationOutDuration: 200,
+          }),
+          ...style,
+        }}
         {...restProps}
       >
         {hasCloseButton ? (

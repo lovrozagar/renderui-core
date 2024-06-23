@@ -1,3 +1,4 @@
+import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuIndicator as NavigationMenuIndicatorPrimitive,
@@ -45,15 +46,17 @@ type NavigationMenuViewportPrimitiveProps =
 type NavigationMenuRenderUIProps = {
   listProps?: NavigationMenuListPrimitiveProps
   listRef?: React.Ref<NavigationMenuListRef>
+  isFullScreen?: boolean
   viewportContainerProps?: NavigationMenuViewportContainerProps
   viewportContainerRef?: React.Ref<NavigationMenuViewportContainerRef>
   viewportProps?: NavigationMenuViewportPrimitiveProps
   viewportRef?: React.Ref<NavigationMenuViewportRef>
+  hasIndicator?: boolean
   indicatorProps?: NavigationMenuIndicatorPrimitiveProps
   indicatorRef?: React.Ref<NavigationMenuIndicatorRef>
   indicatorArrowProps?: NavigationMenuIndicatorArrowProps
   indicatorArrowRef?: React.Ref<NavigationMenuIndicatorArrowRef>
-}
+} & AnimationStyleVariaiables
 
 type NavigationMenuProps = Simplify<NavigationMenuPrimitiveProps & NavigationMenuRenderUIProps>
 

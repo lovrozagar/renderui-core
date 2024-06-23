@@ -1,9 +1,9 @@
 'use client'
 
 import {
-  NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuIndicator as NavigationMenuIndicatorPrimitive,
   NavigationMenuList as NavigationMenuListPrimitive,
+  NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuViewport as NavigationMenuViewportPrimitive,
 } from '@radix-ui/react-navigation-menu'
 import { cn, getOptionalObject } from '@renderui/utils'
@@ -21,6 +21,7 @@ import {
   NavigationMenuProps,
   NavigationMenuRef,
 } from '@/components/navigation-menu/types/navigation-menu'
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>((props, ref) => {
   const {
@@ -36,6 +37,11 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
     listRef,
     indicatorRef,
     indicatorArrowRef,
+    animationDuration,
+    animationInDuration,
+    animationOutDuration,
+    isFullScreen = false,
+    hasIndicator = true,
     ...restProps
   } = props
 
@@ -43,9 +49,13 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
   const { className: indicatorArrowClassName, ...restArrowProps } =
     getOptionalObject(indicatorArrowProps)
   const { className: listClassName, ...restListProps } = getOptionalObject(listProps)
-  const { className: viewportClassName, ...restViewportProps } = getOptionalObject(viewportProps)
   const { className: viewportContainerClassName, ...restViewportContainerProps } =
     getOptionalObject(viewportContainerProps)
+  const {
+    className: viewportClassName,
+    style: viewportStyle,
+    ...restViewportProps
+  } = getOptionalObject(viewportProps)
 
   return (
     <NavigationMenuPrimitive
@@ -59,22 +69,25 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
         {...restListProps}
       >
         {children}
-        <NavigationMenuIndicatorPrimitive
-          ref={indicatorRef}
-          className={cn(DEFAULT_NAVIGATION_MENU_INDICATOR_CLASSNAME, indicatorClassName)}
-          {...restIndicatorProps}
-        >
-          <div
-            ref={indicatorArrowRef}
-            className={cn(DEFAULT_NAVIGATION_MENU_ARROW_CLASSNAME, indicatorArrowClassName)}
-            {...restArrowProps}
-          />
-        </NavigationMenuIndicatorPrimitive>
+        {hasIndicator ? (
+          <NavigationMenuIndicatorPrimitive
+            ref={indicatorRef}
+            className={cn(DEFAULT_NAVIGATION_MENU_INDICATOR_CLASSNAME, indicatorClassName)}
+            {...restIndicatorProps}
+          >
+            <div
+              ref={indicatorArrowRef}
+              className={cn(DEFAULT_NAVIGATION_MENU_ARROW_CLASSNAME, indicatorArrowClassName)}
+              {...restArrowProps}
+            />
+          </NavigationMenuIndicatorPrimitive>
+        ) : null}
       </NavigationMenuListPrimitive>
       <div
         ref={viewportContainerRef}
         className={cn(
           DEFAULT_NAVIGATION_MENU_VIEWPORT_CONTAINER_CLASSNAME,
+          isFullScreen ? 'fixed top-0' : undefined,
           viewportContainerClassName,
         )}
         {...restViewportContainerProps}
@@ -82,6 +95,16 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
         <NavigationMenuViewportPrimitive
           ref={viewportRef}
           className={cn(DEFAULT_NAVIGATION_MENU_VIEWPORT_CLASSNAME, viewportClassName)}
+          style={{
+            ...getAnimationStyleVariables({
+              animationDuration,
+              animationInDuration,
+              animationOutDuration,
+              defaultAnimationInDuration: 300,
+              defaultAnimationOutDuration: 200,
+            }),
+            ...viewportStyle,
+          }}
           {...restViewportProps}
         />
       </div>

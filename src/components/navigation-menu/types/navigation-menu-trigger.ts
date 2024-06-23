@@ -1,23 +1,20 @@
+import { ButtonProps, ButtonRef } from '@/components/button'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
-import { NavigationMenuTrigger as NavigationMenuTriggerPrimitive } from '@radix-ui/react-navigation-menu'
 import { Simplify } from '@renderui/types'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-type NavigationMenuTriggerPrimitiveType = typeof NavigationMenuTriggerPrimitive
+type NavigationMenuTriggerRef = ButtonRef
 
-type NavigationMenuTriggerRef = React.ElementRef<NavigationMenuTriggerPrimitiveType>
+type NavigationMenuTriggerButtonProps = Omit<ButtonProps, 'children'> & { children?: ReactNode }
 
-type NavigationMenuTriggerPrimitiveProps =
-  React.ComponentPropsWithoutRef<NavigationMenuTriggerPrimitiveType>
-
-type NavigationMenuTriggerRenderUIProps = {
+type NavigationMenuTriggerCustomProps = {
   indicator?: React.ReactNode
   indicatorProps?: React.ComponentPropsWithoutRef<typeof ChevronDownIcon>
   hasIndicator?: boolean
 }
 
 type NavigationMenuTriggerProps = Simplify<
-  NavigationMenuTriggerPrimitiveProps & NavigationMenuTriggerRenderUIProps
+  NavigationMenuTriggerButtonProps & NavigationMenuTriggerCustomProps
 >
 
 export type { NavigationMenuTriggerProps, NavigationMenuTriggerRef }

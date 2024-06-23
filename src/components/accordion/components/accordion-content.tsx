@@ -12,10 +12,20 @@ import {
   AccordionContentProps,
   AccordionContentRef,
 } from '@/components/accordion/types/accordion-content'
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentProps>(
   (props, ref) => {
-    const { className, children, childrenContainerProps, ...restProps } = props
+    const {
+      className,
+      style,
+      children,
+      childrenContainerProps,
+      animationDuration,
+      animationOutDuration,
+      animationInDuration,
+      ...restProps
+    } = props
 
     const {
       asChild,
@@ -29,6 +39,16 @@ const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentP
       <AccordionContentPrimitive
         ref={ref}
         className={cn(DEFAULT_ACCORDION_CONTENT_CLASSNAME, className)}
+        style={{
+          ...getAnimationStyleVariables({
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            defaultAnimationInDuration: 200,
+            defaultAnimationOutDuration: 200,
+          }),
+          ...style,
+        }}
         {...restProps}
       >
         <AccordionContentChildrenContainer

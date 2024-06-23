@@ -1,3 +1,4 @@
+import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   TooltipArrow as TooltipArrowPrimitive,
   TooltipContent as TooltipContentPrimitive,
@@ -14,7 +15,7 @@ type TooltipContentPrimitiveProps = React.ComponentPropsWithoutRef<TooltipConten
 type TooltioContentRenderUIProps = {
   hasArrow?: boolean
   arrowProps?: React.ComponentPropsWithoutRef<typeof TooltipArrowPrimitive>
-}
+} & AnimationStyleVariaiables
 
 type TooltipContentProps = Simplify<TooltipContentPrimitiveProps & TooltioContentRenderUIProps>
 

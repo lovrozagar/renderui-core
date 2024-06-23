@@ -9,6 +9,8 @@ import React from 'react'
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import { ButtonProps } from '@/components/button'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
+import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { OverlayProps } from '@/components/overlay'
 
 type SheetContentPrimitiveType = typeof SheetContentPrimitive
 
@@ -18,11 +20,11 @@ type SheetContentPrimitiveProps = React.ComponentPropsWithRef<typeof SheetConten
 
 type SheetContentRenderUIProps = NonNullableVariantProps<typeof sheetClasses> & {
   portalProps?: React.ComponentPropsWithoutRef<typeof SheetPortalPrimitive>
-  overlayProps?: React.ComponentPropsWithoutRef<typeof SheetPortalPrimitive>
+  overlayProps?: OverlayProps
   closeButtonProps?: ButtonProps
   closeButtonIconProps?: React.ComponentPropsWithoutRef<typeof Cross2Icon>
   hasCloseButton?: boolean
-}
+} & AnimationStyleVariaiables
 
 type SheetContentProps = Simplify<SheetContentPrimitiveProps & SheetContentRenderUIProps>
 

@@ -12,10 +12,19 @@ import {
   COLLAPSIBLE_ANIMATED_CONTENT_CLASSNAME,
   DEFAULT_COLLAPSIBLE_CONTENT_CLASSNAME,
 } from '../constants/constants'
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleContentProps>(
   (props, ref) => {
-    const { className, hasDefaultAnimation = true, ...restProps } = props
+    const {
+      style,
+      className,
+      animationInDuration,
+      animationOutDuration,
+      animationDuration,
+      hasDefaultAnimation = true,
+      ...restProps
+    } = props
 
     return (
       <CollapsibleContentPrimitive
@@ -26,6 +35,16 @@ const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleCo
           hasDefaultAnimation ? COLLAPSIBLE_ANIMATED_CONTENT_CLASSNAME : '',
           className,
         )}
+        style={{
+          ...getAnimationStyleVariables({
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            defaultAnimationOutDuration: 200,
+            defaultAnimationInDuration: 200,
+          }),
+          ...style,
+        }}
         {...restProps}
       />
     )

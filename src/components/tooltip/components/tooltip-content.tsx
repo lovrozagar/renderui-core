@@ -13,14 +13,20 @@ import {
   DEFAULT_TOOLTIP_CONTENT_CLASSNAME,
 } from '@/components/tooltip/constants/constants'
 import { TooltipContentProps, TooltipContentRef } from '@/components/tooltip/types/tooltip-content'
+import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 const TooltipContent = React.forwardRef<TooltipContentRef, TooltipContentProps>((props, ref) => {
   const {
     children,
     className,
     arrowProps,
-    hasArrow = true,
+    style,
+    animationDuration,
+    animationInDuration,
+    animationOutDuration,
     side = 'top',
+    hasArrow = true,
+    avoidCollisions = true,
     sideOffset = DEFAULT_SIDE_OFFSET,
     ...restProps
   } = props
@@ -34,6 +40,16 @@ const TooltipContent = React.forwardRef<TooltipContentRef, TooltipContentProps>(
       side={side}
       sideOffset={sideOffset}
       className={cn(DEFAULT_TOOLTIP_CONTENT_CLASSNAME, className)}
+      style={{
+        ...getAnimationStyleVariables({
+          animationDuration,
+          animationInDuration,
+          animationOutDuration,
+          defaultAnimationInDuration: 200,
+          defaultAnimationOutDuration: 200,
+        }),
+        ...style,
+      }}
       {...restProps}
     >
       {children}

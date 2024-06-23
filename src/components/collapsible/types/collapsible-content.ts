@@ -1,3 +1,4 @@
+import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
 import { CollapsibleContent as CollapsibleContentPrimitive } from '@radix-ui/react-collapsible'
 import { Simplify } from '@renderui/types'
 
@@ -10,7 +11,7 @@ type CollapsibleContentPrimitiveProps =
 
 type CollapsibleCustomProps = {
   hasDefaultAnimation?: boolean
-}
+} & AnimationStyleVariaiables
 
 type CollapsibleContentProps = Simplify<CollapsibleContentPrimitiveProps & CollapsibleCustomProps>
 

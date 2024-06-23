@@ -50,13 +50,15 @@ const NavigationMenuTrigger = React.forwardRef<
   }
 
   return (
-    <NavigationMenuTriggerPrimitive ref={ref} asChild {...restProps}>
+    <NavigationMenuTriggerPrimitive asChild>
       <Button
+        ref={ref}
         variant='plain'
         className={cn(DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME, className)}
         onMouseEnter={chain(onMouseEnter, () => setIsHovered(true))}
         onMouseLeave={chain(onMouseLeave, () => setIsHovered(false))}
         data-hover={isHovered}
+        {...restProps}
       >
         {children}
         {renderIndicator()}
