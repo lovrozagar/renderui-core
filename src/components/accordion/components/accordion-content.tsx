@@ -16,16 +16,7 @@ import { getAnimationStyleVariables } from '@/components/_shared/utils/get-anima
 
 const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentProps>(
   (props, ref) => {
-    const {
-      className,
-      style,
-      children,
-      childrenContainerProps,
-      animationDuration,
-      animationOutDuration,
-      animationInDuration,
-      ...restProps
-    } = props
+    const { className, style, children, childrenContainerProps, ...restProps } = props
 
     const {
       asChild,
@@ -41,11 +32,9 @@ const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentP
         className={cn(DEFAULT_ACCORDION_CONTENT_CLASSNAME, className)}
         style={{
           ...getAnimationStyleVariables({
-            animationDuration,
-            animationInDuration,
-            animationOutDuration,
-            defaultAnimationInDuration: 200,
-            defaultAnimationOutDuration: 200,
+            props,
+            defaultAnimationDuration: 200,
+            defaultAnimationTimingFunction: 'ease-out',
           }),
           ...style,
         }}

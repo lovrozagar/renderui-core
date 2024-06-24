@@ -37,11 +37,9 @@ const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleCo
         )}
         style={{
           ...getAnimationStyleVariables({
-            animationDuration,
-            animationInDuration,
-            animationOutDuration,
-            defaultAnimationOutDuration: 200,
-            defaultAnimationInDuration: 200,
+            ...props,
+            defaultAnimationDuration: 200,
+            defaultAnimationTimingFunction: 'ease-out',
           }),
           ...style,
         }}

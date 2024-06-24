@@ -24,11 +24,9 @@ const Overlay = React.forwardRef<OverlayRef, OverlayProps>((props, ref) => {
       className={cn(DEFAULT_OVERLAY_CLASSNAME, className)}
       style={{
         ...getAnimationStyleVariables({
-          animationDuration,
-          animationInDuration,
-          animationOutDuration,
-          defaultAnimationInDuration: 200,
-          defaultAnimationOutDuration: 200,
+          ...props,
+          defaultAnimationDuration: 200,
+          defaultAnimationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
         }),
         ...style,
       }}

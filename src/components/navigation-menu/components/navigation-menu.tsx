@@ -37,9 +37,6 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
     listRef,
     indicatorRef,
     indicatorArrowRef,
-    animationDuration,
-    animationInDuration,
-    animationOutDuration,
     isFullScreen = false,
     hasIndicator = true,
     ...restProps
@@ -97,11 +94,10 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
           className={cn(DEFAULT_NAVIGATION_MENU_VIEWPORT_CLASSNAME, viewportClassName)}
           style={{
             ...getAnimationStyleVariables({
-              animationDuration,
-              animationInDuration,
-              animationOutDuration,
+              ...props,
               defaultAnimationInDuration: 300,
               defaultAnimationOutDuration: 200,
+              defaultAnimationTimingFunction: 'ease',
             }),
             ...viewportStyle,
           }}

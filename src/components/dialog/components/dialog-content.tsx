@@ -53,11 +53,9 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
         className={cn(DFEAULT_DIALOG_CONTENT_CLASSNAME, className)}
         style={{
           ...getAnimationStyleVariables({
-            animationDuration,
-            animationInDuration,
-            animationOutDuration,
-            defaultAnimationInDuration: 200,
-            defaultAnimationOutDuration: 200,
+            ...props,
+            defaultAnimationDuration: 200,
+            defaultAnimationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }),
           ...style,
         }}

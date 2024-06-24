@@ -67,11 +67,9 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
         )}
         style={{
           ...getAnimationStyleVariables({
-            animationDuration,
-            animationInDuration,
-            animationOutDuration,
-            defaultAnimationInDuration: 150,
-            defaultAnimationOutDuration: 150,
+            ...props,
+            defaultAnimationDuration: 150,
+            defaultAnimationTimingFunction: 'ease',
           }),
           ...style,
         }}

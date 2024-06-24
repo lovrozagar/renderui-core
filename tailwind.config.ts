@@ -330,58 +330,70 @@ const config: Config = {
         },
       },
       animation: {
-        'accordion-down': 'accordion-down var(--animation-in-duration) ease-out',
-        'accordion-up': 'accordion-up var(--animation-out-duration) ease-out',
-        'collapsible-down': 'collapsible-down var(--animation-in-duration) ease-out',
-        'collapsible-up': 'collapsible-up var(--animation-out-duration) ease-out',
+        'accordion-down':
+          'accordion-down var(--animation-in-duration) var(--animation-in-timing-function)',
+        'accordion-up':
+          'accordion-up var(--animation-out-duration) var(--animation-out-timing-function)',
+        'collapsible-down':
+          'collapsible-down var(--animation-in-duration) var(--animation-in-timing-function)',
+        'collapsible-up':
+          'collapsible-up var(--animation-out-duration) var(--animation-out-timing-function)',
         'navigation-menu-enter-from-right':
-          'navigation-menu-enter-from-right var(--animation-in-duration) ease',
+          'navigation-menu-enter-from-right var(--animation-in-duration) var(--animation-in-timing-function)',
         'navigation-menu-enter-from-left':
-          'navigation-menu-enter-from-left var(--animation-in-duration) ease',
+          'navigation-menu-enter-from-left var(--animation-in-duration) var(--animation-in-timing-function)',
         'navigation-menu-exit-to-right':
-          'navigation-menu-exit-to-right var(--animation-out-duration) ease',
+          'navigation-menu-exit-to-right var(--animation-out-duration) var(--animation-out-timing-function)',
         'navigation-menu-exit-to-left':
-          'navigation-menu-exit-to-left var(--animation-out-duration) ease',
-        'navigation-menu-scale-in': 'navigation-menu-scale-in var(--animation-in-duration) ease',
-        'navigation-menu-scale-out': 'navigation-menu-scale-out var(--animation-out-duration) ease',
-        'navigation-menu-fade-in': 'navigation-menu-fade-in var(--animation-in-duration) ease',
-        'navigation-menu-fade-out': 'navigation-menu-fade-out var(--animation-out-duration) ease',
-        'dialog-enter': 'dialog-enter var(--animation-in-duration) var(--timing-function)',
-        'dialog-exit': 'dialog-exit var(--animation-out-duration) var(--timing-function)',
+          'navigation-menu-exit-to-left var(--animation-out-duration) var(--animation-out-timing-function)',
+        'navigation-menu-scale-in':
+          'navigation-menu-scale-in var(--animation-in-duration) var(--animation-in-timing-function)',
+        'navigation-menu-scale-out':
+          'navigation-menu-scale-out var(--animation-out-duration) var(--animation-out-timing-function)',
+        'navigation-menu-fade-in':
+          'navigation-menu-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
+        'navigation-menu-fade-out':
+          'navigation-menu-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
+        'dialog-enter':
+          'dialog-enter var(--animation-in-duration) var(--animation-in-timing-function)',
+        'dialog-exit':
+          'dialog-exit var(--animation-out-duration) var(--animation-out-timing-function)',
         'sheet-enter-from-right':
-          'sheet-enter-from-right var(--animation-in-duration) var(--timing-function)',
+          'sheet-enter-from-right var(--animation-in-duration) var(--animation-in-timing-function)',
         'sheet-exit-to-right':
-          'sheet-exit-to-right var(--animation-out-duration) var(--timing-function)',
+          'sheet-exit-to-right var(--animation-out-duration) var(--animation-out-timing-function)',
         'sheet-enter-from-left':
-          'sheet-enter-from-left var(--animation-in-duration) var(--timing-function)',
+          'sheet-enter-from-left var(--animation-in-duration) var(--animation-in-timing-function)',
         'sheet-exit-to-left':
-          'sheet-exit-to-left var(--animation-out-duration) var(--timing-function)',
+          'sheet-exit-to-left var(--animation-out-duration) var(--animation-out-timing-function)',
         'sheet-enter-from-top':
-          'sheet-enter-from-top var(--animation-in-duration) var(--timing-function)',
+          'sheet-enter-from-top var(--animation-in-duration) var(--animation-in-timing-function)',
         'sheet-exit-to-top':
-          'sheet-exit-to-top var(--animation-out-duration) var(--timing-function)',
+          'sheet-exit-to-top var(--animation-out-duration) var(--animation-out-timing-function)',
         'sheet-enter-from-bottom':
-          'sheet-enter-from-bottom var(--animation-in-duration) var(--timing-function)',
+          'sheet-enter-from-bottom var(--animation-in-duration) var(--animation-in-timing-function)',
         'sheet-exit-to-bottom':
-          'sheet-exit-to-bottom var(--animation-out-duration) var(--timing-function)',
+          'sheet-exit-to-bottom var(--animation-out-duration) var(--animation-out-timing-function)',
         'popover-enter-to-top-and-fade-in':
-          'popover-enter-to-top-and-fade-in var(--animation-in-duration) ease',
+          'popover-enter-to-top-and-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
         'popover-enter-to-right-and-fade-in':
-          'popover-enter-to-right-and-fade-in var(--animation-in-duration) ease',
+          'popover-enter-to-right-and-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
         'popover-enter-to-bottom-and-fade-in':
-          'popover-enter-to-bottom-and-fade-in var(--animation-in-duration) ease',
+          'popover-enter-to-bottom-and-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
         'popover-enter-to-left-and-fade-in':
-          'popover-enter-to-left-and-fade-in var(--animation-in-duration) ease',
+          'popover-enter-to-left-and-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
         'popover-exit-from-top-and-fade-out':
-          'popover-exit-from-top-and-fade-out var(--animation-out-duration) ease',
+          'popover-exit-from-top-and-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
         'popover-exit-from-bottom-and-fade-out':
-          'popover-exit-from-bottom-and-fade-out var(--animation-out-duration) ease',
+          'popover-exit-from-bottom-and-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
         'popover-exit-from-left-and-fade-out':
-          'popover-exit-from-left-and-fade-out var(--animation-out-duration) ease',
+          'popover-exit-from-left-and-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
         'popover-exit-from-right-and-fade-out':
-          'popover-exit-from-right-and-fade-out var(--animation-out-duration) ease',
-        'overlay-fade-in': 'overlay-fade-in var(--animation-in-duration) var(--timing-function)',
-        'overlay-fade-out': 'overlay-fade-out var(--animation-out-duration) var(--timing-function)',
+          'popover-exit-from-right-and-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
+        'overlay-fade-in':
+          'overlay-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
+        'overlay-fade-out':
+          'overlay-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
         'infinite-progress': 'infinite-progress 1.25s linear infinite',
         'ripple-animation': 'ripple-animation 0.5s linear forwards',
         'blink': 'blink 1s both infinite',
