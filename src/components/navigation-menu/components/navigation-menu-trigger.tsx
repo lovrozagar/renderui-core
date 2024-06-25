@@ -1,10 +1,10 @@
 'use client'
 
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { NavigationMenuTrigger as NavigationMenuTriggerPrimitive } from '@radix-ui/react-navigation-menu'
 import { chain, cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import { Button } from '@/components/button'
 import {
   DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME,

@@ -1,9 +1,9 @@
 'use client'
 
-import { CheckIcon } from '@radix-ui/react-icons'
 import { chain, cn, functionCallOrValue, getNestedChildrenTextContent } from '@renderui/utils'
 import React from 'react'
 
+import { CheckIcon } from '@/components/_shared/components/icons/check-icon'
 import {
   COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME,
   DEFAULT_COMBOBOX_ITEM_CHECK_ICON_CLASSNAME,

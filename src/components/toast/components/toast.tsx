@@ -1,8 +1,8 @@
 'use client'
 
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { DEFAULT_TOAST_PROPS } from '@/components/toast/constants/constants'
 import { ToastClasses, ToastContentProps, ToastProps } from '@/components/toast/types/toast'
-import { Cross2Icon } from '@radix-ui/react-icons'
 import { chain, cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 import { toast } from 'sonner'
@@ -43,7 +43,12 @@ const ToastContent = (props: ToastContentProps) => {
           <p className={cn('text-sm font-bold text-white', titleClassName)}>{title}</p>
         ) : null}
         {description ? (
-          <p className={cn('text-sm m-0 mt-2 leading-[1.2] text-white', descriptionClassname)}>
+          <p
+            className={cn(
+              'text-sm m-0 mt-2 leading-[1.2] text-white font-medium',
+              descriptionClassname,
+            )}
+          >
             {description}
           </p>
         ) : null}
@@ -69,7 +74,7 @@ const ToastContent = (props: ToastContentProps) => {
         onClick={chain(() => toast.dismiss(t), onCloseButtonClick)}
         {...restCloseButtonProps}
       >
-        {closeButtonChildren ?? <Cross2Icon />}
+        {closeButtonChildren ?? <CrossSmallIcon />}
       </button>
     </div>
   )
@@ -104,31 +109,31 @@ const toastDefault = toastFactory({
 })
 
 const toastSuccess = toastFactory({
-  title: 'text-green-800',
   container: 'bg-green-200 border-green-500/80',
+  title: 'text-green-800',
+  description: 'text-green-900',
   button: 'hover:bg-green-400/70',
-  description: 'text-green-950',
 })
 
 const toastError = toastFactory({
-  title: 'text-red-800',
   container: 'bg-red-200 border-red-500/80',
+  title: 'text-red-800',
+  description: 'text-red-900',
   button: 'hover:bg-red-400/70',
-  description: 'text-red-950',
 })
 
 const toastInfo = toastFactory({
-  title: 'text-sky-800',
   container: 'bg-sky-200 border-sky-500/80',
+  title: 'text-sky-800',
+  description: 'text-sky-900',
   button: 'hover:bg-sky-400/70',
-  description: 'text-sky-950',
 })
 
 const toastWarning = toastFactory({
-  title: 'text-amber-800',
   container: 'bg-amber-200 border-amber-500/80',
+  title: 'text-amber-800',
+  description: 'text-amber-900',
   button: 'hover:bg-amber-400/70',
-  description: 'text-amber-950',
 })
 
 export { toastDefault as toast, toastError, toastInfo, toastSuccess, toastWarning }

@@ -1,10 +1,10 @@
 'use client'
 
-import { CaretSortIcon } from '@radix-ui/react-icons'
 import { useMergedRef } from '@renderui/hooks'
 import { chain, cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
 import {
   COMBOBOX_TRIGGER_OUTLINE_CLASSNAME,
   COMBOBOX_TRIGGER_SOLID_CLASSNAME,

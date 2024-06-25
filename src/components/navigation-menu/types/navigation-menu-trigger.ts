@@ -1,5 +1,5 @@
+import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import { ButtonProps, ButtonRef } from '@/components/button'
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 import React, { ReactNode } from 'react'
 

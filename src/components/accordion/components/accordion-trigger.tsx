@@ -4,10 +4,10 @@ import {
   AccordionHeader as AccordionHeaderPrimitive,
   AccordionTrigger as AccordionTriggerPrimitive,
 } from '@radix-ui/react-accordion'
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import {
   DEFAULT_ACCORDION_HEADER_CLASSNAME,
   DEFAULT_ACCORDION_TRIGGER_CLASSNAME,

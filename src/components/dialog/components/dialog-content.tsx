@@ -4,10 +4,10 @@ import {
   DialogContent as DialogContentPrimitive,
   DialogPortal as DialogPortalPrimitive,
 } from '@radix-ui/react-dialog'
-import { Cross2Icon } from '@radix-ui/react-icons'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { Button } from '@/components/button/components/button'
 import { DialogClose } from '@/components/dialog/components/dialog-close'
@@ -69,7 +69,7 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
               className={cx(DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME, closeButtonClassName, className)}
               {...restCloseButtonProps}
             >
-              <Cross2Icon
+              <CrossSmallIcon
                 className={cn(DEFAULT_DIALOG_CLOSE_BUTTON_ICON_CLASSNAME, closeButtonIconClassName)}
                 {...restCloseButtonIconProps}
               />

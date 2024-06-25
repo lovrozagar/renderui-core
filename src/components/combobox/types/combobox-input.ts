@@ -1,10 +1,9 @@
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { Primitive as primitive } from '@radix-ui/react-primitive'
 import { Simplify } from '@renderui/types'
 import React from 'react'
 
+import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
 import { CommandInputProps, CommandInputRef } from '@/components/command'
-
 
 type ComboboxInputRef = CommandInputRef
 

@@ -8,6 +8,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
   Sheet,
   SheetClose,
   SheetContent,
@@ -98,6 +101,10 @@ const App = () => {
           </SheetFooter>
         </SheetContent>
       </Sheet>
+      <Popover>
+        <PopoverTrigger>Popover</PopoverTrigger>
+        <PopoverContent>Content</PopoverContent>
+      </Popover>
       <Toaster />
     </div>
   )

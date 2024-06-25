@@ -2,12 +2,12 @@ import {
   DialogContent as DialogContentPrimitive,
   DialogPortal as DialogPortalPrimitive,
 } from '@radix-ui/react-dialog'
-import { Cross2Icon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 import React from 'react'
 
-import { ButtonProps } from '@/components/button'
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { ButtonProps } from '@/components/button'
 
 type DialogContentPrimitiveType = typeof DialogContentPrimitive
 
@@ -19,7 +19,7 @@ type DialogContentRenderUIProps = {
   portalProps?: React.ComponentPropsWithoutRef<typeof DialogPortalPrimitive>
   overlayProps?: React.ComponentPropsWithoutRef<typeof DialogPortalPrimitive>
   closeButtonProps?: ButtonProps
-  closeButtonIconProps?: React.ComponentPropsWithoutRef<typeof Cross2Icon>
+  closeButtonIconProps?: React.ComponentPropsWithoutRef<typeof CrossSmallIcon>
   hasCloseButton?: boolean
 }
 

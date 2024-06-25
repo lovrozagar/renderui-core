@@ -4,7 +4,6 @@ import {
   DialogContent as SheetContentPrimitive,
   DialogPortal as SheetPortalPrimitive,
 } from '@radix-ui/react-dialog'
-import { Cross2Icon } from '@radix-ui/react-icons'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
@@ -19,6 +18,7 @@ import {
 } from '@/components/sheet/constants/constants'
 import { SheetContentProps, SheetContentRef } from '@/components/sheet/types/sheet-content'
 import { VisuallyHidden } from '@/components/visually-hidden'
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 
 const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props, ref) => {
   const {
@@ -73,7 +73,7 @@ const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props
               className={cx(DEFAULT_SHEET_CLOSE_BUTTON_CLASSNAME, closeButtonClassName)}
               {...restCloseButtonProps}
             >
-              <Cross2Icon
+              <CrossSmallIcon
                 className={cn(DEFAULT_SHEET_CLOSE_BUTTON_ICON_CLASSNAME, closeButtonIconClassName)}
                 {...restCloseButtonIconProps}
               />

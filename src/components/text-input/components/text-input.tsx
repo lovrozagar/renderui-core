@@ -1,9 +1,9 @@
 'use client'
 
-import { Cross2Icon } from '@radix-ui/react-icons'
 import { polymorphic } from '@renderui/utils'
 import React from 'react'
 
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { Aria } from '@/components/aria'
 import { Button } from '@/components/button'
 import { PasswordToggle } from '@/components/text-input/components/password-toggle'
@@ -33,7 +33,7 @@ const TextInput = React.forwardRef<TextInputRef, TextInputProps>((props, ref) =>
       <InputComponent {...restInputProps} />
       {shouldRenderClearButton ? (
         <Button {...clearButtonProps}>
-          <Cross2Icon {...clearButtonIconProps} />
+          <CrossSmallIcon {...clearButtonIconProps} />
         </Button>
       ) : null}
       {hasPasswordToggle ? <PasswordToggle {...passwordToggleProps} /> : null}

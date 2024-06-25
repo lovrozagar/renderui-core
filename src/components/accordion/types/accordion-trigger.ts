@@ -1,10 +1,9 @@
 import { AccordionHeader as AccordionHeaderPrimitive } from '@radix-ui/react-accordion'
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 import React from 'react'
 
+import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import { ButtonProps, ButtonRef } from '@/components/button'
-
 
 type AccordionTriggerRef = ButtonRef
 

@@ -1,7 +1,8 @@
-import { EyeNoneIcon, EyeOpenIcon } from '@radix-ui/react-icons'
 import { cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { EyeNoneIcon } from '@/components/_shared/components/icons/eye-none-icon'
+import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import { Button } from '@/components/button'
 import {
   DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
@@ -10,13 +11,7 @@ import {
 import { PasswordToggleProps } from '@/components/text-input/types/password-toggle'
 
 const PasswordToggle = (props: PasswordToggleProps) => {
-  const {
-    className,
-    type,
-    variant = 'plain',
-    passwordToggleIconProps,
-    ...restProps
-  } = props
+  const { className, type, variant = 'plain', passwordToggleIconProps, ...restProps } = props
 
   const { className: passwordToggleIconClassName, ...restPasswordToggleIconProps } =
     getOptionalObject(passwordToggleIconProps)

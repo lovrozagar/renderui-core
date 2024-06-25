@@ -1,4 +1,3 @@
-import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons'
 import { cx } from '@renderui/utils'
 import React from 'react'
 
@@ -8,6 +7,8 @@ import {
   DEFAULT_NUMBER_SPIN_BUTTON_ICON_CLASSNAME,
 } from '@/components/number-input/constants/constants'
 import { NumberSpinButtonProps } from '@/components/number-input/types/number-spin-button'
+import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
+import { ChevronUpIcon } from '@/components/_shared/components/icons/chevron-up-icon'
 
 const NumberSpinButton = (props: NumberSpinButtonProps) => {
   const {

@@ -1,7 +1,8 @@
-import { Cross2Icon, EyeOpenIcon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
+import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import { AsChildProp } from '@/components/_shared/types/as-child'
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import { Aria } from '@/components/aria'
@@ -24,7 +25,7 @@ type TextInputCustomProps = {
   hasClearButtonAlways?: boolean
   inputContainerProps?: React.ComponentPropsWithoutRef<typeof Aria>
   clearButtonProps?: ButtonProps
-  clearButtonIconProps?: React.ComponentPropsWithoutRef<typeof Cross2Icon>
+  clearButtonIconProps?: React.ComponentPropsWithoutRef<typeof CrossSmallIcon>
   isDisabled?: boolean
   isReadOnly?: boolean
   isInvalid?: boolean

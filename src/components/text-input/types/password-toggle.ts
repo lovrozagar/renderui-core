@@ -1,6 +1,6 @@
-import { EyeOpenIcon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 
+import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import { ButtonProps } from '@/components/button'
 
 type PasswordToggleCustomProps = {

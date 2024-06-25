@@ -1,6 +1,5 @@
 'use client'
 
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { useControllableState } from '@renderui/hooks'
 import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
 import { CommandInput as CommandInputPrimitive } from 'cmdk'
@@ -13,6 +12,7 @@ import {
 } from '@/components/command/constants/constants'
 import { useSearch } from '@/components/command/hooks/use-search'
 import { CommandInputProps, CommandInputRef } from '@/components/command/types/command-input'
+import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
 
 const CommandInput = React.forwardRef<CommandInputRef, CommandInputProps>((props, ref) => {
   const {

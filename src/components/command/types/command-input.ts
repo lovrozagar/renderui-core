@@ -1,7 +1,7 @@
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { Simplify } from '@renderui/types'
 import { CommandInput as CommandInputPrimitive } from 'cmdk'
 
+import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
 import { AsChildProp } from '@/components/_shared/types/as-child'
 
 type CommandInputPrimitiveType = typeof CommandInputPrimitive
