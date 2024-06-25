@@ -7,7 +7,7 @@ function getMergedClassName(
   className: ContainerProps['className'],
 ) {
   return cn(
-    'render-ui-container 2xl:max-w-screen-2xl px-4 md:px-6 lg:px-8',
+    'render-ui-container mx-auto px-4 md:px-6 lg:px-8 2xl:max-w-screen-2xl',
     isFullHeight ? 'min-h-screen' : '',
     className,
   )

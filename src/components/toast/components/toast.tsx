@@ -96,6 +96,13 @@ const toastFactory = (styles: ToastClasses) => {
   }
 }
 
+const toastDefault = toastFactory({
+  container: 'bg-mode border-neutral',
+  title: 'text-mode-contrast',
+  description: 'text-mode-contrast-accent',
+  button: '',
+})
+
 const toastSuccess = toastFactory({
   title: 'text-green-800',
   container: 'bg-green-200 border-green-500/80',
@@ -124,6 +131,6 @@ const toastWarning = toastFactory({
   description: 'text-amber-950',
 })
 
-export { toastError, toastInfo, toastSuccess, toastWarning }
+export { toastDefault as toast, toastError, toastInfo, toastSuccess, toastWarning }
 
 export type { ToastProps }

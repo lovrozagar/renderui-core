@@ -34,21 +34,24 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
 
   const Component = polymorphic(asChild, 'button')
 
+  const getChildren = () => {
+    return isLoading && loadingContent
+      ? functionCallOrValue(loadingContent, {
+          isPressed,
+          isKeyboardPressed,
+          Loader: LoaderComponent,
+          Ripple: RippleComponent,
+        })
+      : functionCallOrValue(children, {
+          isPressed,
+          isKeyboardPressed,
+          Loader: LoaderComponent,
+          Ripple: RippleComponent,
+        })
+  }
+
   const getContent = () => {
-    if (asChild)
-      return isLoading && loadingContent
-        ? functionCallOrValue(loadingContent, {
-            isPressed,
-            isKeyboardPressed,
-            Loader: LoaderComponent,
-            Ripple: RippleComponent,
-          })
-        : functionCallOrValue(children, {
-            isPressed,
-            isKeyboardPressed,
-            Loader: LoaderComponent,
-            Ripple: RippleComponent,
-          })
+    if (asChild) return getChildren()
 
     return (
       <>
@@ -56,19 +59,7 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
         {!isLoading && loaderPosition === 'start' && LoaderComponent
           ? loader ?? <LoaderComponent {...loaderProps} />
           : null}
-        {isLoading && loadingContent
-          ? functionCallOrValue(loadingContent, {
-              isPressed,
-              isKeyboardPressed,
-              Loader: LoaderComponent,
-              Ripple: RippleComponent,
-            })
-          : functionCallOrValue(children, {
-              isPressed,
-              isKeyboardPressed,
-              Loader: LoaderComponent,
-              Ripple: RippleComponent,
-            })}
+        {getChildren()}
         {!isLoading && loaderPosition === 'end' && LoaderComponent
           ? loader ?? <LoaderComponent {...loaderProps} />
           : null}
