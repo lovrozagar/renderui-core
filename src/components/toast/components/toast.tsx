@@ -67,14 +67,14 @@ const ToastContent = (props: ToastContentProps) => {
       ) : null}
       <button
         className={cn(
-          'absolute cursor-pointer top-[4px] right-[4px] size-[24px] [&_>_svg]:size-[10px] z-[1] flex items-center justify-center p-0 border-none text-neutral-700 transition-colors duration-fast appearance-none bg-transparent rounded',
+          'absolute cursor-pointer top-[4px] right-[4px] size-[24px] z-[1] flex items-center justify-center p-0 border-none text-neutral-700 transition-colors duration-fast appearance-none bg-transparent rounded outline-none ring-offset-0 ring-ring-color focus-visible:ring-[2px]',
           buttonClassName,
           closeButtonClassName,
         )}
         onClick={chain(() => toast.dismiss(t), onCloseButtonClick)}
         {...restCloseButtonProps}
       >
-        {closeButtonChildren ?? <CrossSmallIcon />}
+        {closeButtonChildren ?? <CrossSmallIcon className='size-3.5' />}
       </button>
     </div>
   )
