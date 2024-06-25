@@ -8,6 +8,7 @@ import { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import { buttonClasses } from '@/components/button/classes/button-classes'
 import { LoaderProps, LoaderRef } from '@/components/loader'
 import { RippleProps, RippleRef } from '@/components/ripple'
+import { useLazyComponents } from '@/components/button/hooks/use-lazy-components'
 
 type ButtonRef = React.ElementRef<'button'>
 
@@ -16,18 +17,29 @@ type ButtonPrimitiveProps = Omit<
   'children' | 'disabled' | 'color'
 >
 
-type ButtonRenderPropsProps = {
+type ButtonContentRenderPropsProps = {
   isPressed?: boolean
   isKeyboardPressed?: boolean
 }
 
-type ButtonRenderProps = ((props: ButtonRenderPropsProps) => React.ReactNode) | React.ReactNode
+type ButtonChildrenRenderPropsProps = ButtonContentRenderPropsProps & {
+  Loader: ReturnType<typeof useLazyComponents>['LoaderComponent']
+  Ripple: ReturnType<typeof useLazyComponents>['RippleComponent']
+}
+
+type ButtonContentRenderProps =
+  | ((props: ButtonContentRenderPropsProps) => React.ReactNode)
+  | React.ReactNode
+
+type ButtonChildrenRenderProps =
+  | ((props: ButtonChildrenRenderPropsProps) => React.ReactNode)
+  | React.ReactNode
 
 type ButtonCustomProps = {
-  children?: ButtonRenderProps
-  startContent?: ButtonRenderProps
-  endContent?: ButtonRenderProps
-  loadingContent?: ButtonRenderProps
+  children?: ButtonChildrenRenderProps
+  loadingContent?: ButtonChildrenRenderProps
+  startContent?: ButtonContentRenderProps
+  endContent?: ButtonContentRenderProps
   hasRipple?: boolean
   isDisabled?: boolean
   isLoading?: boolean

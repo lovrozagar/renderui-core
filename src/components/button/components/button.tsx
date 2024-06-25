@@ -34,22 +34,51 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
 
   const Component = polymorphic(asChild, 'button')
 
-  return (
-    <Component {...buttonProps}>
-      {functionCallOrValue(startContent, { isPressed, isKeyboardPressed })}
-      {isLoading && loaderPosition === 'start' && LoaderComponent
-        ? loader ?? <LoaderComponent {...loaderProps} />
-        : null}
-      {isLoading && loadingContent
-        ? functionCallOrValue(loadingContent, { isPressed, isKeyboardPressed })
-        : functionCallOrValue(children, { isPressed, isKeyboardPressed })}
-      {isLoading && loaderPosition === 'end' && LoaderComponent
-        ? loader ?? <LoaderComponent {...loaderProps} />
-        : null}
-      {functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
-      {RippleComponent ? <RippleComponent {...rippleProps} /> : null}
-    </Component>
-  )
+  const getContent = () => {
+    if (asChild)
+      return isLoading && loadingContent
+        ? functionCallOrValue(loadingContent, {
+            isPressed,
+            isKeyboardPressed,
+            Loader: LoaderComponent,
+            Ripple: RippleComponent,
+          })
+        : functionCallOrValue(children, {
+            isPressed,
+            isKeyboardPressed,
+            Loader: LoaderComponent,
+            Ripple: RippleComponent,
+          })
+
+    return (
+      <>
+        {functionCallOrValue(startContent, { isPressed, isKeyboardPressed })}
+        {!isLoading && loaderPosition === 'start' && LoaderComponent
+          ? loader ?? <LoaderComponent {...loaderProps} />
+          : null}
+        {isLoading && loadingContent
+          ? functionCallOrValue(loadingContent, {
+              isPressed,
+              isKeyboardPressed,
+              Loader: LoaderComponent,
+              Ripple: RippleComponent,
+            })
+          : functionCallOrValue(children, {
+              isPressed,
+              isKeyboardPressed,
+              Loader: LoaderComponent,
+              Ripple: RippleComponent,
+            })}
+        {!isLoading && loaderPosition === 'end' && LoaderComponent
+          ? loader ?? <LoaderComponent {...loaderProps} />
+          : null}
+        {functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
+        {RippleComponent ? <RippleComponent {...rippleProps} /> : null}
+      </>
+    )
+  }
+
+  return <Component {...buttonProps}>{getContent()}</Component>
 })
 
 Button.displayName = 'Button'

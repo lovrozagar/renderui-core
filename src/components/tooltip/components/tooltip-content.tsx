@@ -42,11 +42,9 @@ const TooltipContent = React.forwardRef<TooltipContentRef, TooltipContentProps>(
       className={cn(DEFAULT_TOOLTIP_CONTENT_CLASSNAME, className)}
       style={{
         ...getAnimationStyleVariables({
-          animationDuration,
-          animationInDuration,
-          animationOutDuration,
-          defaultAnimationInDuration: 200,
-          defaultAnimationOutDuration: 200,
+          ...props,
+          defaultAnimationDuration: 200,
+          defaultAnimationTimingFunction: 'ease',
         }),
         ...style,
       }}
