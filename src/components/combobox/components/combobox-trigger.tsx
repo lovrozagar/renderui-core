@@ -26,6 +26,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     children,
     placeholder,
     iconProps,
+    endContent,
     onKeyDownCapture,
     role = 'combobox',
     'aria-haspopup': ariaHasPopup = 'listbox',
@@ -109,6 +110,15 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
           setFocusValue,
         }),
       )}
+      endContent={(props) => (
+        <>
+          {typeof endContent === 'function' ? endContent(props) : endContent}
+          <CaretSortIcon
+            className={cn(DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME, iconClassName)}
+            {...iconProps}
+          />
+        </>
+      )}
       {...restProps}
     >
       {hasTruncatedText ? (
@@ -118,10 +128,6 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
       ) : (
         content
       )}
-      <CaretSortIcon
-        className={cn(DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME, iconClassName)}
-        {...iconProps}
-      />
     </PopoverTrigger>
   )
 })

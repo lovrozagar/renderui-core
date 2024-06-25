@@ -105,35 +105,35 @@ const toastDefault = toastFactory({
   container: 'bg-mode border-neutral',
   title: 'text-mode-contrast',
   description: 'text-mode-contrast-accent',
-  button: '',
+  button: 'text-mode-contrast',
 })
 
 const toastSuccess = toastFactory({
   container: 'bg-green-200 border-green-500/80',
   title: 'text-green-800',
   description: 'text-green-900',
-  button: 'hover:bg-green-400/70',
+  button: 'text-green-900 hover:bg-green-400/70',
 })
 
 const toastError = toastFactory({
   container: 'bg-red-200 border-red-500/80',
   title: 'text-red-800',
   description: 'text-red-900',
-  button: 'hover:bg-red-400/70',
+  button: 'text-red-900 hover:bg-red-400/70',
 })
 
 const toastInfo = toastFactory({
   container: 'bg-sky-200 border-sky-500/80',
   title: 'text-sky-800',
   description: 'text-sky-900',
-  button: 'hover:bg-sky-400/70',
+  button: 'text-sky-900 hover:bg-sky-400/70',
 })
 
 const toastWarning = toastFactory({
   container: 'bg-amber-200 border-amber-500/80',
   title: 'text-amber-800',
   description: 'text-amber-900',
-  button: 'hover:bg-amber-400/70',
+  button: 'text-amber-900 hover:bg-amber-400/70',
 })
 
 export { toastDefault as toast, toastError, toastInfo, toastSuccess, toastWarning }
