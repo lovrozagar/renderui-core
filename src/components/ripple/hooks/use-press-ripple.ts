@@ -1,4 +1,3 @@
-import { TWO, ZERO } from '@renderui/constants'
 import React from 'react'
 
 import { RippleRipple } from '@/components/ripple/types/ripple-ripple'
@@ -13,7 +12,7 @@ function usePressRipple(
     let timeoutId: NodeJS.Timeout | undefined = undefined
 
     if (isDisabled) {
-      timeoutId = setTimeout(() => setIsRaised(true), ZERO)
+      timeoutId = setTimeout(() => setIsRaised(true), 0)
     } else {
       setIsRaised(false)
     }
@@ -36,8 +35,8 @@ function usePressRipple(
         {
           key: rippleKey,
           size,
-          x: clientX - rect.x - size / TWO,
-          y: clientY - rect.y - size / TWO,
+          x: clientX - rect.x - size / 2,
+          y: clientY - rect.y - size / 2,
         },
       ])
 

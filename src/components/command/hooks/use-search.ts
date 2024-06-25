@@ -1,6 +1,5 @@
 'use client'
 
-import { ZERO } from '@renderui/constants'
 import { useMutationObserver } from '@renderui/hooks'
 import React from 'react'
 
@@ -62,7 +61,7 @@ function useSearch(value: string, setValue: React.Dispatch<React.SetStateAction<
   )
 
   React.useEffect(() => {
-    setTimeout(storeCommandItems, ZERO)
+    setTimeout(storeCommandItems, 0)
   }, [storeCommandItems])
 
   const handleValueChangeWithSearch = (searchValue: string) => {

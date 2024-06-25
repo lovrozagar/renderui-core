@@ -1,4 +1,3 @@
-import { ZERO } from '@renderui/constants'
 import React from 'react'
 
 import { focusInput } from '@/components/_shared/utils/focus-input'
@@ -20,17 +19,8 @@ type UseNumberSpinArgs = {
 }
 
 function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLInputElement>) {
-  const {
-    value,
-    min,
-    max,
-    step,
-    pattern,
-    setValue,
-    onSpin,
-    onSpinIncrement,
-    onSpinDecrement,
-  } = args
+  const { value, min, max, step, pattern, setValue, onSpin, onSpinIncrement, onSpinDecrement } =
+    args
 
   // track current value with a ref, used to be able to access the current value
   // without the setValue callback function, safer access to current value as
@@ -45,7 +35,7 @@ function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLIn
   const clickTimeout = React.useRef<NodeJS.Timeout | null>(null)
   const incrementInterval = React.useRef<NodeJS.Timeout | null>(null)
   const decrementInterval = React.useRef<NodeJS.Timeout | null>(null)
-  const pressDuration = React.useRef(ZERO)
+  const pressDuration = React.useRef(0)
 
   const focusInputOnClickTimeout = () => {
     if (clickTimeout.current) {
@@ -63,7 +53,7 @@ function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLIn
     onActionSpinHandler: ((value: string) => void) | undefined,
   ) => {
     const previousValue =
-      currentValueRef.current === undefined ? ZERO : Number(currentValueRef.current)
+      currentValueRef.current === undefined ? 0 : Number(currentValueRef.current)
 
     const getNewValue = () => {
       const previousValueString = previousValue.toString()
@@ -120,7 +110,7 @@ function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLIn
       focusInput(inputRef)
     }
 
-    pressDuration.current = ZERO // reset press duration
+    pressDuration.current = 0 // reset press duration
   }
 
   const decrementWithVariableSpeed = () => {
@@ -141,7 +131,7 @@ function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLIn
       focusInput(inputRef)
     }
 
-    pressDuration.current = ZERO // reset press duration
+    pressDuration.current = 0 // reset press duration
   }
 
   const clearIntervals = () => {

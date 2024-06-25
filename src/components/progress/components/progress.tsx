@@ -1,4 +1,3 @@
-import { EMPTY_OBJECT, HUNDRED, ZERO } from '@renderui/constants'
 import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
@@ -6,6 +5,7 @@ import { DEFAULT_PROGRESS_CLASSNAME } from '@/components/progress/constants/cons
 import { ProgressProps, ProgressRef } from '@/components/progress/types/progress'
 import { getProgressIndicatorClassName } from '@/components/progress/utils/get-progress-indicator-class-name'
 import { getTranslateXStyleByValue } from '@/components/progress/utils/get-translate-x-style-by-value'
+import { EMPTY_OBJECT } from '@/components/_shared/constants/constants'
 
 const Progress = React.forwardRef<ProgressRef, ProgressProps>((props, ref) => {
   const {
@@ -28,7 +28,7 @@ const Progress = React.forwardRef<ProgressRef, ProgressProps>((props, ref) => {
     ...restIndicatorProps
   } = indicatorProps ?? EMPTY_OBJECT
 
-  const definedValue = value || ZERO
+  const definedValue = value || 0
 
   const ProgressContainerComponent = polymorphic(asChild, 'div')
   const ProgressIndicatorComponent = polymorphic(indicatorAsChild, 'div')
@@ -36,9 +36,9 @@ const Progress = React.forwardRef<ProgressRef, ProgressProps>((props, ref) => {
   return (
     <ProgressContainerComponent
       ref={ref}
-      data-min={ZERO}
+      data-min={0}
       data-value={value}
-      data-max={HUNDRED}
+      data-max={100}
       data-state='loading'
       data-slot='base'
       className={cn(DEFAULT_PROGRESS_CLASSNAME, className)}
@@ -46,13 +46,13 @@ const Progress = React.forwardRef<ProgressRef, ProgressProps>((props, ref) => {
     >
       <ProgressIndicatorComponent
         ref={indicatorRef}
-        aria-valuemin={ZERO}
-        aria-valuemax={HUNDRED}
+        aria-valuemin={0}
+        aria-valuemax={100}
         aria-valuenow={value}
-        aria-valuetext={isIndeterminate ? 'indeterminate' : `${value ?? ZERO}%`}
+        aria-valuetext={isIndeterminate ? 'indeterminate' : `${value ?? 0}%`}
         data-value={value}
-        data-min={ZERO}
-        data-max={HUNDRED}
+        data-min={0}
+        data-max={100}
         data-state='loading'
         data-slot='indicator'
         role='progressbar'

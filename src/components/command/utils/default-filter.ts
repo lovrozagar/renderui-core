@@ -1,11 +1,9 @@
 'use client'
 
-import { ONE, ZERO } from '@renderui/constants'
-
 function defaultFilter(value: string, search: string) {
-  if (value.toLowerCase().startsWith(search.toLowerCase())) return ONE
+  if (value.toLowerCase().startsWith(search.toLowerCase())) return 1
 
-  return ZERO
+  return 0
 }
 
 export { defaultFilter }

@@ -1,7 +1,5 @@
 'use client'
 
-import { ZERO } from '@renderui/constants'
-
 import { ACTIVE_ITEM_CLASSNAME } from '@/components/combobox/constants/constants'
 import { getNextOrPreviousItem } from '@/components/combobox/utils/get-next-or-previous-item'
 
@@ -42,7 +40,7 @@ function getHandleKeyDownCapture(props: GetHandleKeyDownCaptureArgs) {
 
         setFocusValue(newItemValue)
       }
-    }, ZERO)
+    }, 0)
   }
 }
 

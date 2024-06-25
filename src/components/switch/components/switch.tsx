@@ -1,6 +1,5 @@
 'use client'
 
-import { NEGATIVE_ONE } from '@renderui/constants'
 import { useControllableState } from '@renderui/hooks'
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'
@@ -85,7 +84,7 @@ const Switch = React.forwardRef<SwitchRef, SwitchProps>((props, ref) => {
       <SwitchThumb />
       <VisuallyHidden>
         <InputComponent
-          tabIndex={NEGATIVE_ONE}
+          tabIndex={-1}
           ref={inputRef}
           name={name ?? inputName}
           className={cn(DEFAULT_HIDDEN_SWITCH_INPUT_CLASSNAME, inputClassName)}

@@ -39,7 +39,6 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@renderui/constants": "^0.0.1",
     "@renderui/hooks": "^0.1.7",
     "@renderui/types": "^0.0.2",
     "@renderui/utils": "^0.1.8",

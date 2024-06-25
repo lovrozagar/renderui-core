@@ -8,7 +8,7 @@ import React from 'react'
 import { DEFAULT_TOGGLE_GROUP_CLASSNAME } from '@/components/toggle-group/constants/constants'
 import { ToggleGroupProvider } from '@/components/toggle-group/contexts/toggle-group-context'
 import { ToggleGroupProps, ToggleGroupRef } from '@/components/toggle-group/types/toggle-group'
-import { EMPTY_ARRAY } from '@renderui/constants'
+import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
 
 const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, ref) => {
   const {

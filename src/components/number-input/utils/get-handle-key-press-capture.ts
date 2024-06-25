@@ -1,4 +1,3 @@
-import { ZERO } from '@renderui/constants'
 import React from 'react'
 
 import { NumberInputProps } from '@/components/number-input/types/number-input'
@@ -17,7 +16,7 @@ function getHandleKeyPressCapture(props: GetHandleKeyPressCaptureArgs) {
 
   const updateValue = (previousValue: string | undefined, increment: number) => {
     const numericValue = Number(previousValue)
-    const safeValue = Number.isNaN(numericValue) ? ZERO : numericValue
+    const safeValue = Number.isNaN(numericValue) ? 0 : numericValue
 
     const newValue = safeValue + increment
 

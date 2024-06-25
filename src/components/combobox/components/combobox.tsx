@@ -1,6 +1,5 @@
 'use client'
 
-import { NEGATIVE_ONE } from '@renderui/constants'
 import { useControllableState } from '@renderui/hooks'
 import { chain } from '@renderui/utils'
 import React from 'react'
@@ -78,7 +77,7 @@ const Combobox = (props: ComboboxProps) => {
         <input
           aria-hidden
           name={name}
-          tabIndex={NEGATIVE_ONE}
+          tabIndex={-1}
           value={value}
           /* Sync input value in case change is made externally */
           onChange={(event) => setValue(event.target.value)}

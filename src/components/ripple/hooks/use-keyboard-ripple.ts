@@ -1,4 +1,3 @@
-import { TWO, ZERO } from '@renderui/constants'
 import { useMutationObserver } from '@renderui/hooks'
 import React from 'react'
 
@@ -20,8 +19,8 @@ function useKeyboardRipple<T extends HTMLElement>(
         {
           key: rippleKey,
           size,
-          x: ZERO,
-          y: -clientWidth / TWO + clientHeight / TWO,
+          x: 0,
+          y: -clientWidth / 2 + clientHeight / 2,
         },
       ])
 

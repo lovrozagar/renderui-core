@@ -1,6 +1,5 @@
 'use client'
 
-import { NEGATIVE_ONE } from '@renderui/constants'
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'
 
@@ -79,7 +78,7 @@ const RadioGroupItem = React.forwardRef<RadioGroupItemRef, RadioGroupItemProps>(
           type='radio'
           data-slot='hidden-input'
           aria-hidden
-          tabIndex={NEGATIVE_ONE}
+          tabIndex={-1}
           id={id}
           name={name}
           value={value}

@@ -1,5 +1,4 @@
-import { HUNDRED, ONE, ZERO } from '@renderui/constants'
-import { ProgressProps } from '..'
+import { ProgressProps } from '@/components/progress'
 
 type GetTranslateXStyleByValueProps = Pick<
   ProgressProps,
@@ -25,15 +24,15 @@ const getTranslateXStyleByValue = (props: GetTranslateXStyleByValueProps) => {
   const axis = orientation === 'horizontal' ? 'X' : 'Y'
 
   if (variant === 'spot') {
-    const realValue = definedValue - ONE
+    const realValue = definedValue - 1
 
     return {
-      width: `${spotCount ? HUNDRED / spotCount : HUNDRED}%`,
-      transform: `translate${axis}(${realValue ? realValue * HUNDRED : ZERO}%)`,
+      width: `${spotCount ? 100 / spotCount : 100}%`,
+      transform: `translate${axis}(${realValue ? realValue * 100 : 0}%)`,
     }
   }
 
-  return { transform: `translate${axis}(-${HUNDRED - (value || ZERO)}%)`, ...indicatorStyle }
+  return { transform: `translate${axis}(-${100 - (value || 0)}%)`, ...indicatorStyle }
 }
 
 export { getTranslateXStyleByValue }

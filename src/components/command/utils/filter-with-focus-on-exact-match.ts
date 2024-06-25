@@ -1,6 +1,5 @@
 'use client'
 
-import { ONE, ZERO } from '@renderui/constants'
 import React from 'react'
 
 import { defaultFilter } from '@/components/command/utils/default-filter'
@@ -21,7 +20,7 @@ function getFilterWithFocusOnExactMatch(args: GetFilterWithFocusOnExactMatchArgs
       if (dataValueMapRef.current.has(filterSearch)) {
         onValueChange?.(filterSearch)
       }
-    }, ZERO)
+    }, 0)
 
     if (filterSearch !== '') {
       const startingLabelElement = dataValueArrayRef.current.find((value) =>
@@ -34,9 +33,9 @@ function getFilterWithFocusOnExactMatch(args: GetFilterWithFocusOnExactMatchArgs
     const isMatch =
       filter?.(filterValue, filterSearch) || defaultFilter?.(filterValue, filterSearch)
 
-    if (isMatch) return ONE
+    if (isMatch) return 1
 
-    return ZERO
+    return 0
   }
 }
 

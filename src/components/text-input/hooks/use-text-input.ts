@@ -1,4 +1,3 @@
-import { ZERO } from '@renderui/constants'
 import { useControllableState, useMergedRef, useOnClickOutside } from '@renderui/hooks'
 import { cn, cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
 import React from 'react'
@@ -77,7 +76,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
   useOnClickOutside('pointerdown', internalInputRef, clearTimeouts)
 
   const shouldRenderClearButton =
-    hasClearButtonAlways || (hasClearButton && typeof value === 'string' && value.length > ZERO)
+    hasClearButtonAlways || (hasClearButton && typeof value === 'string' && value.length > 0)
 
   const {
     className: inputContainerClassName,
