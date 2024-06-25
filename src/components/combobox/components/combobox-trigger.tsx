@@ -67,12 +67,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     [],
   )
 
-  const content = (
-    <>
-      {label || placeholder}
-      {children}
-    </>
-  )
+  const content = label || children || placeholder
 
   return (
     <PopoverTrigger
