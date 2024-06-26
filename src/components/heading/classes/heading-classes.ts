@@ -6,7 +6,7 @@ import { textOverflowVariants } from '@/components/_shared/variants/text-overflo
 import { textShadowVariants } from '@/components/_shared/variants/text-shadow'
 import { textSizeVariants } from '@/components/_shared/variants/text-size'
 
-const headingClasses = cva('render-ui-heading relative -left-px box-border text-mode-contrast', {
+const headingClasses = cva('render-ui-heading box-border text-mode-contrast', {
   variants: {
     as: {
       h1: ['text-4xl', 'font-bold', 'tracking-tight'],

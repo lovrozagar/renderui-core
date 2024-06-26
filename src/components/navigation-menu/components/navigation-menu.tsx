@@ -84,7 +84,7 @@ const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>(
         ref={viewportContainerRef}
         className={cn(
           DEFAULT_NAVIGATION_MENU_VIEWPORT_CONTAINER_CLASSNAME,
-          isFullScreen ? 'fixed top-0' : undefined,
+          isFullScreen ? 'w-full fixed top-0' : undefined,
           viewportContainerClassName,
         )}
         {...restViewportContainerProps}

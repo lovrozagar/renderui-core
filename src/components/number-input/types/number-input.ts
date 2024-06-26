@@ -20,6 +20,7 @@ type NumberInputCustomProps = {
   isDisabled?: boolean
   isInvalid?: boolean
   isReadOnly?: boolean
+  hasSpinButtons?: boolean
   children?: React.ReactNode | ((value: string) => React.ReactNode)
   startContent?: React.ReactNode | ((value: string) => React.ReactNode)
   endContent?: React.ReactNode | ((value: string) => React.ReactNode)

@@ -1,15 +1,12 @@
 'use client'
 
 import { NavigationMenuTrigger as NavigationMenuTriggerPrimitive } from '@radix-ui/react-navigation-menu'
-import { chain, cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import { chain, cn } from '@renderui/utils'
+import React, { useCallback } from 'react'
 
-import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import { Button } from '@/components/button'
-import {
-  DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME,
-  DEFAULT_NAVIGATION_MENU_TRIGGER_INDICATOR_CLASSNAME,
-} from '@/components/navigation-menu/constants/constants'
+import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
+import { DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME } from '@/components/navigation-menu/constants/constants'
 import {
   NavigationMenuTriggerProps,
   NavigationMenuTriggerRef,
@@ -20,6 +17,7 @@ const NavigationMenuTrigger = React.forwardRef<
   NavigationMenuTriggerProps
 >((props, ref) => {
   const {
+    asChild,
     className,
     children,
     indicator,
@@ -33,35 +31,44 @@ const NavigationMenuTrigger = React.forwardRef<
   // aria hover event not always firing in combination with radix asChild, track manually with native event
   const [isHovered, setIsHovered] = React.useState(false)
 
-  const { className: indicatorClassName, ...restIndicatorProps } = getOptionalObject(indicatorProps)
-
-  const renderIndicator = () => {
+  const renderIndicator = useCallback(() => {
     if (!hasIndicator) return null
 
     if (indicator) return indicator
 
-    return (
-      <ChevronDownIcon
-        className={cn(DEFAULT_NAVIGATION_MENU_TRIGGER_INDICATOR_CLASSNAME, indicatorClassName)}
-        aria-hidden='true'
-        {...restIndicatorProps}
-      />
+    return <NavigationMenuTriggerIndicator aria-hidden='true' {...indicatorProps} />
+  }, [hasIndicator, indicator, indicatorProps])
+
+  const renderChildren = useCallback(() => {
+    if (asChild) {
+      return typeof children === 'function'
+        ? children({ Indicator: NavigationMenuTriggerIndicator, indicatorProps })
+        : children
+    }
+
+    return typeof children === 'function' ? (
+      children({ Indicator: NavigationMenuTriggerIndicator, indicatorProps })
+    ) : (
+      <>
+        {children}
+        {renderIndicator()}
+      </>
     )
-  }
+  }, [children, indicatorProps])
 
   return (
     <NavigationMenuTriggerPrimitive asChild>
       <Button
-        ref={ref}
         variant='plain'
+        ref={ref}
+        asChild={asChild}
         className={cn(DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME, className)}
         onMouseEnter={chain(onMouseEnter, () => setIsHovered(true))}
         onMouseLeave={chain(onMouseLeave, () => setIsHovered(false))}
         data-hover={isHovered}
         {...restProps}
       >
-        {children}
-        {renderIndicator()}
+        {renderChildren()}
       </Button>
     </NavigationMenuTriggerPrimitive>
   )

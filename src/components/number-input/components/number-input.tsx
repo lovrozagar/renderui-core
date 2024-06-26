@@ -20,7 +20,7 @@ const NumberInput = React.forwardRef<NumberInputRef, NumberInputProps>((props, r
     utilityProps,
   } = useNumberInput(props, ref)
 
-  const { startContent, children, endContent } = utilityProps
+  const { hasSpinButtons, startContent, children, endContent } = utilityProps
 
   const { asChild: inputAsChild, ...restInputProps } = inputProps
 
@@ -34,11 +34,13 @@ const NumberInput = React.forwardRef<NumberInputRef, NumberInputProps>((props, r
     <Aria {...inputContainerProps}>
       {startContent}
       <InputComponent {...restInputProps} />
-      <SpinButtonContainerComponent {...restSpinButtonContainerProps}>
-        <NumberSpinButton {...incrementButtonProps} />
-        <Separator {...separatorProps} />
-        <NumberSpinButton {...decrementButtonProps} />
-      </SpinButtonContainerComponent>
+      {hasSpinButtons ? (
+        <SpinButtonContainerComponent {...restSpinButtonContainerProps}>
+          <NumberSpinButton {...incrementButtonProps} />
+          <Separator {...separatorProps} />
+          <NumberSpinButton {...decrementButtonProps} />
+        </SpinButtonContainerComponent>
+      ) : null}
       {children}
       {endContent}
     </Aria>
