@@ -14,7 +14,7 @@ const DEFAULT_NAVIGATION_MENU_VIEWPORT_CONTAINER_CLASSNAME =
   'render-ui-navigation-menu-viewport-container absolute z-10 left-0 top-full flex w-fit justify-center perspective-[2000px]'
 
 const DEFAULT_NAVIGATION_MENU_VIEWPORT_CLASSNAME =
-  'render-ui-navigation-menu-viewport relative z-10 flex-1 mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-mode shadow-even-xl [&]:shadow-mode-contrast/20 dark:border-[1px] dark:border-mode-accent [&]:dark:shadow-mode-contrast/[1%] transition-all duration-fast data-[state=closed]:animate-navigation-menu-scale-out data-[state=open]:animate-navigation-menu-scale-in sm:w-[var(--radix-navigation-menu-viewport-width)]'
+  'render-ui-navigation-menu-viewport relative z-10 flex-1 mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-mode shadow-even-xl [&]:shadow-mode-contrast/20 dark:border-[1px] dark:border-mode-accent [&]:dark:shadow-mode-contrast/[1%] transition-[width,height] duration-medium data-[state=closed]:animate-navigation-menu-scale-out data-[state=open]:animate-navigation-menu-scale-in sm:w-[var(--radix-navigation-menu-viewport-width)]'
 
 const DEFAULT_NAVIGATION_MENU_ITEM_CLASSNAME = 'render-ui-navigation-menu-item'
 

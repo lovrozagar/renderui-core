@@ -203,7 +203,7 @@ const config: Config = {
           '100%': { opacity: '0', transform: 'translateX(-200px)' },
         },
         'navigation-menu-scale-in': {
-          '0%': { opacity: '0', transform: 'rotateX(-30deg) scale(0.9)' },
+          '0%': { opacity: '0', transform: 'rotateX(-10deg) scale(0.9)' },
           '100%': { opacity: '1', transform: 'rotateX(0deg) scale(1)' },
         },
         'navigation-menu-scale-out': {
@@ -394,6 +394,7 @@ const config: Config = {
           'overlay-fade-in var(--animation-in-duration) var(--animation-in-timing-function)',
         'overlay-fade-out':
           'overlay-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
+        'slide': 'slide var(--animation-in-duration) var(--animation-in-timing-function) infinite',
         'infinite-progress': 'infinite-progress 1.25s linear infinite',
         'ripple-animation': 'ripple-animation 0.5s linear forwards',
         'blink': 'blink 1s both infinite',

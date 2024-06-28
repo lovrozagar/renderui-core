@@ -7,7 +7,7 @@ import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { ButtonProps } from '@/components/button'
 import { OverlayProps } from '@/components/overlay'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
@@ -24,7 +24,7 @@ type SheetContentRenderUIProps = NonNullableVariantProps<typeof sheetClasses> & 
   closeButtonProps?: ButtonProps
   closeButtonIconProps?: React.ComponentPropsWithoutRef<typeof CrossSmallIcon>
   hasCloseButton?: boolean
-} & AnimationStyleVariaiables
+} & AnimationStyleVariables
 
 type SheetContentProps = Simplify<SheetContentPrimitiveProps & SheetContentRenderUIProps>
 

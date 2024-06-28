@@ -1,6 +1,6 @@
 import React from 'react'
 
-type AnimationStyleVariaiables = {
+type AnimationStyleVariables = {
   animationDuration?: number | undefined
   animationInDuration?: number | undefined
   animationOutDuration?: number | undefined
@@ -27,7 +27,7 @@ type AnimationStyleDefaultTimingFunctions = {
   defaultAnimationOutTimingFunction: React.CSSProperties['animationTimingFunction']
 }
 
-type GetAnimationStyleVariablesProps = AnimationStyleVariaiables &
+type GetAnimationStyleVariablesProps = AnimationStyleVariables &
   (AnimationStyleDefaultDuration | AnimationStyleDefaultDurations) &
   (AnimationStyleDefaultTimingFunction | AnimationStyleDefaultTimingFunctions) &
   Record<string, unknown>
@@ -76,4 +76,4 @@ function getAnimationStyleVariables(props: GetAnimationStyleVariablesProps) {
 
 export { getAnimationStyleVariables }
 
-export type { AnimationStyleVariaiables }
+export type { AnimationStyleVariables }

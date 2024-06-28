@@ -1,4 +1,4 @@
-import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuIndicator as NavigationMenuIndicatorPrimitive,
@@ -56,7 +56,7 @@ type NavigationMenuRenderUIProps = {
   indicatorRef?: React.Ref<NavigationMenuIndicatorRef>
   indicatorArrowProps?: NavigationMenuIndicatorArrowProps
   indicatorArrowRef?: React.Ref<NavigationMenuIndicatorArrowRef>
-} & AnimationStyleVariaiables
+} & AnimationStyleVariables
 
 type NavigationMenuProps = Simplify<NavigationMenuPrimitiveProps & NavigationMenuRenderUIProps>
 

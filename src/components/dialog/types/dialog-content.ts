@@ -6,7 +6,7 @@ import { Simplify } from '@renderui/types'
 import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { ButtonProps } from '@/components/button'
 
 type DialogContentPrimitiveType = typeof DialogContentPrimitive
@@ -24,6 +24,6 @@ type DialogContentRenderUIProps = {
 }
 
 type DialogContentProps = Simplify<DialogContentPrimitiveProps & DialogContentRenderUIProps> &
-  AnimationStyleVariaiables
+  AnimationStyleVariables
 
 export type { DialogContentProps, DialogContentRef }

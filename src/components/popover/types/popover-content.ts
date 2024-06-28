@@ -1,4 +1,4 @@
-import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   PopoverArrow as PopoverArrowPrimitive,
   PopoverContent as PopoverContentPrimitive,
@@ -19,6 +19,6 @@ type PopoverContentProps = React.ComponentPropsWithoutRef<PopoverContentPrimitiv
   hasTriggerMaxHeight?: boolean
   hasArrow?: boolean
   arrowProps?: React.ComponentPropsWithoutRef<typeof PopoverArrowPrimitive>
-} & AnimationStyleVariaiables
+} & AnimationStyleVariables
 
 export type { PopoverContentProps, PopoverContentRef }

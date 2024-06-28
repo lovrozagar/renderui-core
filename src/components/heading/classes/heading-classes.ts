@@ -6,22 +6,25 @@ import { textOverflowVariants } from '@/components/_shared/variants/text-overflo
 import { textShadowVariants } from '@/components/_shared/variants/text-shadow'
 import { textSizeVariants } from '@/components/_shared/variants/text-size'
 
-const headingClasses = cva('render-ui-heading box-border text-mode-contrast', {
-  variants: {
-    as: {
-      h1: ['text-4xl', 'font-bold', 'tracking-tight'],
-      h2: ['text-3xl', 'font-bold', 'tracking-tight'],
-      h3: ['text-2xl', 'font-bold', 'tracking-tight'],
-      h4: ['text-xl', 'font-bold', 'tracking-tight'],
-      h5: ['text-lg', 'font-bold', 'tracking-tight'],
-      h6: ['text-base', 'font-bold', 'tracking-tight'],
+const headingClasses = cva(
+  'render-ui-heading box-border text-mode-contrast font-bold tracking-tight',
+  {
+    variants: {
+      as: {
+        h1: ['text-4xl'],
+        h2: ['text-3xl'],
+        h3: ['text-2xl'],
+        h4: ['text-xl'],
+        h5: ['text-lg'],
+        h6: ['text-base'],
+      },
+      size: textSizeVariants,
+      textBreak: textBreakVariants,
+      shadow: textShadowVariants,
+      overflow: textOverflowVariants,
+      letterSpacing: letterSpacingVariants,
     },
-    size: textSizeVariants,
-    textBreak: textBreakVariants,
-    shadow: textShadowVariants,
-    overflow: textOverflowVariants,
-    letterSpacing: letterSpacingVariants,
   },
-})
+)
 
 export { headingClasses }

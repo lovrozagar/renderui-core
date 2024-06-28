@@ -3,7 +3,7 @@ import { Simplify } from '@renderui/types'
 import React from 'react'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'
-import { AnimationStyleVariaiables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 type AccordionContentPrimitiveType = typeof AccordionContentPrimitive
 
@@ -14,7 +14,7 @@ type AccordionContentPrimitiveProps = React.ComponentPropsWithoutRef<AccordionCo
 type AccordionContentChildrenContainerProps = {
   childrenContainerProps?: Simplify<React.ComponentPropsWithoutRef<'div'> & AsChildProp>
   animationDuration?: number
-} & AnimationStyleVariaiables
+} & AnimationStyleVariables
 
 type AccordionContentProps = Simplify<
   AccordionContentPrimitiveProps & AccordionContentChildrenContainerProps
