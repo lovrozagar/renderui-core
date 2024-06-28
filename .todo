@@ -1,0 +1,5 @@
+- fix: scroll area scroll shadow visible when scrolled to end
+- feat: combobox select, auto scroll shadow per item count prop, max items prop
+- fix: kbd, no exproted hook
+- refactor(maybe): slight close timeout on combobox/select value select
+- feat: add skeleton animation duration
