@@ -31,7 +31,6 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     isReadOnly,
     isInvalid,
     isRequired,
-    hasSpinButtons,
     inputContainerProps,
     spinButtonContainerProps,
     incrementButtonProps,
@@ -51,6 +50,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     size = 'md',
     variant = 'solid',
     defaultValue = '',
+    hasSpinButtons = true,
     ...restProps
   } = props
 

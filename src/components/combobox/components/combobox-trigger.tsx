@@ -32,6 +32,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
     'aria-haspopup': ariaHasPopup = 'listbox',
     variant = 'solid',
     color = 'mode-accent',
+    hasIndicator = true,
     hasTruncatedText = false,
     hasDefaultPressedStyles = false,
     hasRipple = false,
@@ -113,10 +114,12 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
       endContent={(props) => (
         <>
           {typeof endContent === 'function' ? endContent(props) : endContent}
-          <CaretSortIcon
-            className={cn(DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME, iconClassName)}
-            {...iconProps}
-          />
+          {hasIndicator ? (
+            <CaretSortIcon
+              className={cn(DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME, iconClassName)}
+              {...iconProps}
+            />
+          ) : null}
         </>
       )}
       {...restProps}

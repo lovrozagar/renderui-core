@@ -17,11 +17,11 @@ const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, r
     className,
     children,
     defaultValue = EMPTY_ARRAY as string[],
-    type = 'multiple',
+    type = 'single',
     ...restProps
   } = props
 
-  const [value, onValueChange] = useControllableState<string[] | number[]>({
+  const [value, onValueChange] = useControllableState<any>({
     onChange: onValueChangeProp,
     defaultProp: defaultValue,
     prop: valueProp,
@@ -30,8 +30,9 @@ const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, r
   return (
     <ToggleGroupPrimitive
       ref={ref}
-      value={value as string[] | undefined}
-      type={type as 'multiple'}
+      data-slot='group'
+      value={value as any}
+      type={type as any}
       onValueChange={onValueChange}
       className={cn(DEFAULT_TOGGLE_GROUP_CLASSNAME, className)}
       {...restProps}

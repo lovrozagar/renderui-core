@@ -11,6 +11,7 @@ type ComboboxTriggerCustomProps = {
   variant?: 'solid' | 'outline'
   placeholder?: string
   hasTruncatedText?: boolean
+  hasIndicator?: boolean
   children?: React.ReactNode
   iconProps?: React.ComponentPropsWithoutRef<typeof CaretSortIcon>
 }

@@ -3,3 +3,5 @@
 - fix: kbd, no exproted hook
 - refactor(maybe): slight close timeout on combobox/select value select
 - feat: add skeleton animation duration
+- fix: higher specificty needed to change text color on button
+- fix: button loader not being visible

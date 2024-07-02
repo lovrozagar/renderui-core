@@ -25,14 +25,20 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
 
   const { value: rootValue } = useToggleGroupContext()
 
+  const isOn = Array.isArray(rootValue)
+    ? Boolean(rootValue.includes(value as never))
+    : value.toString() === rootValue.toString()
+
   return (
     <ToggleGroupItemPrimitive asChild value={value as string} className={cn(className)}>
       <Button
         ref={ref}
+        data-slot='item'
         color={color}
-        variant={variant ?? (rootValue?.includes(value as never) ? 'solid' : 'plain')}
+        variant={variant ?? (isOn ? 'solid' : 'plain')}
         hasRipple={hasRipple}
         className={cn(DEFAUL_TOGGLE_CLASSNAME, className)}
+        data-state={isOn ? 'on' : 'off'}
         {...restProps}
       >
         {children}

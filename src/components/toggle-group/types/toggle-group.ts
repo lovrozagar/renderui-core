@@ -11,13 +11,22 @@ type ToggleGroupPrimitiveProps = Omit<
   'value' | 'defaultValue' | 'onValueChange' | 'type'
 >
 
-type ToggleGroupCustomProps = {
-  type?: 'single' | 'multiple'
+type ToggleGroupCustomSingleProps = {
+  type?: 'single'
+  value?: string | number
+  defaultValue?: string | number
+  onValueChange?: (value: string | number | undefined) => void
+}
+
+type ToggleGroupCustomMultipleProps = {
+  type?: 'multiple'
   value?: string[] | number[]
   defaultValue?: string[] | number[]
   onValueChange?: (value: string[] | number[] | undefined) => void
 }
 
-type ToggleGroupProps = Simplify<ToggleGroupPrimitiveProps & ToggleGroupCustomProps>
+type ToggleGroupProps = Simplify<
+  ToggleGroupPrimitiveProps & (ToggleGroupCustomSingleProps | ToggleGroupCustomMultipleProps)
+>
 
 export type { ToggleGroupProps, ToggleGroupRef }
