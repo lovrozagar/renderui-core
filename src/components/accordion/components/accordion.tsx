@@ -10,7 +10,12 @@ const Accordion = React.forwardRef<AccordionRef, AccordionProps>((props, ref) =>
   const { className, ...restProps } = props
 
   return (
-    <AccordionPrimitive ref={ref} className={cn('render-ui-accordion', className)} {...restProps} />
+    <AccordionPrimitive
+      ref={ref}
+      data-slot='base'
+      className={cn('render-ui-accordion', className)}
+      {...restProps}
+    />
   )
 })
 

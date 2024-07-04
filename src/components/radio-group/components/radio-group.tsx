@@ -1,9 +1,9 @@
 'use client'
 
-import { useControllableState } from '@renderui/hooks'
 import { cx, functionCallOrValue } from '@renderui/utils'
 import React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_RADIO_GROUP_CLASSNAME } from '@/components/radio-group/constants/constants'
 import { RadioGroupProvider } from '@/components/radio-group/contexts/radio-group-context'
 import { RadioGroupProps, RadioGroupRef } from '@/components/radio-group/types/radio-group'

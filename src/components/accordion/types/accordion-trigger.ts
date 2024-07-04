@@ -1,5 +1,5 @@
 import { AccordionHeader as AccordionHeaderPrimitive } from '@radix-ui/react-accordion'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'

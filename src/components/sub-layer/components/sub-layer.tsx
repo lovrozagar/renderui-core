@@ -14,6 +14,7 @@ const SubLayer = React.forwardRef<SubLayerRef, SubLayerProps>((props, ref) => {
       ref={ref}
       role={role}
       aria-hidden
+      data-slot='sub-layer'
       className={cn(DEFAULT_SUB_LAYER_CLASSNAME, className)}
       {...restProps}
     />

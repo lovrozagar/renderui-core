@@ -5,7 +5,7 @@ import {
   NavigationMenuList as NavigationMenuListPrimitive,
   NavigationMenuViewport as NavigationMenuViewportPrimitive,
 } from '@radix-ui/react-navigation-menu'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 type NavigationMenuPrimitiveType = typeof NavigationMenuPrimitive

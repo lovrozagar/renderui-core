@@ -1,7 +1,7 @@
-import { Simplify } from '@renderui/types'
 import React from 'react'
 
 import { OptionalAriaProps } from '@/components/_shared/types/aria'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 type AriaRef = HTMLElement
 

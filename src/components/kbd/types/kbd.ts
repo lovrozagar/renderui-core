@@ -1,5 +1,5 @@
-import { useKeyboardHotkey } from '@renderui/hooks'
-import { Simplify } from '@renderui/types'
+import { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 type KbdRef = HTMLElement
 

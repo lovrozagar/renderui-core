@@ -1,12 +1,11 @@
-import { useMergedRef } from '@renderui/hooks/use-merged-ref'
 import { chain } from '@renderui/utils/chain'
 import { cn } from '@renderui/utils/cn'
 import React from 'react'
 
 import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
 import { buttonClasses } from '@/components/button/classes/button-classes'
-import { useInitialStyle } from '@/components/button/hooks/use-initial-style'
 import { ButtonProps, ButtonRef } from '@/components/button/types/button'
 import { getColorVariables } from '@/components/button/utils/get-color-variables'
 import { getLoaderProps } from '@/components/button/utils/get-loader-props'
@@ -48,9 +47,6 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
   const internalRef = React.useRef<HTMLButtonElement>(null)
   const mergedRefs = useMergedRef<HTMLButtonElement>([internalRef, ref])
 
-  const initialColorDependency = React.useMemo(() => [variant, color], [variant, color])
-  const initialColor = useInitialStyle(internalRef, initialColorDependency)
-
   const isPressDisabled = isDisabled || ariaProps?.isPressDisabled || isLoading
   const isHoverDisabled = isDisabled || ariaProps?.isHoverDisabled || isLoading
 
@@ -65,7 +61,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
   )
   const { isPressed, isKeyboardPressed } = ariaFlags
 
-  const mergedLoaderProps = getLoaderProps({ loaderRef, loaderProps, initialColor, isLoading })
+  const mergedLoaderProps = getLoaderProps({ loaderRef, loaderProps, isLoading })
 
   const hasContent = () => {
     if (mergedLoaderProps.position === 'absolute-center') return false
@@ -111,7 +107,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
       ...ariaComponentProps,
       ...restProps,
     },
-    rippleProps: getRippleProps({ rippleRef, rippleProps, initialColor, isLoading }),
+    rippleProps: getRippleProps({ rippleRef, rippleProps, isLoading }),
     loaderProps: mergedLoaderProps,
     utility: {
       asChild,

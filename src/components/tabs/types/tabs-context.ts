@@ -10,6 +10,7 @@ type TabsContext = {
   variant: NonNullableVariantProps<typeof tabsCursorClasses>['variant']
   color: ButtonProps['color']
   type: TabsProps['type']
+  animationDuration: number | undefined
   hasCursorAppearedRef: React.MutableRefObject<boolean>
   setActiveTab: React.Dispatch<React.SetStateAction<string | number>>
 }

@@ -1,9 +1,9 @@
 'use client'
 
-import { useControllableState } from '@renderui/hooks'
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Button } from '@/components/button'
 import { SwitchThumb } from '@/components/switch/components/switch-thumb'
 import {

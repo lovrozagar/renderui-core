@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React, { CSSProperties } from 'react'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'

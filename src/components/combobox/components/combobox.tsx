@@ -1,9 +1,9 @@
 'use client'
 
-import { useControllableState } from '@renderui/hooks'
 import { chain } from '@renderui/utils'
 import React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { ComboboxProvider } from '@/components/combobox/contexts/combobox-context'
 import { ComboboxProps } from '@/components/combobox/types/combobox'
 import { Popover } from '@/components/popover'
@@ -26,6 +26,7 @@ const Combobox = (props: ComboboxProps) => {
     defaultValue = '',
     defaultOpen = false,
     hasCheckIcon = true,
+    closeTimeout = 50,
     type = 'combobox',
     ...restProps
   } = props
@@ -65,6 +66,7 @@ const Combobox = (props: ComboboxProps) => {
           isInvalid,
           isReadonly,
           isRequired,
+          closeTimeout,
           setOpen,
           setValue,
           setLabel,

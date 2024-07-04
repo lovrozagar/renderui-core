@@ -13,6 +13,7 @@ const AccordionItem = React.forwardRef<AccordionItemRef, AccordionItemProps>((pr
   return (
     <AccordionItemPrimitive
       ref={ref}
+      data-slot='item'
       className={cn(DEFAULT_ACCORDION_ITEM_CLASSNAME, className)}
       {...restProps}
     />

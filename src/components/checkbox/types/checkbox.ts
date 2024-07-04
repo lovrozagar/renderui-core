@@ -1,5 +1,5 @@
 import { Primitive as primitive } from '@radix-ui/react-primitive'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'
@@ -24,8 +24,9 @@ type CheckboxCustomProps = {
   isInvalid?: boolean
   isRequired?: boolean
   defaultChecked?: boolean
-  onCheckedChange?: React.Dispatch<React.SetStateAction<boolean>>
   hasIconContentWhenUnchecked?: boolean
+  animationDuration?: number
+  onCheckedChange?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type CheckboxProps = Simplify<CheckboxButtonProps & CheckboxCustomProps>

@@ -1,5 +1,5 @@
 import { NavigationMenuLink as NavigationMenuLinkPrimitive } from '@radix-ui/react-navigation-menu'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { ButtonProps, ButtonRef } from '@/components/button'
 

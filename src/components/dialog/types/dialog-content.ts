@@ -2,7 +2,7 @@ import {
   DialogContent as DialogContentPrimitive,
   DialogPortal as DialogPortalPrimitive,
 } from '@radix-ui/react-dialog'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'

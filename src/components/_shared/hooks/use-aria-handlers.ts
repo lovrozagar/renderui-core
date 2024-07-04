@@ -1,8 +1,6 @@
-import { OrUndefined } from '@renderui/types'
 import { mergeProps } from '@renderui/utils'
 import React from 'react'
 import {
-  chain,
   FocusProps,
   FocusRingProps,
   HoverProps,
@@ -17,7 +15,9 @@ import {
 } from 'react-aria'
 
 import { UseAriaHandlersProps } from '@/components/_shared/types/aria'
+import { OrUndefined } from '@/components/_shared/types/or-undefined'
 import { isKeyboardPointerType } from '@/components/_shared/utils/is-keyboard-pointer-type'
+import { chain } from '@renderui/utils/chain'
 
 function useAriaHandlers<T extends HTMLElement>(
   props: OrUndefined<UseAriaHandlersProps>,

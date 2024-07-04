@@ -21,6 +21,7 @@ function getHandleInputKeyDownCapture(args: GetHandleInputKeyDownCaptureArgs) {
   return (event: React.KeyboardEvent<HTMLDivElement>) => {
     const { key } = event
 
+    // @TODO inspect this
     // if (!ALLOWED_SELECT_KEYS.includes(key)) {
     //   event.preventDefault()
     // }

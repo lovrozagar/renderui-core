@@ -6,20 +6,20 @@ import React from 'react'
 
 import { buttonClasses } from '@/components/button/classes/button-classes'
 import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
-import {
-  DEFAULT_TABS_CURSOR_CLASSNAME,
-  DEFAULT_TABS_CURSOR_TRANISTION,
-} from '@/components/tabs/constants/constants'
+import { DEFAULT_TABS_CURSOR_CLASSNAME } from '@/components/tabs/constants/constants'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
 import { TabsCursorProps, TabsCursorRef } from '@/components/tabs/types/tabs-cursor'
+import { getMergedCursorTransition } from '@/components/tabs/utils/get-merged-cursor-transition'
 
 const TabsCursor = React.forwardRef<TabsCursorRef, TabsCursorProps>((props, ref) => {
   const { className, transition, initial, animate, ...restProps } = props
 
-  const { layoutId, orientation, variant, hasCursorAppearedRef } = useTabsContext()
+  const { layoutId, orientation, variant, animationDuration, hasCursorAppearedRef } =
+    useTabsContext()
 
   React.useEffect(() => {
     hasCursorAppearedRef.current = true
+    // disabling rule, linter not recognizing ref
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -38,7 +38,7 @@ const TabsCursor = React.forwardRef<TabsCursorRef, TabsCursorProps>((props, ref)
         DEFAULT_TABS_CURSOR_CLASSNAME,
         className,
       )}
-      transition={{ ...DEFAULT_TABS_CURSOR_TRANISTION, ...transition }}
+      transition={getMergedCursorTransition(transition, animationDuration)}
       initial={hasCursorAppearedRef.current ? undefined : initial ?? { opacity: 0, scale: 0.9 }}
       animate={hasCursorAppearedRef.current ? undefined : animate ?? { opacity: 1, scale: 1 }}
       layoutId={layoutId}
@@ -47,7 +47,5 @@ const TabsCursor = React.forwardRef<TabsCursorRef, TabsCursorProps>((props, ref)
     />
   )
 })
-
-TabsCursor.displayName = 'TabsCursor'
 
 export { TabsCursor }

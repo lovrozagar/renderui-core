@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { ButtonProps } from '@/components/button'
 

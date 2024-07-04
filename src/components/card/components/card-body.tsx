@@ -10,7 +10,12 @@ const CardBody = React.forwardRef<CardBodyRef, CardBodyProps>((props, ref) => {
   const Component = polymorphic(asChild, 'div')
 
   return (
-    <Component ref={ref} data-slot='base' className={cn(DEFAULT_CARD_BODY_CLASSNAME, className)} {...restProps} />
+    <Component
+      ref={ref}
+      data-slot='body'
+      className={cn(DEFAULT_CARD_BODY_CLASSNAME, className)}
+      {...restProps}
+    />
   )
 })
 

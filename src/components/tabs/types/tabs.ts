@@ -1,5 +1,5 @@
 import { Tabs as TabsPrimitive } from '@radix-ui/react-tabs'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import { ButtonProps } from '@/components/button/types/button'
@@ -11,13 +11,15 @@ type TabsRef = React.ElementRef<TabsPrimitiveType>
 
 type TabsPrimitiveProps = Omit<
   React.ComponentProps<TabsPrimitiveType>,
-  'value' | 'onValueChange' | 'activationMode'
+  'defaultValue' | 'value' | 'onValueChange' | 'activationMode'
 >
 
 type TabsCustomProps = {
   type?: 'focus' | 'click'
   color?: ButtonProps['color']
+  defaultValue?: string | number
   value?: string | number
+  animationDuration?: number
   onValueChange?: ((value: string | number) => void) | undefined
 }
 

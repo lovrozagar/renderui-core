@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'

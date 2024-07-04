@@ -1,11 +1,12 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
 
-type ExclusiveUnion<T, U> =
-  T | U extends Record<string, unknown> ? (Without<T, U> & U) | (Without<U, T> & T) : T | U
+type ExclusiveUnion<T, U> = T | U extends Record<string, unknown>
+  ? (Without<T, U> & U) | (Without<U, T> & T)
+  : T | U
 
 type GridRef = React.ElementRef<'div'>
 

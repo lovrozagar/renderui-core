@@ -1,4 +1,4 @@
-import { getOptionalObject } from '@renderui/utils'
+import { cx, getOptionalObject } from '@renderui/utils'
 
 import { RippleProps, RippleRef } from '@/components/ripple'
 
@@ -6,35 +6,25 @@ import { RippleProps, RippleRef } from '@/components/ripple'
 type GetRipplePropsArgs = {
   rippleRef: React.Ref<RippleRef> | undefined
   rippleProps: RippleProps | undefined
-  initialColor: string | undefined
   isLoading: boolean | undefined
 }
 
 const getRippleProps = (args: any): any => {
-  const { rippleRef, rippleProps, initialColor, isLoading } = args
+  const { rippleRef, rippleProps, isLoading } = args
 
   const {
     color: colorProp,
-    style: styleProp,
+    className,
     isDisabled: isDisabledProp,
     ...restRippleProps
   } = getOptionalObject(rippleProps)
 
   const isDisabled = isLoading ?? isDisabledProp
 
-  const rippleColor = colorProp ? undefined : initialColor
-
-  const style = isLoading
-    ? {
-        backgroundColor: rippleColor,
-        ...styleProp,
-      }
-    : undefined
-
   return {
     'ref': rippleRef,
     'data-slot': 'ripple',
-    style,
+    'className': cx(isLoading ? '!text-[rgba(var(--button-color))]' : undefined, className),
     isDisabled,
     ...restRippleProps,
   }

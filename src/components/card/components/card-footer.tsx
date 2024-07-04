@@ -32,13 +32,13 @@ const CardFooter = React.forwardRef<CardFooterRef, CardFooterProps>((props, ref)
   return (
     <ContentComponent
       ref={ref}
-      data-slot='footer-content'
+      data-slot='footer'
       className={cn(DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME, contentClassName)}
       {...restProps}
     >
       {startContent}
       <ChildrenContainerComponent
-        data-slot='footer-children'
+        data-slot='footer-children-container'
         className={cn(DEFAULT_CARD_FOOTER_CLASSNAME, childrenClassName, childrenContainerClassName)}
         {...restChildrenContainerProps}
       >

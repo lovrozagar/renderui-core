@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import { CommandInput as CommandInputPrimitive } from 'cmdk'
 
 import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'

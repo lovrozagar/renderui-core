@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
 import { ButtonProps, ButtonRef } from '@/components/button'

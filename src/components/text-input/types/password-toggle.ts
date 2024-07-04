@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import { ButtonProps } from '@/components/button'

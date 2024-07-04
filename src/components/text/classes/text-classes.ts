@@ -9,9 +9,9 @@ import { textSizeVariants } from '@/components/_shared/variants/text-size'
 const textClasses = cva('render-ui-text box-border whitespace-normal text-mode-contrast', {
   variants: {
     as: {
-      span: [],
-      div: [],
-      p: [],
+      span: '',
+      div: '',
+      p: '',
     },
     size: textSizeVariants,
     textBreak: textBreakVariants,

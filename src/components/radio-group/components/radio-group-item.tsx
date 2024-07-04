@@ -58,7 +58,7 @@ const RadioGroupItem = React.forwardRef<RadioGroupItemRef, RadioGroupItemProps>(
       onPress={chain(onClick, () => setValue(value))}
       className={cx(
         DEFAULT_RADIO_GROUP_ITEM_CLASSNAME,
-        isInvalid ? 'ring-destructive' : '',
+        isInvalid ? 'ring-destructive' : undefined,
         className,
       )}
       {...restProps}
@@ -68,7 +68,7 @@ const RadioGroupItem = React.forwardRef<RadioGroupItemRef, RadioGroupItemProps>(
         data-slot='indicator'
         className={cn(
           DEFAULT_RADIO_GROUP_ITEM_INDICATOR_CLASSNAME,
-          isChecked ? RADIO_GROU_ITEM_ACTIVE_INDICATOR_CLASSNAME : '',
+          isChecked ? RADIO_GROU_ITEM_ACTIVE_INDICATOR_CLASSNAME : undefined,
           indicatorClassName,
         )}
         {...restIndicatorProps}

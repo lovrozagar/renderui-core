@@ -416,6 +416,14 @@ const config: Config = {
         },
       })
     }),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.center': {
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+      })
+    }),
   ],
 }
 

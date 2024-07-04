@@ -32,13 +32,13 @@ const CardHeader = React.forwardRef<CardHeaderRef, CardHeaderProps>((props, ref)
   return (
     <ContentComponent
       ref={ref}
-      data-slot='header-content'
+      data-slot='header'
       className={cn(DEFAULT_CARD_HEADER_CONTENT_CLASSNAME, contentClassName)}
       {...restProps}
     >
       {startContent}
       <ChildrenContainerComponent
-        data-slot='header-children'
+        data-slot='header-children-container'
         className={cn(
           DEFAULT_CARD_HEADER_CHILDREN_CLASSNAME,
           childrenClassName,

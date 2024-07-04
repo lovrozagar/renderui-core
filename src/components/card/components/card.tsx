@@ -5,9 +5,9 @@ import { cardClasses } from '@/components/card/classes/card-classes'
 import { CardProps, CardRef } from '@/components/card/types/card'
 
 const Card = React.forwardRef<CardRef, CardProps>((props, ref) => {
-  const { asChild, className, isBlurred, isPressable, hasShadowOnHover, ...restProps } = props
+  const { asChild, className, isBlurred, hasShadowOnHover, ...restProps } = props
 
-  const variantClassName = cardClasses({ isBlurred, isPressable, hasShadowOnHover })
+  const variantClassName = cardClasses({ isBlurred, hasShadowOnHover })
 
   const Component = polymorphic(asChild, 'div')
 

@@ -1,8 +1,8 @@
 'use client'
 
-import { useMutationObserver } from '@renderui/hooks'
 import React from 'react'
 
+import { useMutationObserver } from '@/components/_shared/hooks/use-mutation-observer'
 import {
   COMMAND_ATTRIBUTE,
   COMMAND_ITEM_CLASSNAME_SELECTOR,
@@ -33,6 +33,7 @@ function useSearch(value: string, setValue: React.Dispatch<React.SetStateAction<
 
     /* find all command popover items in the DOM */
     const commandItems = cmdkRoot.querySelectorAll(COMMAND_ITEM_CLASSNAME_SELECTOR)
+
     const newDataValueMap = new Map<string, string>()
     const newDataValueArray: string[] = []
 

@@ -31,7 +31,7 @@ const NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS: Partial<
 const NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME = 'rounded-none'
 
 const INACTIVE_TABS_TRIGGER_CLASSNAME =
-  'text-mode-contrast transition-[color] duration-150 data-[hover="true"]:data-[state="inactive"]:text-primary'
+  'text-mode-contrast transition-[color] duration-fast data-[hover="true"]:data-[state="inactive"]:text-primary'
 
 const DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME =
   'absolute inset-0 z-[20] flex size-full items-center justify-center gap-3 text-[inherit]'

@@ -1,9 +1,11 @@
-import { useControllableState, useMergedRef, useOnClickOutside } from '@renderui/hooks'
 import { cn, cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 import { chain } from 'react-aria'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
+import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 import { buttonClasses } from '@/components/button'
 import {
   DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,

@@ -1,6 +1,5 @@
 'use client'
 
-import { useControllableState } from '@renderui/hooks'
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'
 
@@ -12,6 +11,7 @@ import {
 } from '@/components/checkbox/constants/constants'
 import { CheckboxProps, CheckboxRef } from '@/components/checkbox/types/checkbox'
 import { VisuallyHidden } from '@/components/visually-hidden'
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 
 const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
   const {
@@ -28,6 +28,7 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
     startContent,
     endContent,
     children,
+    animationDuration,
     onCheckedChange,
     onPress,
     color = 'primary',
@@ -48,8 +49,8 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
     value: inputValue,
     className: inputClassName,
     checked: inputChecked,
-    tabIndex = -1,
     onChange,
+    tabIndex = -1,
     ...restInputProps
   } = getOptionalObject(inputProps)
 
@@ -67,6 +68,7 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
       aria-readonly={isReadOnly}
       aria-invalid={isInvalid}
       aria-required={isRequired}
+      data-slot='base'
       data-state={checked ? 'checked' : 'unchecked'}
       data-disabled={isDisabled}
       data-readonly={isReadOnly}
@@ -81,6 +83,7 @@ const Checkbox = React.forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
       {functionCallOrValue(children, checked)}
       <CheckboxIndicator
         isChecked={checked}
+        animationDuration={animationDuration}
         hasIconContentWhenUnchecked={hasIconContentWhenUnchecked}
       />
       <VisuallyHidden>

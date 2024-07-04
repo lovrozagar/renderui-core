@@ -1,5 +1,5 @@
 import { Primitive as primitive } from '@radix-ui/react-primitive'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'

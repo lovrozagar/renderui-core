@@ -4,7 +4,7 @@ import {
   ScrollAreaViewport as ScrollAreaViewportPrimitive,
   Scrollbar as ScrollAreaScrollbarPrimitive,
 } from '@radix-ui/react-scroll-area'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 type ScrollAreaPrimitiveType = typeof ScrollAreaPrimitive

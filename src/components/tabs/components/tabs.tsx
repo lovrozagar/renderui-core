@@ -1,10 +1,10 @@
 'use client'
 
 import { Tabs as TabsPrimitive } from '@radix-ui/react-tabs'
-import { useControllableState } from '@renderui/hooks'
 import { cn } from '@renderui/utils'
 import React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_TABS_CLASSNAME } from '@/components/tabs/constants/constants'
 import { TabsProvider } from '@/components/tabs/context/tabs-context'
 import { TabsProps, TabsRef } from '@/components/tabs/types/tabs'
@@ -17,6 +17,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
     value,
     className,
     children,
+    animationDuration,
     type = 'click',
     color = 'primary',
     variant = 'outline',
@@ -53,6 +54,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
           layoutId,
           activeTab,
           orientation,
+          animationDuration,
           hasCursorAppearedRef,
           setActiveTab,
         }}

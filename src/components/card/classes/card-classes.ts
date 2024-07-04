@@ -12,14 +12,9 @@ const cardClasses = cva(
         true: ['bg-foreground/80', 'backdrop-blur-md', 'backdrop-saturate-150'],
         false: [],
       },
-      isPressable: {
-        true: ['data-[pressed=true]:scale-active-pressed-scale', 'data-[hover=true]:shadow'],
-        false: [],
-      },
     },
     defaultVariants: {
       isBlurred: false,
-      isPressable: false,
       hasShadowOnHover: false,
     },
   },

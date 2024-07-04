@@ -1,10 +1,10 @@
 'use client'
 
 import { Toggle as TogglePrimitive } from '@radix-ui/react-toggle'
-import { useControllableState } from '@renderui/hooks'
 import { cn, functionCallOrValue } from '@renderui/utils'
 import React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Button } from '@/components/button'
 import { DEFAUL_TOGGLE_CLASSNAME } from '@/components/toggle/constants/constants'
 import { ToggleProps, ToggleRef } from '@/components/toggle/types/toggle'

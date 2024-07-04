@@ -1,5 +1,5 @@
 import { Tooltip as TooltipPrimitive } from '@radix-ui/react-tooltip'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 type TooltipPrimitiveProps = Omit<
   React.ComponentProps<typeof TooltipPrimitive>,

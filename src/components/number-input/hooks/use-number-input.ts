@@ -1,8 +1,10 @@
-import { useControllableState, useMergedRef, useOnClickOutside } from '@renderui/hooks'
 import { chain, cn, cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
+import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 import { focusInput } from '@/components/_shared/utils/focus-input'
 import { buttonClasses } from '@/components/button'
 import {

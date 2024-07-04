@@ -1,14 +1,14 @@
 'use client'
 
 import { ToggleGroup as ToggleGroupPrimitive } from '@radix-ui/react-toggle-group'
-import { useControllableState } from '@renderui/hooks'
 import { cn, functionCallOrValue } from '@renderui/utils'
 import React from 'react'
 
+import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_TOGGLE_GROUP_CLASSNAME } from '@/components/toggle-group/constants/constants'
 import { ToggleGroupProvider } from '@/components/toggle-group/contexts/toggle-group-context'
 import { ToggleGroupProps, ToggleGroupRef } from '@/components/toggle-group/types/toggle-group'
-import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
 
 const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, ref) => {
   const {

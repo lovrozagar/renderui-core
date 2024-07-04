@@ -2,14 +2,12 @@ import { cn, getOptionalObject } from '@renderui/utils'
 import { m } from 'framer-motion'
 import React from 'react'
 
-import {
-  DEFAULT_CHECKBOX_INDICATOR_CLASSNAME,
-  DEFEAULT_MOTION_PROPS,
-} from '@/components/checkbox/constants/constants'
+import { DEFAULT_CHECKBOX_INDICATOR_CLASSNAME } from '@/components/checkbox/constants/constants'
 import {
   CheckboxIndicatorProps,
   CheckboxIndicatorRef,
 } from '@/components/checkbox/types/checkbox-indicator'
+import { getMergedIndicatorVariantAnimation } from '@/components/checkbox/utils/get-merged-indicator-variant-animation'
 import { LazyMotionDomAnimationProvider } from '@/providers'
 
 const CheckboxIndicator = React.forwardRef<CheckboxIndicatorRef, CheckboxIndicatorProps>(
@@ -20,6 +18,7 @@ const CheckboxIndicator = React.forwardRef<CheckboxIndicatorRef, CheckboxIndicat
       className,
       pathProps,
       animate,
+      animationDuration,
       initial = false,
       fill = 'none',
       viewBox = '0 0 24 24',
@@ -41,19 +40,21 @@ const CheckboxIndicator = React.forwardRef<CheckboxIndicatorRef, CheckboxIndicat
           fill={fill}
           viewBox={viewBox}
           initial={initial}
+          data-slot='indicator'
           animate={animate ?? isChecked ? 'checked' : 'unchecked'}
           className={cn(
             DEFAULT_CHECKBOX_INDICATOR_CLASSNAME,
-            hasIconContentWhenUnchecked || isChecked ? '' : 'hidden',
+            hasIconContentWhenUnchecked || isChecked ? undefined : 'hidden',
             className,
           )}
           {...restProps}
         >
           <m.path
+            data-slot='indicator-path'
             strokeLinecap={strokeLinecap}
             strokeLinejoin={strokeLinejoin}
             d={dProp}
-            variants={{ ...DEFEAULT_MOTION_PROPS, ...variants }}
+            variants={getMergedIndicatorVariantAnimation(variants, animationDuration)}
             {...restPathprops}
           />
         </m.svg>

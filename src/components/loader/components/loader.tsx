@@ -23,7 +23,6 @@ const Loader = React.forwardRef<LoaderRef, LoaderProps>((props, ref) => {
     <Component
       ref={ref}
       aria-label='loading'
-      data-slot='base'
       className={cn(
         loaderClasses({
           variant,

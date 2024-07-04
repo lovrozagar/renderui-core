@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'
 import { NonNullableVariantProps } from '@/components/_shared/types/variants'

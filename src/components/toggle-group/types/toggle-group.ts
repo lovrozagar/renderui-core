@@ -1,5 +1,5 @@
 import { ToggleGroup as ToggleGroupPrimitive } from '@radix-ui/react-toggle-group'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 type ToggleGroupPrimitiveType = typeof ToggleGroupPrimitive

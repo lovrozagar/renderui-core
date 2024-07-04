@@ -3,6 +3,7 @@
 import { cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { ComboboxInput } from '@/components/combobox/components/combobox-input'
 import {
   COMBOBOX_INPUT_CONTAINER_CLASSNAME,
   DEFAULT_COMBOBOX_COMMAND_CLASSNAME,
@@ -15,17 +16,17 @@ import {
   SELECT_INPUT_CONTAINER_CLASSNAME,
 } from '@/components/combobox/constants/constants'
 import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
+import { useLazyScrollAreaComponent } from '@/components/combobox/hooks/use-lazy-scroll-area-component'
 import {
   ComboboxContentProps,
   ComboboxContentRef,
 } from '@/components/combobox/types/combobox-content'
-import { PopoverContent } from '@/components/popover/components/popover-content'
 import { Command } from '@/components/command/components/command'
-import { useLazyScrollAreaComponent } from '@/components/combobox/hooks/use-lazy-scroll-area-component'
-import { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
-import { ComboboxInput } from '@/components/combobox/components/combobox-input'
 import { CommandEmpty } from '@/components/command/components/command-empty'
 import { CommandGroup } from '@/components/command/components/command-group'
+import { CommandList } from '@/components/command/components/command-list'
+import { PopoverContent } from '@/components/popover/components/popover-content'
+import { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
 
 const ComboboxContent = React.forwardRef<ComboboxContentRef, ComboboxContentProps>((props, ref) => {
   const {
@@ -37,6 +38,7 @@ const ComboboxContent = React.forwardRef<ComboboxContentRef, ComboboxContentProp
     commandInputProps,
     commandEmptyProps,
     commandGroupProps,
+    commandListProps,
     scrollAreaProps,
     align = 'start',
     side = 'bottom',
@@ -135,7 +137,7 @@ const ComboboxContent = React.forwardRef<ComboboxContentRef, ComboboxContentProp
               className={cx(DEFAULT_COMBOBOX_COMMAND_GROUP_CLASSNAME, commandGroupClassName)}
               {...restCommandGroupClassName}
             >
-              {children}
+              <CommandList {...commandListProps}>{children}</CommandList>
             </CommandGroup>
           </ScrollAreaComponent>
         ) : (
@@ -144,7 +146,7 @@ const ComboboxContent = React.forwardRef<ComboboxContentRef, ComboboxContentProp
             className={cx(DEFAULT_COMBOBOX_COMMAND_GROUP_CLASSNAME, commandGroupClassName)}
             {...restCommandGroupClassName}
           >
-            {children}
+            <CommandList {...commandListProps}>{children}</CommandList>
           </CommandGroup>
         )}
       </Command>

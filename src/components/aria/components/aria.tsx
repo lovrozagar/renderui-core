@@ -1,10 +1,10 @@
 'use client'
 
-import { useMergedRef } from '@renderui/hooks'
 import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
 import { DEFAULT_ARIA_CLASSNAME } from '@/components/aria/constants/constants'
 import { AriaProps, AriaRef } from '@/components/aria/types/aria'

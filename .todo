@@ -5,3 +5,14 @@
 - feat: add skeleton animation duration
 - fix: higher specificty needed to change text color on button
 - fix: button loader not being visible
+- feat: scroll-area, combobox select, auto scroll shadow per item count prop
+- feat: data-slot everywhere
+- feat: toaster buttons
+- feat: RHF adapter lib add ability to pass/control value or prevent defeault of custom events
+- feat: RHF combobox max items
+- feat: hasContentOnLoading button, inspect and rework, seems to not be working
+- feat: isDisabledonloading button
+- refactor: unify variable or inline render-ui-\* classname
+- fix: combobox/select content, inspect and fix empty content
+- refactor (imports): separate import from utils lib
+- fix: combobox search (in new cmdk group list now must be used)

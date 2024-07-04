@@ -29,6 +29,7 @@ const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentP
     return (
       <AccordionContentPrimitive
         ref={ref}
+        data-slot='content'
         className={cn(DEFAULT_ACCORDION_CONTENT_CLASSNAME, className)}
         style={{
           ...getAnimationStyleVariables({
@@ -41,6 +42,7 @@ const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentP
         {...restProps}
       >
         <AccordionContentChildrenContainer
+          data-slot='content-children-container'
           className={cn(
             DEFAULT_ACCORDION_CONTENT_CHILDREN_CONTAINER_CLASSNAME,
             childrenContainerClassName,

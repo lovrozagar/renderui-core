@@ -3,7 +3,7 @@ import {
   TooltipArrow as TooltipArrowPrimitive,
   TooltipContent as TooltipContentPrimitive,
 } from '@radix-ui/react-tooltip'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React from 'react'
 
 type TooltipContentPrimitiveType = typeof TooltipContentPrimitive

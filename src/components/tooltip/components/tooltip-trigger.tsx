@@ -20,7 +20,7 @@ const TooltipTrigger = React.forwardRef<TooltipTriggerRef, TooltipTriggerProps>(
     ...restProps
   } = props
 
-  // aria hover event not always firing in combination with radix asChild, track manually with native event
+  /* aria hover event not always firing in combination with radix asChild, track manually with native event */
   const [isHovered, setIsHovered] = React.useState(false)
 
   return (

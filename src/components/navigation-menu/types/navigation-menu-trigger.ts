@@ -1,6 +1,6 @@
 import { ButtonProps, ButtonRef } from '@/components/button'
 import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import React, { ReactNode } from 'react'
 
 type NavigationMenuTriggerRef = ButtonRef

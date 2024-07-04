@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 import { Command as CommandPrimitive } from 'cmdk'
 import React from 'react'
 

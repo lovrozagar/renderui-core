@@ -51,13 +51,16 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         hasRipple={hasRipple}
         hasDefaultHoverStyles={hasDefaultHoverStyles}
         hasDefaultPressedStyles={hasDefaultPressedStyles}
-        onPress={chain(onPress, getHandleTriggerPress(type, value as string | number, setActiveTab))}
+        onPress={chain(
+          onPress,
+          getHandleTriggerPress(type, value as string | number, setActiveTab),
+        )}
         className={cx(
           DEFAULT_TABS_TRIGGER_CLASSNAME,
-          isActive ? '' : INACTIVE_TABS_TRIGGER_CLASSNAME,
+          isActive ? undefined : INACTIVE_TABS_TRIGGER_CLASSNAME,
           NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS.includes(rootVariant)
             ? NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME
-            : '',
+            : undefined,
           className,
         )}
         {...restProps}

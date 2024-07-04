@@ -1,12 +1,9 @@
 'use client'
 
-import {
-  DirectionProvider as Provider,
-  DirectionProviderProps as ProviderProps,
-} from '@radix-ui/react-direction'
+import { Provider } from '@radix-ui/react-direction'
 import React from 'react'
 
-type DirectionProviderProps = ProviderProps
+type DirectionProviderProps = React.ComponentPropsWithoutRef<typeof Provider>
 
 const DirectionProvider = (props: DirectionProviderProps) => {
   const { children, dir: direction = 'ltr' } = props

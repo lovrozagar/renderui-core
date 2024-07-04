@@ -32,11 +32,14 @@ const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props
     open,
     label,
     hasCheckIcon,
+    closeTimeout,
     setOpen,
     setValue,
     setLabel,
     setFocusValue,
   } = useComboboxContext()
+
+  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
 
   const childrenTextContent = React.useMemo(
     () => getNestedChildrenTextContent(children),
@@ -49,8 +52,21 @@ const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props
     setValue(isUnselect ? '' : value)
     setLabel(isUnselect ? '' : childrenTextContent)
     setFocusValue(isUnselect ? '' : childrenTextContent)
-    setOpen(false)
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+
+    setTimeout(() => setOpen(false), closeTimeout)
   }
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+    }
+  }, [])
 
   const isChecked = value === rootValue
 

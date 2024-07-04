@@ -64,6 +64,7 @@ function useRipple(
 
   const getRippleRipplesProps = (ripple: RippleRipple) => {
     const duration = durationProp ?? getRippleDuration(ripple.size)
+
     const scale = scaleProp ?? RIPPLE_ANIMATION_END_DEFAULT_SCALE
 
     const initial = initialProp ?? {
@@ -96,8 +97,9 @@ function useRipple(
       exit,
       transition,
       style,
-      className: cn('render-ui-ripple bg-current', className),
-      onAnimationComplete: (definition: AnimationDefinition) =>
+      'data-slot': 'ripple',
+      'className': cn('render-ui-ripple bg-current', className),
+      'onAnimationComplete': (definition: AnimationDefinition) =>
         onAnimationComplete(ripple, definition),
       ...restProps,
     }

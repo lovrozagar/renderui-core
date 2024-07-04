@@ -1,10 +1,10 @@
 'use client'
 
-import { useMergedRef } from '@renderui/hooks'
 import { chain, cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import {
   COMBOBOX_TRIGGER_OUTLINE_CLASSNAME,
   COMBOBOX_TRIGGER_SOLID_CLASSNAME,
@@ -70,6 +70,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
   )
 
   const content = label || children || placeholder
+  const isEmpty = value === null || value === undefined
 
   return (
     <PopoverTrigger
@@ -83,7 +84,7 @@ const ComboboxTrigger = React.forwardRef<ComboboxTriggerRef, ComboboxTriggerProp
       aria-required={isRequired}
       aria-expanded={open}
       data-expanded={open}
-      data-empty={!value}
+      data-empty={isEmpty}
       data-disabled={isDisabled}
       data-readonly={isReadonly}
       data-invalid={isInvalid}

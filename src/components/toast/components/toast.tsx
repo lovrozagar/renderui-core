@@ -8,7 +8,7 @@ import React from 'react'
 import { toast } from 'sonner'
 
 const ToastContent = (props: ToastContentProps) => {
-  const { t, title, description, styles, closeButtonProps, actionButtonProps } = props
+  const { t, title, description, styles, closeButtonProps, actionButtonProps, children } = props
 
   const {
     className: closeButtonClassName,
@@ -65,6 +65,7 @@ const ToastContent = (props: ToastContentProps) => {
           {actionButtonChildren}
         </button>
       ) : null}
+      {typeof children === 'function' ? children(t) : children}
       <button
         className={cn(
           'absolute cursor-pointer top-[4px] right-[4px] size-[24px] z-[1] flex items-center justify-center p-0 border-none text-neutral-700 transition-colors duration-fast appearance-none bg-transparent rounded outline-none ring-offset-0 ring-ring-color focus-visible:ring-[2px]',

@@ -53,6 +53,7 @@ const AccordionTrigger = React.forwardRef<AccordionTriggerRef, AccordionTriggerP
 
     return (
       <AccordionHeaderPrimitive
+        data-slot='header'
         className={cn(DEFAULT_ACCORDION_HEADER_CLASSNAME, headerClassName)}
         {...restAccordionHeaderProps}
       >
@@ -60,6 +61,7 @@ const AccordionTrigger = React.forwardRef<AccordionTriggerRef, AccordionTriggerP
           <Button
             ref={ref}
             variant='plain'
+            data-slot='trigger'
             hasRipple={hasRipple}
             hasDefaultPressedStyles={hasDefaultPressedStyles}
             className={cn(DEFAULT_ACCORDION_TRIGGER_CLASSNAME, className)}

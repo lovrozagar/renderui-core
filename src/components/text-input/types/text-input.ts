@@ -1,4 +1,4 @@
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'

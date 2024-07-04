@@ -56,15 +56,15 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
     return (
       <>
         {functionCallOrValue(startContent, { isPressed, isKeyboardPressed })}
-        {!isLoading && loaderPosition === 'start' && LoaderComponent
-          ? loader ?? <LoaderComponent {...loaderProps} />
+        {isLoading && loaderPosition === 'start' && LoaderComponent
+          ? loader ?? <LoaderComponent {...loaderProps} data-slot='loader' />
           : null}
         {getChildren()}
-        {!isLoading && loaderPosition === 'end' && LoaderComponent
-          ? loader ?? <LoaderComponent {...loaderProps} />
+        {isLoading && loaderPosition === 'end' && LoaderComponent
+          ? loader ?? <LoaderComponent {...loaderProps} data-slot='loader' />
           : null}
         {functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
-        {RippleComponent ? <RippleComponent {...rippleProps} /> : null}
+        {RippleComponent ? <RippleComponent {...rippleProps} data-slot='ripple' /> : null}
       </>
     )
   }

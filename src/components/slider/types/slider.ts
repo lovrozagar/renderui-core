@@ -4,7 +4,7 @@ import {
   SliderThumb as SliderThumbPrimitive,
   SliderTrack as SliderTrackPrimitive,
 } from '@radix-ui/react-slider'
-import { Simplify } from '@renderui/types'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 type SliderRef = React.ElementRef<typeof SliderPrimitive>
 
