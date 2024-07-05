@@ -6,10 +6,6 @@ import { inputContainerClasses } from '@/components/_shared/classes/input-contai
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
-<<<<<<< HEAD
-import { buttonClasses } from '@/components/button'
-=======
->>>>>>> d68c9fe (refactor: internal hook rewrite, update deps)
 import {
   DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
   DEFAULT_TEXT_INPUT_CLASSNAME,

@@ -2,13 +2,10 @@
 
 import { ToggleGroup as ToggleGroupPrimitive } from '@radix-ui/react-toggle-group'
 import { cn, functionCallOrValue } from '@renderui/utils'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
-<<<<<<< HEAD
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
-=======
->>>>>>> d68c9fe (refactor: internal hook rewrite, update deps)
 import { DEFAULT_TOGGLE_GROUP_CLASSNAME } from '@/components/toggle-group/constants/constants'
 import { ToggleGroupProvider } from '@/components/toggle-group/contexts/toggle-group-context'
 import { ToggleGroupProps, ToggleGroupRef } from '@/components/toggle-group/types/toggle-group'
@@ -24,7 +21,11 @@ const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, r
     ...restProps
   } = props
 
-  const [value, onValueChange] = useState(valueProp ?? defaultValue)
+  const [value, onValueChange] = useControllableState<any>({
+    onChange: onValueChangeProp,
+    defaultProp: defaultValue,
+    prop: valueProp,
+  })
 
   return (
     <ToggleGroupPrimitive

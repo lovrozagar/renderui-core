@@ -6,7 +6,6 @@ import { useControllableState } from '@/components/_shared/hooks/use-controllabl
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 import { focusInput } from '@/components/_shared/utils/focus-input'
-import { buttonClasses } from '@/components/button'
 import {
   DEFAULT_NUMBER_INPUT_CLASSNAME,
   DEFAULT_NUMBER_INPUT_CONTAINER_CLASSNAME,
