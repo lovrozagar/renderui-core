@@ -138,13 +138,6 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       'data-slot': 'base',
       'className': cx(
         DEFAULT_NUMBER_INPUT_CONTAINER_CLASSNAME,
-        buttonClasses({
-          variant: forcedVariant,
-          hasDefaultHoverStyles: false,
-          hasDefaultPressedStyles: false,
-          hasLoaderOnLoading: false,
-          hasLowerOpacityOnLoading: false,
-        }),
         inputContainerClasses({ size, variant: forcedVariant }),
         inputContainerClassName,
       ),
