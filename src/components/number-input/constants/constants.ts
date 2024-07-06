@@ -16,7 +16,7 @@ const DEFAULT_NUMBER_SPIN_BUTTON_ICON_CLASSNAME = 'pointer-events-none relative 
 const DEFAULT_NUMBER_INPUT_CONTAINER_CLASSNAME = 'render-ui-number-input-container'
 
 const DEFAULT_NUMBER_INPUT_CLASSNAME =
-  'render-ui-number-input text-sm pl-3 pr-[44px] appearence-none text-mode-contrast bg-transparent outline-none text-elipsis overflow-hidden min-w-[0px] h-full w-full data-[disabled=true]:cursor-[inherit] data-[disabled=true]:pointer-events-none placeholder:text-mode-foreground/50'
+  'render-ui-number-input relative z-[1] text-sm pl-3 pr-[44px] appearence-none text-mode-contrast bg-transparent outline-none text-elipsis overflow-hidden min-w-[0px] h-full w-full data-[disabled=true]:cursor-[inherit] data-[disabled=true]:pointer-events-none placeholder:text-mode-foreground/50'
 
 const DFEAULT_NUMBER_INPUT_SPIN_BUTTON_CONTAINER_CLASSNAME =
   'render-ui-number-input-spin-button-container render-ui-number-input-increment absolute right-0 top-0 flex h-full flex-col border-l p-0'

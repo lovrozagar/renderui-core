@@ -6,7 +6,7 @@ const TEXT_INPUT_CONTAINER_BASE_PADDING = 'pr-3'
 const TEXT_INPUT_CONTAINER_ACTIONS_PADDING = 'pr-1.5'
 
 const DEFAULT_TEXT_INPUT_CLASSNAME =
-  'render-ui-text_input text-elipsis h-full w-full min-w-[0px] pl-3 overflow-hidden bg-transparent text-sm text-mode-contrast outline-none data-[disabled=true]:cursor-[inherit] data-[disabled=true]:pointer-events-none placeholder:text-mode-foreground/50'
+  'render-ui-text_input relative z-[1] text-elipsis h-full w-full min-w-[0px] pl-3 overflow-hidden bg-transparent text-sm text-mode-contrast outline-none data-[disabled=true]:cursor-[inherit] data-[disabled=true]:pointer-events-none placeholder:text-mode-foreground/50'
 
 const DEFAULT_TEXT_INPUT_PASSWORD_TOGGLE_CLASSNAME =
   'render-ui-text_input-password-toggle relative z-[10] flex h-6 w-6 mr-2 shrink-0 items-center justify-center rounded-full ring-offset-mode-accent p-0 [&]:data-[focus-visible=true]:ring-[2px]'
