@@ -9,17 +9,17 @@ type RadioGroupRef = React.ElementRef<RadioGroupPrimitive>
 
 type RadioGroupPrimitiveProps = Omit<
   React.ComponentProps<RadioGroupPrimitive>,
-  'children' | 'disabled' | 'readonly' | 'required' | 'value' | 'onValueChange'
+  'children' | 'disabled' | 'readonly' | 'required' | 'type' | 'value' | 'onValueChange'
 >
 
 type RadioGroupCustomProps = {
-  startContent?: React.ReactNode | ((value: string | number) => React.ReactNode)
-  children?: React.ReactNode | ((value: string | number) => React.ReactNode)
-  endContent?: React.ReactNode | ((value: string | number) => React.ReactNode)
+  startContent?: React.ReactNode | ((value: any) => React.ReactNode)
+  children?: React.ReactNode | ((value: any) => React.ReactNode)
+  endContent?: React.ReactNode | ((value: any) => React.ReactNode)
   name?: string
   value?: string | number
   defaultValue?: string | number | undefined
-  onValueChange?: (value: string | number) => void
+  onValueChange?: (value: any) => void
   isDisabled?: boolean
   isReadOnly?: boolean
   isInvalid?: boolean

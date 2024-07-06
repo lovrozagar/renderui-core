@@ -20,7 +20,7 @@ type TabsCustomProps = {
   defaultValue?: string | number
   value?: string | number
   animationDuration?: number
-  onValueChange?: ((value: string | number) => void) | undefined
+  onValueChange?: (value: any) => void
 }
 
 type TabsVariantProps = NonNullableVariantProps<typeof tabsCursorClasses>

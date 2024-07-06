@@ -16,8 +16,8 @@ const ToggleGroup = React.forwardRef<ToggleGroupRef, ToggleGroupProps>((props, r
     value: valueProp,
     className,
     children,
-    defaultValue = EMPTY_ARRAY as string[],
     type = 'multiple',
+    defaultValue = type === 'multiple' ? (EMPTY_ARRAY as string[]) : '',
     ...restProps
   } = props
 

@@ -26,7 +26,7 @@ type CheckboxCustomProps = {
   defaultChecked?: boolean
   hasIconContentWhenUnchecked?: boolean
   animationDuration?: number
-  onCheckedChange?: React.Dispatch<React.SetStateAction<boolean>>
+  onCheckedChange?: (isChecked: boolean) => void
 }
 
 type CheckboxProps = Simplify<CheckboxButtonProps & CheckboxCustomProps>

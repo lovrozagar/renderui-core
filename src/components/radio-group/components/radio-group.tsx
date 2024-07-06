@@ -48,6 +48,8 @@ const RadioGroup = React.forwardRef<RadioGroupRef, RadioGroupProps>((props, ref)
       data-slot='base'
       className={cx(DEFAULT_RADIO_GROUP_CLASSNAME, className)}
       {...restProps}
+      /* enforce single type */
+      type='single'
     >
       <RadioGroupProvider value={{ name, isInvalid, value, setValue }}>
         {functionCallOrValue(startContent, value)}
