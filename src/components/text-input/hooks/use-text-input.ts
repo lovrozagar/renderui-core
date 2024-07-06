@@ -85,6 +85,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     onPointerDown: inputContainerOnPointerDown,
     isFocusWithin = true,
     isTextInput = true,
+    isUsingAriaPressProps = false,
     ...restInputContainerClassName
   } = getOptionalObject(inputContainerProps)
 
@@ -120,6 +121,7 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
       isTextInput,
       isFocusWithin,
       isDisabled,
+      isUsingAriaPressProps,
       'data-disabled': isDisabled,
       'data-readonly': isReadOnly,
       'data-invalid': isInvalid,

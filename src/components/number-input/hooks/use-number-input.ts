@@ -95,6 +95,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     onClick: inputContainerOnClick,
     isTextInput = true,
     isFocusWithin = true,
+    isUsingAriaPressProps = false,
     ...restInputContainerProps
   } = getOptionalObject(inputContainerProps)
 
@@ -130,6 +131,7 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
       isTextInput,
       isFocusWithin,
       isDisabled,
+      isUsingAriaPressProps,
       'data-disabled': isDisabled,
       'data-read-only': isReadOnly,
       'data-invalid': isInvalid,
