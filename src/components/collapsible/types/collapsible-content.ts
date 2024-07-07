@@ -11,6 +11,7 @@ type CollapsibleContentPrimitiveProps =
 
 type CollapsibleCustomProps = {
   hasDefaultAnimation?: boolean
+  hasSkippedInitialAnimation?: boolean
 } & AnimationStyleVariables
 
 type CollapsibleContentProps = Simplify<CollapsibleContentPrimitiveProps & CollapsibleCustomProps>

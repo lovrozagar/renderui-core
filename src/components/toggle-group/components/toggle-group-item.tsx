@@ -5,12 +5,15 @@ import { cn } from '@renderui/utils'
 import React from 'react'
 
 import { Button } from '@/components/button'
-import { DEFAUL_TOGGLE_CLASSNAME } from '@/components/toggle/constants/constants'
 import { useToggleGroupContext } from '@/components/toggle-group/contexts/toggle-group-context'
 import {
   ToggleGroupItemProps,
   ToggleGroupItemRef,
 } from '@/components/toggle-group/types/toggle-group-item'
+import {
+  DEFAUL_TOGGLE_CLASSNAME,
+  TOGGLED_OFF_RING_CLASSNAME,
+} from '@/components/toggle/constants/constants'
 
 const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProps>((props, ref) => {
   const {
@@ -19,6 +22,7 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
     children,
     variant,
     hasRipple = false,
+    hasToggledOffRing = false,
     color = 'primary',
     ...restProps
   } = props
@@ -37,7 +41,11 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
         color={color}
         variant={variant ?? (isOn ? 'solid' : 'plain')}
         hasRipple={hasRipple}
-        className={cn(DEFAUL_TOGGLE_CLASSNAME, className)}
+        className={cn(
+          DEFAUL_TOGGLE_CLASSNAME,
+          hasToggledOffRing ? TOGGLED_OFF_RING_CLASSNAME : undefined,
+          className,
+        )}
         data-state={isOn ? 'on' : 'off'}
         {...restProps}
       >
