@@ -1,7 +1,10 @@
 'use client'
 
 import { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
-import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
+import { cn } from '@renderui/utils/cn'
+import { getOptionalObject } from '@renderui/utils/get-optional-object'
+import { polymorphic } from '@renderui/utils/polymorphic'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 import React from 'react'
 
 import {
@@ -12,7 +15,6 @@ import {
   AccordionContentProps,
   AccordionContentRef,
 } from '@/components/accordion/types/accordion-content'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 
 const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentProps>(
   (props, ref) => {

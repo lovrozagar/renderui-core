@@ -13,7 +13,7 @@ import {
   DEFAULT_TOOLTIP_CONTENT_CLASSNAME,
 } from '@/components/tooltip/constants/constants'
 import { TooltipContentProps, TooltipContentRef } from '@/components/tooltip/types/tooltip-content'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const TooltipContent = React.forwardRef<TooltipContentRef, TooltipContentProps>((props, ref) => {
   const {

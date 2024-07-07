@@ -1,3 +1,5 @@
+'use client'
+
 import { UseAriaHandlersProps } from '@/components/_shared/types/aria'
 
 type AriaHandlerPropsSelectorProps<T extends object> = T & Partial<UseAriaHandlersProps>

@@ -1,3 +1,5 @@
+'use client'
+
 import { PressEvent } from 'react-aria'
 
 function isKeyboardPointerType(event: PressEvent) {

@@ -8,7 +8,6 @@ import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { Button } from '@/components/button/components/button'
 import { DialogClose } from '@/components/dialog/components/dialog-close'
 import {
@@ -19,6 +18,7 @@ import {
 import { DialogContentProps, DialogContentRef } from '@/components/dialog/types/dialog-content'
 import { Overlay } from '@/components/overlay/components/overlay'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((props, ref) => {
   const {

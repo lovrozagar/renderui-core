@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 function focusInput(inputRef: React.RefObject<HTMLInputElement>) {

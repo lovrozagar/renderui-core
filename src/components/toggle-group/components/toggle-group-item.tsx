@@ -1,7 +1,8 @@
 'use client'
 
 import { ToggleGroupItem as ToggleGroupItemPrimitive } from '@radix-ui/react-toggle-group'
-import { cn } from '@renderui/utils'
+import { cn } from '@renderui/utils/cn'
+import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
 import React from 'react'
 
 import { Button } from '@/components/button'
@@ -34,7 +35,7 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
     : value.toString() === rootValue.toString()
 
   return (
-    <ToggleGroupItemPrimitive asChild value={value as string} className={cn(className)}>
+    <ToggleGroupItemPrimitive asChild value={value as string}>
       <Button
         ref={ref}
         data-slot='item'
@@ -49,7 +50,7 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
         data-state={isOn ? 'on' : 'off'}
         {...restProps}
       >
-        {children}
+        {functionCallOrValue(children, { isOn })}
       </Button>
     </ToggleGroupItemPrimitive>
   )

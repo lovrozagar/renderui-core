@@ -21,7 +21,7 @@ import {
   NavigationMenuProps,
   NavigationMenuRef,
 } from '@/components/navigation-menu/types/navigation-menu'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const NavigationMenu = React.forwardRef<NavigationMenuRef, NavigationMenuProps>((props, ref) => {
   const {

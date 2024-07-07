@@ -13,7 +13,7 @@ import {
   COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION,
   DEFAULT_COLLAPSIBLE_CONTENT_CLASSNAME,
 } from '../constants/constants'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleContentProps>(
   (props, ref) => {

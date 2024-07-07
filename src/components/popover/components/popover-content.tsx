@@ -8,7 +8,6 @@ import {
 import { cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   DEFAULT_POPOVER_ARROW_CLASSNAME,
   DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
@@ -21,6 +20,7 @@ import {
   POPOVER_CONTENT_TRIGGER_WIDTH_CLASSNAME,
 } from '@/components/popover/constants/constants'
 import { PopoverContentProps, PopoverContentRef } from '@/components/popover/types/popover-content'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>((props, ref) => {
   const {

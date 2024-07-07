@@ -6,7 +6,7 @@ import React from 'react'
 
 import { DEFAULT_OVERLAY_CLASSNAME } from '@/components/overlay/constants/constants'
 import { OverlayProps, OverlayRef } from '@/components/overlay/types/overlay'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const Overlay = React.forwardRef<OverlayRef, OverlayProps>((props, ref) => {
   const {

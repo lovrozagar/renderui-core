@@ -3,7 +3,7 @@ import React from 'react'
 
 import { SkeletonProps, SkeletonRef } from '@/components/skeleton/types/skeleton'
 import { getMergedClassName } from '@/components/skeleton/utils/get-merged-class-name'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const Skeleton = React.forwardRef<SkeletonRef, SkeletonProps>((props, ref) => {
   const {

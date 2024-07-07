@@ -8,7 +8,6 @@ import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'
-import { getAnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import { Button } from '@/components/button'
 import { Overlay } from '@/components/overlay'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
@@ -19,6 +18,7 @@ import {
 import { SheetContentProps, SheetContentRef } from '@/components/sheet/types/sheet-content'
 import { VisuallyHidden } from '@/components/visually-hidden'
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
+import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props, ref) => {
   const {
