@@ -9,6 +9,7 @@ import { buttonClasses } from '@/components/button/classes/button-classes'
 import { LoaderProps, LoaderRef } from '@/components/loader'
 import { RippleProps, RippleRef } from '@/components/ripple'
 import { useLazyComponents } from '@/components/button/hooks/use-lazy-components'
+import { SubLayerProps } from '@/components/sub-layer'
 
 type ButtonRef = React.ElementRef<'button'>
 
@@ -48,6 +49,7 @@ type ButtonCustomProps = {
   loaderProps?: LoaderProps
   loaderRef?: React.Ref<LoaderRef>
   loader?: React.ReactNode
+  subLayerProps?: SubLayerProps
   rippleProps?: RippleProps
   rippleRef?: React.Ref<RippleRef>
 }

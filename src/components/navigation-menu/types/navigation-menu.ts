@@ -1,11 +1,11 @@
-import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { Simplify } from '@/components/_shared/types/simplify'
 import {
-  NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuIndicator as NavigationMenuIndicatorPrimitive,
   NavigationMenuList as NavigationMenuListPrimitive,
+  NavigationMenu as NavigationMenuPrimitive,
   NavigationMenuViewport as NavigationMenuViewportPrimitive,
 } from '@radix-ui/react-navigation-menu'
-import { Simplify } from '@/components/_shared/types/simplify'
+import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 import React from 'react'
 
 type NavigationMenuPrimitiveType = typeof NavigationMenuPrimitive

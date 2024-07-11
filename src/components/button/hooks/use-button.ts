@@ -24,6 +24,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
     loadingContent,
     loaderProps,
     loaderRef,
+    subLayerProps,
     rippleProps,
     rippleRef,
     loader,
@@ -107,6 +108,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
       ...ariaComponentProps,
       ...restProps,
     },
+    subLayerProps,
     rippleProps: getRippleProps({ rippleRef, rippleProps, isLoading }),
     loaderProps: mergedLoaderProps,
     utility: {

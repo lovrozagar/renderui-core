@@ -1,7 +1,7 @@
 import { Simplify } from '@/components/_shared/types/simplify'
 
 import { AsChildProp } from '@/components/_shared/types/as-child'
-import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
+import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
 type SkeletonRef = React.ElementRef<'div'>
 

@@ -6,7 +6,6 @@ import React from 'react'
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Aria } from '@/components/aria'
-import { buttonClasses } from '@/components/button'
 import {
   DEFAULT_TEXT_AREA_CLASSNAME,
   DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
@@ -59,13 +58,6 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       data-required={isRequired}
       data-slot='base'
       className={cx(
-        buttonClasses({
-          variant,
-          hasDefaultHoverStyles: false,
-          hasDefaultPressedStyles: false,
-          hasLoaderOnLoading: false,
-          hasLowerOpacityOnLoading: false,
-        }),
         inputContainerClasses({ variant }),
         DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
         inputContainerClassName,

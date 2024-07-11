@@ -1,8 +1,8 @@
-import { AnimationStyleVariables } from '@/components/_shared/utils/get-animation-style-variables'
 import {
   PopoverArrow as PopoverArrowPrimitive,
   PopoverContent as PopoverContentPrimitive,
 } from '@radix-ui/react-popover'
+import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 import React from 'react'
 
 type PopoverContentPrimitiveType = typeof PopoverContentPrimitive

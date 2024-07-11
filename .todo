@@ -16,3 +16,18 @@
 - fix: combobox/select content, inspect and fix empty content
 - refactor (imports): separate import from utils lib
 - fix: combobox search (in new cmdk group list now must be used)
+- fix: animation duration props being forwarded to components
+- refactor: useReactLazy instead of custom import hooks to dynamically import components
+- feat: badge
+- feat: breadcrumbs
+- feat: carousel
+- feat: context menu
+- feat: calendar
+- feat: date picker
+- feat: drawer
+- feat: dropdown menu
+- feat: hover card
+- feat: otp input
+- feat: menubar
+- feat: pagination
+- feat: resizeable

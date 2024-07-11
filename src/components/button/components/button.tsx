@@ -1,7 +1,7 @@
 'use client'
 
-import { polymorphic } from '@renderui/utils/polymorphic'
 import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
+import { polymorphic } from '@renderui/utils/polymorphic'
 import React from 'react'
 
 import { useButton } from '@/components/button/hooks/use-button'
@@ -9,7 +9,7 @@ import { useLazyComponents } from '@/components/button/hooks/use-lazy-components
 import { ButtonProps, ButtonRef } from '@/components/button/types/button'
 
 const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
-  const { buttonProps, rippleProps, loaderProps, utility } = useButton(props, ref)
+  const { buttonProps, subLayerProps, rippleProps, loaderProps, utility } = useButton(props, ref)
   const { children } = buttonProps
   const {
     asChild,
@@ -64,7 +64,9 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
           ? loader ?? <LoaderComponent {...loaderProps} data-slot='loader' />
           : null}
         {functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
-        {RippleComponent ? <RippleComponent {...rippleProps} data-slot='ripple' /> : null}
+        {RippleComponent ? (
+          <RippleComponent {...subLayerProps} {...rippleProps} data-slot='ripple' />
+        ) : null}
       </>
     )
   }
