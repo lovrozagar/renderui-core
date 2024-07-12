@@ -9,7 +9,12 @@ const App = () => {
       <Tabs value={state} onValueChange={setValue}>
         <TabsTriggerList>
           <TabsTrigger asChild value={1}>
-            <a>Trigger 1</a>
+            {({ isSelected, ChildrenContainer, Cursor }) => (
+              <span>
+                <ChildrenContainer>Text</ChildrenContainer>
+                {isSelected ? <Cursor /> : null}
+              </span>
+            )}
           </TabsTrigger>
           <TabsTrigger value={2}>Trigger 2</TabsTrigger>
         </TabsTriggerList>

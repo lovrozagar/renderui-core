@@ -1,14 +1,14 @@
 'use client'
 
 import { TabsTrigger as TabsTriggerPrimitive } from '@radix-ui/react-tabs'
-import { cn, cx, getOptionalObject } from '@renderui/utils'
+import { cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 import { chain } from 'react-aria'
 
 import { Button } from '@/components/button'
 import { TabsCursor } from '@/components/tabs/components/tabs-cursor'
+import { TabsTriggerChildrenContainer } from '@/components/tabs/components/tabs-trigger-children-container'
 import {
-  DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
   DEFAULT_TABS_TRIGGER_CLASSNAME,
   INACTIVE_TABS_TRIGGER_CLASSNAME,
   NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS,
@@ -38,9 +38,16 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
   const { className: childrenContainerClassName, ...restChildrenContainerProps } =
     getOptionalObject(childrenContainerProps)
 
-  const { activeTab, color: rootColor, variant: rootVariant, type, setActiveTab } = useTabsContext()
+  const {
+    activeTab,
+    color: rootColor,
+    variant: rootVariant,
+    type,
+    hasCursor,
+    setActiveTab,
+  } = useTabsContext()
 
-  const isActive = activeTab === value
+  const isSelected = activeTab === value
 
   return (
     <TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>
@@ -48,6 +55,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         asChild={asChild}
         ref={ref}
         data-slot='trigger'
+        data-selected={isSelected}
         color={color ?? rootColor}
         variant={variant}
         hasRipple={hasRipple}
@@ -59,7 +67,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         )}
         className={cx(
           DEFAULT_TABS_TRIGGER_CLASSNAME,
-          isActive ? undefined : INACTIVE_TABS_TRIGGER_CLASSNAME,
+          isSelected ? undefined : INACTIVE_TABS_TRIGGER_CLASSNAME,
           NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS.includes(rootVariant)
             ? NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME
             : undefined,
@@ -68,38 +76,24 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         {...restProps}
       >
         {asChild ? (
-          <span className='w-full h-full rounded-[inherit] text-[inherit]'>
-            <span
-              data-slot='trigger-children-container'
-              className={cn(
-                DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
-                childrenContainerClassName,
-              )}
-              {...restChildrenContainerProps}
-            >
-              {children}
-            </span>
-            <span aria-hidden className='invisible'>
-              {children}
-            </span>
-            {isActive ? <TabsCursor /> : null}
-          </span>
+          functionCallOrValue(children, {
+            isSelected,
+            ChildrenContainer: TabsTriggerChildrenContainer,
+            Cursor: TabsCursor,
+          })
         ) : (
           <>
-            <span
-              data-slot='trigger-children-container'
-              className={cn(
-                DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
-                childrenContainerClassName,
-              )}
+            <TabsTriggerChildrenContainer
+              className={childrenContainerClassName}
               {...restChildrenContainerProps}
             >
-              {children}
-            </span>
-            <span aria-hidden className='invisible'>
-              {children}
-            </span>
-            {isActive ? <TabsCursor /> : null}
+              {functionCallOrValue(children, {
+                isSelected,
+                ChildrenContainer: TabsTriggerChildrenContainer,
+                Cursor: TabsCursor,
+              })}
+            </TabsTriggerChildrenContainer>
+            {hasCursor && isSelected ? <TabsCursor /> : null}
           </>
         )}
       </Button>

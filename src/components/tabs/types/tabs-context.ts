@@ -11,6 +11,7 @@ type TabsContext = {
   color: ButtonProps['color']
   type: TabsProps['type']
   animationDuration: number | undefined
+  hasCursor: boolean
   hasCursorAppearedRef: React.MutableRefObject<boolean>
   setActiveTab: React.Dispatch<React.SetStateAction<string | number>>
 }

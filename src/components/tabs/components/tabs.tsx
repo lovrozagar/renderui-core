@@ -22,6 +22,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
     color = 'primary',
     variant = 'outline',
     orientation = 'horizontal',
+    hasCursor = true,
     ...restProps
   } = props
 
@@ -52,6 +53,7 @@ const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
           color,
           variant,
           layoutId,
+          hasCursor,
           activeTab,
           orientation,
           animationDuration,

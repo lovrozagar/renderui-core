@@ -20,6 +20,7 @@ type TabsCustomProps = {
   defaultValue?: string | number
   value?: string | number
   animationDuration?: number
+  hasCursor?: boolean
   onValueChange?: (value: any) => void
 }
 
