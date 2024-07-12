@@ -34,7 +34,7 @@ const INACTIVE_TABS_TRIGGER_CLASSNAME =
   'text-mode-contrast transition-[color] duration-fast data-[hover="true"]:data-[state="inactive"]:text-primary'
 
 const DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME =
-  'absolute inset-0 z-[20] flex size-full items-center justify-center gap-3 text-[inherit]'
+  'absolute inset-0 z-[2] flex size-full items-center justify-center gap-3 text-[inherit]'
 
 export {
   DEFAULT_TABS_CLASSNAME,

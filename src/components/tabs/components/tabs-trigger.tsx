@@ -20,6 +20,7 @@ import { getHandleTriggerPress } from '@/components/tabs/utils/get-handdle-trigg
 
 const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, ref) => {
   const {
+    asChild,
     value,
     className,
     children,
@@ -44,6 +45,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
   return (
     <TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>
       <Button
+        asChild={asChild}
         ref={ref}
         data-slot='trigger'
         color={color ?? rootColor}
@@ -65,20 +67,41 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         )}
         {...restProps}
       >
-        <span
-          data-slot='trigger-children-container'
-          className={cn(
-            DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
-            childrenContainerClassName,
-          )}
-          {...restChildrenContainerProps}
-        >
-          {children}
-        </span>
-        <span aria-hidden className='invisible'>
-          {children}
-        </span>
-        {isActive ? <TabsCursor /> : null}
+        {asChild ? (
+          <span className='w-full h-full rounded-[inherit] text-[inherit]'>
+            <span
+              data-slot='trigger-children-container'
+              className={cn(
+                DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
+                childrenContainerClassName,
+              )}
+              {...restChildrenContainerProps}
+            >
+              {children}
+            </span>
+            <span aria-hidden className='invisible'>
+              {children}
+            </span>
+            {isActive ? <TabsCursor /> : null}
+          </span>
+        ) : (
+          <>
+            <span
+              data-slot='trigger-children-container'
+              className={cn(
+                DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME,
+                childrenContainerClassName,
+              )}
+              {...restChildrenContainerProps}
+            >
+              {children}
+            </span>
+            <span aria-hidden className='invisible'>
+              {children}
+            </span>
+            {isActive ? <TabsCursor /> : null}
+          </>
+        )}
       </Button>
     </TabsTriggerPrimitive>
   )
