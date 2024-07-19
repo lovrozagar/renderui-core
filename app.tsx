@@ -1,4 +1,4 @@
-import { Tabs, TabsTrigger, TabsTriggerList } from '@/components'
+import { Tabs, TabsTrigger, TabsTriggerList, TextArea } from '@/components'
 import React, { useState } from 'react'
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
           <TabsTrigger value={2}>Trigger 2</TabsTrigger>
         </TabsTriggerList>
       </Tabs>
+      <TextArea />
     </div>
   )
 }

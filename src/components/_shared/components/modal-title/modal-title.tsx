@@ -1,27 +1,20 @@
 import { cx } from '@renderui/utils'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 
-import { Text, TextProps, TextRef } from '@/components/text'
+import { DialogTitle } from '@radix-ui/react-dialog'
 
-type ModalTitleRef = TextRef
-
-type ModalTitleProps = TextProps
-
-const ModalTitle = React.forwardRef<ModalTitleRef, ModalTitleProps>((props, ref) => {
-  const { className, size = 'lg', color = 'mode-contrast', ...restProps } = props
+const ModalTitle = (props: ComponentProps<typeof DialogTitle>) => {
+  const { ref, className, color = 'mode-contrast', ...restProps } = props
 
   return (
-    <Text
+    <DialogTitle
       ref={ref}
-      data-slot='title'
-      size={size}
       color={color}
+      data-slot='title'
       className={cx('render-ui-modal-title font-semibold', className)}
       {...restProps}
     />
   )
-})
-
-ModalTitle.displayName = 'ModalTitle'
+}
 
 export { ModalTitle }

@@ -20,6 +20,8 @@ type TextAreaCustomProps = {
   isDisabled?: boolean
   isRequired?: boolean
   inputContainerProps?: React.ComponentPropsWithoutRef<typeof Aria>
+  minHeight?: number | `${number}`
+  maxHeight?: number | `${number}`
   onValueChange?: (value: string) => void
 }
 

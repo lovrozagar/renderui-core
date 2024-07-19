@@ -2,6 +2,4 @@ import { ModalTitle } from '@/components/_shared/components/modal-title/modal-ti
 
 const SheetTitle = ModalTitle
 
-SheetTitle.displayName = 'SheetTitle'
-
 export { SheetTitle }

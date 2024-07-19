@@ -18,6 +18,7 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     value: valueProp,
     children,
     className,
+    style,
     isDisabled,
     isReadOnly,
     isInvalid,
@@ -29,6 +30,8 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     onValueChange,
     variant = 'solid',
     defaultValue = '',
+    minHeight = 80,
+    maxHeight = 200,
     ...restProps
   } = props
 
@@ -42,6 +45,7 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     className: inputContainerClassName,
     isTextInput = true,
     isFocusWithin = true,
+    isUsingAriaPressProps = false,
     ...restInputContainerProps
   } = getOptionalObject(inputContainerProps)
 
@@ -52,6 +56,7 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       isTextInput={isTextInput}
       isFocusWithin={isFocusWithin}
       isDisabled={isDisabled}
+      isUsingAriaPressProps={isUsingAriaPressProps}
       data-readonly={isReadOnly}
       data-invalid={isInvalid}
       data-disabled={isDisabled}
@@ -62,6 +67,13 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
         DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
         inputContainerClassName,
       )}
+      style={
+        {
+          ...style,
+          '--min-height': `${minHeight}px`,
+          '--max-height': `${maxHeight}px`,
+        } as React.CSSProperties
+      }
       {...restInputContainerProps}
     >
       {functionCallOrValue(startContent, value)}

@@ -31,3 +31,6 @@
 - feat: menubar
 - feat: pagination
 - feat: resizeable
+
+-refactor: collapsible to use css height: calc-size(auto) when better browser support
+-also see what can be done with starting style and and transition behaviour when better browser support

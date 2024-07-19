@@ -2,6 +2,4 @@ import { ModalTitle } from '@/components/_shared/components/modal-title/modal-ti
 
 const DialogTitle = ModalTitle
 
-DialogTitle.displayName = 'DialogTitle'
-
 export { DialogTitle }

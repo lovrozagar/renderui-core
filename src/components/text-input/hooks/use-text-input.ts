@@ -83,8 +83,8 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     className: inputContainerClassName,
     onClick: inputContainerOnClick,
     onPointerDown: inputContainerOnPointerDown,
-    isFocusWithin = true,
     isTextInput = true,
+    isFocusWithin = true,
     isUsingAriaPressProps = false,
     ...restInputContainerClassName
   } = getOptionalObject(inputContainerProps)

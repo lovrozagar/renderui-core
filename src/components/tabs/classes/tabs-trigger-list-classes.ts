@@ -3,7 +3,7 @@ import { cva } from '@renderui/utils'
 import { TABS_SHARED_ORIENTATIONS, TABS_SHARED_VARIANTS } from '@/components/tabs/classes/shared'
 
 const tabsTriggerListClasses = cva(
-  'render-ui-trigger-list flex w-fit rounded p-1 transition-[background-color,border-color] duration-fast grow-children',
+  'render-ui-trigger-list flex w-fit rounded p-1 transition-[background-color,border-color] duration-fast',
   {
     variants: {
       variant: TABS_SHARED_VARIANTS,
@@ -12,11 +12,11 @@ const tabsTriggerListClasses = cva(
     compoundVariants: [
       {
         orientation: ['horizontal'],
-        className: 'flex',
+        className: 'flex grow-children',
       },
       {
         orientation: ['vertical'],
-        className: 'grid',
+        className: 'flex-col',
       },
       {
         variant: ['solid'],
