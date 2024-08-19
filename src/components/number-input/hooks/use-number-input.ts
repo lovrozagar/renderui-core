@@ -87,7 +87,11 @@ function useNumberInput(props: NumberInputProps, ref: React.Ref<NumberInputRef>)
     internalInputRef,
   )
 
-  useOnClickOutside('pointerdown', internalInputRef, clearIntervals)
+  useOnClickOutside({
+    event: 'pointerdown',
+    element: internalInputRef.current,
+    handler: clearIntervals,
+  })
 
   const {
     className: inputContainerClassName,

@@ -27,9 +27,12 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
     children,
     closeButtonProps,
     closeButtonIconProps,
+    animationDuration,
     animationInDuration,
     animationOutDuration,
-    animationDuration,
+    animationTimingFunction,
+    animationInTimingFunction,
+    animationOutTimingFunction,
     hasCloseButton = true,
     ...restProps
   } = props
@@ -53,7 +56,12 @@ const DialogContent = React.forwardRef<DialogContentRef, DialogContentProps>((pr
         className={cn(DFEAULT_DIALOG_CONTENT_CLASSNAME, className)}
         style={{
           ...getAnimationStyleVariables({
-            ...props,
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            animationTimingFunction,
+            animationInTimingFunction,
+            animationOutTimingFunction,
             defaultAnimationDuration: 200,
             defaultAnimationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }),

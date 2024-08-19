@@ -74,7 +74,11 @@ function useTextInput(props: TextInputProps, ref: React.Ref<TextInputRef>) {
     internalInputRef,
   )
 
-  useOnClickOutside('pointerdown', internalInputRef, clearTimeouts)
+  useOnClickOutside({
+    event: 'pointerdown',
+    element: internalInputRef.current,
+    handler: clearTimeouts,
+  })
 
   const shouldRenderClearButton =
     hasClearButtonAlways || (hasClearButton && typeof value === 'string' && value.length > 0)

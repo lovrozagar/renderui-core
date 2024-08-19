@@ -18,7 +18,19 @@ import {
 
 const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentProps>(
   (props, ref) => {
-    const { className, style, children, childrenContainerProps, ...restProps } = props
+    const {
+      className,
+      style,
+      children,
+      childrenContainerProps,
+      animationDuration,
+      animationInDuration,
+      animationOutDuration,
+      animationTimingFunction,
+      animationInTimingFunction,
+      animationOutTimingFunction,
+      ...restProps
+    } = props
 
     const {
       asChild,
@@ -35,7 +47,12 @@ const AccordionContent = React.forwardRef<AccordionContentRef, AccordionContentP
         className={cn(DEFAULT_ACCORDION_CONTENT_CLASSNAME, className)}
         style={{
           ...getAnimationStyleVariables({
-            props,
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            animationTimingFunction,
+            animationInTimingFunction,
+            animationOutTimingFunction,
             defaultAnimationDuration: 200,
             defaultAnimationTimingFunction: 'ease-out',
           }),

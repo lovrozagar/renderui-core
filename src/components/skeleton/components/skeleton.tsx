@@ -11,6 +11,8 @@ const Skeleton = React.forwardRef<SkeletonRef, SkeletonProps>((props, ref) => {
     className,
     style,
     count,
+    animationDuration,
+    animationTimingFunction,
     variant = 'slide',
     type = 'static',
     ...restProps
@@ -23,7 +25,8 @@ const Skeleton = React.forwardRef<SkeletonRef, SkeletonProps>((props, ref) => {
   const mergedStyle = {
     ...style,
     ...getAnimationStyleVariables({
-      ...props,
+      animationDuration,
+      animationTimingFunction,
       defaultAnimationDuration: 1500,
       defaultAnimationTimingFunction: 'ease',
     }),

@@ -9,7 +9,10 @@ type PopoverContentPrimitiveType = typeof PopoverContentPrimitive
 
 type PopoverContentRef = React.ElementRef<PopoverContentPrimitiveType>
 
-type PopoverContentProps = React.ComponentPropsWithoutRef<PopoverContentPrimitiveType> & {
+type PopoverContentProps = Omit<
+  React.ComponentPropsWithoutRef<PopoverContentPrimitiveType>,
+  'onPointerDownOutside'
+> & {
   portalContainer?: HTMLElement | null | undefined
   hasTriggerHeight?: boolean
   hasTriggerWidth?: boolean
@@ -19,6 +22,7 @@ type PopoverContentProps = React.ComponentPropsWithoutRef<PopoverContentPrimitiv
   hasTriggerMaxHeight?: boolean
   hasArrow?: boolean
   arrowProps?: React.ComponentPropsWithoutRef<typeof PopoverArrowPrimitive>
+  onPointerDownOutside?: (event: PointerEvent) => void
 } & AnimationStyleVariables
 
 export type { PopoverContentProps, PopoverContentRef }

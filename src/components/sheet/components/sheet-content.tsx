@@ -32,6 +32,9 @@ const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props
     animationDuration,
     animationInDuration,
     animationOutDuration,
+    animationTimingFunction,
+    animationInTimingFunction,
+    animationOutTimingFunction,
     hasCloseButton = true,
     side = 'right',
     ...restProps
@@ -56,7 +59,12 @@ const SheetContent = React.forwardRef<SheetContentRef, SheetContentProps>((props
         className={cn(sheetClasses({ side }), className)}
         style={{
           ...getAnimationStyleVariables({
-            ...props,
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            animationTimingFunction,
+            animationInTimingFunction,
+            animationOutTimingFunction,
             defaultAnimationDuration: 200,
             defaultAnimationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }),

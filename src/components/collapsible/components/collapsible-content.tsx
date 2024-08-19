@@ -20,10 +20,13 @@ const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleCo
     const {
       style,
       className,
+      hasSkippedInitialAnimation,
+      animationDuration,
       animationInDuration,
       animationOutDuration,
-      animationDuration,
-      hasSkippedInitialAnimation,
+      animationTimingFunction,
+      animationInTimingFunction,
+      animationOutTimingFunction,
       hasDefaultAnimation = true,
       ...restProps
     } = props
@@ -47,7 +50,12 @@ const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleCo
         )}
         style={{
           ...getAnimationStyleVariables({
-            ...props,
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            animationTimingFunction,
+            animationInTimingFunction,
+            animationOutTimingFunction,
             defaultAnimationDuration: defaultDuration,
             defaultAnimationTimingFunction: 'ease-out',
           }),

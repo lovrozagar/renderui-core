@@ -6,7 +6,7 @@ import {
   PopoverPortal as PopoverPortalPrimitive,
 } from '@radix-ui/react-popover'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import React, { useRef } from 'react'
 
 import {
   DEFAULT_POPOVER_ARROW_CLASSNAME,
@@ -21,6 +21,7 @@ import {
 } from '@/components/popover/constants/constants'
 import { PopoverContentProps, PopoverContentRef } from '@/components/popover/types/popover-content'
 import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 
 const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>((props, ref) => {
   const {
@@ -39,6 +40,10 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
     animationDuration,
     animationInDuration,
     animationOutDuration,
+    animationTimingFunction,
+    animationInTimingFunction,
+    animationOutTimingFunction,
+    onPointerDownOutside,
     hasArrow = true,
     align = 'center',
     sideOffset = 4,
@@ -46,6 +51,14 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
   } = props
 
   const { className: arrowClassName, ...restArrowProps } = getOptionalObject(arrowProps)
+
+  const contentRef = useRef<HTMLDivElement | null>(null)
+
+  useOnClickOutside({
+    event: 'pointerdown',
+    element: contentRef.current,
+    handler: onPointerDownOutside,
+  })
 
   return (
     <PopoverPortalPrimitive container={portalContainer} forceMount={forceMount}>
@@ -67,7 +80,12 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
         )}
         style={{
           ...getAnimationStyleVariables({
-            ...props,
+            animationDuration,
+            animationInDuration,
+            animationOutDuration,
+            animationTimingFunction,
+            animationInTimingFunction,
+            animationOutTimingFunction,
             defaultAnimationDuration: 150,
             defaultAnimationTimingFunction: 'ease',
           }),

@@ -21,6 +21,9 @@ const NavigationMenuContent = React.forwardRef<
     animationDuration,
     animationInDuration,
     animationOutDuration,
+    animationTimingFunction,
+    animationInTimingFunction,
+    animationOutTimingFunction,
     ...restProps
   } = props
 
@@ -30,7 +33,12 @@ const NavigationMenuContent = React.forwardRef<
       className={cn(DEFAULT_NAVIGATION_MENU_CONTENT_CLASSNAME, className)}
       style={{
         ...getAnimationStyleVariables({
-          ...props,
+          animationDuration,
+          animationInDuration,
+          animationOutDuration,
+          animationTimingFunction,
+          animationInTimingFunction,
+          animationOutTimingFunction,
           defaultAnimationDuration: 300,
           defaultAnimationTimingFunction: 'ease',
         }),
