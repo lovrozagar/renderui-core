@@ -1,20 +1,15 @@
-"use client";
+'use client'
 
-import { DialogClose as DialogClosePrimitive } from "@radix-ui/react-dialog";
-import { cn } from "@renderui/utils";
-import React from "react";
+import { DialogClose as DialogClosePrimitive } from '@radix-ui/react-dialog'
+import { cn } from '@renderui/utils'
+import React from 'react'
 
-type DialogCloseProps = React.ComponentProps<typeof DialogClosePrimitive>;
+type DialogCloseProps = React.ComponentProps<typeof DialogClosePrimitive>
 
 const ModalClose = (props: DialogCloseProps) => {
-  const { className, ...restProps } = props;
+	const { className, ...restProps } = props
 
-  return (
-    <DialogClosePrimitive
-      className={cn("render-ui-modal-close", className)}
-      {...restProps}
-    />
-  );
-};
+	return <DialogClosePrimitive className={cn('render-ui-modal-close', className)} {...restProps} />
+}
 
-export { ModalClose };
+export { ModalClose }

@@ -1,14 +1,14 @@
-import { Simplify } from "@/components/_shared/types/simplify";
+import { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from "@/components/_shared/types/as-child";
+import { AsChildProp } from '@/components/_shared/types/as-child'
 
-type BoxPrimitiveProps = React.ComponentPropsWithRef<"div">;
+type BoxPrimitiveProps = React.ComponentPropsWithRef<'div'>
 
 type BoxCustomProps = {
-  grow?: boolean;
-  noShrink?: boolean;
-};
+	grow?: boolean
+	noShrink?: boolean
+}
 
-type BoxProps = Simplify<BoxPrimitiveProps & BoxCustomProps & AsChildProp>;
+type BoxProps = Simplify<BoxPrimitiveProps & BoxCustomProps & AsChildProp>
 
-export type { BoxProps };
+export type { BoxProps }

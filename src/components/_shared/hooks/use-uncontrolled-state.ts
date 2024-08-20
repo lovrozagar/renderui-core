@@ -5,27 +5,27 @@ import React from 'react'
 import { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 
 type UseControllableStateProps<T> = {
-  prop?: T | undefined
-  defaultProp?: T | undefined
-  onChange: ((state: T) => void) | undefined
+	prop?: T | undefined
+	defaultProp?: T | undefined
+	onChange: ((state: T) => void) | undefined
 }
 
 function useUncontrolledState<T>({
-  defaultProp,
-  onChange,
+	defaultProp,
+	onChange,
 }: Omit<UseControllableStateProps<T>, 'prop'>) {
-  const [value, setValue] = React.useState<T | undefined>(defaultProp)
-  const previousValueRef = React.useRef(value)
-  const handleChange = useFreshRef(onChange)
+	const [value, setValue] = React.useState<T | undefined>(defaultProp)
+	const previousValueRef = React.useRef(value)
+	const handleChange = useFreshRef(onChange)
 
-  React.useEffect(() => {
-    if (previousValueRef.current !== value) {
-      handleChange.current?.(value as T)
-      previousValueRef.current = value
-    }
-  }, [value, previousValueRef, handleChange])
+	React.useEffect(() => {
+		if (previousValueRef.current !== value) {
+			handleChange.current?.(value as T)
+			previousValueRef.current = value
+		}
+	}, [value, previousValueRef, handleChange])
 
-  return [value, setValue]
+	return [value, setValue]
 }
 
 export { useUncontrolledState }

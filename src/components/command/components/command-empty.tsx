@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import { cn } from "@renderui/utils";
-import { CommandEmpty as CommandEmptyPrimitive } from "cmdk";
-import React from "react";
+import { cn } from '@renderui/utils'
+import { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
+import React from 'react'
 
-import { DEFAULT_COMMAND_EMPTY_CLASSNAME } from "@/components/command/constants/constants";
-import { CommandEmptyProps } from "@/components/command/types/command-empty";
+import { DEFAULT_COMMAND_EMPTY_CLASSNAME } from '@/components/command/constants/constants'
+import { CommandEmptyProps } from '@/components/command/types/command-empty'
 
 const CommandEmpty = (props: CommandEmptyProps) => {
-  const { className, ...restProps } = props;
+	const { className, ...restProps } = props
 
-  return (
-    <CommandEmptyPrimitive
-      data-slot="empty"
-      className={cn(DEFAULT_COMMAND_EMPTY_CLASSNAME, className)}
-      {...restProps}
-    />
-  );
-};
+	return (
+		<CommandEmptyPrimitive
+			data-slot='empty'
+			className={cn(DEFAULT_COMMAND_EMPTY_CLASSNAME, className)}
+			{...restProps}
+		/>
+	)
+}
 
-export { CommandEmpty };
+export { CommandEmpty }

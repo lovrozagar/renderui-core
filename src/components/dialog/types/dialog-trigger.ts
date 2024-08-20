@@ -1,5 +1,5 @@
-import { ButtonProps } from "@/components/button";
+import { ButtonProps } from '@/components/button'
 
-type DialogTriggerProps = ButtonProps;
+type DialogTriggerProps = ButtonProps
 
-export type { DialogTriggerProps };
+export type { DialogTriggerProps }

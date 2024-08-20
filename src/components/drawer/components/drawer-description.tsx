@@ -1,1 +1,1 @@
-export { ModalDescription as DrawerDescription } from "@/components/_shared/components/modal-description/modal-description";
+export { ModalDescription as DrawerDescription } from '@/components/_shared/components/modal-description/modal-description'

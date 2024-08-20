@@ -1,17 +1,12 @@
-import { cn } from "@renderui/utils";
-import React from "react";
+import { cn } from '@renderui/utils'
+import React from 'react'
 
-import { VisuallyHiddenProps } from "@/components/visually-hidden/types/visually-hidden";
+import { VisuallyHiddenProps } from '@/components/visually-hidden/types/visually-hidden'
 
 const VisuallyHidden = (props: VisuallyHiddenProps) => {
-  const { className, ...restProps } = props;
+	const { className, ...restProps } = props
 
-  return (
-    <span
-      className={cn("render-ui-visually-hidden sr-only", className)}
-      {...restProps}
-    />
-  );
-};
+	return <span className={cn('render-ui-visually-hidden sr-only', className)} {...restProps} />
+}
 
-export { VisuallyHidden };
+export { VisuallyHidden }

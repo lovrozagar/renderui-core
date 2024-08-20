@@ -1,5 +1,5 @@
-import { SliderThumb as SliderThumbPrimitive } from "@radix-ui/react-slider";
+import { SliderThumb as SliderThumbPrimitive } from '@radix-ui/react-slider'
 
-type SliderThumbProps = React.ComponentProps<typeof SliderThumbPrimitive>;
+type SliderThumbProps = React.ComponentProps<typeof SliderThumbPrimitive>
 
-export type { SliderThumbProps };
+export type { SliderThumbProps }

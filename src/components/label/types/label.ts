@@ -1,7 +1,7 @@
-import { Simplify } from "@/components/_shared/types/simplify";
+import { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from "@/components/_shared/types/as-child";
+import { AsChildProp } from '@/components/_shared/types/as-child'
 
-type LabelProps = Simplify<React.ComponentPropsWithRef<"label"> & AsChildProp>;
+type LabelProps = Simplify<React.ComponentPropsWithRef<'label'> & AsChildProp>
 
-export type { LabelProps };
+export type { LabelProps }

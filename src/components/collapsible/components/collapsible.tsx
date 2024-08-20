@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { CollapsibleProps } from "@/components/collapsible/types/collapsible";
-import { Collapsible as CollapsiblePrimitive } from "@radix-ui/react-collapsible";
-import { cn } from "@renderui/utils";
-import React from "react";
+import { CollapsibleProps } from '@/components/collapsible/types/collapsible'
+import { Collapsible as CollapsiblePrimitive } from '@radix-ui/react-collapsible'
+import { cn } from '@renderui/utils'
+import React from 'react'
 
 const Collapsible = (props: CollapsibleProps) => {
-  const { className, ...restProps } = props;
+	const { className, ...restProps } = props
 
-  return (
-    <CollapsiblePrimitive
-      data-slot="base"
-      className={cn("render-ui-collapsible", className)}
-      {...restProps}
-    />
-  );
-};
+	return (
+		<CollapsiblePrimitive
+			data-slot='base'
+			className={cn('render-ui-collapsible', className)}
+			{...restProps}
+		/>
+	)
+}
 
-export { Collapsible };
+export { Collapsible }

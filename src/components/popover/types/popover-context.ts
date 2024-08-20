@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 type PopoverContext = {
-  contentRef: React.RefObject<HTMLDivElement | null>;
-};
+	contentRef: React.RefObject<HTMLDivElement | null>
+}
 
-export type { PopoverContext };
+export type { PopoverContext }

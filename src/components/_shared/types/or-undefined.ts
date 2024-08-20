@@ -5,7 +5,7 @@
  * @template T - The original type to be transformed.
  */
 type OrUndefined<T> = {
-  [K in keyof T]: T[K] | undefined
+	[K in keyof T]: T[K] | undefined
 }
 
 export type { OrUndefined }

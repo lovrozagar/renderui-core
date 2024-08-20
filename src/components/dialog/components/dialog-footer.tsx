@@ -1,5 +1,5 @@
-import { ModalFooter } from "@/components/_shared/components/modal-footer/modal-footer";
+import { ModalFooter } from '@/components/_shared/components/modal-footer/modal-footer'
 
-const DialogFooter = ModalFooter;
+const DialogFooter = ModalFooter
 
-export { DialogFooter };
+export { DialogFooter }

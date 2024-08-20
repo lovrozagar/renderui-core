@@ -1,16 +1,14 @@
-import { Simplify } from "@/components/_shared/types/simplify";
-import React, { CSSProperties } from "react";
+import { Simplify } from '@/components/_shared/types/simplify'
+import React, { CSSProperties } from 'react'
 
-import { AsChildProp } from "@/components/_shared/types/as-child";
+import { AsChildProp } from '@/components/_shared/types/as-child'
 
-type AspectRatioBoxProps = React.ComponentPropsWithRef<"div">;
+type AspectRatioBoxProps = React.ComponentPropsWithRef<'div'>
 
 type AspectRatioRatioProps = {
-  ratio: CSSProperties["aspectRatio"];
-};
+	ratio: CSSProperties['aspectRatio']
+}
 
-type AspectRatioProps = Simplify<
-  AspectRatioBoxProps & AspectRatioRatioProps & AsChildProp
->;
+type AspectRatioProps = Simplify<AspectRatioBoxProps & AspectRatioRatioProps & AsChildProp>
 
-export type { AspectRatioProps };
+export type { AspectRatioProps }

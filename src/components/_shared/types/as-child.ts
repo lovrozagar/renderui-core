@@ -1,5 +1,5 @@
 type AsChildProp = {
-  asChild?: boolean
+	asChild?: boolean
 }
 
 export type { AsChildProp }

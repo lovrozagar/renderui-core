@@ -1,5 +1,5 @@
-import { ButtonProps } from "@/components/button";
+import { ButtonProps } from '@/components/button'
 
-type SheetTriggerProps = ButtonProps;
+type SheetTriggerProps = ButtonProps
 
-export type { SheetTriggerProps };
+export type { SheetTriggerProps }

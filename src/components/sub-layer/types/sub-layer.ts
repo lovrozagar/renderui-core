@@ -1,10 +1,8 @@
-import { Simplify } from "@/components/_shared/types/simplify";
-import React from "react";
+import { Simplify } from '@/components/_shared/types/simplify'
+import React from 'react'
 
-import { AsChildProp } from "@/components/_shared/types/as-child";
+import { AsChildProp } from '@/components/_shared/types/as-child'
 
-type SubLayerProps = Simplify<
-  React.ComponentPropsWithRef<"span"> & AsChildProp
->;
+type SubLayerProps = Simplify<React.ComponentPropsWithRef<'span'> & AsChildProp>
 
-export type { SubLayerProps };
+export type { SubLayerProps }

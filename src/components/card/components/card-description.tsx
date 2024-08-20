@@ -1,21 +1,21 @@
-import { cn } from "@renderui/utils";
-import React from "react";
+import { cn } from '@renderui/utils'
+import React from 'react'
 
-import { DEFAULT_CARD_DESCRIPTION_CLASSNAME } from "@/components/card/constants/constants";
-import { CardDescriptionProps } from "@/components/card/types/card-description";
-import { Text } from "@/components/text";
+import { DEFAULT_CARD_DESCRIPTION_CLASSNAME } from '@/components/card/constants/constants'
+import { CardDescriptionProps } from '@/components/card/types/card-description'
+import { Text } from '@/components/text'
 
 const CardDescription = (props: CardDescriptionProps) => {
-  const { className, size = "sm", ...restProps } = props;
+	const { className, size = 'sm', ...restProps } = props
 
-  return (
-    <Text
-      size={size}
-      data-slot="description"
-      className={cn(DEFAULT_CARD_DESCRIPTION_CLASSNAME, className)}
-      {...restProps}
-    />
-  );
-};
+	return (
+		<Text
+			size={size}
+			data-slot='description'
+			className={cn(DEFAULT_CARD_DESCRIPTION_CLASSNAME, className)}
+			{...restProps}
+		/>
+	)
+}
 
-export { CardDescription };
+export { CardDescription }

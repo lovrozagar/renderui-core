@@ -1,32 +1,27 @@
-"use client";
+'use client'
 
-import { DialogTrigger as DialogTriggerPrimitive } from "@radix-ui/react-dialog";
-import { cn } from "@renderui/utils";
-import React from "react";
+import { DialogTrigger as DialogTriggerPrimitive } from '@radix-ui/react-dialog'
+import { cn } from '@renderui/utils'
+import React from 'react'
 
-import { Button } from "@/components/button/components/button";
-import { DEFAULT_DIALOG_TRIGGER_CLASSNAME } from "@/components/dialog/constants/constants";
-import { DialogTriggerProps } from "@/components/dialog/types/dialog-trigger";
+import { Button } from '@/components/button/components/button'
+import { DEFAULT_DIALOG_TRIGGER_CLASSNAME } from '@/components/dialog/constants/constants'
+import { DialogTriggerProps } from '@/components/dialog/types/dialog-trigger'
 
 const DialogTrigger = (props: DialogTriggerProps) => {
-  const {
-    className,
-    variant = "solid",
-    color = "mode-accent",
-    ...restProps
-  } = props;
+	const { className, variant = 'solid', color = 'mode-accent', ...restProps } = props
 
-  return (
-    <DialogTriggerPrimitive asChild>
-      <Button
-        data-slot="trigger"
-        color={color}
-        variant={variant}
-        className={cn(DEFAULT_DIALOG_TRIGGER_CLASSNAME, className)}
-        {...restProps}
-      />
-    </DialogTriggerPrimitive>
-  );
-};
+	return (
+		<DialogTriggerPrimitive asChild>
+			<Button
+				data-slot='trigger'
+				color={color}
+				variant={variant}
+				className={cn(DEFAULT_DIALOG_TRIGGER_CLASSNAME, className)}
+				{...restProps}
+			/>
+		</DialogTriggerPrimitive>
+	)
+}
 
-export { DialogTrigger };
+export { DialogTrigger }

@@ -1,3 +1,3 @@
-"use client";
+'use client'
 
-export { ModalClose as SheetClose } from "@/components/_shared/components/modal-close/modal-close";
+export { ModalClose as SheetClose } from '@/components/_shared/components/modal-close/modal-close'

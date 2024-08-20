@@ -1,23 +1,23 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "noEmit": true,
-    "allowJs": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "noUncheckedIndexedAccess": true,
-    "jsx": "react",
-    "target": "es2022",
-    "moduleDetection": "force",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+	"compilerOptions": {
+		"strict": true,
+		"noEmit": true,
+		"allowJs": true,
+		"declaration": true,
+		"skipLibCheck": true,
+		"noImplicitAny": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"noUncheckedIndexedAccess": true,
+		"jsx": "react",
+		"target": "es2022",
+		"moduleDetection": "force",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	}
 }

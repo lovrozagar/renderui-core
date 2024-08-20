@@ -1,53 +1,43 @@
 {
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.fixAll.eslint": "explicit"
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
-  "eslint.format.enable": true,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "files.encoding": "utf8",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.useEditorConfig": true,
-  "search.exclude": {
-    "**/package-lock.json": true,
-    "**/pnpm-lock.yaml": true,
-    ".cache/**": true,
-    ".git/**": true,
-    "coverage/**": true,
-    "dist/**": true,
-    "generated/**": true,
-    "node_modules/**": true,
-    "public/**": true
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["cn"],
-    ["className\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["classNams\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.suggest.autoImports": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"files.encoding": "utf8",
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+	"javascript.preferences.importModuleSpecifier": "non-relative",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"search.exclude": {
+		"**/package-lock.json": true,
+		"**/pnpm-lock.yaml": true,
+		".cache/**": true,
+		".git/**": true,
+		"coverage/**": true,
+		"dist/**": true,
+		"generated/**": true,
+		"node_modules/**": true,
+		"public/**": true
+	},
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.suggest.autoImports": true,
+	"typescript.updateImportsOnFileMove.enabled": "always"
 }

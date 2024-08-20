@@ -1,5 +1,5 @@
-import { TextProps } from "@/components/text";
+import { TextProps } from '@/components/text'
 
-type CardDescriptionProps = TextProps;
+type CardDescriptionProps = TextProps
 
-export type { CardDescriptionProps };
+export type { CardDescriptionProps }

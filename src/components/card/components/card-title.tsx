@@ -1,21 +1,21 @@
-import { cx } from "@renderui/utils";
-import React from "react";
+import { cx } from '@renderui/utils'
+import React from 'react'
 
-import { DEFAULT_CARD_TITLE_CLASSNAME } from "@/components/card/constants/constants";
-import { CardTitleProps } from "@/components/card/types/card-title";
-import { Text } from "@/components/text";
+import { DEFAULT_CARD_TITLE_CLASSNAME } from '@/components/card/constants/constants'
+import { CardTitleProps } from '@/components/card/types/card-title'
+import { Text } from '@/components/text'
 
 const CardTitle = (props: CardTitleProps) => {
-  const { className, size = "md", ...restProps } = props;
+	const { className, size = 'md', ...restProps } = props
 
-  return (
-    <Text
-      size={size}
-      data-slot="title"
-      className={cx(DEFAULT_CARD_TITLE_CLASSNAME, className)}
-      {...restProps}
-    />
-  );
-};
+	return (
+		<Text
+			size={size}
+			data-slot='title'
+			className={cx(DEFAULT_CARD_TITLE_CLASSNAME, className)}
+			{...restProps}
+		/>
+	)
+}
 
-export { CardTitle };
+export { CardTitle }

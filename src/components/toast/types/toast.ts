@@ -1,39 +1,32 @@
-import { Simplify } from "@/components/_shared/types/simplify";
-import { toast } from "sonner";
+import { Simplify } from '@/components/_shared/types/simplify'
+import { toast } from 'sonner'
 
 type ToastProps = Simplify<
-  Parameters<(typeof toast)["custom"]>[1] & {
-    title?: string;
-    description?: string;
-    children?: React.ReactNode | ((t: string | number) => React.ReactNode);
-    closeButtonProps?: React.ComponentPropsWithRef<"button">;
-    actionButtonProps?: Omit<
-      React.ComponentPropsWithRef<"button">,
-      "onClick"
-    > & {
-      onClick: (t: string | number) => void;
-    };
-  }
->;
+	Parameters<(typeof toast)['custom']>[1] & {
+		title?: string
+		description?: string
+		children?: React.ReactNode | ((t: string | number) => React.ReactNode)
+		closeButtonProps?: React.ComponentPropsWithRef<'button'>
+		actionButtonProps?: Omit<React.ComponentPropsWithRef<'button'>, 'onClick'> & {
+			onClick: (t: string | number) => void
+		}
+	}
+>
 
 type ToastClasses = {
-  title: string;
-  description: string;
-  container: string;
-  button: string;
-};
+	title: string
+	description: string
+	container: string
+	button: string
+}
 
 type ToastContentProps = {
-  t: string | number;
+	t: string | number
 } & Pick<
-  ToastProps,
-  | "title"
-  | "description"
-  | "children"
-  | "closeButtonProps"
-  | "actionButtonProps"
+	ToastProps,
+	'title' | 'description' | 'children' | 'closeButtonProps' | 'actionButtonProps'
 > & {
-    styles: ToastClasses;
-  };
+		styles: ToastClasses
+	}
 
-export type { ToastProps, ToastClasses, ToastContentProps };
+export type { ToastProps, ToastClasses, ToastContentProps }

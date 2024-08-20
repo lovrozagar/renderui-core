@@ -1,19 +1,19 @@
-import { Simplify } from "@/components/_shared/types/simplify";
-import { m } from "framer-motion";
-import React from "react";
+import { Simplify } from '@/components/_shared/types/simplify'
+import { m } from 'framer-motion'
+import React from 'react'
 
-import { SubLayerProps } from "@/components/sub-layer";
+import { SubLayerProps } from '@/components/sub-layer'
 
-type RipplePrimitiveProps = React.ComponentPropsWithRef<typeof m.span>;
+type RipplePrimitiveProps = React.ComponentPropsWithRef<typeof m.span>
 
 type RippleCustomProps = {
-  isDisabled?: boolean;
-  opacity?: number;
-  duration?: number;
-  scale?: number;
-  subLayerProps?: SubLayerProps;
-};
+	isDisabled?: boolean
+	opacity?: number
+	duration?: number
+	scale?: number
+	subLayerProps?: SubLayerProps
+}
 
-type RippleProps = Simplify<RipplePrimitiveProps & RippleCustomProps>;
+type RippleProps = Simplify<RipplePrimitiveProps & RippleCustomProps>
 
-export type { RippleProps };
+export type { RippleProps }

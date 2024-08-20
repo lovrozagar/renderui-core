@@ -4,19 +4,19 @@ import { ComboboxContentProps } from '@/components/combobox/types/combobox-conte
 import { ScrollArea } from '@/components/scroll-area'
 
 function useLazyScrollAreaComponent(hasScroll: ComboboxContentProps['hasScroll']) {
-  const [ScrollAreaComponent, setScrollComponent] = React.useState<typeof ScrollArea | null>(null)
+	const [ScrollAreaComponent, setScrollComponent] = React.useState<typeof ScrollArea | null>(null)
 
-  React.useEffect(() => {
-    const loadComponent = async () => {
-      const { ScrollArea } = await import('@/components/scroll-area')
+	React.useEffect(() => {
+		const loadComponent = async () => {
+			const { ScrollArea } = await import('@/components/scroll-area')
 
-      setScrollComponent(ScrollArea)
-    }
+			setScrollComponent(ScrollArea)
+		}
 
-    loadComponent()
-  }, [hasScroll])
+		loadComponent()
+	}, [hasScroll])
 
-  return ScrollAreaComponent
+	return ScrollAreaComponent
 }
 
 export { useLazyScrollAreaComponent }

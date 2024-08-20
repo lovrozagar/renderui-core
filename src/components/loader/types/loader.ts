@@ -1,15 +1,13 @@
-import { Simplify } from "@/components/_shared/types/simplify";
+import { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from "@/components/_shared/types/as-child";
-import { NonNullableVariantProps } from "@/components/_shared/types/variants";
-import { loaderClasses } from "@/components/loader/classes/loader-classes";
+import { AsChildProp } from '@/components/_shared/types/as-child'
+import { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import { loaderClasses } from '@/components/loader/classes/loader-classes'
 
-type LoaderPrimitiveProps = React.ComponentPropsWithRef<"span">;
+type LoaderPrimitiveProps = React.ComponentPropsWithRef<'span'>
 
-type LodaerRenderUIProps = NonNullableVariantProps<typeof loaderClasses>;
+type LodaerRenderUIProps = NonNullableVariantProps<typeof loaderClasses>
 
-type LoaderProps = Simplify<
-  LoaderPrimitiveProps & LodaerRenderUIProps & AsChildProp
->;
+type LoaderProps = Simplify<LoaderPrimitiveProps & LodaerRenderUIProps & AsChildProp>
 
-export type { LoaderProps };
+export type { LoaderProps }

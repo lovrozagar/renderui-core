@@ -1,7 +1,5 @@
-import { Drawer as DrawerPrimitive } from "vaul";
+import { Drawer as DrawerPrimitive } from 'vaul'
 
-type DrawerContentProps = React.ComponentPropsWithRef<
-  typeof DrawerPrimitive.Content
->;
+type DrawerContentProps = React.ComponentPropsWithRef<typeof DrawerPrimitive.Content>
 
-export type { DrawerContentProps };
+export type { DrawerContentProps }

@@ -1,1 +1,1 @@
-export { ComboboxItem as SelectItem } from "@/components/combobox";
+export { ComboboxItem as SelectItem } from '@/components/combobox'

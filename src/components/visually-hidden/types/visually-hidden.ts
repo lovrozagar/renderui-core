@@ -1,3 +1,3 @@
-type VisuallyHiddenProps = React.ComponentPropsWithRef<"span">;
+type VisuallyHiddenProps = React.ComponentPropsWithRef<'span'>
 
-export type { VisuallyHiddenProps };
+export type { VisuallyHiddenProps }

@@ -1,27 +1,23 @@
-import { ButtonProps } from "@/components/button";
-import { NavigationMenuTriggerIndicator } from "@/components/navigation-menu/components/navigation-menu-trigger-indicator";
-import { Simplify } from "@/components/_shared/types/simplify";
+import { ButtonProps } from '@/components/button'
+import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
+import { Simplify } from '@/components/_shared/types/simplify'
 
 type NavigationMenuTriggerRenderProps = {
-  Indicator: typeof NavigationMenuTriggerIndicator;
-  indicatorProps:
-    | React.ComponentProps<typeof NavigationMenuTriggerIndicator>
-    | undefined;
-};
-type NavigationMenuTriggerButtonProps = Omit<ButtonProps, "children"> & {
-  children?:
-    | ((props: NavigationMenuTriggerRenderProps) => React.ReactNode)
-    | React.ReactNode;
-};
+	Indicator: typeof NavigationMenuTriggerIndicator
+	indicatorProps: React.ComponentProps<typeof NavigationMenuTriggerIndicator> | undefined
+}
+type NavigationMenuTriggerButtonProps = Omit<ButtonProps, 'children'> & {
+	children?: ((props: NavigationMenuTriggerRenderProps) => React.ReactNode) | React.ReactNode
+}
 
 type NavigationMenuTriggerCustomProps = {
-  indicator?: React.ReactNode;
-  indicatorProps?: React.ComponentProps<typeof NavigationMenuTriggerIndicator>;
-  hasIndicator?: boolean;
-};
+	indicator?: React.ReactNode
+	indicatorProps?: React.ComponentProps<typeof NavigationMenuTriggerIndicator>
+	hasIndicator?: boolean
+}
 
 type NavigationMenuTriggerProps = Simplify<
-  NavigationMenuTriggerButtonProps & NavigationMenuTriggerCustomProps
->;
+	NavigationMenuTriggerButtonProps & NavigationMenuTriggerCustomProps
+>
 
-export type { NavigationMenuTriggerProps };
+export type { NavigationMenuTriggerProps }

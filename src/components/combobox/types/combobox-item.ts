@@ -1,21 +1,16 @@
-import { Simplify } from "@/components/_shared/types/simplify";
+import { Simplify } from '@/components/_shared/types/simplify'
 
-import { CommandItemProps } from "@/components/command";
+import { CommandItemProps } from '@/components/command'
 
-type ComboboxItemCommandItemProps = Omit<
-  CommandItemProps,
-  "value" | "children"
->;
+type ComboboxItemCommandItemProps = Omit<CommandItemProps, 'value' | 'children'>
 
 type ComboboxItemCustomProps = {
-  value: string | number;
-  children: React.ReactNode;
-  startContent?: React.ReactNode;
-  endContent?: React.ReactNode;
-};
+	value: string | number
+	children: React.ReactNode
+	startContent?: React.ReactNode
+	endContent?: React.ReactNode
+}
 
-type ComboboxItemProps = Simplify<
-  ComboboxItemCommandItemProps & ComboboxItemCustomProps
->;
+type ComboboxItemProps = Simplify<ComboboxItemCommandItemProps & ComboboxItemCustomProps>
 
-export type { ComboboxItemProps };
+export type { ComboboxItemProps }

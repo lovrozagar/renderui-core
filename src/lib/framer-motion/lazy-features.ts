@@ -1,13 +1,13 @@
 async function lazyImportDomAnimation() {
-  const { domAnimation } = await import('@/lib/framer-motion/dom-animation')
+	const { domAnimation } = await import('@/lib/framer-motion/dom-animation')
 
-  return domAnimation
+	return domAnimation
 }
 
 async function lazyImportDomMax() {
-  const { domMax } = await import('@/lib/framer-motion/dom-max')
+	const { domMax } = await import('@/lib/framer-motion/dom-max')
 
-  return domMax
+	return domMax
 }
 
 export { lazyImportDomAnimation, lazyImportDomMax }

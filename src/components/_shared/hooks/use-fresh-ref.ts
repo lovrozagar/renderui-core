@@ -3,13 +3,13 @@
 import React from 'react'
 
 function useFreshRef<T>(value: T) {
-  const ref = React.useRef(value)
+	const ref = React.useRef(value)
 
-  React.useEffect(() => {
-    ref.current = value
-  }, [value])
+	React.useEffect(() => {
+		ref.current = value
+	}, [value])
 
-  return ref
+	return ref
 }
 
 export { useFreshRef }

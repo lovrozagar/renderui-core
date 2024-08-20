@@ -1,7 +1,7 @@
-import { CommandItem as CommandItemPrimitive } from "cmdk";
+import { CommandItem as CommandItemPrimitive } from 'cmdk'
 
-type CommandItemPrimitiveType = typeof CommandItemPrimitive;
+type CommandItemPrimitiveType = typeof CommandItemPrimitive
 
-type CommandItemProps = React.ComponentPropsWithRef<CommandItemPrimitiveType>;
+type CommandItemProps = React.ComponentPropsWithRef<CommandItemPrimitiveType>
 
-export type { CommandItemProps };
+export type { CommandItemProps }

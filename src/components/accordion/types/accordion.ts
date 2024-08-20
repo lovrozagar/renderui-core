@@ -1,7 +1,7 @@
-import { Accordion as AccordionPrimitive } from "@radix-ui/react-accordion";
+import { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
 
-type AccordionPrimitiveType = typeof AccordionPrimitive;
+type AccordionPrimitiveType = typeof AccordionPrimitive
 
-type AccordionProps = React.ComponentPropsWithRef<AccordionPrimitiveType>;
+type AccordionProps = React.ComponentPropsWithRef<AccordionPrimitiveType>
 
-export type { AccordionProps };
+export type { AccordionProps }

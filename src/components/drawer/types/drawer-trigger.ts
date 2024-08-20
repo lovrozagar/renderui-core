@@ -1,5 +1,5 @@
-import { ButtonProps } from "@/components/button";
+import { ButtonProps } from '@/components/button'
 
-type DrawerTriggerProps = ButtonProps;
+type DrawerTriggerProps = ButtonProps
 
-export type { DrawerTriggerProps };
+export type { DrawerTriggerProps }

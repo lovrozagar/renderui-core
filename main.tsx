@@ -8,7 +8,7 @@ import { App } from './app'
 
 // eslint-disable-next-line ssr-friendly/no-dom-globals-in-module-scope
 ReactDOM.createRoot(document.querySelector('#root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
 )

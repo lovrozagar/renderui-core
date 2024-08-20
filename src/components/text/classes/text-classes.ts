@@ -7,28 +7,28 @@ import { textShadowVariants } from '@/components/_shared/variants/text-shadow'
 import { textSizeVariants } from '@/components/_shared/variants/text-size'
 
 const textClasses = cva('render-ui-text box-border whitespace-normal text-mode-contrast', {
-  variants: {
-    as: {
-      span: '',
-      div: '',
-      p: '',
-    },
-    size: textSizeVariants,
-    textBreak: textBreakVariants,
-    shadow: textShadowVariants,
-    overflow: textOverflowVariants,
-    letterSpacing: letterSpacingVariants,
-  },
-  compoundVariants: [
-    {
-      overflow: ['elipsis', 'clip'],
-      as: 'span',
-      className: 'block',
-    },
-  ],
-  defaultVariants: {
-    size: 'base',
-  },
+	variants: {
+		as: {
+			span: '',
+			div: '',
+			p: '',
+		},
+		size: textSizeVariants,
+		textBreak: textBreakVariants,
+		shadow: textShadowVariants,
+		overflow: textOverflowVariants,
+		letterSpacing: letterSpacingVariants,
+	},
+	compoundVariants: [
+		{
+			overflow: ['elipsis', 'clip'],
+			as: 'span',
+			className: 'block',
+		},
+	],
+	defaultVariants: {
+		size: 'base',
+	},
 })
 
 export { textClasses }

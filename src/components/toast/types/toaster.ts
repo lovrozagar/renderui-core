@@ -1,5 +1,5 @@
-import { ExternalToast, Toaster, ToastT } from "sonner";
+import { ExternalToast, Toaster, ToastT } from 'sonner'
 
-type ToasterProps = React.ComponentPropsWithRef<typeof Toaster>;
+type ToasterProps = React.ComponentPropsWithRef<typeof Toaster>
 
-export type { ExternalToast, ToasterProps, ToastT };
+export type { ExternalToast, ToasterProps, ToastT }

@@ -6,8 +6,8 @@
  * @template T - The original type to be transformed.
  */
 type Prettify<T> = {
-  [K in keyof T]: T[K]
-  // eslint-disable-next-line functional/readonly-type
+	[K in keyof T]: T[K]
+	// eslint-disable-next-line functional/readonly-type
 } & {}
 
 export type { Prettify }

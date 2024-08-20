@@ -1,7 +1,7 @@
-import { CommandGroup as CommandGroupPrimitive } from "cmdk";
+import { CommandGroup as CommandGroupPrimitive } from 'cmdk'
 
-type CommandGroupPrimitiveType = typeof CommandGroupPrimitive;
+type CommandGroupPrimitiveType = typeof CommandGroupPrimitive
 
-type CommandGroupProps = React.ComponentPropsWithRef<CommandGroupPrimitiveType>;
+type CommandGroupProps = React.ComponentPropsWithRef<CommandGroupPrimitiveType>
 
-export type { CommandGroupProps };
+export type { CommandGroupProps }
