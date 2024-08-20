@@ -1,7 +1,7 @@
 'use client'
 
 import { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
-import { noop } from '@renderui/utils/noop'
+import { noop } from '@renderui/utils'
 import React from 'react'
 
 /* MediaQueryList Event based useEventListener interface */
@@ -47,6 +47,7 @@ function useEventListener<
 	KW extends keyof WindowEventMap,
 	KH extends keyof HTMLElementEventMap,
 	KM extends keyof MediaQueryListEventMap,
+	// biome-ignore lint/suspicious/noConfusingVoidType: allow void
 	T extends HTMLElement | MediaQueryList | void = void,
 >(props: {
 	event: KW | KH | KM
@@ -63,6 +64,7 @@ function useEventListener<
 	const freshHandler = useFreshRef(handler)
 	const freshOptions = useFreshRef(options)
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	React.useEffect(() => {
 		if (!enabled) return noop
 
@@ -70,7 +72,7 @@ function useEventListener<
 		const targetElement: T | HTMLElement | null =
 			element ?? (typeof window !== 'undefined' ? window.document.documentElement : null)
 
-		if (!(targetElement && targetElement.addEventListener)) return noop
+		if (!targetElement?.addEventListener) return noop
 
 		/* Create event listener that calls handler function stored in ref */
 		const listener: typeof handler = (event) => freshHandler.current(event)

@@ -1,10 +1,10 @@
 'use client'
 
-import { Drawer as DrawerPrimitive } from 'vaul'
 import { Button } from '@/components/button'
-import { cn } from '@renderui/utils/cn'
+import type { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
+import { cn } from '@renderui/utils'
 import React from 'react'
-import { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
+import { Drawer as DrawerPrimitive } from 'vaul'
 
 const DrawerTrigger = (props: DrawerTriggerProps) => {
 	const { className, children, variant = 'solid', color = 'mode-accent', ...restProps } = props

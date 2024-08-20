@@ -1,7 +1,7 @@
 import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
-import { FormProps } from '@/components/form/types/form'
+import type { FormProps } from '@/components/form/types/form'
 import { getSubmitProps } from '@/components/form/utils/get-submit-props'
 
 const Form = (props: FormProps) => {

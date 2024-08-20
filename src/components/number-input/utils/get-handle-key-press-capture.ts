@@ -1,6 +1,6 @@
-import React from 'react'
+import type React from 'react'
 
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 import { isValidValue } from '@/components/number-input/utils/is-valid-value'
 
 type GetHandleKeyPressCaptureArgs = {

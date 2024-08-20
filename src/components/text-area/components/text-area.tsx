@@ -1,7 +1,7 @@
 'use client'
 
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
@@ -10,7 +10,7 @@ import {
 	DEFAULT_TEXT_AREA_CLASSNAME,
 	DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
 } from '@/components/text-area/constants/constants'
-import { TextAreaProps } from '@/components/text-area/types/text-area'
+import type { TextAreaProps } from '@/components/text-area/types/text-area'
 
 const TextArea = (props: TextAreaProps) => {
 	const {

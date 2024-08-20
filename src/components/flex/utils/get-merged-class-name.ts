@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { FlexProps } from '@/components/flex/types/flex'
+import type { FlexProps } from '@/components/flex/types/flex'
 
 function getMergedClassName(
 	growChildren: FlexProps['growChildren'],

@@ -1,4 +1,4 @@
-import { CommandList as CommandListPrimitive } from 'cmdk'
+import type { CommandList as CommandListPrimitive } from 'cmdk'
 
 type CommandListPrimitiveType = typeof CommandListPrimitive
 

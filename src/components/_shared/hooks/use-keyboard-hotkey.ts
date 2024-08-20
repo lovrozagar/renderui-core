@@ -2,8 +2,8 @@
 
 import { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 import React from 'react'
-import { HotkeyCallback, useHotkeys } from 'react-hotkeys-hook'
-import { HotkeysEvent, OptionsOrDependencyArray } from 'react-hotkeys-hook/dist/types'
+import { type HotkeyCallback, useHotkeys } from 'react-hotkeys-hook'
+import type { HotkeysEvent, OptionsOrDependencyArray } from 'react-hotkeys-hook/dist/types'
 
 const DEFAULT_KEY_COMBINATION_OPTIONS: OptionsOrDependencyArray = {
 	preventDefault: true,
@@ -28,6 +28,7 @@ function useKeyboardHotkey(props: UseKeyboardHotkeyArgs) {
 
 	const freshKeyCombination = useFreshRef(keyCombination)
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	const memoizedKeyCombination = React.useMemo(() => {
 		return (
 			(Array.isArray(freshKeyCombination.current)
@@ -38,6 +39,7 @@ function useKeyboardHotkey(props: UseKeyboardHotkeyArgs) {
 
 	const freshOptions = useFreshRef(keyCombinationOptions)
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	const memoizedOptions = React.useMemo(() => {
 		return freshOptions.current
 			? { ...DEFAULT_KEY_COMBINATION_OPTIONS, ...freshOptions.current }
@@ -52,9 +54,10 @@ function useKeyboardHotkey(props: UseKeyboardHotkeyArgs) {
 
 			return !passesCasingTest
 		},
-		[],
+		[isKeyCombinationCasingIgnored],
 	)
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	const handleKeyCombinationDown = React.useCallback(
 		(event: KeyboardEvent, options: HotkeysEvent) => {
 			if (!freshOnMatch.current) return

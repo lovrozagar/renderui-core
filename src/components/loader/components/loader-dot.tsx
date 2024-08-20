@@ -5,7 +5,7 @@ import {
 	DEFAULT_LOADER_DOT_CLASSNAME,
 	LOADER_DOT_PAUSED_CLASSNAME,
 } from '@/components/loader/constants/constants'
-import { LoaderDotProps } from '@/components/loader/types/loader-dot'
+import type { LoaderDotProps } from '@/components/loader/types/loader-dot'
 
 const LoaderDot = (props: LoaderDotProps) => {
 	const { isPaused, className, style, element } = props

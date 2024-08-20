@@ -5,7 +5,7 @@ import {
 	DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME,
 	DEFAULT_CARD_FOOTER_CLASSNAME,
 } from '@/components/card/constants/constants'
-import { CardFooterProps } from '@/components/card/types/card-footer'
+import type { CardFooterProps } from '@/components/card/types/card-footer'
 
 const CardFooter = (props: CardFooterProps) => {
 	const {

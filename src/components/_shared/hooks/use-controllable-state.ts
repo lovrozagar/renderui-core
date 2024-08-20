@@ -2,11 +2,11 @@
 
 import { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 import {
-	UseControllableStateProps,
+	type UseControllableStateProps,
 	useUncontrolledState,
 } from '@/components/_shared/hooks/use-uncontrolled-state'
-import { isFunction } from '@renderui/utils/is-function'
-import { noop } from '@renderui/utils/noop'
+import { isFunction } from '@renderui/utils'
+import { noop } from '@renderui/utils'
 import React from 'react'
 
 type SetStateFunction<T> = (previousState?: T) => T

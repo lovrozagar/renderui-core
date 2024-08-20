@@ -8,7 +8,7 @@ import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_TOGGLE_GROUP_CLASSNAME } from '@/components/toggle-group/constants/constants'
 import { ToggleGroupProvider } from '@/components/toggle-group/contexts/toggle-group-context'
-import { ToggleGroupProps } from '@/components/toggle-group/types/toggle-group'
+import type { ToggleGroupProps } from '@/components/toggle-group/types/toggle-group'
 
 const ToggleGroup = (props: ToggleGroupProps) => {
 	const {
@@ -21,6 +21,7 @@ const ToggleGroup = (props: ToggleGroupProps) => {
 		...restProps
 	} = props
 
+	/* biome-ignore lint/suspicious/noExplicitAny: generic */
 	const [value, onValueChange] = useControllableState<any>({
 		onChange: onValueChangeProp,
 		defaultProp: defaultValue,
@@ -30,7 +31,9 @@ const ToggleGroup = (props: ToggleGroupProps) => {
 	return (
 		<ToggleGroupPrimitive
 			data-slot='group'
+			/* biome-ignore lint/suspicious/noExplicitAny: generic */
 			value={value as any}
+			/* biome-ignore lint/suspicious/noExplicitAny: generic */
 			type={type as any}
 			onValueChange={onValueChange}
 			className={cn(DEFAULT_TOGGLE_GROUP_CLASSNAME, className)}

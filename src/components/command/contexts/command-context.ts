@@ -2,7 +2,7 @@
 
 import { initializeContext } from '@renderui/utils'
 
-import { CommandContext } from '@/components/command/types/command-context'
+import type { CommandContext } from '@/components/command/types/command-context'
 
 const [CommandProvider, useCommandContext] = initializeContext<CommandContext>({
 	errorMessage: 'Components using command context must be wrapped in a <Command />.',

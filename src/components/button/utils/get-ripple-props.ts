@@ -1,30 +1,24 @@
-import { cx, getOptionalObject } from '@renderui/utils'
+import { getOptionalObject } from '@renderui/utils'
 
-import { RippleProps, RippleRef } from '@/components/ripple'
+import type { RippleProps } from '@/components/ripple'
 
-// @TODO understand type problem and fix it, remove any's
 type GetRipplePropsArgs = {
-	rippleRef: React.Ref<RippleRef> | undefined
 	rippleProps: RippleProps | undefined
 	isLoading: boolean | undefined
 }
 
-const getRippleProps = (args: any): any => {
-	const { rippleRef, rippleProps, isLoading } = args
+/* biome-ignore lint/suspicious/noExplicitAny: avoid external module reference error: */
+const getRippleProps = (props: GetRipplePropsArgs): any => {
+	const { rippleProps, isLoading } = props
 
-	const {
-		color: colorProp,
-		className,
-		isDisabled: isDisabledProp,
-		...restRippleProps
-	} = getOptionalObject(rippleProps)
+	const { ref, isDisabled: isDisabledProp, ...restRippleProps } = getOptionalObject(rippleProps)
 
 	const isDisabled = isLoading ?? isDisabledProp
 
 	return {
-		'ref': rippleRef,
+		'ref': ref,
 		'data-slot': 'ripple',
-		'className': cx(isLoading ? '!text-[rgba(var(--button-color))]' : undefined, className),
+		'className': isLoading ? '!text-[rgba(var(--button-color))]' : undefined,
 		isDisabled,
 		...restRippleProps,
 	}

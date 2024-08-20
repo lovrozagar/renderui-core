@@ -1,9 +1,9 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { Primitive as primitive } from '@radix-ui/react-primitive'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { Primitive as primitive } from '@radix-ui/react-primitive'
+import type React from 'react'
 
-import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
-import { CommandInputProps } from '@/components/command'
+import type { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
+import type { CommandInputProps } from '@/components/command'
 
 type ComboboxInputCommandInputProps = CommandInputProps
 

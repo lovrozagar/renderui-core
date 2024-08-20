@@ -1,17 +1,14 @@
 'use client'
 
 import { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
-import { cn } from '@renderui/utils/cn'
-import { getOptionalObject } from '@renderui/utils/get-optional-object'
-import { polymorphic } from '@renderui/utils/polymorphic'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import { cn, getAnimationStyleVariables, getOptionalObject, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import {
 	DEFAULT_ACCORDION_CONTENT_CHILDREN_CONTAINER_CLASSNAME,
 	DEFAULT_ACCORDION_CONTENT_CLASSNAME,
 } from '@/components/accordion/constants/constants'
-import { AccordionContentProps } from '@/components/accordion/types/accordion-content'
+import type { AccordionContentProps } from '@/components/accordion/types/accordion-content'
 
 const AccordionContent = (props: AccordionContentProps) => {
 	const {

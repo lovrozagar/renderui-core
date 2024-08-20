@@ -1,4 +1,4 @@
-import { CommandItem as CommandItemPrimitive } from 'cmdk'
+import type { CommandItem as CommandItemPrimitive } from 'cmdk'
 
 type CommandItemPrimitiveType = typeof CommandItemPrimitive
 

@@ -1,11 +1,10 @@
 'use client'
 
-import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
-import { polymorphic } from '@renderui/utils/polymorphic'
 import React from 'react'
 
 import { useButton } from '@/components/button/hooks/use-button'
-import { ButtonProps } from '@/components/button/types/button'
+import type { ButtonProps } from '@/components/button/types/button'
+import { functionCallOrValue, polymorphic } from '@renderui/utils'
 
 const Loader = React.lazy(() =>
 	import('@/components/loader/components/loader').then((module) => ({

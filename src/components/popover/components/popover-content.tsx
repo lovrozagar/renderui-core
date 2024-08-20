@@ -8,6 +8,7 @@ import {
 import { cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import {
 	DEFAULT_POPOVER_ARROW_CLASSNAME,
 	DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
@@ -20,12 +21,12 @@ import {
 	POPOVER_CONTENT_TRIGGER_WIDTH_CLASSNAME,
 } from '@/components/popover/constants/constants'
 import { usePopoverContext } from '@/components/popover/contexts/popover-context'
-import { PopoverContentProps, PopoverContentRef } from '@/components/popover/types/popover-content'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
+import type { PopoverContentProps } from '@/components/popover/types/popover-content'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
-const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>((props, ref) => {
+const PopoverContent = (props: PopoverContentProps) => {
 	const {
+		ref,
 		children,
 		style,
 		className,
@@ -102,7 +103,7 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
 								preserveAspectRatio='none'
 								{...restArrowProps}
 							>
-								<polygon points='0,0 30,0 15,10'></polygon>
+								<polygon points='0,0 30,0 15,10' />
 							</svg>
 						</span>
 					</PopoverArrowPrimitive>
@@ -110,8 +111,6 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
 			</PopoverContentPrimitive>
 		</PopoverPortalPrimitive>
 	)
-})
-
-PopoverContent.displayName = 'PopoverContent'
+}
 
 export { PopoverContent }

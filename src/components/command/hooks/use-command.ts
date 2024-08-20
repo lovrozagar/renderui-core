@@ -1,10 +1,10 @@
 'use client'
 
 import { cn } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
 import { DEFAULT_COMMAND_CLASSNAME } from '@/components/command/constants/constants'
-import { CommandProps, CommandRef } from '@/components/command/types/command'
+import type { CommandProps, CommandRef } from '@/components/command/types/command'
 import { defaultFilter } from '@/components/command/utils/default-filter'
 
 function useCommand(props: CommandProps, ref: React.ForwardedRef<CommandRef>) {

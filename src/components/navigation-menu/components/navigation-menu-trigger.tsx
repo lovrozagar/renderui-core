@@ -6,7 +6,7 @@ import { chain, cn } from '@renderui/utils'
 import { Button } from '@/components/button'
 import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
 import { DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME } from '@/components/navigation-menu/constants/constants'
-import { NavigationMenuTriggerProps } from '@/components/navigation-menu/types/navigation-menu-trigger'
+import type { NavigationMenuTriggerProps } from '@/components/navigation-menu/types/navigation-menu-trigger'
 import React from 'react'
 
 const NavigationMenuTrigger = (props: NavigationMenuTriggerProps) => {
@@ -51,7 +51,7 @@ const NavigationMenuTrigger = (props: NavigationMenuTriggerProps) => {
 				{renderIndicator()}
 			</>
 		)
-	}, [children, indicatorProps])
+	}, [asChild, children, indicatorProps, renderIndicator])
 
 	return (
 		<NavigationMenuTriggerPrimitive asChild>

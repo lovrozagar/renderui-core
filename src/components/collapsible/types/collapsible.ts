@@ -1,4 +1,4 @@
-import { Collapsible as CollapsiblePrimitive } from '@radix-ui/react-collapsible'
+import type { Collapsible as CollapsiblePrimitive } from '@radix-ui/react-collapsible'
 
 type CollapsiblePrimitiveType = typeof CollapsiblePrimitive
 

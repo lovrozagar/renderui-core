@@ -8,16 +8,8 @@ export * from '@/providers'
 export * from '@/components/_shared/components/icons'
 
 /* utils */
-export * from '@renderui/utils/cn'
-export * from '@renderui/utils/noop'
-export * from '@renderui/utils/chain'
-export * from '@renderui/utils/cva'
-export * from '@renderui/utils/get-optional-object'
-export * from '@renderui/utils/function-call-or-value'
-export * from '@renderui/utils/initialize-context'
+export * from '@renderui/utils'
 
-// @TODO fix, separate export cx from util lib
-// export * from '@renderui/utils/cx'
 export { cx } from '@renderui/utils'
 
 export * from '@/components/_shared/hooks/use-aria-handlers'

@@ -1,12 +1,12 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
-import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { Aria } from '@/components/aria'
-import { ButtonProps } from '@/components/button'
+import type { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
+import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
+import type { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { Aria } from '@/components/aria'
+import type { ButtonProps } from '@/components/button'
 
 type TextInputRef = HTMLInputElement
 

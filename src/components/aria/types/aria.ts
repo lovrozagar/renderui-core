@@ -1,7 +1,7 @@
-import React from 'react'
+import type React from 'react'
 
-import { OptionalAriaProps } from '@/components/_shared/types/aria'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { OptionalAriaProps } from '@/components/_shared/types/aria'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
 type AriaPrimitiveProps = React.ComponentPropsWithRef<'div'>
 

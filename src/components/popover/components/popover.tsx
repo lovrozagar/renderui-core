@@ -1,11 +1,11 @@
 'use client'
 
-import React from 'react'
-import { useEventListener } from '@/components/_shared/hooks/use-event-listener'
-import { Popover as PopoverPrimitive } from '@radix-ui/react-popover'
-import { PopoverProps } from '@/components/popover/types/popover'
-import { PopoverProvider } from '@/components/popover/contexts/popover-context'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
+import { useEventListener } from '@/components/_shared/hooks/use-event-listener'
+import { PopoverProvider } from '@/components/popover/contexts/popover-context'
+import type { PopoverProps } from '@/components/popover/types/popover'
+import { Popover as PopoverPrimitive } from '@radix-ui/react-popover'
+import React from 'react'
 
 const Popover = (props: PopoverProps) => {
 	const {

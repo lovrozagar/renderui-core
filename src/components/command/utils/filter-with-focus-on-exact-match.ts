@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import type React from 'react'
 
 import { defaultFilter } from '@/components/command/utils/default-filter'
 

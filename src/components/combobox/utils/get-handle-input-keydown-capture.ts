@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import type React from 'react'
 
 import { ACTIVE_ITEM_CLASSNAME } from '@/components/combobox/constants/constants'
 

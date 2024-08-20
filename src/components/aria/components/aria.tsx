@@ -7,7 +7,7 @@ import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
 import { DEFAULT_ARIA_CLASSNAME } from '@/components/aria/constants/constants'
-import { AriaProps } from '@/components/aria/types/aria'
+import type { AriaProps } from '@/components/aria/types/aria'
 
 const Aria = (props: AriaProps) => {
 	const { ariaProps, nonAriaProps } = splitAriaProps(props)

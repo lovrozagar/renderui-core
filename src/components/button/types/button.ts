@@ -1,15 +1,14 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type React from 'react'
 
-import { OptionalAriaProps } from '@/components/_shared/types/aria'
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { Color } from '@/components/_shared/types/colors'
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { buttonClasses } from '@/components/button/classes/button-classes'
-import { LoaderProps, LoaderRef } from '@/components/loader'
-import { RippleProps, RippleRef } from '@/components/ripple'
-import { useLazyComponents } from '@/components/button/hooks/use-lazy-components'
-import { SubLayerProps } from '@/components/sub-layer'
+import type { OptionalAriaProps } from '@/components/_shared/types/aria'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { Color } from '@/components/_shared/types/colors'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { buttonClasses } from '@/components/button/classes/button-classes'
+import type { LoaderProps } from '@/components/loader'
+import type { RippleProps } from '@/components/ripple'
+import type { SubLayerProps } from '@/components/sub-layer'
 
 type ButtonPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'button'>,
@@ -22,8 +21,8 @@ type ButtonContentRenderPropsProps = {
 }
 
 type ButtonChildrenRenderPropsProps = ButtonContentRenderPropsProps & {
-	Loader: ReturnType<typeof useLazyComponents>['LoaderComponent']
-	Ripple: ReturnType<typeof useLazyComponents>['RippleComponent']
+	Loader: React.LazyExoticComponent<(props: LoaderProps) => React.JSX.Element>
+	Ripple: React.LazyExoticComponent<(props: RippleProps) => React.JSX.Element>
 }
 
 type ButtonContentRenderProps =
@@ -45,11 +44,9 @@ type ButtonCustomProps = {
 	color?: Color
 	loaderPosition?: 'start' | 'end'
 	loaderProps?: LoaderProps
-	loaderRef?: React.Ref<LoaderRef>
 	loader?: React.ReactNode
 	subLayerProps?: SubLayerProps
 	rippleProps?: RippleProps
-	rippleRef?: React.Ref<RippleRef>
 }
 
 type ButtoVariantProps = NonNullableVariantProps<typeof buttonClasses>

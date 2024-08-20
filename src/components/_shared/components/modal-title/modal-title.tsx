@@ -1,5 +1,5 @@
 import { cx } from '@renderui/utils'
-import React, { ComponentProps } from 'react'
+import React, { type ComponentProps } from 'react'
 
 import { DialogTitle } from '@radix-ui/react-dialog'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { isFunction } from '@renderui/utils/is-function'
+import { isFunction } from '@renderui/utils'
 import React from 'react'
 
 function handleRef<T extends Element>(element: T | null, ref: React.Ref<T> | undefined | null) {
@@ -11,7 +11,8 @@ function handleRef<T extends Element>(element: T | null, ref: React.Ref<T> | und
 
 		return
 	}
-	// eslint-disable-next-line padding-line-between-statements, no-param-reassign
+	// @TODO change when react 19 released
+	// @ts-ignore
 	;(ref as React.RefObject<T>).current = element
 }
 

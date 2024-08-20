@@ -12,7 +12,7 @@ import {
 	COMMAND_INPUT_ICON_CLASSNAME,
 } from '@/components/command/constants/constants'
 import { useSearch } from '@/components/command/hooks/use-search'
-import { CommandInputProps } from '@/components/command/types/command-input'
+import type { CommandInputProps } from '@/components/command/types/command-input'
 
 const CommandInput = (props: CommandInputProps) => {
 	const {

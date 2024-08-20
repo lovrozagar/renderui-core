@@ -8,7 +8,7 @@ import { buttonClasses } from '@/components/button/classes/button-classes'
 import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 import { DEFAULT_TABS_CURSOR_CLASSNAME } from '@/components/tabs/constants/constants'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
-import { TabsCursorProps } from '@/components/tabs/types/tabs-cursor'
+import type { TabsCursorProps } from '@/components/tabs/types/tabs-cursor'
 import { getMergedCursorTransition } from '@/components/tabs/utils/get-merged-cursor-transition'
 
 const TabsCursor = (props: TabsCursorProps) => {
@@ -17,15 +17,15 @@ const TabsCursor = (props: TabsCursorProps) => {
 	const { layoutId, orientation, variant, animationDuration, hasCursorAppearedRef } =
 		useTabsContext()
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	React.useEffect(() => {
 		hasCursorAppearedRef.current = true
-		// disabling rule, linter not recognizing ref
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return (
 		<m.span
 			data-slot='cursor'
+			/* @ts-ignore type not including className even though className is a valid prop */
 			className={cn(
 				buttonClasses({
 					variant: 'solid',

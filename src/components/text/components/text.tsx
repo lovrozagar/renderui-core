@@ -2,7 +2,7 @@ import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { textClasses } from '@/components/text/classes/text-classes'
-import { TextProps } from '@/components/text/types/text'
+import type { TextProps } from '@/components/text/types/text'
 
 const Text = (props: TextProps) => {
 	const {

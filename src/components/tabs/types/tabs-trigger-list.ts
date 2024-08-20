@@ -1,5 +1,5 @@
-import { TabsList as TabsTriggerListPrimitive } from '@radix-ui/react-tabs'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { TabsList as TabsTriggerListPrimitive } from '@radix-ui/react-tabs'
 
 type TabsTriggerListPrimitiveType = typeof TabsTriggerListPrimitive
 

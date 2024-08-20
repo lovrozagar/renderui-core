@@ -17,8 +17,8 @@ import {
 	DEFAULT_NAVIGATION_MENU_VIEWPORT_CLASSNAME,
 	DEFAULT_NAVIGATION_MENU_VIEWPORT_CONTAINER_CLASSNAME,
 } from '@/components/navigation-menu/constants/constants'
-import { NavigationMenuProps } from '@/components/navigation-menu/types/navigation-menu'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { NavigationMenuProps } from '@/components/navigation-menu/types/navigation-menu'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const NavigationMenu = (props: NavigationMenuProps) => {
 	const {
@@ -29,11 +29,6 @@ const NavigationMenu = (props: NavigationMenuProps) => {
 		listProps,
 		indicatorProps,
 		indicatorArrowProps,
-		viewportRef,
-		viewportContainerRef,
-		listRef,
-		indicatorRef,
-		indicatorArrowRef,
 		animationDuration,
 		animationInDuration,
 		animationOutDuration,
@@ -63,19 +58,16 @@ const NavigationMenu = (props: NavigationMenuProps) => {
 			{...restProps}
 		>
 			<NavigationMenuListPrimitive
-				ref={listRef}
 				className={cn(DEFAULT_NAVIGATION_MENU_LIST_CLASSNAME, listClassName)}
 				{...restListProps}
 			>
 				{children}
 				{hasIndicator ? (
 					<NavigationMenuIndicatorPrimitive
-						ref={indicatorRef}
 						className={cn(DEFAULT_NAVIGATION_MENU_INDICATOR_CLASSNAME, indicatorClassName)}
 						{...restIndicatorProps}
 					>
 						<div
-							ref={indicatorArrowRef}
 							className={cn(DEFAULT_NAVIGATION_MENU_ARROW_CLASSNAME, indicatorArrowClassName)}
 							{...restArrowProps}
 						/>
@@ -83,7 +75,6 @@ const NavigationMenu = (props: NavigationMenuProps) => {
 				) : null}
 			</NavigationMenuListPrimitive>
 			<div
-				ref={viewportContainerRef}
 				className={cn(
 					DEFAULT_NAVIGATION_MENU_VIEWPORT_CONTAINER_CLASSNAME,
 					isFullScreen ? 'w-full fixed top-0' : undefined,
@@ -92,7 +83,6 @@ const NavigationMenu = (props: NavigationMenuProps) => {
 				{...restViewportContainerProps}
 			>
 				<NavigationMenuViewportPrimitive
-					ref={viewportRef}
 					className={cn(DEFAULT_NAVIGATION_MENU_VIEWPORT_CLASSNAME, viewportClassName)}
 					style={{
 						...getAnimationStyleVariables({

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MagnifyingGlassIcon = (props: React.ComponentPropsWithRef<'svg'>) => {
 	return (
 		<svg width='15' height='15' viewBox='0 0 15 15' fill='none' {...props}>
@@ -8,7 +6,7 @@ const MagnifyingGlassIcon = (props: React.ComponentPropsWithRef<'svg'>) => {
 				fill='currentColor'
 				fillRule='evenodd'
 				clipRule='evenodd'
-			></path>
+			/>
 		</svg>
 	)
 }

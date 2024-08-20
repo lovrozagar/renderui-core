@@ -23,7 +23,7 @@ function useUncontrolledState<T>({
 			handleChange.current?.(value as T)
 			previousValueRef.current = value
 		}
-	}, [value, previousValueRef, handleChange])
+	}, [value, handleChange])
 
 	return [value, setValue]
 }

@@ -13,7 +13,7 @@ import {
 	DEFAULT_COMBOBOX_TRIGGER_ICON_CLASSNAME,
 } from '@/components/combobox/constants/constants'
 import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
-import { ComboboxTriggerProps } from '@/components/combobox/types/combobox-trigger'
+import type { ComboboxTriggerProps } from '@/components/combobox/types/combobox-trigger'
 import { getHandleKeyDownCapture } from '@/components/combobox/utils/get-handle-keydown-capture'
 import { PopoverTrigger } from '@/components/popover'
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { Provider } from '@radix-ui/react-direction'
-import React from 'react'
+import type React from 'react'
 
 type DirectionProviderProps = React.ComponentPropsWithRef<typeof Provider>
 

@@ -16,14 +16,19 @@ import {
 	SELECT_INPUT_CONTAINER_CLASSNAME,
 } from '@/components/combobox/constants/constants'
 import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
-import { useLazyScrollAreaComponent } from '@/components/combobox/hooks/use-lazy-scroll-area-component'
-import { ComboboxContentProps } from '@/components/combobox/types/combobox-content'
+import type { ComboboxContentProps } from '@/components/combobox/types/combobox-content'
 import { Command } from '@/components/command/components/command'
 import { CommandEmpty } from '@/components/command/components/command-empty'
 import { CommandGroup } from '@/components/command/components/command-group'
 import { CommandList } from '@/components/command/components/command-list'
 import { PopoverContent } from '@/components/popover/components/popover-content'
-import { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
+import type { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
+
+const ScrollArea = React.lazy(() =>
+	import('@/components/scroll-area/components/scroll-area').then((module) => ({
+		default: module.ScrollArea,
+	})),
+)
 
 const ComboboxContent = (props: ComboboxContentProps) => {
 	const {
@@ -73,8 +78,6 @@ const ComboboxContent = (props: ComboboxContentProps) => {
 
 	const { className: scrollbarClassName, ...restScrollbarProps } = getOptionalObject(scrollbarProps)
 
-	const ScrollAreaComponent = useLazyScrollAreaComponent(hasScroll)
-
 	const shouldRenderEmptyContent = hasEmptyContent && (commandEmptyContent || emptyContent)
 
 	return (
@@ -111,8 +114,8 @@ const ComboboxContent = (props: ComboboxContentProps) => {
 					{...restCommandInputProps}
 				/>
 
-				{hasScroll && ScrollAreaComponent ? (
-					<ScrollAreaComponent
+				{hasScroll ? (
+					<ScrollArea
 						data-slot='scroll-area'
 						scrollbarProps={
 							{
@@ -131,7 +134,7 @@ const ComboboxContent = (props: ComboboxContentProps) => {
 						>
 							<CommandList {...commandListProps}>{children}</CommandList>
 						</CommandGroup>
-					</ScrollAreaComponent>
+					</ScrollArea>
 				) : (
 					<CommandGroup
 						data-slot='group'

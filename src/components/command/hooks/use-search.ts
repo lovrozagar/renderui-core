@@ -53,7 +53,7 @@ function useSearch(value: string, setValue: React.Dispatch<React.SetStateAction<
 		dataValueArrayRef.current = newDataValueArray.sort((a: string, b: string) =>
 			a.toLowerCase().localeCompare(b.toLowerCase()),
 		)
-	}, [])
+	}, [htmlDocument?.querySelector])
 
 	useMutationObserver(
 		htmlDocument?.documentElement ?? null,

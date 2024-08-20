@@ -1,6 +1,6 @@
-import { ButtonProps } from '@/components/button'
-import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { ButtonProps } from '@/components/button'
+import type { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
 
 type NavigationMenuTriggerRenderProps = {
 	Indicator: typeof NavigationMenuTriggerIndicator

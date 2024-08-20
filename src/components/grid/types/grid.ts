@@ -1,6 +1,6 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
 

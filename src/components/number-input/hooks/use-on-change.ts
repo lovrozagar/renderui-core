@@ -1,4 +1,4 @@
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 import { isValidValue } from '@/components/number-input/utils/is-valid-value'
 
 type UseOnChangeArgs = Pick<NumberInputProps, 'value' | 'min' | 'max' | 'pattern' | 'onChange'> & {

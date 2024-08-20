@@ -1,5 +1,5 @@
-import { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
 type KbdHTMLProps = React.ComponentPropsWithRef<'kbd'>
 

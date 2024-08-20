@@ -4,7 +4,7 @@ import React from 'react'
 import { loaderClasses } from '@/components/loader/classes/loader-classes'
 import { LoaderDot } from '@/components/loader/components/loader-dot'
 import { LOADER_DOTS } from '@/components/loader/constants/constants'
-import { LoaderProps } from '@/components/loader/types/loader'
+import type { LoaderProps } from '@/components/loader/types/loader'
 
 const Loader = (props: LoaderProps) => {
 	const {

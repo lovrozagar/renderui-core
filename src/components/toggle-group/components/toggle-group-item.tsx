@@ -1,22 +1,18 @@
 'use client'
 
 import { ToggleGroupItem as ToggleGroupItemPrimitive } from '@radix-ui/react-toggle-group'
-import { cn } from '@renderui/utils/cn'
-import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
+import { cn, functionCallOrValue } from '@renderui/utils'
 import React from 'react'
 
 import { Button } from '@/components/button'
 import { useToggleGroupContext } from '@/components/toggle-group/contexts/toggle-group-context'
-import {
-	ToggleGroupItemProps,
-	ToggleGroupItemRef,
-} from '@/components/toggle-group/types/toggle-group-item'
+import type { ToggleGroupItemProps } from '@/components/toggle-group/types/toggle-group-item'
 import {
 	DEFAUL_TOGGLE_CLASSNAME,
 	TOGGLED_OFF_RING_CLASSNAME,
 } from '@/components/toggle/constants/constants'
 
-const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProps>((props, ref) => {
+const ToggleGroupItem = (props: ToggleGroupItemProps) => {
 	const {
 		value,
 		className,
@@ -37,7 +33,6 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
 	return (
 		<ToggleGroupItemPrimitive asChild value={value as string}>
 			<Button
-				ref={ref}
 				data-slot='item'
 				color={color}
 				variant={variant ?? (isOn ? 'solid' : 'plain')}
@@ -54,8 +49,6 @@ const ToggleGroupItem = React.forwardRef<ToggleGroupItemRef, ToggleGroupItemProp
 			</Button>
 		</ToggleGroupItemPrimitive>
 	)
-})
-
-ToggleGroupItem.displayName = 'ToggleGroupItem'
+}
 
 export { ToggleGroupItem }

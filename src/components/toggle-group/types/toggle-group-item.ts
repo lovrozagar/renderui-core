@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { ButtonProps } from '@/components/button'
-import React from 'react'
+import type { ButtonProps } from '@/components/button'
+import type React from 'react'
 
 type ToggleGroupItemCustomProps = {
 	value: string | number

@@ -1,5 +1,5 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { toast } from 'sonner'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { toast } from 'sonner'
 
 type ToastProps = Simplify<
 	Parameters<(typeof toast)['custom']>[1] & {

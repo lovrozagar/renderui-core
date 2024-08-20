@@ -16,7 +16,7 @@ import {
 } from '@/components/number-input/constants/constants'
 import { useNumberSpin } from '@/components/number-input/hooks/use-number-spin'
 import { getOnChange } from '@/components/number-input/hooks/use-on-change'
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 import { getHandleKeyPressCapture } from '@/components/number-input/utils/get-handle-key-press-capture'
 
 function useNumberInput(props: NumberInputProps) {

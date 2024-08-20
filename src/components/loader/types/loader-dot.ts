@@ -1,4 +1,4 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
 type LoaderDotPrimitiveProps = React.ComponentPropsWithRef<'span'>
 

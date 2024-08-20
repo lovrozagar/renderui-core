@@ -5,7 +5,7 @@ import React from 'react'
 
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { ComboboxProvider } from '@/components/combobox/contexts/combobox-context'
-import { ComboboxProps } from '@/components/combobox/types/combobox'
+import type { ComboboxProps } from '@/components/combobox/types/combobox'
 import { Popover } from '@/components/popover'
 import { VisuallyHidden } from '@/components/visually-hidden'
 

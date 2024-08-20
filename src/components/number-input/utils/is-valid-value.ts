@@ -1,5 +1,5 @@
 import { NUMERIC_REGEX } from '@/components/number-input/constants/constants'
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 
 type IsValidValueArgs = {
 	value: string | undefined
@@ -31,7 +31,6 @@ const isValidValue = (args: IsValidValueArgs) => {
 	}
 
 	// Check if the new value matches the pattern
-	// eslint-disable-next-line security/detect-non-literal-regexp
 	return !(pattern !== undefined && !new RegExp(pattern).test(value))
 }
 

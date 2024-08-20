@@ -7,7 +7,7 @@ import React from 'react'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_COMMAND_CLASSNAME } from '@/components/command/constants/constants'
 import { CommandProvider } from '@/components/command/contexts/command-context'
-import { CommandProps } from '@/components/command/types/command'
+import type { CommandProps } from '@/components/command/types/command'
 import { defaultFilter } from '@/components/command/utils/default-filter'
 
 const Command = (props: CommandProps) => {

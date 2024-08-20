@@ -4,7 +4,7 @@ import { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
 import { cn } from '@renderui/utils'
 import React from 'react'
 
-import { AccordionProps } from '@/components/accordion/types/accordion'
+import type { AccordionProps } from '@/components/accordion/types/accordion'
 
 const Accordion = (props: AccordionProps) => {
 	const { className, ...restProps } = props

@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { ContainerProps } from '@/components/container/types/container'
+import type { ContainerProps } from '@/components/container/types/container'
 
 function getMergedClassName(
 	isFullHeight: ContainerProps['isFullHeight'],

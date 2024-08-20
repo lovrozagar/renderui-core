@@ -1,1 +1,5 @@
-export { ModalClose as DrawerClose } from '@/components/_shared/components/modal-close/modal-close'
+import { Drawer as DrawerPrimitive } from 'vaul'
+
+const DrawerClose = DrawerPrimitive.Close
+
+export { DrawerClose }

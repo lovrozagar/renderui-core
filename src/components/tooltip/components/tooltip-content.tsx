@@ -12,8 +12,8 @@ import {
 	DEFAULT_TOOLTIP_ARROW_CLASSNAME,
 	DEFAULT_TOOLTIP_CONTENT_CLASSNAME,
 } from '@/components/tooltip/constants/constants'
-import { TooltipContentProps } from '@/components/tooltip/types/tooltip-content'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { TooltipContentProps } from '@/components/tooltip/types/tooltip-content'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const TooltipContent = (props: TooltipContentProps) => {
 	const {

@@ -1,6 +1,6 @@
 import { capitalize } from '@renderui/utils'
 
-import { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
+import type { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
 import { determineScrollVisibility } from '@/components/scroll-area/utils/determine-scroll-visibility'
 
 type SetScrollAttributes = {

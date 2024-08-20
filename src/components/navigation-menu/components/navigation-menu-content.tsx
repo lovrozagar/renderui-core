@@ -5,8 +5,8 @@ import { cn } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_NAVIGATION_MENU_CONTENT_CLASSNAME } from '@/components/navigation-menu/constants/constants'
-import { NavigationMenuContentProps } from '@/components/navigation-menu/types/navigation-menu-content'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { NavigationMenuContentProps } from '@/components/navigation-menu/types/navigation-menu-content'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const NavigationMenuContent = (props: NavigationMenuContentProps) => {
 	const {

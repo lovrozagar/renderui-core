@@ -1,6 +1,6 @@
-import React from 'react'
+import type React from 'react'
 
-import { Color } from '@/components/_shared/types/colors'
+import type { Color } from '@/components/_shared/types/colors'
 
 const getColorVariables = (color: Color) =>
 	({

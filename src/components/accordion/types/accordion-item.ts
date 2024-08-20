@@ -1,5 +1,5 @@
-import { AccordionItem as AccordionItemPrimitive } from '@radix-ui/react-accordion'
-import React from 'react'
+import type { AccordionItem as AccordionItemPrimitive } from '@radix-ui/react-accordion'
+import type React from 'react'
 
 type AccordionItemPrimitiveType = typeof AccordionItemPrimitive
 

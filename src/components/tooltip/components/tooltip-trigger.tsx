@@ -6,7 +6,7 @@ import React from 'react'
 
 import { Button } from '@/components/button'
 import { DEFAULT_TOOLTIP_TRIGGER_CLASSNAME } from '@/components/tooltip/constants/constants'
-import { TooltipTriggerProps } from '@/components/tooltip/types/tooltip-trigger'
+import type { TooltipTriggerProps } from '@/components/tooltip/types/tooltip-trigger'
 
 const TooltipTrigger = (props: TooltipTriggerProps) => {
 	const {

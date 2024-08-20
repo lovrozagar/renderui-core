@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useMutationObserver } from '@/components/_shared/hooks/use-mutation-observer'
 import { KEYBOARD_RIPPLE_MUTATION_OBSERVER_OPTIONS } from '@/components/ripple/constants/constants'
-import { RippleRipple } from '@/components/ripple/types/ripple-ripple'
+import type { RippleRipple } from '@/components/ripple/types/ripple-ripple'
 
 function useKeyboardRipple<T extends HTMLElement>(
 	ref: React.RefObject<T>,

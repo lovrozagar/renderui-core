@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type React from 'react'
 
-import { ToggleGroup } from '@/components/toggle-group'
+import type { ToggleGroup } from '@/components/toggle-group'
 
 type RadioGroupPrimitive = typeof ToggleGroup
 
@@ -11,13 +11,13 @@ type RadioGroupPrimitiveProps = Omit<
 >
 
 type RadioGroupCustomProps = {
-	startContent?: React.ReactNode | ((value: any) => React.ReactNode)
-	children?: React.ReactNode | ((value: any) => React.ReactNode)
-	endContent?: React.ReactNode | ((value: any) => React.ReactNode)
+	startContent?: React.ReactNode | ((value: unknown) => React.ReactNode)
+	children?: React.ReactNode | ((value: unknown) => React.ReactNode)
+	endContent?: React.ReactNode | ((value: unknown) => React.ReactNode)
 	name?: string
 	value?: string | number
 	defaultValue?: string | number | undefined
-	onValueChange?: (value: any) => void
+	onValueChange?: (value: unknown) => void
 	isDisabled?: boolean
 	isReadOnly?: boolean
 	isInvalid?: boolean

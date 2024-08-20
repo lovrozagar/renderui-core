@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { SeparatorProps } from '@/components/separator/types/separator'
+import type { SeparatorProps } from '@/components/separator/types/separator'
 
 function getMergedClassName(
 	className: SeparatorProps['className'],

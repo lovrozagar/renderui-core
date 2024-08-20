@@ -15,10 +15,10 @@ import {
 	DEFAULT_DIALOG_CLOSE_BUTTON_ICON_CLASSNAME,
 	DFEAULT_DIALOG_CONTENT_CLASSNAME,
 } from '@/components/dialog/constants/constants'
-import { DialogContentProps } from '@/components/dialog/types/dialog-content'
+import type { DialogContentProps } from '@/components/dialog/types/dialog-content'
 import { Overlay } from '@/components/overlay/components/overlay'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const DialogContent = (props: DialogContentProps) => {
 	const {
@@ -69,7 +69,7 @@ const DialogContent = (props: DialogContentProps) => {
 				{...restProps}
 			>
 				{hasCloseButton ? (
-					<DialogClose asChild className={cn(DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME, className)}>
+					<DialogClose asChild>
 						<Button
 							variant={variant}
 							color={color}

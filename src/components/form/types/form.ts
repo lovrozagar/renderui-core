@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { FormEvent } from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { FormEvent } from 'react'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type FormPrimitiveProps = React.ComponentPropsWithRef<'form'>
 

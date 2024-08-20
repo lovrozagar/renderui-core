@@ -2,7 +2,7 @@ import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { cardClasses } from '@/components/card/classes/card-classes'
-import { CardProps } from '@/components/card/types/card'
+import type { CardProps } from '@/components/card/types/card'
 
 const Card = (props: CardProps) => {
 	const { asChild, className, isBlurred, hasShadowOnHover, ...restProps } = props

@@ -1,9 +1,9 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { AccordionHeader as AccordionHeaderPrimitive } from '@radix-ui/react-accordion'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { AccordionHeader as AccordionHeaderPrimitive } from '@radix-ui/react-accordion'
+import type React from 'react'
 
-import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
-import { ButtonProps } from '@/components/button'
+import type { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
+import type { ButtonProps } from '@/components/button'
 
 type AccordionTriggerButtonProps = Omit<ButtonProps, 'children'>
 

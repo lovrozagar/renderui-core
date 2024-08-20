@@ -2,7 +2,7 @@ import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { headingClasses } from '@/components/heading/classes/heading-classes'
-import { HeadingProps } from '@/components/heading/types/heading'
+import type { HeadingProps } from '@/components/heading/types/heading'
 
 const Heading = (props: HeadingProps) => {
 	const {

@@ -1,4 +1,4 @@
-import { FormProps } from '@/components/form/types/form'
+import type { FormProps } from '@/components/form/types/form'
 import { getFormData } from '@/components/form/utils/get-form-data'
 
 /* we are checking if submit handler is attached, if not return undefined to keep server-component functionality */

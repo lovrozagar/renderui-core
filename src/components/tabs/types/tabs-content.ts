@@ -1,5 +1,5 @@
-import { TabsContent as TabsContentPrimitive } from '@radix-ui/react-tabs'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { TabsContent as TabsContentPrimitive } from '@radix-ui/react-tabs'
 
 type TabsContentPrimtiiveType = typeof TabsContentPrimitive
 

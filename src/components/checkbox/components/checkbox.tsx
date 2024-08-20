@@ -1,17 +1,17 @@
 'use client'
 
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Button } from '@/components/button'
 import { CheckboxIndicator } from '@/components/checkbox/components/checkbox-indicator'
 import {
 	DEFAULT_CHECKBOX_CLASSNAME,
 	DEFAULT_CHECKBOX_HIDDEN_INPUT_CLASSNAME,
 } from '@/components/checkbox/constants/constants'
-import { CheckboxProps } from '@/components/checkbox/types/checkbox'
+import type { CheckboxProps } from '@/components/checkbox/types/checkbox'
 import { VisuallyHidden } from '@/components/visually-hidden'
-import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 
 const Checkbox = (props: CheckboxProps) => {
 	const {

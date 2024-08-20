@@ -5,7 +5,7 @@ import { cn } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_TABS_CONTENT_CLASSNAME } from '@/components/tabs/constants/constants'
-import { TabsContentProps } from '@/components/tabs/types/tabs-content'
+import type { TabsContentProps } from '@/components/tabs/types/tabs-content'
 
 const TabsContent = (props: TabsContentProps) => {
 	const { className, ...restProps } = props

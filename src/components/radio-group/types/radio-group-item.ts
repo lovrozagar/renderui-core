@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { ToggleGroupItem } from '@/components/toggle-group'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { ToggleGroupItem } from '@/components/toggle-group'
 
 type RadioGroupItemPrimitive = typeof ToggleGroupItem
 

@@ -4,69 +4,62 @@ import { CollapsibleContent as CollapsibleContentPrimitive } from '@radix-ui/rea
 import { cn } from '@renderui/utils'
 import React, { useEffect, useState } from 'react'
 
-import {
-	CollapsibleContentProps,
-	CollapsibleContentRef,
-} from '@/components/collapsible/types/collapsible-content'
+import type { CollapsibleContentProps } from '@/components/collapsible/types/collapsible-content'
+import { getAnimationStyleVariables } from '@renderui/utils'
 import {
 	COLLAPSIBLE_ANIMATED_CONTENT_CLASSNAME,
 	COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION,
 	DEFAULT_COLLAPSIBLE_CONTENT_CLASSNAME,
 } from '../constants/constants'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
 
-const CollapsibleContent = React.forwardRef<CollapsibleContentRef, CollapsibleContentProps>(
-	(props, ref) => {
-		const {
-			style,
-			className,
-			hasSkippedInitialAnimation,
-			animationDuration,
-			animationInDuration,
-			animationOutDuration,
-			animationTimingFunction,
-			animationInTimingFunction,
-			animationOutTimingFunction,
-			hasDefaultAnimation = true,
-			...restProps
-		} = props
+const CollapsibleContent = (props: CollapsibleContentProps) => {
+	const {
+		style,
+		className,
+		hasSkippedInitialAnimation,
+		animationDuration,
+		animationInDuration,
+		animationOutDuration,
+		animationTimingFunction,
+		animationInTimingFunction,
+		animationOutTimingFunction,
+		hasDefaultAnimation = true,
+		...restProps
+	} = props
 
-		const [defaultDuration, setDefaultDuration] = useState(
-			hasSkippedInitialAnimation ? 0 : COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION,
-		)
+	const [defaultDuration, setDefaultDuration] = useState(
+		hasSkippedInitialAnimation ? 0 : COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION,
+	)
 
-		useEffect(() => {
-			setDefaultDuration(COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION)
-		}, [hasSkippedInitialAnimation])
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: purposeful dependency */
+	useEffect(() => {
+		setDefaultDuration(COLLAPSIBLE_CONTENT_DEFAULT_ANIMATION_DURATION)
+	}, [hasSkippedInitialAnimation])
 
-		return (
-			<CollapsibleContentPrimitive
-				ref={ref}
-				data-slot='content'
-				className={cn(
-					DEFAULT_COLLAPSIBLE_CONTENT_CLASSNAME,
-					hasDefaultAnimation ? COLLAPSIBLE_ANIMATED_CONTENT_CLASSNAME : undefined,
-					className,
-				)}
-				style={{
-					...getAnimationStyleVariables({
-						animationDuration,
-						animationInDuration,
-						animationOutDuration,
-						animationTimingFunction,
-						animationInTimingFunction,
-						animationOutTimingFunction,
-						defaultAnimationDuration: defaultDuration,
-						defaultAnimationTimingFunction: 'ease-out',
-					}),
-					...style,
-				}}
-				{...restProps}
-			/>
-		)
-	},
-)
-
-CollapsibleContent.displayName = 'CollapsibleContent'
+	return (
+		<CollapsibleContentPrimitive
+			data-slot='content'
+			className={cn(
+				DEFAULT_COLLAPSIBLE_CONTENT_CLASSNAME,
+				hasDefaultAnimation ? COLLAPSIBLE_ANIMATED_CONTENT_CLASSNAME : undefined,
+				className,
+			)}
+			style={{
+				...getAnimationStyleVariables({
+					animationDuration,
+					animationInDuration,
+					animationOutDuration,
+					animationTimingFunction,
+					animationInTimingFunction,
+					animationOutTimingFunction,
+					defaultAnimationDuration: defaultDuration,
+					defaultAnimationTimingFunction: 'ease-out',
+				}),
+				...style,
+			}}
+			{...restProps}
+		/>
+	)
+}
 
 export { CollapsibleContent }

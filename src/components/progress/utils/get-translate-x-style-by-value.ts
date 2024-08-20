@@ -1,4 +1,4 @@
-import { ProgressProps } from '@/components/progress'
+import type { ProgressProps } from '@/components/progress'
 
 type GetTranslateXStyleByValueProps = Pick<
 	ProgressProps,

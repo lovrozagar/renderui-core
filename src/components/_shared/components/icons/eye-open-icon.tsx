@@ -1,3 +1,4 @@
+// biome-ignore lint/style/useImportType: react import needed here
 import React from 'react'
 
 const EyeOpenIcon = (props: React.ComponentPropsWithRef<'svg'>) => {

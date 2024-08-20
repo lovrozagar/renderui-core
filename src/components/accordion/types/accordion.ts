@@ -1,4 +1,4 @@
-import { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
+import type { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
 
 type AccordionPrimitiveType = typeof AccordionPrimitive
 

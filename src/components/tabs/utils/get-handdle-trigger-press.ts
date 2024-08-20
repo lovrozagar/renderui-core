@@ -1,4 +1,4 @@
-import { TabsContext } from '@/components/tabs/types/tabs-context'
+import type { TabsContext } from '@/components/tabs/types/tabs-context'
 
 function handleTriggerPress(value: string | number, setActiveTab: TabsContext['setActiveTab']) {
 	return () => setActiveTab(value)

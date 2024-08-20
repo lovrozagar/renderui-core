@@ -5,8 +5,8 @@ import { cn } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_OVERLAY_CLASSNAME } from '@/components/overlay/constants/constants'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import { OverlayProps } from '@/components/overlay/types/overlay'
+import type { OverlayProps } from '@/components/overlay/types/overlay'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const Overlay = (props: OverlayProps) => {
 	const {

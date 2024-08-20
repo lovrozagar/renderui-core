@@ -1,5 +1,5 @@
 import { DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME } from '@/components/tabs/constants/constants'
-import { TabsTriggerChildrenContainerProps } from '@/components/tabs/types/tabs-trigger-children-container'
+import type { TabsTriggerChildrenContainerProps } from '@/components/tabs/types/tabs-trigger-children-container'
 import { cn } from '@renderui/utils'
 import React from 'react'
 

@@ -4,7 +4,7 @@ import { chain, cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_LABEL_CLASSNAME } from '@/components/label/constants/constants'
-import { LabelProps } from '@/components/label/types/label'
+import type { LabelProps } from '@/components/label/types/label'
 import { handlePreventDoubleClickTextSelection } from '@/components/label/utils/handle-prevent-double-click-text-selection'
 
 const Label = (props: LabelProps) => {

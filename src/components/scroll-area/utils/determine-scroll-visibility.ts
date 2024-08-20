@@ -1,6 +1,5 @@
-import { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
+import type { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
 
-// eslint-disable-next-line max-params
 function determineScrollVisibility(
 	hasBefore: boolean,
 	hasAfter: boolean,

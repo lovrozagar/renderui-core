@@ -7,7 +7,7 @@ const DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME =
 	'redner-ui-dialog-close absolute z-[1] right-4 top-4 p-2'
 
 const DEFAULT_DIALOG_CLOSE_BUTTON_ICON_CLASSNAME =
-	'render-ui-sheet-close-button-icon h-4 w-4 opacity-70'
+	'render-ui-dialog-close-button-icon h-4 w-4 opacity-70'
 
 export {
 	DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME,

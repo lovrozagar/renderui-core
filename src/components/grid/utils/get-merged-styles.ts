@@ -1,8 +1,7 @@
-/* eslint-disable max-params */
 import { cn } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
-import { GridProps } from '@/components/grid/types/grid'
+import type { GridProps } from '@/components/grid/types/grid'
 
 const sanitizeCols = (cols: GridProps['cols']) =>
 	Number.isNaN(Number(cols))

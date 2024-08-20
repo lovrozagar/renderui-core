@@ -8,7 +8,6 @@ const HOLDING_SPIN_TIMEOUT = 25
 
 const FORBIDDEN_INPUT_CHARACTERS = ['e', 'E']
 
-// eslint-disable-next-line security/detect-unsafe-regex
 const NUMERIC_REGEX = /^[+-]?\d*(?:\.\d*)?$/u
 
 const DEFAULT_NUMBER_SPIN_BUTTON_ICON_CLASSNAME = 'pointer-events-none relative w-3 h-3'

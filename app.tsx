@@ -1,21 +1,12 @@
 import {
-	Button,
-	Combobox,
-	ComboboxContent,
-	ComboboxItem,
-	ComboboxTrigger,
-	Drawer,
-	DrawerContent,
-	DrawerTrigger,
+	HoverCard,
+	HoverCardContent,
+	HoverCardTrigger,
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
 } from '@/components'
-import { DrawerClose } from '@/components/drawer/components/drawer-close'
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/drawer'
 import { DrawerDescription } from '@/components/drawer/components/drawer-description'
 import { DrawerHeader } from '@/components/drawer/components/drawer-header'
 import { DrawerTitle } from '@/components/drawer/components/drawer-title'
@@ -54,14 +45,25 @@ const App = () => {
       </Combobox> */}
 			<Drawer>
 				<DrawerTrigger>Trigger</DrawerTrigger>
-				<DrawerContent>
-					<DrawerClose>X</DrawerClose>
+				<DrawerContent className='min-h-[600px]'>
 					<DrawerHeader>
 						<DrawerTitle>Title</DrawerTitle>
 						<DrawerDescription>Description</DrawerDescription>
 					</DrawerHeader>
 				</DrawerContent>
 			</Drawer>
+			<Popover>
+				<PopoverTrigger>Trigger</PopoverTrigger>
+				<PopoverContent>Content</PopoverContent>
+			</Popover>
+			<HoverCard>
+				<HoverCardTrigger>Trigger</HoverCardTrigger>
+				<HoverCardContent>
+					<div className='max-w-[100px]'>
+						feiaojfpijeap apej fpeaij paej peaj epai jpia jfaepij fpeiaj pieajfp
+					</div>
+				</HoverCardContent>
+			</HoverCard>
 		</div>
 	)
 }

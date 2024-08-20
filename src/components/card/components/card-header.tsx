@@ -5,7 +5,7 @@ import {
 	DEFAULT_CARD_HEADER_CHILDREN_CLASSNAME,
 	DEFAULT_CARD_HEADER_CONTENT_CLASSNAME,
 } from '@/components/card/constants/constants'
-import { CardHeaderProps } from '@/components/card/types/card-header'
+import type { CardHeaderProps } from '@/components/card/types/card-header'
 
 const CardHeader = (props: CardHeaderProps) => {
 	const {

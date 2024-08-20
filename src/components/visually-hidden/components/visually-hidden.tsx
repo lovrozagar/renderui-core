@@ -1,7 +1,7 @@
 import { cn } from '@renderui/utils'
 import React from 'react'
 
-import { VisuallyHiddenProps } from '@/components/visually-hidden/types/visually-hidden'
+import type { VisuallyHiddenProps } from '@/components/visually-hidden/types/visually-hidden'
 
 const VisuallyHidden = (props: VisuallyHiddenProps) => {
 	const { className, ...restProps } = props

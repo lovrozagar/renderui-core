@@ -2,7 +2,7 @@ import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_CARD_BODY_CLASSNAME } from '@/components/card/constants/constants'
-import { CardBodyProps } from '@/components/card/types/card-body'
+import type { CardBodyProps } from '@/components/card/types/card-body'
 
 const CardBody = (props: CardBodyProps) => {
 	const { asChild, className, ...restProps } = props

@@ -1,5 +1,5 @@
 import { initializeContext } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
 const [FieldProvider, useFieldContext] = initializeContext<{
 	id: string

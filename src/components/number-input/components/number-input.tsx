@@ -6,7 +6,7 @@ import React from 'react'
 import { Aria } from '@/components/aria'
 import { NumberSpinButton } from '@/components/number-input/components/number-spin-button'
 import { useNumberInput } from '@/components/number-input/hooks/use-number-input'
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 import { Separator } from '@/components/separator'
 
 const NumberInput = (props: NumberInputProps) => {

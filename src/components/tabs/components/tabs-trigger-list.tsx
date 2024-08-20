@@ -6,7 +6,7 @@ import React from 'react'
 
 import { tabsTriggerListClasses } from '@/components/tabs/classes/tabs-trigger-list-classes'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
-import { TabsTriggerListProps } from '@/components/tabs/types/tabs-trigger-list'
+import type { TabsTriggerListProps } from '@/components/tabs/types/tabs-trigger-list'
 
 const TabsTriggerList = (props: TabsTriggerListProps) => {
 	const { className, ...restProps } = props

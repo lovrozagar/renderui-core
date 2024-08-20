@@ -1,7 +1,7 @@
 import { cx } from '@renderui/utils'
 import React from 'react'
 
-import { Text, TextProps } from '@/components/text'
+import { Text, type TextProps } from '@/components/text'
 
 const ModalDescription = (props: TextProps) => {
 	const { className, size = 'sm', ...restProps } = props

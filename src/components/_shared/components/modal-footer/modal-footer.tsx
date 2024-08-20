@@ -1,7 +1,7 @@
 import { cx } from '@renderui/utils'
 import React from 'react'
 
-import { Flex, FlexProps } from '@/components/flex'
+import { Flex, type FlexProps } from '@/components/flex'
 
 const ModalFooter = (props: FlexProps) => {
 	const { className, ...restProps } = props

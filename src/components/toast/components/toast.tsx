@@ -2,7 +2,7 @@
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { DEFAULT_TOAST_PROPS } from '@/components/toast/constants/constants'
-import { ToastClasses, ToastContentProps, ToastProps } from '@/components/toast/types/toast'
+import type { ToastClasses, ToastContentProps, ToastProps } from '@/components/toast/types/toast'
 import { chain, cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 import { toast } from 'sonner'

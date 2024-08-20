@@ -17,7 +17,7 @@ import {
 	TEXT_INPUT_CONTAINER_BASE_PADDING,
 } from '@/components/text-input/constants/constants'
 import { useInputActions } from '@/components/text-input/hooks/use-input-actions'
-import { TextInputProps } from '@/components/text-input/types/text-input'
+import type { TextInputProps } from '@/components/text-input/types/text-input'
 
 function useTextInput(props: TextInputProps) {
 	const {

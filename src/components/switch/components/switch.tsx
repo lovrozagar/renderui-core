@@ -1,7 +1,7 @@
 'use client'
 
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import type React from 'react'
 
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Button } from '@/components/button'
@@ -10,7 +10,7 @@ import {
 	DEFAULT_HIDDEN_SWITCH_INPUT_CLASSNAME,
 	DEFAULT_SWITCH_CLASSNAME,
 } from '@/components/switch/constants/constants'
-import { SwitchProps } from '@/components/switch/types/switch'
+import type { SwitchProps } from '@/components/switch/types/switch'
 import { VisuallyHidden } from '@/components/visually-hidden'
 
 const Switch = (props: SwitchProps) => {

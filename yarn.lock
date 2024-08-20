@@ -247,6 +247,10 @@
   resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-1.8.3.tgz#6a9dc5a4e13357277da43c015cd5cdc374035448"
   integrity sha512-/PJ59vA1pnQeKahemaQf4Nyj7IKUvGQSc3Ze1uIGi+Wvr1xF7rGobSrAAG01T/gUDG21vkDsZYM03NAmPiVkqg==
 
+"@biomejs/monorepo@biomejs/biome":
+  version "0.0.0"
+  resolved "https://codeload.github.com/biomejs/biome/tar.gz/4feee9cebd43e38696345d18d64d13de37cf5274"
+
 "@changesets/apply-release-plan@^7.0.4":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@changesets/apply-release-plan/-/apply-release-plan-7.0.4.tgz#f963e11848efa24c53abd10713662f2012b6082b"
@@ -1121,6 +1125,21 @@
     "@radix-ui/react-compose-refs" "1.1.0"
     "@radix-ui/react-primitive" "2.0.0"
     "@radix-ui/react-use-callback-ref" "1.1.0"
+
+"@radix-ui/react-hover-card@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-hover-card/-/react-hover-card-1.1.1.tgz#2982a5a91c7ae5a98e0cacd845fbdfbfdcdab355"
+  integrity sha512-IwzAOP97hQpDADYVKrEEHUH/b2LA+9MgB0LgdmnbFO2u/3M5hmEofjjr2M6CyzUblaAqJdFm6B7oFtU72DPXrA==
+  dependencies:
+    "@radix-ui/primitive" "1.1.0"
+    "@radix-ui/react-compose-refs" "1.1.0"
+    "@radix-ui/react-context" "1.1.0"
+    "@radix-ui/react-dismissable-layer" "1.1.0"
+    "@radix-ui/react-popper" "1.2.0"
+    "@radix-ui/react-portal" "1.1.1"
+    "@radix-ui/react-presence" "1.1.0"
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-use-controllable-state" "1.1.0"
 
 "@radix-ui/react-id@1.0.1":
   version "1.0.1"
@@ -2435,10 +2454,10 @@
     "@react-types/overlays" "^3.8.9"
     "@react-types/shared" "^3.24.1"
 
-"@renderui/utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@renderui/utils/-/utils-0.2.0.tgz#866a3b23d61c9e378eddf763bd21d8e956472eab"
-  integrity sha512-24hhDaNoXca9z3YyT+a1sSVKMAWgQtmOtGdEA04oXITAzXf8ipOFeZ0EM9MOjkdzWLlZheVI/WZSfkVzzdqbow==
+"@renderui/utils@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@renderui/utils/-/utils-0.2.2.tgz#6135d16c9a8453ae033596e4a7a3db958afbb797"
+  integrity sha512-rcaEE7E8Fn1b8sFWLa9BQrJzdm8LuV5CyO/Rm1oIgngkZvZIGXTvwIWaBdl8UIowYKe3n6+HOdcbSl5Y2hWI8Q==
   dependencies:
     "@radix-ui/react-slot" "^1.1.0"
     class-variance-authority "^0.7.0"
@@ -2750,27 +2769,12 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.12.tgz#12bb1e2be27293c1406acb6af1c3f3a1481d98c6"
   integrity sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==
 
-"@types/react-dom@yarn:types-react-dom@rc":
-  version "19.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/types-react-dom/-/types-react-dom-19.0.0-rc.1.tgz#1d544d02c5df2a82d87c2eff979afa2e21a8317a"
-  integrity sha512-VSLZJl8VXCD0fAWp7DUTFUDCcZ8DVXOQmjhJMD03odgeFmu14ZQJHCXeETm3BEAhJqfgJaFkLnGkQv88sRx0fQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react@*":
   version "18.3.3"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.3.tgz#9679020895318b0915d7a3ab004d92d33375c45f"
   integrity sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==
   dependencies:
     "@types/prop-types" "*"
-    csstype "^3.0.2"
-
-"@types/react@yarn:types-react@rc", types-react@^19.0.0-rc.1:
-  name "@types/react"
-  version "19.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/types-react/-/types-react-19.0.0-rc.1.tgz#576d1a702f6d0cc5b24813a293913e5cbfeaa647"
-  integrity sha512-RshndUfqTW6K3STLPis8BtAYCGOkMbtvYsi90gmVNDZBXUyUc5juf2PE9LfS/JmOlUIRO8cWTS/1MTnmhjDqyQ==
-  dependencies:
     csstype "^3.0.2"
 
 "@types/resolve@1.20.2":
@@ -4805,12 +4809,12 @@ react-aria@^3.33.1:
     "@react-aria/visually-hidden" "^3.8.15"
     "@react-types/shared" "^3.24.1"
 
-react-dom@^19.0.0-rc-fb9a90fa48-20240614:
-  version "19.0.0-rc-fb9a90fa48-20240614"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-fb9a90fa48-20240614.tgz#8dce9ed0650096d65437e4bce790628e483831a2"
-  integrity sha512-PoEsPe32F7KPLYOBvZfjylEI1B67N44PwY3lyvpmBkhlluLnLz0jH8q2Wg9YidAi6z0k3iUnNRm5x10wurzt9Q==
+react-dom@19.0.0-rc-a960b92c-20240819:
+  version "19.0.0-rc-a960b92c-20240819"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-a960b92c-20240819.tgz#339113e8ff24256a697386cce9d52f98d337963c"
+  integrity sha512-wODzSwedvrrAicorcODj1ai1ZrwbcAytV6lYMbCJTfc9+fHrA/vWjdX7ImL7ySYi80CDsJ20gg0FZvjrt+CZgw==
   dependencies:
-    scheduler "0.25.0-rc-fb9a90fa48-20240614"
+    scheduler "0.25.0-rc-a960b92c-20240819"
 
 react-hotkeys-hook@^4.5.0:
   version "4.5.0"
@@ -4879,10 +4883,10 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
-react@^19.0.0-rc-fb9a90fa48-20240614:
-  version "19.0.0-rc-fb9a90fa48-20240614"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0-rc-fb9a90fa48-20240614.tgz#90eb43a0b005e8cc3cbf0d801c14816d01df1b08"
-  integrity sha512-nvE3Gy+IOIfH/DXhkyxFVQSrITarFcQz4+shzC/McxQXEUSonpw2oDy/Wi9hdDtV3hlP12VYuDL95iiBREedNQ==
+react@19.0.0-rc-a960b92c-20240819:
+  version "19.0.0-rc-a960b92c-20240819"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0-rc-a960b92c-20240819.tgz#78d8b157f9addfb1f22d7445b9f05322ae181aa8"
+  integrity sha512-d00ur25bNRRAnIE9MDgigRSirn71eYX0Meq13d8UF4DKSqir9GIKl7qdLM5Bs8eTPRwLNhZ769fN9+pxJS/+sQ==
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -5088,10 +5092,10 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-scheduler@0.25.0-rc-fb9a90fa48-20240614:
-  version "0.25.0-rc-fb9a90fa48-20240614"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-fb9a90fa48-20240614.tgz#9ee11063b7c0f47aef3fea53d9f1be3f13794dce"
-  integrity sha512-HHqQ/SqbeiDfXXVKgNxTpbQTD4n7IUb4hZATvHjp03jr3TF7igehCyHdOjeYTrzIseLO93cTTfSb5f4qWcirMQ==
+scheduler@0.25.0-rc-a960b92c-20240819:
+  version "0.25.0-rc-a960b92c-20240819"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-a960b92c-20240819.tgz#13b2750792563724e0a208fed901af5fdc54e271"
+  integrity sha512-mmVCUouhFq/JNCoMMInqcqidcl8+bqv1giqhQj5aD5wujBN6T7Q2v9OIwC/ENlrWdhzcn71sVdWWZyjRiTn+CQ==
 
 semantic-ui-react@^0.88.2:
   version "0.88.2"
@@ -5518,6 +5522,14 @@ types-react-dom@^19.0.0-rc.1:
   integrity sha512-qtWBYduBCmrgf4wqnTrGttEJJSZ6cTGmzuvmWd/34TJNKz/Pp69Islc1+txHF3nRxSuRvmhxztFXvLyxhp8G2w==
   dependencies:
     "@types/react" "*"
+
+types-react@^19.0.0-rc.1:
+  name "@types/react"
+  version "19.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/types-react/-/types-react-19.0.0-rc.1.tgz#576d1a702f6d0cc5b24813a293913e5cbfeaa647"
+  integrity sha512-RshndUfqTW6K3STLPis8BtAYCGOkMbtvYsi90gmVNDZBXUyUc5juf2PE9LfS/JmOlUIRO8cWTS/1MTnmhjDqyQ==
+  dependencies:
+    csstype "^3.0.2"
 
 typescript-coverage-report@^1.0.0:
   version "1.0.0"

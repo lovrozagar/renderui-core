@@ -1,5 +1,5 @@
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 
 const DEFAULT_TABS_CURSOR_TRANISTION = {
 	type: 'spring',

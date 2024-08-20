@@ -1,12 +1,12 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type React from 'react'
 
-import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { Aria } from '@/components/aria'
-import { ButtonProps } from '@/components/button'
-import { SeparatorProps } from '@/components/separator'
+import type { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { Aria } from '@/components/aria'
+import type { ButtonProps } from '@/components/button'
+import type { SeparatorProps } from '@/components/separator'
 
 type NumberInputPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'input'>,

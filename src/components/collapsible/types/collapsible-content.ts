@@ -1,6 +1,6 @@
-import { CollapsibleContent as CollapsibleContentPrimitive } from '@radix-ui/react-collapsible'
-import { Simplify } from '@/components/_shared/types/simplify'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { CollapsibleContent as CollapsibleContentPrimitive } from '@radix-ui/react-collapsible'
+import type { AnimationStyleVariables } from '@renderui/utils'
 
 type CollapsibleContentPrimitiveType = typeof CollapsibleContentPrimitive
 

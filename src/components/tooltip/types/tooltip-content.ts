@@ -1,10 +1,10 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import {
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type {
 	TooltipArrow as TooltipArrowPrimitive,
 	TooltipContent as TooltipContentPrimitive,
 } from '@radix-ui/react-tooltip'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import React from 'react'
+import type { AnimationStyleVariables } from '@renderui/utils'
+import type React from 'react'
 
 type TooltipContentPrimitiveType = typeof TooltipContentPrimitive
 

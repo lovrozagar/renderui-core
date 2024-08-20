@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
-import { ButtonProps } from '@/components/button/types/button'
+import type { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
+import type { ButtonProps } from '@/components/button/types/button'
 
 type ComboboxTriggerButtonProps = Omit<ButtonProps, 'children' | 'variant' | 'size'>
 

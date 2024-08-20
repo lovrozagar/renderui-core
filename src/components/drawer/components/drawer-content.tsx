@@ -1,24 +1,74 @@
-import { Drawer as DrawerPrimitive } from 'vaul'
-import React from 'react'
+import { CrossSmallIcon } from '@/components/_shared/components/icons'
+import { Button } from '@/components/button'
+import type { DrawerContentProps } from '@/components/drawer/types/drawer-content'
 import { Overlay } from '@/components/overlay'
-import { cn } from '@renderui/utils/cn'
-import { DrawerContentProps } from '@/components/drawer/types/drawer-content'
+import { VisuallyHidden } from '@/components/visually-hidden'
+import { cn, cx } from '@renderui/utils'
+import { getOptionalObject } from '@renderui/utils'
+import React from 'react'
+import { Drawer as DrawerPrimitive } from 'vaul'
+
+import { DrawerClose } from '@/components/drawer/components/drawer-close'
+import {
+	DEFAULT_DRAWER_CLOSE_BUTTON_CLASSNAME,
+	DEFAULT_DRAWER_CLOSE_BUTTON_ICON_CLASSNAME,
+	DEFAULT_DRAWER_CONTENT_CLASSNAME,
+	DEFAULT_DRAWER_INDICATOR_CLASSNAME,
+} from '@/components/drawer/constant/constants'
 
 const DrawerContent = (props: DrawerContentProps) => {
-	const { className, children, ...restProps } = props
+	const {
+		className,
+		children,
+		indicatorProps,
+		closeButtonProps,
+		closeButtonIconProps,
+		hasCloseButton = true,
+		hasIndicator = true,
+		...restProps
+	} = props
+
+	const { className: indicatorClassName, ...restIndicatorProps } = getOptionalObject(indicatorProps)
+
+	const {
+		className: closeButtonClassName,
+		'aria-label': closeButtonAriaLabel,
+		variant = 'ghost',
+		color = 'mode-contrast',
+		...restCloseButtonProps
+	} = getOptionalObject(closeButtonProps)
+
+	const { className: closeButtonIconClassName, ...restCloseButtonIconProps } =
+		getOptionalObject(closeButtonIconProps)
 
 	return (
 		<DrawerPrimitive.Portal>
 			<Overlay />
 			<DrawerPrimitive.Content
-				className={cn(
-					'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background outline-none border-mode-accent',
-					className,
-				)}
+				className={cn(DEFAULT_DRAWER_CONTENT_CLASSNAME, className)}
 				{...restProps}
 			>
-				<div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />
+				<div
+					className={cn(DEFAULT_DRAWER_INDICATOR_CLASSNAME, indicatorClassName)}
+					{...restIndicatorProps}
+				/>
 				{children}
+				{hasCloseButton ? (
+					<DrawerClose asChild>
+						<Button
+							className={cx(DEFAULT_DRAWER_CLOSE_BUTTON_CLASSNAME, closeButtonClassName)}
+							variant={variant}
+							color={color}
+							{...restCloseButtonProps}
+						>
+							<CrossSmallIcon
+								className={cn(DEFAULT_DRAWER_CLOSE_BUTTON_ICON_CLASSNAME, closeButtonIconClassName)}
+								{...restCloseButtonIconProps}
+							/>
+							{closeButtonAriaLabel ? null : <VisuallyHidden>Close</VisuallyHidden>}
+						</Button>
+					</DrawerClose>
+				) : null}
 			</DrawerPrimitive.Content>
 		</DrawerPrimitive.Portal>
 	)

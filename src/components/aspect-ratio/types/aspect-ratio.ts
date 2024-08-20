@@ -1,7 +1,8 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React, { CSSProperties } from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type React from 'react'
+import type { CSSProperties } from 'react'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type AspectRatioBoxProps = React.ComponentPropsWithRef<'div'>
 

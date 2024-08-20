@@ -1,12 +1,11 @@
-import { chain } from '@renderui/utils/chain'
-import { cn } from '@renderui/utils/cn'
+import { chain, cn } from '@renderui/utils'
 import React from 'react'
 
 import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
 import { buttonClasses } from '@/components/button/classes/button-classes'
-import { ButtonProps } from '@/components/button/types/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import { getColorVariables } from '@/components/button/utils/get-color-variables'
 import { getLoaderProps } from '@/components/button/utils/get-loader-props'
 import { getRippleProps } from '@/components/button/utils/get-ripple-props'
@@ -24,10 +23,8 @@ function useButton(props: ButtonProps) {
 		endContent,
 		loadingContent,
 		loaderProps,
-		loaderRef,
 		subLayerProps,
 		rippleProps,
-		rippleRef,
 		loader,
 		type = 'button',
 		size = 'md',
@@ -64,7 +61,6 @@ function useButton(props: ButtonProps) {
 	const { isPressed, isKeyboardPressed } = ariaFlags
 
 	const mergedLoaderProps = getLoaderProps({
-		loaderRef,
 		loaderProps,
 		isLoading,
 	})
@@ -114,7 +110,7 @@ function useButton(props: ButtonProps) {
 			...restProps,
 		},
 		subLayerProps,
-		rippleProps: getRippleProps({ rippleRef, rippleProps, isLoading }),
+		rippleProps: getRippleProps({ rippleProps, isLoading }),
 		loaderProps: mergedLoaderProps,
 		utility: {
 			asChild,

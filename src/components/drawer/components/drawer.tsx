@@ -1,6 +1,6 @@
-import { DrawerProps } from '@/components/drawer/types/drawer'
-import { Drawer as DrawerPrimitive } from 'vaul'
+import type { DrawerProps } from '@/components/drawer/types/drawer'
 import React from 'react'
+import { Drawer as DrawerPrimitive } from 'vaul'
 
 const Drawer = (props: DrawerProps) => {
 	const { shouldScaleBackground = true, ...restProps } = props

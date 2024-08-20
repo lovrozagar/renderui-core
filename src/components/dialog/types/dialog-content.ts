@@ -1,13 +1,13 @@
-import {
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type {
 	DialogContent as DialogContentPrimitive,
 	DialogPortal as DialogPortalPrimitive,
 } from '@radix-ui/react-dialog'
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type React from 'react'
 
-import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { ButtonProps } from '@/components/button'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
+import type { ButtonProps } from '@/components/button'
+import type { AnimationStyleVariables } from '@renderui/utils'
 
 type DialogContentPrimitiveProps = React.ComponentPropsWithRef<typeof DialogContentPrimitive>
 

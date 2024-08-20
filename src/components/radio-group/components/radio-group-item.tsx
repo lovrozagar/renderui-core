@@ -9,7 +9,7 @@ import {
 	RADIO_GROU_ITEM_ACTIVE_INDICATOR_CLASSNAME,
 } from '@/components/radio-group/constants/constants'
 import { useRadioGroupContext } from '@/components/radio-group/contexts/radio-group-context'
-import { RadioGroupItemProps } from '@/components/radio-group/types/radio-group-item'
+import type { RadioGroupItemProps } from '@/components/radio-group/types/radio-group-item'
 import { ToggleGroupItem } from '@/components/toggle-group'
 import { VisuallyHidden } from '@/components/visually-hidden'
 

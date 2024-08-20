@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { AspectRatioProps } from '@/components/aspect-ratio/types/aspect-ratio'
+import type { AspectRatioProps } from '@/components/aspect-ratio/types/aspect-ratio'
 
 function getMergedStyles(
 	ratio: AspectRatioProps['ratio'],

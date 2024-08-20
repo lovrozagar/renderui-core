@@ -1,4 +1,4 @@
-import { Drawer as DrawerPrimitive } from 'vaul'
+import type { Drawer as DrawerPrimitive } from 'vaul'
 
 type DrawerProps = React.ComponentPropsWithRef<typeof DrawerPrimitive.Root>
 

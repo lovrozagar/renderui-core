@@ -2,7 +2,7 @@ import React from 'react'
 
 import { focusInput } from '@/components/_shared/utils/focus-input'
 import { SPIN_TIMEOUT } from '@/components/number-input/constants/constants'
-import { NumberInputProps } from '@/components/number-input/types/number-input'
+import type { NumberInputProps } from '@/components/number-input/types/number-input'
 import { getNewIntervalDuration } from '@/components/number-input/utils/get-new-interval-duration'
 import { isValidValue } from '@/components/number-input/utils/is-valid-value'
 

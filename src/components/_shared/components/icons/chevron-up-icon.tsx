@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 const ChevronUpIcon = (props: React.ComponentPropsWithRef<'svg'>) => {
 	return (

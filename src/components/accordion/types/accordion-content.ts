@@ -1,9 +1,9 @@
-import { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
+import type React from 'react'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { AnimationStyleVariables } from '@renderui/utils'
 
 type AccordionContentPrimitiveType = typeof AccordionContentPrimitive
 

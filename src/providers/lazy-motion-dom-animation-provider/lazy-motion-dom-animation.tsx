@@ -1,7 +1,7 @@
 'use client'
 
 import { LazyMotion } from 'framer-motion'
-import React from 'react'
+import type React from 'react'
 
 type LazyMotionDomAnimationProviderProps = Readonly<{
 	children: React.ReactNode

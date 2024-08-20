@@ -1,9 +1,9 @@
-import { Tabs as TabsPrimitive } from '@radix-ui/react-tabs'
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { Tabs as TabsPrimitive } from '@radix-ui/react-tabs'
 
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { ButtonProps } from '@/components/button/types/button'
-import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { ButtonProps } from '@/components/button/types/button'
+import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 
 type TabsPrimitiveType = typeof TabsPrimitive
 
@@ -19,7 +19,7 @@ type TabsCustomProps = {
 	value?: string | number
 	animationDuration?: number
 	hasCursor?: boolean
-	onValueChange?: (value: any) => void
+	onValueChange?: (value: unknown) => void
 }
 
 type TabsVariantProps = NonNullableVariantProps<typeof tabsCursorClasses>

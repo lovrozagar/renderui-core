@@ -6,7 +6,7 @@ import React from 'react'
 
 import { Button } from '@/components/button/components/button'
 import { DEFAULT_DIALOG_TRIGGER_CLASSNAME } from '@/components/dialog/constants/constants'
-import { DialogTriggerProps } from '@/components/dialog/types/dialog-trigger'
+import type { DialogTriggerProps } from '@/components/dialog/types/dialog-trigger'
 
 const DialogTrigger = (props: DialogTriggerProps) => {
 	const { className, variant = 'solid', color = 'mode-accent', ...restProps } = props

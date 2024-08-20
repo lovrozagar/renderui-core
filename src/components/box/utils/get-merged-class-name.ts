@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { BoxProps } from '@/components/box/types/box'
+import type { BoxProps } from '@/components/box/types/box'
 
 function getMergedClassName(
 	className: BoxProps['className'],

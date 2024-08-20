@@ -20,7 +20,7 @@ import {
 	VERTICAL_SLIDER_CLASSNAME,
 	VERTICAL_SLIDER_TRACK_CLASSNAME,
 } from '@/components/slider/constants/constants'
-import { SliderProps } from '@/components/slider/types/slider'
+import type { SliderProps } from '@/components/slider/types/slider'
 
 const Slider = (props: SliderProps) => {
 	const {

@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import type React from 'react'
 
 function focusInput(inputRef: React.RefObject<HTMLInputElement>) {
 	if (!inputRef?.current) return

@@ -10,7 +10,7 @@ import {
 	DEFAULT_COMBOBOX_ITEM_CLASSNAME,
 } from '@/components/combobox/constants/constants'
 import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
-import { ComboboxItemProps } from '@/components/combobox/types/combobox-item'
+import type { ComboboxItemProps } from '@/components/combobox/types/combobox-item'
 import { CommandItem } from '@/components/command/components/command-item'
 
 // @TODO waiting for cmdk fix https://github.com/pacocoursey/cmdk/issues/150 to be implemented

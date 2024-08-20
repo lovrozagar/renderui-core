@@ -6,7 +6,7 @@ import React from 'react'
 
 import { Button } from '@/components/button'
 import { DEFAULT_SHEET_TRIGGER_CLASSNAME } from '@/components/sheet/constants/constants'
-import { SheetTriggerProps } from '@/components/sheet/types/sheet-trigger'
+import type { SheetTriggerProps } from '@/components/sheet/types/sheet-trigger'
 
 const SheetTrigger = (props: SheetTriggerProps) => {
 	const { className, children, variant = 'solid', color = 'mode-accent', ...restProps } = props

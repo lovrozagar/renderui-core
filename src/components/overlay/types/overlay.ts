@@ -1,5 +1,5 @@
-import { DialogOverlay as OverlayPrimitive } from '@radix-ui/react-dialog'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import type { DialogOverlay as OverlayPrimitive } from '@radix-ui/react-dialog'
+import type { AnimationStyleVariables } from '@renderui/utils'
 
 type OverlayPrimitiveType = typeof OverlayPrimitive
 

@@ -1,8 +1,8 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { CommandInput as CommandInputPrimitive } from 'cmdk'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { CommandInput as CommandInputPrimitive } from 'cmdk'
 
-import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
-import { AsChildProp } from '@/components/_shared/types/as-child'
+import type { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type CommandInputPrimitiveType = typeof CommandInputPrimitive
 

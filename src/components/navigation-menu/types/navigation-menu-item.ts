@@ -1,5 +1,5 @@
-import { NavigationMenuItem as NavigationMenuItemPrimitive } from '@radix-ui/react-navigation-menu'
-import React from 'react'
+import type { NavigationMenuItem as NavigationMenuItemPrimitive } from '@radix-ui/react-navigation-menu'
+import type React from 'react'
 
 type NavigationMenuItemPrimitiveType = typeof NavigationMenuItemPrimitive
 

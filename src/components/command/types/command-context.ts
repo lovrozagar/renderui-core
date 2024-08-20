@@ -1,4 +1,4 @@
-import { CommandProps } from '@/components/command/types/command'
+import type { CommandProps } from '@/components/command/types/command'
 
 type CommandContext = {
 	type: CommandProps['type']

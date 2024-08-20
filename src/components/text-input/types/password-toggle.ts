@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
-import { ButtonProps } from '@/components/button'
+import type { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
+import type { ButtonProps } from '@/components/button'
 
 type PasswordToggleCustomProps = {
 	type: React.ComponentPropsWithRef<'input'>['type']

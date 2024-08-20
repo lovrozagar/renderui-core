@@ -1,6 +1,6 @@
 import { DEFAULT_TABS_CURSOR_TRANISTION } from '@/components/tabs/constants/constants'
-import { TabsCursorProps } from '@/components/tabs/types/tabs-cursor'
-import { TabsProps } from '@/components/tabs/types/tabs'
+import type { TabsProps } from '@/components/tabs/types/tabs'
+import type { TabsCursorProps } from '@/components/tabs/types/tabs-cursor'
 
 function getMergedCursorTransition(
 	transition: TabsCursorProps['transition'],

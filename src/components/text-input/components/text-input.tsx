@@ -8,7 +8,7 @@ import { Aria } from '@/components/aria'
 import { Button } from '@/components/button'
 import { PasswordToggle } from '@/components/text-input/components/password-toggle'
 import { useTextInput } from '@/components/text-input/hooks/use-text-input'
-import { TextInputProps, TextInputRef } from '@/components/text-input/types/text-input'
+import { type TextInputProps, TextInputRef } from '@/components/text-input/types/text-input'
 
 const TextInput = (props: TextInputProps) => {
 	const {

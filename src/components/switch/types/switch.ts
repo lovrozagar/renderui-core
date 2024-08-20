@@ -1,7 +1,7 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import type { Simplify } from '@/components/_shared/types/simplify'
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
-import { ButtonProps } from '@/components/button'
+import type { AsChildProp } from '@/components/_shared/types/as-child'
+import type { ButtonProps } from '@/components/button'
 
 type SwitchButtonProps = Omit<
 	ButtonProps,

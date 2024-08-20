@@ -3,7 +3,7 @@ import { m } from 'framer-motion'
 import React from 'react'
 
 import { DEFAULT_CHECKBOX_INDICATOR_CLASSNAME } from '@/components/checkbox/constants/constants'
-import {
+import type {
 	CheckboxIndicatorProps,
 	CheckboxIndicatorRef,
 } from '@/components/checkbox/types/checkbox-indicator'

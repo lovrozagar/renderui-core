@@ -1,4 +1,4 @@
-import { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
+import type { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
 
 type CommandEmptyPrimitiveType = typeof CommandEmptyPrimitive
 

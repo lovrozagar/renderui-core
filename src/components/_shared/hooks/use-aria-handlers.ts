@@ -1,12 +1,12 @@
 import { mergeProps } from '@renderui/utils'
 import React from 'react'
 import {
-	FocusProps,
-	FocusRingProps,
-	HoverProps,
-	LongPressProps,
-	PressEvent,
-	PressHookProps,
+	type FocusProps,
+	type FocusRingProps,
+	type HoverProps,
+	type LongPressProps,
+	type PressEvent,
+	type PressHookProps,
 	useFocus,
 	useFocusRing,
 	useHover,
@@ -14,10 +14,10 @@ import {
 	usePress,
 } from 'react-aria'
 
-import { UseAriaHandlersProps } from '@/components/_shared/types/aria'
-import { OrUndefined } from '@/components/_shared/types/or-undefined'
+import type { UseAriaHandlersProps } from '@/components/_shared/types/aria'
+import type { OrUndefined } from '@/components/_shared/types/or-undefined'
 import { isKeyboardPointerType } from '@/components/_shared/utils/is-keyboard-pointer-type'
-import { chain } from '@renderui/utils/chain'
+import { chain } from '@renderui/utils'
 
 function useAriaHandlers<T extends HTMLElement>(
 	props: OrUndefined<UseAriaHandlersProps>,

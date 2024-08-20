@@ -7,6 +7,7 @@ import {
 import { cn, cx, getOptionalObject } from '@renderui/utils'
 import React from 'react'
 
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'
 import { Button } from '@/components/button'
 import { Overlay } from '@/components/overlay'
@@ -15,10 +16,9 @@ import {
 	DEFAULT_SHEET_CLOSE_BUTTON_CLASSNAME,
 	DEFAULT_SHEET_CLOSE_BUTTON_ICON_CLASSNAME,
 } from '@/components/sheet/constants/constants'
-import { SheetContentProps } from '@/components/sheet/types/sheet-content'
+import type { SheetContentProps } from '@/components/sheet/types/sheet-content'
 import { VisuallyHidden } from '@/components/visually-hidden'
-import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
+import { getAnimationStyleVariables } from '@renderui/utils'
 
 const SheetContent = (props: SheetContentProps) => {
 	const {

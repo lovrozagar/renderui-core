@@ -1,5 +1,5 @@
-import { ComboboxProps } from '@/components/combobox/types/combobox'
-import { ButtonProps } from '@/components/button/types/button'
+import type { ButtonProps } from '@/components/button/types/button'
+import type { ComboboxProps } from '@/components/combobox/types/combobox'
 
 type ComboboxContext = {
 	type: NonNullable<ComboboxProps['type']>

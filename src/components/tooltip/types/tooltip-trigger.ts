@@ -1,4 +1,4 @@
-import { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button'
 
 type TooltipTriggerProps = ButtonProps
 

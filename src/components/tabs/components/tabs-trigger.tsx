@@ -15,7 +15,7 @@ import {
 	NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME,
 } from '@/components/tabs/constants/constants'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
-import { TabsTriggerProps } from '@/components/tabs/types/tabs-trigger'
+import type { TabsTriggerProps } from '@/components/tabs/types/tabs-trigger'
 import { getHandleTriggerPress } from '@/components/tabs/utils/get-handdle-trigger-press'
 
 const TabsTrigger = (props: TabsTriggerProps) => {

@@ -4,7 +4,7 @@ import {
 	SCROLL_SHADOW_OVERFLOW_DIRECTIONS,
 	SCROLL_SHADOW_VISIBLITY_DIRECTIONS,
 } from '@/components/scroll-area/constants/constants'
-import { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
+import type { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
 import { setScrollAttributes } from '@/components/scroll-area/utils/set-scroll-attributes'
 
 type ScrollShadowVisibility = ScrollAreaProps['scrollShadowVisibility']
@@ -32,6 +32,7 @@ function useDataScrollOverflow(props: UseDataScrollOverflowProps) {
 
 	const visibleRef = React.useRef<ScrollShadowVisibility>(visibility)
 
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: purposeful children dependency */
 	React.useEffect(() => {
 		const element = ref?.current
 

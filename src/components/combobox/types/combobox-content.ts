@@ -1,15 +1,15 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type React from 'react'
 
-import {
+import type {
 	Command,
 	CommandEmpty,
 	CommandGroup,
 	CommandInput,
 	CommandList,
 } from '@/components/command'
-import { PopoverContentProps } from '@/components/popover'
-import { ScrollArea } from '@/components/scroll-area'
+import type { PopoverContentProps } from '@/components/popover'
+import type { ScrollArea } from '@/components/scroll-area'
 
 type ComboboxContentPopoverContentProps = PopoverContentProps
 

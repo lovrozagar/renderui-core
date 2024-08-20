@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@renderui/utils'
-import { AnimationDefinition } from 'framer-motion'
+import type { AnimationDefinition } from 'framer-motion'
 import React from 'react'
 
 import {
@@ -13,14 +13,15 @@ import {
 } from '@/components/ripple/constants/constants'
 import { useKeyboardRipple } from '@/components/ripple/hooks/use-keyboard-ripple'
 import { usePressRipple } from '@/components/ripple/hooks/use-press-ripple'
-import { RippleProps } from '@/components/ripple/types/ripple'
-import { RippleRipple } from '@/components/ripple/types/ripple-ripple'
+import type { RippleProps } from '@/components/ripple/types/ripple'
+import type { RippleRipple } from '@/components/ripple/types/ripple-ripple'
 import { getRippleDuration } from '@/components/ripple/utils/utils'
 
 type UseRippleReturnType = {
 	ripples: RippleRipple[]
 	internalSubLayerRef: React.RefObject<HTMLSpanElement>
 	addRippleOnPress: ReturnType<typeof usePressRipple>
+	// biome-ignore lint/suspicious/noExplicitAny: avoid external module reference error
 	getRippleRipplesProps: (ripple: RippleRipple) => any
 }
 

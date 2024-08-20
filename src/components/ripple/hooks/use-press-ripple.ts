@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { RippleRipple } from '@/components/ripple/types/ripple-ripple'
+import type { RippleRipple } from '@/components/ripple/types/ripple-ripple'
 
 function usePressRipple(
 	setRipples: React.Dispatch<React.SetStateAction<RippleRipple[]>>,

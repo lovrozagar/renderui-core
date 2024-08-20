@@ -5,7 +5,7 @@ import { cn } from '@renderui/utils'
 import React from 'react'
 
 import { DEFAULT_SLIDER_THUMB_CLASSNAME } from '@/components/slider/constants/constants'
-import { SliderThumbProps } from '@/components/slider/types/slider-thumb'
+import type { SliderThumbProps } from '@/components/slider/types/slider-thumb'
 
 const SliderThumb = (props: SliderThumbProps) => {
 	const { className, ...restProps } = props

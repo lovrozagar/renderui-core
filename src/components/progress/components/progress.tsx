@@ -1,11 +1,11 @@
 import { cn, polymorphic } from '@renderui/utils'
 import React from 'react'
 
+import { EMPTY_OBJECT } from '@/components/_shared/constants/constants'
 import { DEFAULT_PROGRESS_CLASSNAME } from '@/components/progress/constants/constants'
-import { ProgressProps } from '@/components/progress/types/progress'
+import type { ProgressProps } from '@/components/progress/types/progress'
 import { getProgressIndicatorClassName } from '@/components/progress/utils/get-progress-indicator-class-name'
 import { getTranslateXStyleByValue } from '@/components/progress/utils/get-translate-x-style-by-value'
-import { EMPTY_OBJECT } from '@/components/_shared/constants/constants'
 
 const Progress = (props: ProgressProps) => {
 	const {

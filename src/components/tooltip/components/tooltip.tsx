@@ -3,7 +3,7 @@
 import { Tooltip as TooltipPrimitive, TooltipProvider } from '@radix-ui/react-tooltip'
 import React from 'react'
 
-import { TooltipProps } from '@/components/tooltip/types/tooltip'
+import type { TooltipProps } from '@/components/tooltip/types/tooltip'
 
 const Tooltip = (props: TooltipProps) => {
 	const {

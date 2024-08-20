@@ -7,7 +7,7 @@ import React from 'react'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_TABS_CLASSNAME } from '@/components/tabs/constants/constants'
 import { TabsProvider } from '@/components/tabs/context/tabs-context'
-import { TabsProps } from '@/components/tabs/types/tabs'
+import type { TabsProps } from '@/components/tabs/types/tabs'
 import { LazyMotionDomMaxProvider } from '@/providers'
 
 const Tabs = (props: TabsProps) => {

@@ -8,7 +8,7 @@ import {
 	DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
 	DEFAULT_TEXT_INPUT_PASSWORD_TOGGLE_CLASSNAME,
 } from '@/components/text-input/constants/constants'
-import { PasswordToggleProps } from '@/components/text-input/types/password-toggle'
+import type { PasswordToggleProps } from '@/components/text-input/types/password-toggle'
 
 const PasswordToggle = (props: PasswordToggleProps) => {
 	const { className, type, variant = 'plain', passwordToggleIconProps, ...restProps } = props

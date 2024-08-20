@@ -1,11 +1,8 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { m } from 'framer-motion'
-import React from 'react'
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type { m } from 'framer-motion'
+import type React from 'react'
 
-// type CheckboxIndicatorPrimitive = typeof m.svg;
-
-// @TODO
-// type CheckboxIndicatorPrimitiveProps = React.ComponentPropsWithRef<CheckboxIndicatorPrimitive>
+/* biome-ignore lint/suspicious/noExplicitAny: avoid external module reference error */
 type CheckboxIndicatorPrimitiveProps = Record<string, any>
 
 type CheckboxIndicatorCustomProps = {

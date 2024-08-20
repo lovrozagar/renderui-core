@@ -1,7 +1,7 @@
 import { polymorphic } from '@renderui/utils'
 import React from 'react'
 
-import { ContainerProps } from '@/components/container/types/container'
+import type { ContainerProps } from '@/components/container/types/container'
 import { getMergedClassName } from '@/components/container/utils/get-merged-class-name'
 
 const Container = (props: ContainerProps) => {

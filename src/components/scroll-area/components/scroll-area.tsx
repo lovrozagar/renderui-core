@@ -15,7 +15,7 @@ import {
 	SCROLL_AREA_ORIENTATIONS,
 } from '@/components/scroll-area/constants/constants'
 import { useDataScrollOverflow } from '@/components/scroll-area/hooks/use-scroll-shadow'
-import { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
+import type { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area'
 
 const ScrollArea = (props: ScrollAreaProps) => {
 	const {

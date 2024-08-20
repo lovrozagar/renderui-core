@@ -1,7 +1,7 @@
-import { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import { ButtonProps } from '@/components/button'
-import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
-import { TabsProps } from '@/components/tabs/types/tabs'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { ButtonProps } from '@/components/button'
+import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
+import type { TabsProps } from '@/components/tabs/types/tabs'
 
 type TabsContext = {
 	activeTab: string | number

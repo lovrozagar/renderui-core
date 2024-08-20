@@ -5,7 +5,7 @@ import { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
 import React from 'react'
 
 import { DEFAULT_COMMAND_EMPTY_CLASSNAME } from '@/components/command/constants/constants'
-import { CommandEmptyProps } from '@/components/command/types/command-empty'
+import type { CommandEmptyProps } from '@/components/command/types/command-empty'
 
 const CommandEmpty = (props: CommandEmptyProps) => {
 	const { className, ...restProps } = props

@@ -1,6 +1,6 @@
 import { cn } from '@renderui/utils'
 
-import { SkeletonProps } from '@/components/skeleton/types/skeleton'
+import type { SkeletonProps } from '@/components/skeleton/types/skeleton'
 
 function getMergedClassName(
 	className: SkeletonProps['className'],

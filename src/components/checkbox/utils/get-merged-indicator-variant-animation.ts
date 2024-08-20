@@ -1,4 +1,4 @@
-import { CheckboxIndicatorProps } from '@/checkbox'
+import type { CheckboxIndicatorProps } from '@/checkbox'
 import { DEFEAULT_MOTION_PROPS } from '@/components/checkbox/constants/constants'
 
 function getMergedIndicatorVariantAnimation(

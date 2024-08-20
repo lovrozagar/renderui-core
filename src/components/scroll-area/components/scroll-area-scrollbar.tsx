@@ -1,8 +1,8 @@
 'use client'
 
 import {
-	ScrollAreaThumb as ScrollAreaThumbPrimitive,
 	Scrollbar as ScrollAreaScrollbarPrimitive,
+	ScrollAreaThumb as ScrollAreaThumbPrimitive,
 } from '@radix-ui/react-scroll-area'
 import { chain, cn, getOptionalObject } from '@renderui/utils'
 import React from 'react'
@@ -13,7 +13,7 @@ import {
 	DEFAULT_SCROLL_AREA_SCROLLBAR_VERTICAL_CLASSNAME,
 	DEFAULT_SCROLL_AREA_THUMB_CLASSNAME,
 } from '@/components/scroll-area/constants/constants'
-import { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
+import type { ScrollAreaScrollbarProps } from '@/components/scroll-area/types/scroll-area-scrollbar'
 
 const ScrollAreaScrolllbar = (props: ScrollAreaScrollbarProps) => {
 	const {

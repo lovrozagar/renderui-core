@@ -13,7 +13,7 @@ import {
 	DEFAULT_ACCORDION_TRIGGER_CLASSNAME,
 	DEFAULT_ACCORDION_TRIGGER_ICON_CLASSNAME,
 } from '@/components/accordion/constants/constants'
-import { AccordionTriggerProps } from '@/components/accordion/types/accordion-trigger'
+import type { AccordionTriggerProps } from '@/components/accordion/types/accordion-trigger'
 import { Button } from '@/components/button'
 
 const AccordionTrigger = (props: AccordionTriggerProps) => {

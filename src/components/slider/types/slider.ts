@@ -1,10 +1,10 @@
-import {
+import type { Simplify } from '@/components/_shared/types/simplify'
+import type {
 	Slider as SliderPrimitive,
 	SliderRange as SliderRangePrimitive,
 	SliderThumb as SliderThumbPrimitive,
 	SliderTrack as SliderTrackPrimitive,
 } from '@radix-ui/react-slider'
-import { Simplify } from '@/components/_shared/types/simplify'
 
 type SliderPrimitiveProps = Omit<React.ComponentProps<typeof SliderPrimitive>, 'disabled'>
 

@@ -1,4 +1,4 @@
-import { CommandGroup as CommandGroupPrimitive } from 'cmdk'
+import type { CommandGroup as CommandGroupPrimitive } from 'cmdk'
 
 type CommandGroupPrimitiveType = typeof CommandGroupPrimitive
 

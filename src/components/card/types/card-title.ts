@@ -1,4 +1,4 @@
-import { TextProps } from '@/components/text'
+import type { TextProps } from '@/components/text'
 
 type CardTitleProps = TextProps
 
