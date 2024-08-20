@@ -1,7 +1,5 @@
-import { ButtonProps, ButtonRef } from '@/components/button'
+import { ButtonProps } from "@/components/button";
 
-type PopoverTriggerRef = ButtonRef
+type PopoverTriggerProps = ButtonProps;
 
-type PopoverTriggerProps = ButtonProps
-
-export type { PopoverTriggerProps, PopoverTriggerRef }
+export type { PopoverTriggerProps };

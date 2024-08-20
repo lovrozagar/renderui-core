@@ -6,7 +6,7 @@ import { getNextOrPreviousItem } from '@/components/combobox/utils/get-next-or-p
 type GetHandleKeyDownCaptureArgs = {
   open: boolean | undefined
   value: string | number | undefined
-  timeoutIdRef: React.MutableRefObject<NodeJS.Timeout | null>
+  timeoutIdRef: React.RefObject<NodeJS.Timeout | null>
   setOpen: (open: boolean) => void
   setFocusValue: (value: string) => void
 }

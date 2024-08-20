@@ -1,18 +1,21 @@
-import { NavigationMenuLink as NavigationMenuLinkPrimitive } from '@radix-ui/react-navigation-menu'
-import { Simplify } from '@/components/_shared/types/simplify'
+import { NavigationMenuLink as NavigationMenuLinkPrimitive } from "@radix-ui/react-navigation-menu";
+import { Simplify } from "@/components/_shared/types/simplify";
 
-import { ButtonProps, ButtonRef } from '@/components/button'
+import { ButtonProps } from "@/components/button";
 
-type NavigationMenuLinkPrimitiveProps = React.ComponentPropsWithoutRef<
+type NavigationMenuLinkPrimitiveProps = React.ComponentPropsWithRef<
   typeof NavigationMenuLinkPrimitive
->
+>;
 
-type NavigationMenuLinkRef = ButtonRef
+type NavigationMenuLinkButtonProps = ButtonProps;
 
-type NavigationMenuLinkButtonProps = ButtonProps
+type NavigationMenuLinkLinkProps = Pick<
+  NavigationMenuLinkPrimitiveProps,
+  "active" | "onSelect"
+>;
 
-type NavigationMenuLinkLinkProps = Pick<NavigationMenuLinkPrimitiveProps, 'active' | 'onSelect'>
+type NavigationMenuLinkProps = Simplify<
+  NavigationMenuLinkButtonProps & NavigationMenuLinkLinkProps
+>;
 
-type NavigationMenuLinkProps = Simplify<NavigationMenuLinkButtonProps & NavigationMenuLinkLinkProps>
-
-export type { NavigationMenuLinkProps, NavigationMenuLinkRef }
+export type { NavigationMenuLinkProps };

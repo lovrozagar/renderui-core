@@ -2,24 +2,26 @@ import {
   ScrollAreaThumb as ScrollAreaThumbPrimitive,
   ScrollAreaViewport as ScrollAreaViewportPrimitive,
   Scrollbar as ScrollAreaScrollbarPrimitive,
-} from '@radix-ui/react-scroll-area'
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+} from "@radix-ui/react-scroll-area";
+import { Simplify } from "@/components/_shared/types/simplify";
+import React from "react";
 
-type ScrollAreaScrollBarPrimitiveType = typeof ScrollAreaScrollbarPrimitive
-
-type ScrollAreaScrollbarRef = React.ElementRef<ScrollAreaScrollBarPrimitiveType>
+type ScrollAreaScrollBarPrimitiveType = typeof ScrollAreaScrollbarPrimitive;
 
 type ScrollAreaScrollbarpPrimitiveProps =
-  React.ComponentPropsWithoutRef<ScrollAreaScrollBarPrimitiveType>
+  React.ComponentPropsWithRef<ScrollAreaScrollBarPrimitiveType>;
 
 type ScrollAreaScrollbarThumbProps = {
-  viewportRef: React.RefObject<React.ElementRef<typeof ScrollAreaViewportPrimitive>> | null
-  thumbProps: React.ComponentPropsWithoutRef<typeof ScrollAreaThumbPrimitive> | undefined
-}
+  viewportRef: React.RefObject<
+    React.ElementRef<typeof ScrollAreaViewportPrimitive>
+  > | null;
+  thumbProps:
+    | React.ComponentPropsWithRef<typeof ScrollAreaThumbPrimitive>
+    | undefined;
+};
 
 type ScrollAreaScrollbarProps = Simplify<
   ScrollAreaScrollbarpPrimitiveProps & ScrollAreaScrollbarThumbProps
->
+>;
 
-export type { ScrollAreaScrollbarProps, ScrollAreaScrollbarRef }
+export type { ScrollAreaScrollbarProps };

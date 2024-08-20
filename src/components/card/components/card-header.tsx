@@ -1,13 +1,13 @@
-import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, getOptionalObject, polymorphic } from "@renderui/utils";
+import React from "react";
 
 import {
   DEFAULT_CARD_HEADER_CHILDREN_CLASSNAME,
   DEFAULT_CARD_HEADER_CONTENT_CLASSNAME,
-} from '@/components/card/constants/constants'
-import { CardHeaderProps, CardHeaderRef } from '@/components/card/types/card-header'
+} from "@/components/card/constants/constants";
+import { CardHeaderProps } from "@/components/card/types/card-header";
 
-const CardHeader = React.forwardRef<CardHeaderRef, CardHeaderProps>((props, ref) => {
+const CardHeader = (props: CardHeaderProps) => {
   const {
     asChild,
     childrenContainerProps,
@@ -17,32 +17,34 @@ const CardHeader = React.forwardRef<CardHeaderRef, CardHeaderProps>((props, ref)
     endContent,
     children,
     ...restProps
-  } = props
+  } = props;
 
   const {
     asChild: childrenContainerAsChild,
     className: childrenContainerClassName,
     ...restChildrenContainerProps
-  } = getOptionalObject(childrenContainerProps)
+  } = getOptionalObject(childrenContainerProps);
 
-  const ContentComponent = polymorphic(asChild, 'div')
+  const ContentComponent = polymorphic(asChild, "div");
 
-  const ChildrenContainerComponent = polymorphic(childrenContainerAsChild, 'span')
+  const ChildrenContainerComponent = polymorphic(
+    childrenContainerAsChild,
+    "span"
+  );
 
   return (
     <ContentComponent
-      ref={ref}
-      data-slot='header'
+      data-slot="header"
       className={cn(DEFAULT_CARD_HEADER_CONTENT_CLASSNAME, contentClassName)}
       {...restProps}
     >
       {startContent}
       <ChildrenContainerComponent
-        data-slot='header-children-container'
+        data-slot="header-children-container"
         className={cn(
           DEFAULT_CARD_HEADER_CHILDREN_CLASSNAME,
           childrenClassName,
-          childrenContainerClassName,
+          childrenContainerClassName
         )}
         {...restChildrenContainerProps}
       >
@@ -50,9 +52,7 @@ const CardHeader = React.forwardRef<CardHeaderRef, CardHeaderProps>((props, ref)
       </ChildrenContainerComponent>
       {endContent}
     </ContentComponent>
-  )
-})
+  );
+};
 
-CardHeader.displayName = 'CardHeader'
-
-export { CardHeader }
+export { CardHeader };

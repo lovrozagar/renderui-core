@@ -1,21 +1,26 @@
-'use client'
+"use client";
 
-import { chain, cn, functionCallOrValue, getNestedChildrenTextContent } from '@renderui/utils'
-import React from 'react'
+import {
+  chain,
+  cn,
+  functionCallOrValue,
+  getNestedChildrenTextContent,
+} from "@renderui/utils";
+import React from "react";
 
-import { CheckIcon } from '@/components/_shared/components/icons/check-icon'
+import { CheckIcon } from "@/components/_shared/components/icons/check-icon";
 import {
   COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME,
   DEFAULT_COMBOBOX_ITEM_CHECK_ICON_CLASSNAME,
   DEFAULT_COMBOBOX_ITEM_CLASSNAME,
-} from '@/components/combobox/constants/constants'
-import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
-import { ComboboxItemProps, ComboboxItemRef } from '@/components/combobox/types/combobox-item'
-import { CommandItem } from '@/components/command/components/command-item'
+} from "@/components/combobox/constants/constants";
+import { useComboboxContext } from "@/components/combobox/contexts/combobox-context";
+import { ComboboxItemProps } from "@/components/combobox/types/combobox-item";
+import { CommandItem } from "@/components/command/components/command-item";
 
 // @TODO waiting for cmdk fix https://github.com/pacocoursey/cmdk/issues/150 to be implemented
 
-const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props, ref) => {
+const ComboboxItem = (props: ComboboxItemProps) => {
   const {
     className,
     children,
@@ -23,9 +28,9 @@ const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props
     endContent,
     value,
     onSelect,
-    role = 'option',
+    role = "option",
     ...restProps
-  } = props
+  } = props;
 
   const {
     value: rootValue,
@@ -37,46 +42,49 @@ const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props
     setValue,
     setLabel,
     setFocusValue,
-  } = useComboboxContext()
+  } = useComboboxContext();
 
-  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   const childrenTextContent = React.useMemo(
     () => getNestedChildrenTextContent(children),
-    [children],
-  )
+    [children]
+  );
 
   const handleSelect = () => {
-    const isUnselect = value === rootValue
+    const isUnselect = value === rootValue;
 
-    setValue(isUnselect ? '' : value)
-    setLabel(isUnselect ? '' : childrenTextContent)
-    setFocusValue(isUnselect ? '' : childrenTextContent)
+    setValue(isUnselect ? "" : value);
+    setLabel(isUnselect ? "" : childrenTextContent);
+    setFocusValue(isUnselect ? "" : childrenTextContent);
 
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
 
-    setTimeout(() => setOpen(false), closeTimeout)
-  }
+    setTimeout(() => setOpen(false), closeTimeout);
+  };
 
   React.useEffect(() => {
     return () => {
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
+        clearTimeout(timeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
-  const isChecked = value === rootValue
+  const isChecked = value === rootValue;
 
   return (
     <CommandItem
-      ref={ref}
-      data-slot='item'
+      data-slot="item"
       role={role}
       onSelect={chain(onSelect, handleSelect)}
-      className={cn(DEFAULT_COMBOBOX_ITEM_CLASSNAME, open ? '' : 'pointer-events-none', className)}
+      className={cn(
+        DEFAULT_COMBOBOX_ITEM_CLASSNAME,
+        open ? "" : "pointer-events-none",
+        className
+      )}
       data-input-value={value}
       value={childrenTextContent}
       data-label={childrenTextContent}
@@ -90,15 +98,15 @@ const ComboboxItem = React.forwardRef<ComboboxItemRef, ComboboxItemProps>((props
         <CheckIcon
           className={cn(
             DEFAULT_COMBOBOX_ITEM_CHECK_ICON_CLASSNAME,
-            childrenTextContent === label ? COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME : '',
+            childrenTextContent === label
+              ? COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME
+              : ""
           )}
         />
       ) : null}
       {functionCallOrValue(endContent, isChecked)}
     </CommandItem>
-  )
-})
+  );
+};
 
-ComboboxItem.displayName = 'ComboboxItem'
-
-export { ComboboxItem }
+export { ComboboxItem };

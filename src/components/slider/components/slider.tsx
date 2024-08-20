@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
 import {
   Slider as SliderPrimitive,
   SliderRange as SliderRangePrimitive,
   SliderTrack as SliderTrackPrimitive,
-} from '@radix-ui/react-slider'
-import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+} from "@radix-ui/react-slider";
+import { cn, getOptionalObject } from "@renderui/utils";
+import React from "react";
 
-import { SliderThumb } from '@/components/slider/components/slider-thumb'
+import { SliderThumb } from "@/components/slider/components/slider-thumb";
 import {
   DEFAULT_SLIDER_CLASSNAME,
   DEFAULT_SLIDER_RANGE_CLASSNAME,
@@ -19,10 +19,10 @@ import {
   SLIDER_VERTICAL_RANGE_CLASSNAME,
   VERTICAL_SLIDER_CLASSNAME,
   VERTICAL_SLIDER_TRACK_CLASSNAME,
-} from '@/components/slider/constants/constants'
-import { SliderProps, SliderRef } from '@/components/slider/types/slider'
+} from "@/components/slider/constants/constants";
+import { SliderProps } from "@/components/slider/types/slider";
 
-const Slider = React.forwardRef<SliderRef, SliderProps>((props, ref) => {
+const Slider = (props: SliderProps) => {
   const {
     className,
     trackProps,
@@ -30,54 +30,55 @@ const Slider = React.forwardRef<SliderRef, SliderProps>((props, ref) => {
     thumbProps,
     children,
     isDisabled,
-    orientation = 'horizontal',
+    orientation = "horizontal",
     ...restProps
-  } = props
+  } = props;
 
-  const { className: trackClassName, ...restTrackProps } = getOptionalObject(trackProps)
-  const { className: rangeClassName, ...restRangeProps } = getOptionalObject(rangeProps)
+  const { className: trackClassName, ...restTrackProps } =
+    getOptionalObject(trackProps);
+  const { className: rangeClassName, ...restRangeProps } =
+    getOptionalObject(rangeProps);
 
   return (
     <SliderPrimitive
-      ref={ref}
-      data-slot='base'
+      data-slot="base"
       disabled={isDisabled}
       orientation={orientation}
       className={cn(
         DEFAULT_SLIDER_CLASSNAME,
-        orientation === 'horizontal' ? HORIZONTAL_SLIDER_CLASSNAME : VERTICAL_SLIDER_CLASSNAME,
-        className,
+        orientation === "horizontal"
+          ? HORIZONTAL_SLIDER_CLASSNAME
+          : VERTICAL_SLIDER_CLASSNAME,
+        className
       )}
       {...restProps}
     >
       <SliderTrackPrimitive
-        data-slot='track'
+        data-slot="track"
         className={cn(
           DEFAULT_SLIDER_TRACK_CLASSNAME,
-          orientation === 'horizontal'
+          orientation === "horizontal"
             ? HORIZONTAL_SLIDER_TRACK_CLASSNAME
             : VERTICAL_SLIDER_TRACK_CLASSNAME,
-          trackClassName,
+          trackClassName
         )}
         {...restTrackProps}
       >
         <SliderRangePrimitive
-          data-slot='range'
+          data-slot="range"
           className={cn(
             DEFAULT_SLIDER_RANGE_CLASSNAME,
-            orientation === 'horizontal'
+            orientation === "horizontal"
               ? SLIDER_HORIZONTAL_RANGE_CLASSNAME
               : SLIDER_VERTICAL_RANGE_CLASSNAME,
-            rangeClassName,
+            rangeClassName
           )}
           {...restRangeProps}
         />
       </SliderTrackPrimitive>
       {children || <SliderThumb {...thumbProps} />}
     </SliderPrimitive>
-  )
-})
+  );
+};
 
-Slider.displayName = 'Slider'
-
-export { Slider }
+export { Slider };

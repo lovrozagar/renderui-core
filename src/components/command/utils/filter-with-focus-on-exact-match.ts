@@ -5,9 +5,9 @@ import React from 'react'
 import { defaultFilter } from '@/components/command/utils/default-filter'
 
 type GetFilterWithFocusOnExactMatchArgs = {
-  timeoutIdRef: React.MutableRefObject<NodeJS.Timeout | null>
-  dataValueMapRef: React.MutableRefObject<Map<string, string>>
-  dataValueArrayRef: React.MutableRefObject<string[]>
+  timeoutIdRef: React.RefObject<NodeJS.Timeout | null>
+  dataValueMapRef: React.RefObject<Map<string, string>>
+  dataValueArrayRef: React.RefObject<string[]>
   onValueChange: ((value: string) => void) | undefined
   filter: ((value: string, search: string) => number) | undefined
 }

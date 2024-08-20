@@ -1,33 +1,32 @@
-'use client'
+"use client";
 
-import { TooltipTrigger as TooltipTriggerPrimitive } from '@radix-ui/react-tooltip'
-import { chain, cx } from '@renderui/utils'
-import React from 'react'
+import { TooltipTrigger as TooltipTriggerPrimitive } from "@radix-ui/react-tooltip";
+import { chain, cx } from "@renderui/utils";
+import React from "react";
 
-import { Button } from '@/components/button'
-import { DEFAULT_TOOLTIP_TRIGGER_CLASSNAME } from '@/components/tooltip/constants/constants'
-import { TooltipTriggerProps, TooltipTriggerRef } from '@/components/tooltip/types/tooltip-trigger'
+import { Button } from "@/components/button";
+import { DEFAULT_TOOLTIP_TRIGGER_CLASSNAME } from "@/components/tooltip/constants/constants";
+import { TooltipTriggerProps } from "@/components/tooltip/types/tooltip-trigger";
 
-const TooltipTrigger = React.forwardRef<TooltipTriggerRef, TooltipTriggerProps>((props, ref) => {
+const TooltipTrigger = (props: TooltipTriggerProps) => {
   const {
     className,
     onMouseEnter,
     onMouseLeave,
     hasRipple = false,
     hasDefaultPressedStyles = false,
-    variant = 'plain',
-    color = 'mode-accent',
+    variant = "plain",
+    color = "mode-accent",
     ...restProps
-  } = props
+  } = props;
 
   /* aria hover event not always firing in combination with radix asChild, track manually with native event */
-  const [isHovered, setIsHovered] = React.useState(false)
+  const [isHovered, setIsHovered] = React.useState(false);
 
   return (
     <TooltipTriggerPrimitive asChild>
       <Button
-        ref={ref}
-        data-slot='trigger'
+        data-slot="trigger"
         color={color}
         variant={variant}
         hasRipple={hasRipple}
@@ -39,9 +38,7 @@ const TooltipTrigger = React.forwardRef<TooltipTriggerRef, TooltipTriggerProps>(
         {...restProps}
       />
     </TooltipTriggerPrimitive>
-  )
-})
+  );
+};
 
-TooltipTrigger.displayName = 'TooltipTrigger'
-
-export { TooltipTrigger }
+export { TooltipTrigger };

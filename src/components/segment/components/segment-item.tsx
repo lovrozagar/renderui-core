@@ -1,5 +1,1 @@
-import { TabsTrigger } from '@/components/tabs'
-
-const SegmentItem = TabsTrigger
-
-export { SegmentItem }
+export { TabsTrigger as SegmentItem } from "@/components/tabs";

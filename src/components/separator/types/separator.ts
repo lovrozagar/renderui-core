@@ -1,15 +1,15 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import { Simplify } from "@/components/_shared/types/simplify";
 
-import { AsChildProp } from '../../_shared/types/as-child'
+import { AsChildProp } from "../../_shared/types/as-child";
 
-type SeparatorRef = HTMLHRElement
-
-type SeparatorHTMLProps = React.ComponentPropsWithoutRef<'hr'>
+type SeparatorHTMLProps = React.ComponentPropsWithRef<"hr">;
 
 type SeparatorRenderUIProps = {
-  orientation?: 'horizontal' | 'vertical'
-}
+  orientation?: "horizontal" | "vertical";
+};
 
-type SeparatorProps = Simplify<SeparatorHTMLProps & SeparatorRenderUIProps & AsChildProp>
+type SeparatorProps = Simplify<
+  SeparatorHTMLProps & SeparatorRenderUIProps & AsChildProp
+>;
 
-export type { SeparatorProps, SeparatorRef }
+export type { SeparatorProps };

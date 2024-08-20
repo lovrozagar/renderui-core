@@ -1,10 +1,10 @@
-import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, polymorphic } from "@renderui/utils";
+import React from "react";
 
-import { textClasses } from '@/components/text/classes/text-classes'
-import { TextProps, TextRef } from '@/components/text/types/text'
+import { textClasses } from "@/components/text/classes/text-classes";
+import { TextProps } from "@/components/text/types/text";
 
-const Text = React.forwardRef<TextRef, TextProps>((props, ref) => {
+const Text = (props: TextProps) => {
   const {
     asChild,
     children,
@@ -16,15 +16,14 @@ const Text = React.forwardRef<TextRef, TextProps>((props, ref) => {
     shadow,
     letterSpacing,
     textBreak,
-    as = 'span',
+    as = "span",
     ...restProps
-  } = props
+  } = props;
 
-  const Component = polymorphic(asChild, as)
+  const Component = polymorphic(asChild, as);
 
   return (
     <Component
-      ref={ref}
       className={cn(
         textClasses({
           as,
@@ -34,7 +33,7 @@ const Text = React.forwardRef<TextRef, TextProps>((props, ref) => {
           letterSpacing,
           textBreak,
         }),
-        className,
+        className
       )}
       {...restProps}
     >
@@ -42,9 +41,7 @@ const Text = React.forwardRef<TextRef, TextProps>((props, ref) => {
       {children}
       {hasEndSpace ? <>&nbsp;</> : null}
     </Component>
-  )
-})
+  );
+};
 
-Text.displayName = 'Text'
-
-export { Text }
+export { Text };

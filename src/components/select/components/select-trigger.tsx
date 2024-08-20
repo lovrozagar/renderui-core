@@ -1,5 +1,1 @@
-import { ComboboxTrigger } from '@/components/combobox'
-
-const SelectTrigger = ComboboxTrigger
-
-export { SelectTrigger }
+export { ComboboxTrigger as SelectTrigger } from "@/components/combobox";

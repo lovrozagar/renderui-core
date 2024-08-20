@@ -1,12 +1,12 @@
-import { Simplify } from '@/components/_shared/types/simplify'
+import { Simplify } from "@/components/_shared/types/simplify";
 
-type LoaderDotPrimitiveProps = React.ComponentPropsWithoutRef<'span'>
+type LoaderDotPrimitiveProps = React.ComponentPropsWithRef<"span">;
 
 type LoaderDotCustomProps = {
-  isPaused: boolean | undefined
-  element?: 'start' | 'middle' | 'end'
-}
+  isPaused: boolean | undefined;
+  element?: "start" | "middle" | "end";
+};
 
-type LoaderDotProps = Simplify<LoaderDotPrimitiveProps & LoaderDotCustomProps>
+type LoaderDotProps = Simplify<LoaderDotPrimitiveProps & LoaderDotCustomProps>;
 
-export type { LoaderDotProps }
+export type { LoaderDotProps };

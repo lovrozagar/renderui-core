@@ -1,10 +1,9 @@
-import { NavigationMenuItem as NavigationMenuItemPrimitive } from '@radix-ui/react-navigation-menu'
-import React from 'react'
+import { NavigationMenuItem as NavigationMenuItemPrimitive } from "@radix-ui/react-navigation-menu";
+import React from "react";
 
-type NavigationMenuItemPrimitiveType = typeof NavigationMenuItemPrimitive
+type NavigationMenuItemPrimitiveType = typeof NavigationMenuItemPrimitive;
 
-type NavigationMenuItemRef = React.ElementRef<NavigationMenuItemPrimitiveType>
+type NavigationMenuItemProps =
+  React.ComponentPropsWithRef<NavigationMenuItemPrimitiveType>;
 
-type NavigationMenuItemProps = React.ComponentPropsWithoutRef<NavigationMenuItemPrimitiveType>
-
-export type { NavigationMenuItemProps, NavigationMenuItemRef }
+export type { NavigationMenuItemProps };

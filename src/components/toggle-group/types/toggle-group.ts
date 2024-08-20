@@ -1,39 +1,43 @@
-import { ToggleGroup as ToggleGroupPrimitive } from '@radix-ui/react-toggle-group'
-import { Simplify } from '@/components/_shared/types/simplify'
-import React, { ReactNode } from 'react'
+import { ToggleGroup as ToggleGroupPrimitive } from "@radix-ui/react-toggle-group";
+import { Simplify } from "@/components/_shared/types/simplify";
+import React from "react";
 
-type ToggleGroupPrimitiveType = typeof ToggleGroupPrimitive
-
-type ToggleGroupRef = React.ElementRef<ToggleGroupPrimitiveType>
+type ToggleGroupPrimitiveType = typeof ToggleGroupPrimitive;
 
 type ToggleGroupPrimitiveProps = Omit<
-  React.ComponentPropsWithoutRef<ToggleGroupPrimitiveType>,
-  'value' | 'defaultValue' | 'onValueChange' | 'type'
->
+  React.ComponentPropsWithRef<ToggleGroupPrimitiveType>,
+  "value" | "defaultValue" | "onValueChange" | "type"
+>;
 
 type ToggleGroupCustomSingleProps = {
-  type: 'single'
-  value?: string | number
-  defaultValue?: string | number
-}
+  type: "single";
+  value?: string | number;
+  defaultValue?: string | number;
+};
 
 type ToggleGroupCustomMultipleProps = {
-  type: 'multiple'
-  value?: string[] | number[]
-  defaultValue?: string[] | number[]
-}
+  type: "multiple";
+  value?: string[] | number[];
+  defaultValue?: string[] | number[];
+};
 
 type ToggleGroupCustomBaseProps = {
-  onValueChange?: (value: any) => void
+  onValueChange?: (value: any) => void;
   children?:
-    | (({ value, onValueChange }: { value: any; onValueChange: React.Dispatch<any> }) => ReactNode)
-    | ReactNode
-}
+    | (({
+        value,
+        onValueChange,
+      }: {
+        value: any;
+        onValueChange: React.Dispatch<any>;
+      }) => React.ReactNode)
+    | React.ReactNode;
+};
 
 type ToggleGroupProps = Simplify<
   ToggleGroupPrimitiveProps &
     (ToggleGroupCustomSingleProps | ToggleGroupCustomMultipleProps) &
     ToggleGroupCustomBaseProps
->
+>;
 
-export type { ToggleGroupProps, ToggleGroupRef }
+export type { ToggleGroupProps };

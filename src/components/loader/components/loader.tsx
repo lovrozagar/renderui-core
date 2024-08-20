@@ -1,28 +1,27 @@
-import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, polymorphic } from "@renderui/utils";
+import React from "react";
 
-import { loaderClasses } from '@/components/loader/classes/loader-classes'
-import { LoaderDot } from '@/components/loader/components/loader-dot'
-import { LOADER_DOTS } from '@/components/loader/constants/constants'
-import { LoaderProps, LoaderRef } from '@/components/loader/types/loader'
+import { loaderClasses } from "@/components/loader/classes/loader-classes";
+import { LoaderDot } from "@/components/loader/components/loader-dot";
+import { LOADER_DOTS } from "@/components/loader/constants/constants";
+import { LoaderProps } from "@/components/loader/types/loader";
 
-const Loader = React.forwardRef<LoaderRef, LoaderProps>((props, ref) => {
+const Loader = (props: LoaderProps) => {
   const {
     asChild,
     isPaused,
-    position = 'relative',
-    variant = 'half',
-    size = 'sm',
+    position = "relative",
+    variant = "half",
+    size = "sm",
     className,
     ...restProps
-  } = props
+  } = props;
 
-  const Component = polymorphic(asChild, 'span')
+  const Component = polymorphic(asChild, "span");
 
   return (
     <Component
-      ref={ref}
-      aria-label='loading'
+      aria-label="loading"
       className={cn(
         loaderClasses({
           variant,
@@ -30,11 +29,11 @@ const Loader = React.forwardRef<LoaderRef, LoaderProps>((props, ref) => {
           size,
           position,
         }),
-        className,
+        className
       )}
       {...restProps}
     >
-      {Boolean(variant === 'dots') && (
+      {Boolean(variant === "dots") && (
         <>
           {LOADER_DOTS.map((element) => (
             <LoaderDot key={element} isPaused={isPaused} element={element} />
@@ -42,9 +41,7 @@ const Loader = React.forwardRef<LoaderRef, LoaderProps>((props, ref) => {
         </>
       )}
     </Component>
-  )
-})
+  );
+};
 
-Loader.displayName = 'Loader'
-
-export { Loader }
+export { Loader };

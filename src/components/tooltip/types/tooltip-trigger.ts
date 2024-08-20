@@ -1,7 +1,5 @@
-import { ButtonProps, ButtonRef } from '@/components/button'
+import { ButtonProps } from "@/components/button";
 
-type TooltipTriggerRef = ButtonRef
+type TooltipTriggerProps = ButtonProps;
 
-type TooltipTriggerProps = ButtonProps
-
-export type { TooltipTriggerProps, TooltipTriggerRef }
+export type { TooltipTriggerProps };

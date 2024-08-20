@@ -3,20 +3,21 @@ import {
   SliderRange as SliderRangePrimitive,
   SliderThumb as SliderThumbPrimitive,
   SliderTrack as SliderTrackPrimitive,
-} from '@radix-ui/react-slider'
-import { Simplify } from '@/components/_shared/types/simplify'
+} from "@radix-ui/react-slider";
+import { Simplify } from "@/components/_shared/types/simplify";
 
-type SliderRef = React.ElementRef<typeof SliderPrimitive>
-
-type SliderPrimitiveProps = Omit<React.ComponentProps<typeof SliderPrimitive>, 'disabled'>
+type SliderPrimitiveProps = Omit<
+  React.ComponentProps<typeof SliderPrimitive>,
+  "disabled"
+>;
 
 type SliderCustomProps = {
-  isDisabled?: boolean
-  trackProps?: React.ComponentPropsWithoutRef<typeof SliderTrackPrimitive>
-  rangeProps?: React.ComponentPropsWithoutRef<typeof SliderRangePrimitive>
-  thumbProps?: React.ComponentPropsWithoutRef<typeof SliderThumbPrimitive>
-}
+  isDisabled?: boolean;
+  trackProps?: React.ComponentPropsWithRef<typeof SliderTrackPrimitive>;
+  rangeProps?: React.ComponentPropsWithRef<typeof SliderRangePrimitive>;
+  thumbProps?: React.ComponentPropsWithRef<typeof SliderThumbPrimitive>;
+};
 
-type SliderProps = Simplify<SliderPrimitiveProps & SliderCustomProps>
+type SliderProps = Simplify<SliderPrimitiveProps & SliderCustomProps>;
 
-export type { SliderProps, SliderRef }
+export type { SliderProps };

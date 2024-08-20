@@ -1,19 +1,20 @@
-import { chain } from '@renderui/utils/chain'
-import { cn } from '@renderui/utils/cn'
-import React from 'react'
+import { chain } from "@renderui/utils/chain";
+import { cn } from "@renderui/utils/cn";
+import React from "react";
 
-import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
-import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
-import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
-import { buttonClasses } from '@/components/button/classes/button-classes'
-import { ButtonProps, ButtonRef } from '@/components/button/types/button'
-import { getColorVariables } from '@/components/button/utils/get-color-variables'
-import { getLoaderProps } from '@/components/button/utils/get-loader-props'
-import { getRippleProps } from '@/components/button/utils/get-ripple-props'
+import { useAriaHandlers } from "@/components/_shared/hooks/use-aria-handlers";
+import { useMergedRef } from "@/components/_shared/hooks/use-merged-ref";
+import { splitAriaProps } from "@/components/_shared/utils/split-aria-props";
+import { buttonClasses } from "@/components/button/classes/button-classes";
+import { ButtonProps } from "@/components/button/types/button";
+import { getColorVariables } from "@/components/button/utils/get-color-variables";
+import { getLoaderProps } from "@/components/button/utils/get-loader-props";
+import { getRippleProps } from "@/components/button/utils/get-ripple-props";
 
-function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
-  const { ariaProps, nonAriaProps } = splitAriaProps(props)
+function useButton(props: ButtonProps) {
+  const { ariaProps, nonAriaProps } = splitAriaProps(props);
   const {
+    ref,
     asChild,
     className,
     style,
@@ -28,11 +29,11 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
     rippleProps,
     rippleRef,
     loader,
-    type = 'button',
-    size = 'md',
-    variant = 'solid',
-    color = 'primary',
-    loaderPosition = 'end',
+    type = "button",
+    size = "md",
+    variant = "solid",
+    color = "primary",
+    loaderPosition = "end",
     hasLoaderOnLoading = true,
     hasRipple = true,
     hasDefaultHoverStyles = true,
@@ -43,13 +44,13 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
     hasContentOnLoading = true,
     onClick,
     ...restProps
-  } = nonAriaProps
+  } = nonAriaProps;
 
-  const internalRef = React.useRef<HTMLButtonElement>(null)
-  const mergedRefs = useMergedRef<HTMLButtonElement>([internalRef, ref])
+  const internalRef = React.useRef<HTMLButtonElement>(null);
+  const mergedRefs = useMergedRef<HTMLButtonElement>([internalRef, ref]);
 
-  const isPressDisabled = isDisabled || ariaProps?.isPressDisabled || isLoading
-  const isHoverDisabled = isDisabled || ariaProps?.isHoverDisabled || isLoading
+  const isPressDisabled = isDisabled || ariaProps?.isPressDisabled || isLoading;
+  const isHoverDisabled = isDisabled || ariaProps?.isHoverDisabled || isLoading;
 
   const { ariaComponentProps, ariaFlags } = useAriaHandlers(
     {
@@ -58,32 +59,36 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
       isPressDisabled,
       isHoverDisabled,
     },
-    internalRef,
-  )
-  const { isPressed, isKeyboardPressed } = ariaFlags
+    internalRef
+  );
+  const { isPressed, isKeyboardPressed } = ariaFlags;
 
-  const mergedLoaderProps = getLoaderProps({ loaderRef, loaderProps, isLoading })
+  const mergedLoaderProps = getLoaderProps({
+    loaderRef,
+    loaderProps,
+    isLoading,
+  });
 
   const hasContent = () => {
-    if (mergedLoaderProps.position === 'absolute-center') return false
+    if (mergedLoaderProps.position === "absolute-center") return false;
 
-    return hasContentOnLoading
-  }
+    return hasContentOnLoading;
+  };
 
   const memoizedStyleWithColorVariable = React.useMemo(
     () => ({
       ...style,
       ...getColorVariables(color),
     }),
-    [style, color],
-  )
+    [style, color]
+  );
 
   return {
     buttonProps: {
       type,
-      'ref': mergedRefs,
-      'disabled': isDisabled,
-      'className': cn(
+      ref: mergedRefs,
+      disabled: isDisabled,
+      className: cn(
         buttonClasses({
           size,
           variant,
@@ -95,16 +100,16 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
           hasLoaderOnLoading,
           hasContentOnLoading: hasContent(),
         }),
-        className,
+        className
       ),
-      'style': memoizedStyleWithColorVariable,
-      'aria-label': isLoading ? 'loading' : undefined,
-      'aria-busy': isLoading || undefined,
-      'data-variant': variant,
-      'data-color': color,
-      'data-loading': isLoading || undefined,
-      'data-disabled': isDisabled,
-      'data-slot': 'base',
+      style: memoizedStyleWithColorVariable,
+      "aria-label": isLoading ? "loading" : undefined,
+      "aria-busy": isLoading || undefined,
+      "data-variant": variant,
+      "data-color": color,
+      "data-loading": isLoading || undefined,
+      "data-disabled": isDisabled,
+      "data-slot": "base",
       ...ariaComponentProps,
       ...restProps,
     },
@@ -124,7 +129,7 @@ function useButton(props: ButtonProps, ref: React.ForwardedRef<ButtonRef>) {
       hasRipple,
       hasLoaderOnLoading,
     },
-  }
+  };
 }
 
-export { useButton }
+export { useButton };

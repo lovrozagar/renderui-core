@@ -1,16 +1,16 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import { Simplify } from "@/components/_shared/types/simplify";
+import React from "react";
 
-import { AsChildProp } from '../../_shared/types/as-child'
+import { AsChildProp } from "../../_shared/types/as-child";
 
-type ContainerRef = React.ElementRef<'div'>
-
-type ContainerPrimitiveProps = React.ComponentPropsWithoutRef<'div'>
+type ContainerPrimitiveProps = React.ComponentPropsWithRef<"div">;
 
 type ContainerRenderUIProps = {
-  isFullHeight?: boolean
-}
+  isFullHeight?: boolean;
+};
 
-type ContainerProps = Simplify<ContainerPrimitiveProps & ContainerRenderUIProps & AsChildProp>
+type ContainerProps = Simplify<
+  ContainerPrimitiveProps & ContainerRenderUIProps & AsChildProp
+>;
 
-export type { ContainerProps, ContainerRef }
+export type { ContainerProps };

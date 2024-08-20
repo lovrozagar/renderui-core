@@ -1,24 +1,24 @@
-'use client'
+"use client";
 
-import { TabsTrigger as TabsTriggerPrimitive } from '@radix-ui/react-tabs'
-import { cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
-import React from 'react'
-import { chain } from 'react-aria'
+import { TabsTrigger as TabsTriggerPrimitive } from "@radix-ui/react-tabs";
+import { cx, functionCallOrValue, getOptionalObject } from "@renderui/utils";
+import React from "react";
+import { chain } from "react-aria";
 
-import { Button } from '@/components/button'
-import { TabsCursor } from '@/components/tabs/components/tabs-cursor'
-import { TabsTriggerChildrenContainer } from '@/components/tabs/components/tabs-trigger-children-container'
+import { Button } from "@/components/button";
+import { TabsCursor } from "@/components/tabs/components/tabs-cursor";
+import { TabsTriggerChildrenContainer } from "@/components/tabs/components/tabs-trigger-children-container";
 import {
   DEFAULT_TABS_TRIGGER_CLASSNAME,
   INACTIVE_TABS_TRIGGER_CLASSNAME,
   NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS,
   NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME,
-} from '@/components/tabs/constants/constants'
-import { useTabsContext } from '@/components/tabs/context/tabs-context'
-import { TabsTriggerProps, TabsTriggerRef } from '@/components/tabs/types/tabs-trigger'
-import { getHandleTriggerPress } from '@/components/tabs/utils/get-handdle-trigger-press'
+} from "@/components/tabs/constants/constants";
+import { useTabsContext } from "@/components/tabs/context/tabs-context";
+import { TabsTriggerProps } from "@/components/tabs/types/tabs-trigger";
+import { getHandleTriggerPress } from "@/components/tabs/utils/get-handdle-trigger-press";
 
-const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, ref) => {
+const TabsTrigger = (props: TabsTriggerProps) => {
   const {
     asChild,
     value,
@@ -28,15 +28,17 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
     isDisabled,
     childrenContainerProps,
     onPress,
-    variant = 'solid',
+    variant = "solid",
     hasRipple = false,
     hasDefaultHoverStyles = false,
     hasDefaultPressedStyles = false,
     ...restProps
-  } = props
+  } = props;
 
-  const { className: childrenContainerClassName, ...restChildrenContainerProps } =
-    getOptionalObject(childrenContainerProps)
+  const {
+    className: childrenContainerClassName,
+    ...restChildrenContainerProps
+  } = getOptionalObject(childrenContainerProps);
 
   const {
     activeTab,
@@ -45,16 +47,15 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
     type,
     hasCursor,
     setActiveTab,
-  } = useTabsContext()
+  } = useTabsContext();
 
-  const isSelected = activeTab === value
+  const isSelected = activeTab === value;
 
   return (
     <TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>
       <Button
         asChild={asChild}
-        ref={ref}
-        data-slot='trigger'
+        data-slot="trigger"
         data-selected={isSelected}
         color={color ?? rootColor}
         variant={variant}
@@ -63,7 +64,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         hasDefaultPressedStyles={hasDefaultPressedStyles}
         onPress={chain(
           onPress,
-          getHandleTriggerPress(type, value as string | number, setActiveTab),
+          getHandleTriggerPress(type, value as string | number, setActiveTab)
         )}
         className={cx(
           DEFAULT_TABS_TRIGGER_CLASSNAME,
@@ -71,7 +72,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
           NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS.includes(rootVariant)
             ? NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME
             : undefined,
-          className,
+          className
         )}
         {...restProps}
       >
@@ -98,9 +99,7 @@ const TabsTrigger = React.forwardRef<TabsTriggerRef, TabsTriggerProps>((props, r
         )}
       </Button>
     </TabsTriggerPrimitive>
-  )
-})
+  );
+};
 
-TabsTrigger.displayName = 'TabsTrigger'
-
-export { TabsTrigger }
+export { TabsTrigger };

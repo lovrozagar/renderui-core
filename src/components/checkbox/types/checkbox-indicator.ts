@@ -1,24 +1,22 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { m } from 'framer-motion'
-import React from 'react'
+import { Simplify } from "@/components/_shared/types/simplify";
+import { m } from "framer-motion";
+import React from "react";
 
-type CheckboxIndicatorPrimitive = typeof m.svg
-
-type CheckboxIndicatorRef = React.ElementRef<CheckboxIndicatorPrimitive>
+// type CheckboxIndicatorPrimitive = typeof m.svg;
 
 // @TODO
-// type CheckboxIndicatorPrimitiveProps = React.ComponentPropsWithoutRef<CheckboxIndicatorPrimitive>
-type CheckboxIndicatorPrimitiveProps = Record<string, any>
+// type CheckboxIndicatorPrimitiveProps = React.ComponentPropsWithRef<CheckboxIndicatorPrimitive>
+type CheckboxIndicatorPrimitiveProps = Record<string, any>;
 
 type CheckboxIndicatorCustomProps = {
-  isChecked?: boolean
-  animationDuration?: number
-  hasIconContentWhenUnchecked?: boolean
-  pathProps?: React.ComponentPropsWithoutRef<typeof m.path>
-}
+  isChecked?: boolean;
+  animationDuration?: number;
+  hasIconContentWhenUnchecked?: boolean;
+  pathProps?: React.ComponentPropsWithRef<typeof m.path>;
+};
 
 type CheckboxIndicatorProps = Simplify<
   CheckboxIndicatorPrimitiveProps & CheckboxIndicatorCustomProps
->
+>;
 
-export type { CheckboxIndicatorProps, CheckboxIndicatorRef }
+export type { CheckboxIndicatorProps };

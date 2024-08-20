@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import { Combobox, ComboboxProps } from '@/components/combobox'
+import { Combobox, ComboboxProps } from "@/components/combobox";
 
 const Select = (props: ComboboxProps) => {
-  const { type = 'select', ...restProps } = props
+  const { type = "select", ...restProps } = props;
 
-  return <Combobox type={type} {...restProps} />
-}
+  return <Combobox type={type} {...restProps} />;
+};
 
-Select.displayName = 'Select'
+Select.displayName = "Select";
 
-export { Select }
+export { Select };

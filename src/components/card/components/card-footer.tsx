@@ -1,13 +1,13 @@
-import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, getOptionalObject, polymorphic } from "@renderui/utils";
+import React from "react";
 
 import {
   DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME,
   DEFAULT_CARD_FOOTER_CLASSNAME,
-} from '@/components/card/constants/constants'
-import { CardFooterProps, CardFooterRef } from '@/components/card/types/card-footer'
+} from "@/components/card/constants/constants";
+import { CardFooterProps } from "@/components/card/types/card-footer";
 
-const CardFooter = React.forwardRef<CardFooterRef, CardFooterProps>((props, ref) => {
+const CardFooter = (props: CardFooterProps) => {
   const {
     asChild,
     childrenContainerProps,
@@ -17,38 +17,43 @@ const CardFooter = React.forwardRef<CardFooterRef, CardFooterProps>((props, ref)
     endContent,
     children,
     ...restProps
-  } = props
+  } = props;
 
   const {
     asChild: childrenContainerAsChild,
     className: childrenContainerClassName,
     ...restChildrenContainerProps
-  } = getOptionalObject(childrenContainerProps)
+  } = getOptionalObject(childrenContainerProps);
 
-  const ContentComponent = polymorphic(asChild, 'div')
+  const ContentComponent = polymorphic(asChild, "div");
 
-  const ChildrenContainerComponent = polymorphic(childrenContainerAsChild, 'span')
+  const ChildrenContainerComponent = polymorphic(
+    childrenContainerAsChild,
+    "span"
+  );
 
   return (
     <ContentComponent
       ref={ref}
-      data-slot='footer'
+      data-slot="footer"
       className={cn(DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME, contentClassName)}
       {...restProps}
     >
       {startContent}
       <ChildrenContainerComponent
-        data-slot='footer-children-container'
-        className={cn(DEFAULT_CARD_FOOTER_CLASSNAME, childrenClassName, childrenContainerClassName)}
+        data-slot="footer-children-container"
+        className={cn(
+          DEFAULT_CARD_FOOTER_CLASSNAME,
+          childrenClassName,
+          childrenContainerClassName
+        )}
         {...restChildrenContainerProps}
       >
         {children}
       </ChildrenContainerComponent>
       {endContent}
     </ContentComponent>
-  )
-})
+  );
+};
 
-CardFooter.displayName = 'CardFooter'
-
-export { CardFooter }
+export { CardFooter };

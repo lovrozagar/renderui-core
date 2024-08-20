@@ -1,25 +1,22 @@
-'use client'
+"use client";
 
-import { cn } from '@renderui/utils'
-import { CommandList as CommandListPrimitive } from 'cmdk'
-import React from 'react'
+import { cn } from "@renderui/utils";
+import { CommandList as CommandListPrimitive } from "cmdk";
+import React from "react";
 
-import { DEFAULT_COMMAND_LIST_CLASSNAME } from '@/components/command/constants/constants'
-import { CommandListProps, CommandListRef } from '@/components/command/types/command-list'
+import { DEFAULT_COMMAND_LIST_CLASSNAME } from "@/components/command/constants/constants";
+import { CommandListProps } from "@/components/command/types/command-list";
 
-const CommandList = React.forwardRef<CommandListRef, CommandListProps>((props, ref) => {
-  const { className, ...restProps } = props
+const CommandList = (props: CommandListProps) => {
+  const { className, ...restProps } = props;
 
   return (
     <CommandListPrimitive
-      ref={ref}
-      data-slot='list'
+      data-slot="list"
       className={cn(DEFAULT_COMMAND_LIST_CLASSNAME, className)}
       {...restProps}
     />
-  )
-})
+  );
+};
 
-CommandList.displayName = 'CommandList'
-
-export { CommandList }
+export { CommandList };

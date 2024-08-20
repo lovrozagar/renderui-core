@@ -1,10 +1,10 @@
-import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, polymorphic } from "@renderui/utils";
+import React from "react";
 
-import { headingClasses } from '@/components/heading/classes/heading-classes'
-import { HeadingProps, HeadingRef } from '@/components/heading/types/heading'
+import { headingClasses } from "@/components/heading/classes/heading-classes";
+import { HeadingProps } from "@/components/heading/types/heading";
 
-const Heading = React.forwardRef<HeadingRef, HeadingProps>((props, ref) => {
+const Heading = (props: HeadingProps) => {
   const {
     asChild,
     children,
@@ -14,15 +14,14 @@ const Heading = React.forwardRef<HeadingRef, HeadingProps>((props, ref) => {
     shadow,
     letterSpacing,
     textBreak,
-    as = 'h3',
+    as = "h3",
     ...restProps
-  } = props
+  } = props;
 
-  const Component = polymorphic(asChild, as)
+  const Component = polymorphic(asChild, as);
 
   return (
     <Component
-      ref={ref}
       className={cn(
         headingClasses({
           as,
@@ -32,15 +31,13 @@ const Heading = React.forwardRef<HeadingRef, HeadingProps>((props, ref) => {
           letterSpacing,
           textBreak,
         }),
-        className,
+        className
       )}
       {...restProps}
     >
       {children}
     </Component>
-  )
-})
+  );
+};
 
-Heading.displayName = 'Heading'
-
-export { Heading }
+export { Heading };

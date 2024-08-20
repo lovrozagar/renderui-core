@@ -31,6 +31,8 @@
 - feat: menubar
 - feat: pagination
 - feat: resizeable
+- feat: framer motion useIsMOtionReduced
+- fix: empty select/combobox content
 
 -refactor: collapsible to use css height: calc-size(auto) when better browser support
 -also see what can be done with starting style and and transition behaviour when better browser support

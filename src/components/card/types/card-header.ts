@@ -1,20 +1,25 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import React from 'react'
+import { Simplify } from "@/components/_shared/types/simplify";
+import React from "react";
 
-import { AsChildProp } from '@/components/_shared/types/as-child'
+import { AsChildProp } from "@/components/_shared/types/as-child";
 
-type CardHeaderRef = React.ElementRef<'div'>
-
-type CardHeaderPrimitiveProps = Omit<React.ComponentPropsWithoutRef<'div'>, 'className'>
+type CardHeaderPrimitiveProps = Omit<
+  React.ComponentPropsWithRef<"div">,
+  "className"
+>;
 
 type CardHeaderCustomProps = {
-  startContent?: React.ReactNode
-  endContent?: React.ReactNode
-  childrenClassName?: string
-  contentClassName?: string
-  childrenContainerProps?: Simplify<React.ComponentPropsWithoutRef<'span'> & AsChildProp>
-}
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
+  childrenClassName?: string;
+  contentClassName?: string;
+  childrenContainerProps?: Simplify<
+    React.ComponentPropsWithRef<"span"> & AsChildProp
+  >;
+};
 
-type CardHeaderProps = Simplify<CardHeaderPrimitiveProps & CardHeaderCustomProps & AsChildProp>
+type CardHeaderProps = Simplify<
+  CardHeaderPrimitiveProps & CardHeaderCustomProps & AsChildProp
+>;
 
-export type { CardHeaderProps, CardHeaderRef }
+export type { CardHeaderProps };

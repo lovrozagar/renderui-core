@@ -1,27 +1,26 @@
-'use client'
+"use client";
 
-import { PopoverTrigger as PopoverTriggerPrimitive } from '@radix-ui/react-popover'
-import { cx } from '@renderui/utils'
-import React from 'react'
+import { PopoverTrigger as PopoverTriggerPrimitive } from "@radix-ui/react-popover";
+import { cx } from "@renderui/utils";
+import React from "react";
 
-import { Button } from '@/components/button'
-import { DEFAULT_POPOVER_TRIGGER_CLASSNAME } from '@/components/popover/constants/constants'
-import { PopoverTriggerProps, PopoverTriggerRef } from '@/components/popover/types/popover-trigger'
+import { Button } from "@/components/button";
+import { DEFAULT_POPOVER_TRIGGER_CLASSNAME } from "@/components/popover/constants/constants";
+import { PopoverTriggerProps } from "@/components/popover/types/popover-trigger";
 
-const PopoverTrigger = React.forwardRef<PopoverTriggerRef, PopoverTriggerProps>((props, ref) => {
+const PopoverTrigger = (props: PopoverTriggerProps) => {
   const {
     className,
-    variant = 'solid',
-    color = 'mode-accent',
+    variant = "solid",
+    color = "mode-accent",
     hasRipple = true,
     ...restProps
-  } = props
+  } = props;
 
   return (
     <PopoverTriggerPrimitive asChild>
       <Button
-        ref={ref}
-        data-slot='trigger'
+        data-slot="trigger"
         color={color}
         variant={variant}
         hasRipple={hasRipple}
@@ -29,9 +28,7 @@ const PopoverTrigger = React.forwardRef<PopoverTriggerRef, PopoverTriggerProps>(
         {...restProps}
       />
     </PopoverTriggerPrimitive>
-  )
-})
+  );
+};
 
-PopoverTrigger.displayName = 'PopoverTrigger'
-
-export { PopoverTrigger }
+export { PopoverTrigger };

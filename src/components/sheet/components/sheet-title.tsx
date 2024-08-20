@@ -1,5 +1,1 @@
-import { ModalTitle } from '@/components/_shared/components/modal-title/modal-title'
-
-const SheetTitle = ModalTitle
-
-export { SheetTitle }
+export { ModalTitle as SheetTitle } from "@/components/_shared/components/modal-title/modal-title";

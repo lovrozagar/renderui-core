@@ -1,16 +1,29 @@
-'use client'
+"use client";
 
-import { functionCallOrValue } from '@renderui/utils/function-call-or-value'
-import { polymorphic } from '@renderui/utils/polymorphic'
-import React from 'react'
+import { functionCallOrValue } from "@renderui/utils/function-call-or-value";
+import { polymorphic } from "@renderui/utils/polymorphic";
+import React from "react";
 
-import { useButton } from '@/components/button/hooks/use-button'
-import { useLazyComponents } from '@/components/button/hooks/use-lazy-components'
-import { ButtonProps, ButtonRef } from '@/components/button/types/button'
+import { useButton } from "@/components/button/hooks/use-button";
+import { ButtonProps } from "@/components/button/types/button";
 
-const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
-  const { buttonProps, subLayerProps, rippleProps, loaderProps, utility } = useButton(props, ref)
-  const { children } = buttonProps
+const Loader = React.lazy(() =>
+  import("@/components/loader/components/loader").then((module) => ({
+    default: module.Loader,
+  }))
+);
+
+const Ripple = React.lazy(() =>
+  import("@/components/ripple/components/ripple").then((module) => ({
+    default: module.Ripple,
+  }))
+);
+
+const Button = (props: ButtonProps) => {
+  const { buttonProps, subLayerProps, rippleProps, loaderProps, utility } =
+    useButton(props);
+
+  const { children } = buttonProps;
   const {
     asChild,
     isPressed,
@@ -23,57 +36,48 @@ const Button = React.forwardRef<ButtonRef, ButtonProps>((props, ref) => {
     endContent,
     loadingContent,
     hasRipple,
-  } = utility
+  } = utility;
 
-  const { LoaderComponent, RippleComponent } = useLazyComponents({
-    isLoading,
-    hasLoaderOnLoading,
-    loader,
-    hasRipple,
-  })
-
-  const Component = polymorphic(asChild, 'button')
+  const Component = polymorphic(asChild, "button");
 
   const getChildren = () => {
     return isLoading && loadingContent
       ? functionCallOrValue(loadingContent, {
           isPressed,
           isKeyboardPressed,
-          Loader: LoaderComponent,
-          Ripple: RippleComponent,
+          Loader: Loader,
+          Ripple: Ripple,
         })
       : functionCallOrValue(children, {
           isPressed,
           isKeyboardPressed,
-          Loader: LoaderComponent,
-          Ripple: RippleComponent,
-        })
-  }
+          Loader: Loader,
+          Ripple: Ripple,
+        });
+  };
 
   const getContent = () => {
-    if (asChild) return getChildren()
+    if (asChild) return getChildren();
 
     return (
       <>
         {functionCallOrValue(startContent, { isPressed, isKeyboardPressed })}
-        {isLoading && loaderPosition === 'start' && LoaderComponent
-          ? loader ?? <LoaderComponent {...loaderProps} data-slot='loader' />
+        {isLoading && hasLoaderOnLoading && loaderPosition === "start"
+          ? loader ?? <Loader {...loaderProps} data-slot="loader" />
           : null}
         {getChildren()}
-        {isLoading && loaderPosition === 'end' && LoaderComponent
-          ? loader ?? <LoaderComponent {...loaderProps} data-slot='loader' />
+        {isLoading && hasLoaderOnLoading && loaderPosition === "end"
+          ? loader ?? <Loader {...loaderProps} data-slot="loader" />
           : null}
         {functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
-        {RippleComponent ? (
-          <RippleComponent {...subLayerProps} {...rippleProps} data-slot='ripple' />
+        {hasRipple ? (
+          <Ripple {...subLayerProps} {...rippleProps} data-slot="ripple" />
         ) : null}
       </>
-    )
-  }
+    );
+  };
 
-  return <Component {...buttonProps}>{getContent()}</Component>
-})
+  return <Component {...buttonProps}>{getContent()}</Component>;
+};
 
-Button.displayName = 'Button'
-
-export { Button }
+export { Button };

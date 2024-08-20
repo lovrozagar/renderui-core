@@ -1,9 +1,7 @@
-import { CommandList as CommandListPrimitive } from 'cmdk'
+import { CommandList as CommandListPrimitive } from "cmdk";
 
-type CommandListPrimitiveType = typeof CommandListPrimitive
+type CommandListPrimitiveType = typeof CommandListPrimitive;
 
-type CommandListRef = React.ElementRef<CommandListPrimitiveType>
+type CommandListProps = React.ComponentPropsWithRef<CommandListPrimitiveType>;
 
-type CommandListProps = React.ComponentPropsWithoutRef<CommandListPrimitiveType>
-
-export type { CommandListProps, CommandListRef }
+export type { CommandListProps };

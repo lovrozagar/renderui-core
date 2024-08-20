@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react";
 
-type TabsTriggerChildrenContainerProps = React.ComponentPropsWithoutRef<'span'>
+type TabsTriggerChildrenContainerProps = React.ComponentPropsWithRef<"span">;
 
-export type { TabsTriggerChildrenContainerProps }
+export type { TabsTriggerChildrenContainerProps };

@@ -6,7 +6,7 @@ import {
   PopoverPortal as PopoverPortalPrimitive,
 } from '@radix-ui/react-popover'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React, { useRef } from 'react'
+import React from 'react'
 
 import {
   DEFAULT_POPOVER_ARROW_CLASSNAME,
@@ -19,9 +19,10 @@ import {
   POPOVER_CONTENT_TRIGGER_MIN_WIDTH_CLASSNAME,
   POPOVER_CONTENT_TRIGGER_WIDTH_CLASSNAME,
 } from '@/components/popover/constants/constants'
+import { usePopoverContext } from '@/components/popover/contexts/popover-context'
 import { PopoverContentProps, PopoverContentRef } from '@/components/popover/types/popover-content'
 import { getAnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>((props, ref) => {
   const {
@@ -43,7 +44,6 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
     animationTimingFunction,
     animationInTimingFunction,
     animationOutTimingFunction,
-    onPointerDownOutside,
     hasArrow = true,
     align = 'center',
     sideOffset = 4,
@@ -52,18 +52,14 @@ const PopoverContent = React.forwardRef<PopoverContentRef, PopoverContentProps>(
 
   const { className: arrowClassName, ...restArrowProps } = getOptionalObject(arrowProps)
 
-  const contentRef = useRef<HTMLDivElement | null>(null)
+  const { contentRef } = usePopoverContext()
 
-  useOnClickOutside({
-    event: 'pointerdown',
-    element: contentRef.current,
-    handler: onPointerDownOutside,
-  })
+  const mergedRefCallback = useMergedRef([contentRef, ref])
 
   return (
     <PopoverPortalPrimitive container={portalContainer} forceMount={forceMount}>
       <PopoverContentPrimitive
-        ref={ref}
+        ref={mergedRefCallback}
         data-slot='content'
         align={align}
         forceMount={forceMount}

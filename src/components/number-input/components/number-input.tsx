@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { polymorphic } from '@renderui/utils'
-import React from 'react'
+import { polymorphic } from "@renderui/utils";
+import React from "react";
 
-import { Aria } from '@/components/aria'
-import { NumberSpinButton } from '@/components/number-input/components/number-spin-button'
-import { useNumberInput } from '@/components/number-input/hooks/use-number-input'
-import { NumberInputProps, NumberInputRef } from '@/components/number-input/types/number-input'
-import { Separator } from '@/components/separator'
+import { Aria } from "@/components/aria";
+import { NumberSpinButton } from "@/components/number-input/components/number-spin-button";
+import { useNumberInput } from "@/components/number-input/hooks/use-number-input";
+import { NumberInputProps } from "@/components/number-input/types/number-input";
+import { Separator } from "@/components/separator";
 
-const NumberInput = React.forwardRef<NumberInputRef, NumberInputProps>((props, ref) => {
+const NumberInput = (props: NumberInputProps) => {
   const {
     inputContainerProps,
     inputProps,
@@ -18,17 +18,22 @@ const NumberInput = React.forwardRef<NumberInputRef, NumberInputProps>((props, r
     decrementButtonProps,
     separatorProps,
     utilityProps,
-  } = useNumberInput(props, ref)
+  } = useNumberInput(props);
 
-  const { hasSpinButtons, startContent, children, endContent } = utilityProps
+  const { hasSpinButtons, startContent, children, endContent } = utilityProps;
 
-  const { asChild: inputAsChild, ...restInputProps } = inputProps
+  const { asChild: inputAsChild, ...restInputProps } = inputProps;
 
-  const { asChild: spinButtonContainerAsChild, ...restSpinButtonContainerProps } =
-    spinButtonContainerProps
+  const {
+    asChild: spinButtonContainerAsChild,
+    ...restSpinButtonContainerProps
+  } = spinButtonContainerProps;
 
-  const InputComponent = polymorphic(inputAsChild, 'input')
-  const SpinButtonContainerComponent = polymorphic(spinButtonContainerAsChild, 'div')
+  const InputComponent = polymorphic(inputAsChild, "input");
+  const SpinButtonContainerComponent = polymorphic(
+    spinButtonContainerAsChild,
+    "div"
+  );
 
   return (
     <Aria {...inputContainerProps}>
@@ -44,9 +49,7 @@ const NumberInput = React.forwardRef<NumberInputRef, NumberInputProps>((props, r
       {children}
       {endContent}
     </Aria>
-  )
-})
+  );
+};
 
-NumberInput.displayName = 'NumberInput'
-
-export { NumberInput }
+export { NumberInput };

@@ -1,9 +1,7 @@
-import { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
+import { CommandEmpty as CommandEmptyPrimitive } from "cmdk";
 
-type CommandEmptyPrimitiveType = typeof CommandEmptyPrimitive
+type CommandEmptyPrimitiveType = typeof CommandEmptyPrimitive;
 
-type CommandEmptyRef = React.ElementRef<CommandEmptyPrimitiveType>
+type CommandEmptyProps = React.ComponentPropsWithRef<CommandEmptyPrimitiveType>;
 
-type CommandEmptyProps = React.ComponentPropsWithoutRef<CommandEmptyPrimitiveType>
-
-export type { CommandEmptyProps, CommandEmptyRef }
+export type { CommandEmptyProps };

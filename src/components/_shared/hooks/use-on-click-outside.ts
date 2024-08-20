@@ -25,7 +25,11 @@ function useOnClickOutside<T extends HTMLElement = HTMLElement>(props: UseOnClic
     event,
     element: element,
     handler: (event) => {
-      if (!handler || !element || element.contains(event.target as Node)) {
+      if (!(event.target instanceof Node)) {
+        return
+      }
+
+      if (!handler || element?.contains(event.target)) {
         return
       }
 

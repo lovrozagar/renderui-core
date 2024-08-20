@@ -1,5 +1,1 @@
-import { Tabs } from '@/components/tabs'
-
-const Segment = Tabs
-
-export { Segment }
+export { Tabs as Segment } from "@/components/tabs";

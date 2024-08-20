@@ -1,5 +1,3 @@
-type VisuallyHiddenRef = HTMLSpanElement
+type VisuallyHiddenProps = React.ComponentPropsWithRef<"span">;
 
-type VisuallyHiddenProps = React.ComponentPropsWithoutRef<'span'>
-
-export type { VisuallyHiddenProps, VisuallyHiddenRef }
+export type { VisuallyHiddenProps };

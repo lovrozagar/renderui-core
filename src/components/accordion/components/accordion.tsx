@@ -1,24 +1,21 @@
-'use client'
+"use client";
 
-import { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
-import { cn } from '@renderui/utils'
-import React from 'react'
+import { Accordion as AccordionPrimitive } from "@radix-ui/react-accordion";
+import { cn } from "@renderui/utils";
+import React from "react";
 
-import { AccordionProps, AccordionRef } from '@/components/accordion/types/accordion'
+import { AccordionProps } from "@/components/accordion/types/accordion";
 
-const Accordion = React.forwardRef<AccordionRef, AccordionProps>((props, ref) => {
-  const { className, ...restProps } = props
+const Accordion = (props: AccordionProps) => {
+  const { className, ...restProps } = props;
 
   return (
     <AccordionPrimitive
-      ref={ref}
-      data-slot='base'
-      className={cn('render-ui-accordion', className)}
+      data-slot="base"
+      className={cn("render-ui-accordion", className)}
       {...restProps}
     />
-  )
-})
+  );
+};
 
-Accordion.displayName = 'Accordion'
-
-export { Accordion }
+export { Accordion };

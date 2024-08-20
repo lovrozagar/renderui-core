@@ -1,7 +1,5 @@
-import { ButtonProps, ButtonRef } from '@/components/button'
+import { ButtonProps } from "@/components/button";
 
-type CollapsibleTriggerRef = ButtonRef
+type CollapsibleTriggerProps = ButtonProps;
 
-type CollapsibleTriggerProps = ButtonProps
-
-export type { CollapsibleTriggerProps, CollapsibleTriggerRef }
+export type { CollapsibleTriggerProps };

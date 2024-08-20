@@ -1,5 +1,1 @@
-import { ComboboxItem } from '@/components/combobox'
-
-const SelectItem = ComboboxItem
-
-export { SelectItem }
+export { ComboboxItem as SelectItem } from "@/components/combobox";

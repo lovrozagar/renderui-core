@@ -1,12 +1,11 @@
-import { NavigationMenuContent as NavigationMenuContentPrimitive } from '@radix-ui/react-navigation-menu'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import React from 'react'
+import { NavigationMenuContent as NavigationMenuContentPrimitive } from "@radix-ui/react-navigation-menu";
+import { AnimationStyleVariables } from "@renderui/utils/get-animation-style-variables";
+import React from "react";
 
-type NavigationMenuContentPrimitiveType = typeof NavigationMenuContentPrimitive
-
-type NavigationMenuContentRef = React.ElementRef<NavigationMenuContentPrimitiveType>
+type NavigationMenuContentPrimitiveType = typeof NavigationMenuContentPrimitive;
 
 type NavigationMenuContentProps =
-  React.ComponentPropsWithoutRef<NavigationMenuContentPrimitiveType> & AnimationStyleVariables
+  React.ComponentPropsWithRef<NavigationMenuContentPrimitiveType> &
+    AnimationStyleVariables;
 
-export type { NavigationMenuContentProps, NavigationMenuContentRef }
+export type { NavigationMenuContentProps };

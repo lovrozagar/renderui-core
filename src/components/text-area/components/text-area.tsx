@@ -1,18 +1,25 @@
-'use client'
+"use client";
 
-import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
+import {
+  chain,
+  cn,
+  cx,
+  functionCallOrValue,
+  getOptionalObject,
+  polymorphic,
+} from "@renderui/utils";
+import React from "react";
 
-import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
-import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
-import { Aria } from '@/components/aria'
+import { inputContainerClasses } from "@/components/_shared/classes/input-container-classes";
+import { useControllableState } from "@/components/_shared/hooks/use-controllable-state";
+import { Aria } from "@/components/aria";
 import {
   DEFAULT_TEXT_AREA_CLASSNAME,
   DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
-} from '@/components/text-area/constants/constants'
-import { TextAreaProps, TextAreaRef } from '@/components/text-area/types/text-area'
+} from "@/components/text-area/constants/constants";
+import { TextAreaProps } from "@/components/text-area/types/text-area";
 
-const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
+const TextArea = (props: TextAreaProps) => {
   const {
     asChild,
     value: valueProp,
@@ -28,18 +35,18 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     inputContainerProps,
     onChange,
     onValueChange,
-    variant = 'solid',
-    defaultValue = '',
+    variant = "solid",
+    defaultValue = "",
     minHeight = 80,
     maxHeight = 200,
     ...restProps
-  } = props
+  } = props;
 
   const [value, setValue] = useControllableState<string>({
     prop: valueProp as string,
     defaultProp: defaultValue as string,
     onChange: onValueChange,
-  })
+  });
 
   const {
     className: inputContainerClassName,
@@ -47,9 +54,9 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     isFocusWithin = true,
     isUsingAriaPressProps = false,
     ...restInputContainerProps
-  } = getOptionalObject(inputContainerProps)
+  } = getOptionalObject(inputContainerProps);
 
-  const Component = polymorphic(asChild, 'textarea')
+  const Component = polymorphic(asChild, "textarea");
 
   return (
     <Aria
@@ -61,17 +68,17 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       data-invalid={isInvalid}
       data-disabled={isDisabled}
       data-required={isRequired}
-      data-slot='base'
+      data-slot="base"
       className={cx(
         inputContainerClasses({ variant }),
         DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
-        inputContainerClassName,
+        inputContainerClassName
       )}
       style={
         {
           ...style,
-          '--min-height': `${minHeight}px`,
-          '--max-height': `${maxHeight}px`,
+          "--min-height": `${minHeight}px`,
+          "--max-height": `${maxHeight}px`,
         } as React.CSSProperties
       }
       {...restInputContainerProps}
@@ -79,7 +86,6 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       {functionCallOrValue(startContent, value)}
       {functionCallOrValue(children, value)}
       <Component
-        ref={ref}
         value={value}
         disabled={isDisabled}
         readOnly={isReadOnly}
@@ -91,18 +97,18 @@ const TextArea = React.forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
         data-invalid={isInvalid}
         data-disabled={isDisabled}
         data-required={isRequired}
-        data-slot='input'
+        data-slot="input"
         className={cn(DEFAULT_TEXT_AREA_CLASSNAME, className)}
-        onChange={chain(onChange, (event: React.ChangeEvent<HTMLTextAreaElement>) =>
-          setValue(event.target.value),
+        onChange={chain(
+          onChange,
+          (event: React.ChangeEvent<HTMLTextAreaElement>) =>
+            setValue(event.target.value)
         )}
         {...restProps}
       />
       {functionCallOrValue(endContent, value)}
     </Aria>
-  )
-})
+  );
+};
 
-TextArea.displayName = 'TextArea'
-
-export { TextArea }
+export { TextArea };

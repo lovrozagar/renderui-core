@@ -5,7 +5,7 @@ import { determineScrollVisibility } from '@/components/scroll-area/utils/determ
 
 type SetScrollAttributes = {
   visibility: ScrollAreaProps['scrollShadowVisibility']
-  visibleRef: React.MutableRefObject<ScrollAreaProps['scrollShadowVisibility']>
+  visibleRef: React.RefObject<ScrollAreaProps['scrollShadowVisibility']>
   element: HTMLElement
   hasBefore: boolean
   hasAfter: boolean

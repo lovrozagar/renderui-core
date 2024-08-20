@@ -1,17 +1,15 @@
-import { Simplify } from '@/components/_shared/types/simplify'
-import { Command as CommandPrimitive } from 'cmdk'
-import React from 'react'
+import { Simplify } from "@/components/_shared/types/simplify";
+import { Command as CommandPrimitive } from "cmdk";
+import React from "react";
 
-type CommandPrimitiveType = typeof CommandPrimitive
+type CommandPrimitiveType = typeof CommandPrimitive;
 
-type CommandRef = React.ElementRef<CommandPrimitiveType>
-
-type CommandPrimitiveProps = React.ComponentPropsWithoutRef<CommandPrimitiveType>
+type CommandPrimitiveProps = React.ComponentPropsWithRef<CommandPrimitiveType>;
 
 type CommandCustomProps = {
-  type?: 'select' | 'combobox'
-}
+  type?: "select" | "combobox";
+};
 
-type CommandProps = Simplify<CommandPrimitiveProps & CommandCustomProps>
+type CommandProps = Simplify<CommandPrimitiveProps & CommandCustomProps>;
 
-export type { CommandProps, CommandRef }
+export type { CommandProps };

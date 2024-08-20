@@ -1,19 +1,22 @@
-'use client'
+"use client";
 
-import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
+import { cn, polymorphic } from "@renderui/utils";
+import React from "react";
 
-import { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
-import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
-import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
-import { DEFAULT_ARIA_CLASSNAME } from '@/components/aria/constants/constants'
-import { AriaProps, AriaRef } from '@/components/aria/types/aria'
+import { useAriaHandlers } from "@/components/_shared/hooks/use-aria-handlers";
+import { useMergedRef } from "@/components/_shared/hooks/use-merged-ref";
+import { splitAriaProps } from "@/components/_shared/utils/split-aria-props";
+import { DEFAULT_ARIA_CLASSNAME } from "@/components/aria/constants/constants";
+import { AriaProps } from "@/components/aria/types/aria";
 
-const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
-  const { ariaProps, nonAriaProps } = splitAriaProps(props)
+const Aria = (props: AriaProps) => {
+  const { ariaProps, nonAriaProps } = splitAriaProps(props);
 
-  const internalRef = React.useRef<HTMLElement>(null)
-  const mergedRefCallback = useMergedRef<HTMLElement>([internalRef, ref])
+  const internalRef = React.useRef<HTMLElement>(null);
+  const mergedRefCallback = useMergedRef<HTMLElement>([
+    internalRef,
+    nonAriaProps.ref,
+  ]);
 
   const {
     isPressDisabled,
@@ -21,7 +24,7 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
     isLongPressDisabled,
     isHoverDisabled,
     ...restAriaProps
-  } = ariaProps
+  } = ariaProps;
 
   const {
     className,
@@ -29,7 +32,7 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
     asChild,
     isUsingAriaPressProps = false,
     ...restNonAriaProps
-  } = nonAriaProps
+  } = nonAriaProps;
 
   const { ariaComponentProps } = useAriaHandlers(
     {
@@ -40,10 +43,10 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
       isHoverDisabled: isDisabled || isHoverDisabled,
       isUsingAriaPressProps,
     },
-    internalRef,
-  )
+    internalRef
+  );
 
-  const Component = polymorphic(asChild, 'div')
+  const Component = polymorphic(asChild, "div");
 
   return (
     <Component
@@ -53,9 +56,7 @@ const Aria = React.forwardRef<AriaRef, AriaProps>((props, ref) => {
       {...restNonAriaProps}
       {...ariaComponentProps}
     />
-  )
-})
+  );
+};
 
-Aria.displayName = 'Aria'
-
-export { Aria }
+export { Aria };

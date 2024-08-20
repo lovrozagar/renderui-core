@@ -1,23 +1,23 @@
-'use client'
+"use client";
 
 import {
   Corner as ScrollAreaCornerPrimitive,
   ScrollArea as ScrollAreaPrimitive,
   ScrollAreaViewport as ScrollAreaViewportPrimitive,
-} from '@radix-ui/react-scroll-area'
-import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+} from "@radix-ui/react-scroll-area";
+import { cn, getOptionalObject } from "@renderui/utils";
+import React from "react";
 
-import { ScrollAreaScrolllbar } from '@/components/scroll-area/components/scroll-area-scrollbar'
+import { ScrollAreaScrolllbar } from "@/components/scroll-area/components/scroll-area-scrollbar";
 import {
   DEFAULT_SCROLL_AREA_CLASSNAME,
   DEFAULT_SCROLL_AREA_VIEWPORT_CLASSNAME,
   SCROLL_AREA_ORIENTATIONS,
-} from '@/components/scroll-area/constants/constants'
-import { useDataScrollOverflow } from '@/components/scroll-area/hooks/use-scroll-shadow'
-import { ScrollAreaProps, ScrollAreaRef } from '@/components/scroll-area/types/scroll-area'
+} from "@/components/scroll-area/constants/constants";
+import { useDataScrollOverflow } from "@/components/scroll-area/hooks/use-scroll-shadow";
+import { ScrollAreaProps } from "@/components/scroll-area/types/scroll-area";
 
-const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref) => {
+const ScrollArea = (props: ScrollAreaProps) => {
   const {
     className,
     children,
@@ -28,18 +28,18 @@ const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref)
     scrollShadowOffset,
     scrollShadowVisibility,
     onScrollShadowVisiblityChange,
-    orientation = 'vertical',
+    orientation = "vertical",
     scrollShadowSize = 48,
     ...restProps
-  } = props
+  } = props;
 
-  const scrollViewportRef = React.useRef<ScrollAreaRef>(null)
+  const scrollViewportRef = React.useRef<HTMLDivElement | null>(null);
 
   const {
     className: viewportClassName,
     style: viewportStyle,
     ...restViewportProps
-  } = getOptionalObject(viewportProps)
+  } = getOptionalObject(viewportProps);
 
   useDataScrollOverflow({
     ref: scrollViewportRef,
@@ -49,19 +49,19 @@ const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref)
     overflowCheck: orientation,
     children,
     onVisibilityChange: onScrollShadowVisiblityChange,
-  })
+  });
 
   const mergedViewportStyle = React.useMemo(
     () =>
       ({
         ...viewportStyle,
-        '--scroll-shadow-size': `${scrollShadowSize}px`,
-      }) as React.CSSProperties,
-    [scrollShadowSize, viewportStyle],
-  )
+        "--scroll-shadow-size": `${scrollShadowSize}px`,
+      } as React.CSSProperties),
+    [scrollShadowSize, viewportStyle]
+  );
 
   const renderScrollBars = () => {
-    if (orientation === 'vertical' || orientation === 'horizontal') {
+    if (orientation === "vertical" || orientation === "horizontal") {
       return (
         <ScrollAreaScrolllbar
           orientation={orientation}
@@ -69,7 +69,7 @@ const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref)
           thumbProps={thumbProps}
           {...scrollbarProps}
         />
-      )
+      );
     }
 
     return (
@@ -84,19 +84,21 @@ const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref)
           />
         ))}
       </>
-    )
-  }
+    );
+  };
 
   return (
     <ScrollAreaPrimitive
-      ref={ref}
       className={cn(DEFAULT_SCROLL_AREA_CLASSNAME, className)}
       {...restProps}
     >
       <ScrollAreaViewportPrimitive
         ref={scrollViewportRef}
         data-orientation={orientation}
-        className={cn(viewportClassName, DEFAULT_SCROLL_AREA_VIEWPORT_CLASSNAME)}
+        className={cn(
+          viewportClassName,
+          DEFAULT_SCROLL_AREA_VIEWPORT_CLASSNAME
+        )}
         style={mergedViewportStyle}
         {...restViewportProps}
       >
@@ -105,9 +107,7 @@ const ScrollArea = React.forwardRef<ScrollAreaRef, ScrollAreaProps>((props, ref)
       {renderScrollBars()}
       <ScrollAreaCornerPrimitive />
     </ScrollAreaPrimitive>
-  )
-})
+  );
+};
 
-ScrollArea.displayName = 'ScrollArea'
-
-export { ScrollArea }
+export { ScrollArea };

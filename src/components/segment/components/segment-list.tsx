@@ -1,5 +1,1 @@
-import { TabsTriggerList } from '@/components/tabs'
-
-const SegmentList = TabsTriggerList
-
-export { SegmentList }
+export { TabsTriggerList as SegmentList } from "@/components/tabs";

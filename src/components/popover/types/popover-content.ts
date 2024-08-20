@@ -1,28 +1,25 @@
 import {
   PopoverArrow as PopoverArrowPrimitive,
   PopoverContent as PopoverContentPrimitive,
-} from '@radix-ui/react-popover'
-import { AnimationStyleVariables } from '@renderui/utils/get-animation-style-variables'
-import React from 'react'
+} from "@radix-ui/react-popover";
+import { AnimationStyleVariables } from "@renderui/utils/get-animation-style-variables";
+import React from "react";
 
-type PopoverContentPrimitiveType = typeof PopoverContentPrimitive
-
-type PopoverContentRef = React.ElementRef<PopoverContentPrimitiveType>
+type PopoverContentPrimitiveType = typeof PopoverContentPrimitive;
 
 type PopoverContentProps = Omit<
-  React.ComponentPropsWithoutRef<PopoverContentPrimitiveType>,
-  'onPointerDownOutside'
+  React.ComponentPropsWithRef<PopoverContentPrimitiveType>,
+  "onPointerDownOutside" | "onFocusOutside" | "onInteractOutside"
 > & {
-  portalContainer?: HTMLElement | null | undefined
-  hasTriggerHeight?: boolean
-  hasTriggerWidth?: boolean
-  hasTriggerMinWidth?: boolean
-  hasTriggerMinHeight?: boolean
-  hasTriggerMaxWidth?: boolean
-  hasTriggerMaxHeight?: boolean
-  hasArrow?: boolean
-  arrowProps?: React.ComponentPropsWithoutRef<typeof PopoverArrowPrimitive>
-  onPointerDownOutside?: (event: PointerEvent) => void
-} & AnimationStyleVariables
+  portalContainer?: HTMLElement | null | undefined;
+  hasTriggerHeight?: boolean;
+  hasTriggerWidth?: boolean;
+  hasTriggerMinWidth?: boolean;
+  hasTriggerMinHeight?: boolean;
+  hasTriggerMaxWidth?: boolean;
+  hasTriggerMaxHeight?: boolean;
+  hasArrow?: boolean;
+  arrowProps?: React.ComponentPropsWithRef<typeof PopoverArrowPrimitive>;
+} & AnimationStyleVariables;
 
-export type { PopoverContentProps, PopoverContentRef }
+export type { PopoverContentProps };
