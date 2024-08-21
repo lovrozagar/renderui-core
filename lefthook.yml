@@ -14,7 +14,7 @@ pre-commit:
       glob: "*.{json,js,ts,tsx}"
       run: yarn tsc --noEmit -p ./tsconfig.json
     3_build:
-      run: yarn next build
+      run: yarn build
 
 pre-push:
   commands:

@@ -2,6 +2,7 @@
 	"name": "@renderui/core",
 	"version": "1.5.8",
 	"private": false,
+	"sideEffects": false,
 	"description": "React UI library with highly modular and ready-out-of-the-box components",
 	"license": "MIT",
 	"author": "Lovro Žagar",
@@ -27,7 +28,7 @@
 		"type:coverage": "typescript-coverage-report",
 		"lint": "npx @biomejs/biome lint ./src",
 		"lint:check": "npx @biomejs/biome check ./src",
-		"lint:format": "npx @biomejs/biome format ./src",
+		"lint:format": "npx @biomejs/biome format --write ./src",
 		"lint:fix": "npx @biomejs/biome lint --write ./src"
 	},
 	"dependencies": {
@@ -67,11 +68,11 @@
 		"postcss": "^8.4.35",
 		"react": "19.0.0-rc-a960b92c-20240819",
 		"react-dom": "19.0.0-rc-a960b92c-20240819",
-		"tailwindcss": "^3.4.1",
 		"types-react": "^19.0.0-rc.1",
 		"types-react-dom": "^19.0.0-rc.1",
 		"typescript": "^5.5.4",
 		"typescript-coverage-report": "^1.0.0",
+		"tailwindcss": "^3.4.1",
 		"vite": "^5.1.4"
 	},
 	"peerDependencies": {

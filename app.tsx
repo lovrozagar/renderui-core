@@ -56,7 +56,7 @@ const App = () => {
 				<PopoverTrigger>Trigger</PopoverTrigger>
 				<PopoverContent>Content</PopoverContent>
 			</Popover>
-			<HoverCard>
+			<HoverCard shouldTriggerToggleOpen>
 				<HoverCardTrigger>Trigger</HoverCardTrigger>
 				<HoverCardContent>
 					<div className='max-w-[100px]'>
