@@ -23,6 +23,7 @@ const DrawerContent = (props: DrawerContentProps) => {
 		indicatorProps,
 		closeButtonProps,
 		closeButtonIconProps,
+		overlayProps,
 		hasCloseButton = true,
 		hasIndicator = true,
 		...restProps
@@ -43,15 +44,17 @@ const DrawerContent = (props: DrawerContentProps) => {
 
 	return (
 		<DrawerPrimitive.Portal>
-			<Overlay />
+			<Overlay {...overlayProps} />
 			<DrawerPrimitive.Content
 				className={cn(DEFAULT_DRAWER_CONTENT_CLASSNAME, className)}
 				{...restProps}
 			>
-				<div
-					className={cn(DEFAULT_DRAWER_INDICATOR_CLASSNAME, indicatorClassName)}
-					{...restIndicatorProps}
-				/>
+				{hasIndicator ? (
+					<div
+						className={cn(DEFAULT_DRAWER_INDICATOR_CLASSNAME, indicatorClassName)}
+						{...restIndicatorProps}
+					/>
+				) : null}
 				{children}
 				{hasCloseButton ? (
 					<DrawerClose asChild>
