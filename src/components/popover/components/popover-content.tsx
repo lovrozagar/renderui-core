@@ -5,13 +5,11 @@ import {
 	PopoverContent as PopoverContentPrimitive,
 	PopoverPortal as PopoverPortalPrimitive,
 } from '@radix-ui/react-popover'
-import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import { cn } from '@renderui/utils'
 
+import { ContentArrow } from '@/components/_shared/components/content-arrow/content-arrow'
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import {
-	DEFAULT_POPOVER_ARROW_CLASSNAME,
-	DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
 	DEFAULT_POPOVER_CONTENT_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_HEIGHT_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_MAX_HEIGHT_CLASSNAME,
@@ -38,6 +36,7 @@ const PopoverContent = (props: PopoverContentProps) => {
 		hasTriggerMinHeight,
 		hasTriggerMaxWidth,
 		hasTriggerMaxHeight,
+		arrowContainerProps,
 		arrowProps,
 		animationDuration,
 		animationInDuration,
@@ -50,8 +49,6 @@ const PopoverContent = (props: PopoverContentProps) => {
 		sideOffset = 4,
 		...restProps
 	} = props
-
-	const { className: arrowClassName, ...restArrowProps } = getOptionalObject(arrowProps)
 
 	const { contentRef } = usePopoverContext()
 
@@ -93,19 +90,7 @@ const PopoverContent = (props: PopoverContentProps) => {
 				{children}
 				{hasArrow ? (
 					<PopoverArrowPrimitive asChild>
-						<span data-slot='arrow-container' className={DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME}>
-							<svg
-								data-slot='arrow'
-								className={DEFAULT_POPOVER_ARROW_CLASSNAME}
-								width='10'
-								height='5'
-								viewBox='0 0 30 10'
-								preserveAspectRatio='none'
-								{...restArrowProps}
-							>
-								<polygon points='0,0 30,0 15,10' />
-							</svg>
-						</span>
+						<ContentArrow arrowContainerProps={arrowContainerProps} arrowProps={arrowProps} />
 					</PopoverArrowPrimitive>
 				) : null}
 			</PopoverContentPrimitive>

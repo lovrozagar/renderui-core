@@ -10,7 +10,7 @@
 		"isolatedModules": true,
 		"resolveJsonModule": true,
 		"noUncheckedIndexedAccess": true,
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"target": "es2022",
 		"moduleDetection": "force",
 		"lib": ["dom", "dom.iterable", "esnext"],

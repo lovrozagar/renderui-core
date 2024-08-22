@@ -1,5 +1,4 @@
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_CARD_DESCRIPTION_CLASSNAME } from '@/components/card/constants/constants'
 import type { CardDescriptionProps } from '@/components/card/types/card-description'

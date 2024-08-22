@@ -15,13 +15,7 @@ const POPOVER_CONTENT_TRIGGER_MAX_WIDTH_CLASSNAME = 'max-w-[var(--radix-popover-
 
 const POPOVER_CONTENT_TRIGGER_MAX_HEIGHT_CLASSNAME = 'max-h-[var(--radix-popover-trigger-width)]'
 
-const DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME =
-	'render-ui-popover-arrow-container relative before:absolute before:size-[8px] before:rotate-45 before:top-[-4px] before:left-1/2 before:-translate-x-1/2 before:inline-block before:z-[1] before:border before:border-r-mode-accent before:border-b-mode-accent before:border-t-transparent before:border-l-transparent'
-
-const DEFAULT_POPOVER_ARROW_CLASSNAME = 'render-ui-popover-arrow bg-transparent fill-background'
-
 export {
-	DEFAULT_POPOVER_ARROW_CLASSNAME,
 	DEFAULT_POPOVER_CONTENT_CLASSNAME,
 	DEFAULT_POPOVER_TRIGGER_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_HEIGHT_CLASSNAME,
@@ -30,5 +24,4 @@ export {
 	POPOVER_CONTENT_TRIGGER_MIN_HEIGHT_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_MIN_WIDTH_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_WIDTH_CLASSNAME,
-	DEFAULT_POPOVER_ARROW_CONTAINER_CLASSNAME,
 }

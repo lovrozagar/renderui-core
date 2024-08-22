@@ -1,17 +1,14 @@
-import { DEFAULT_HOVER_CARD_CONTENT_CLASSNAME } from '@/components/hover-card/constants/constants'
+import { ContentArrow } from '@/components/_shared/components/content-arrow/content-arrow'
 import type { HoverCardContentProps } from '@/components/hover-card/types/hover-card-content'
+import { DEFAULT_POPOVER_CONTENT_CLASSNAME } from '@/components/popover/constants/constants'
 import {
 	HoverCardArrow as HoverCardArrowPrimitive,
 	HoverCardContent as HoverCardContentPrimitive,
 } from '@radix-ui/react-hover-card'
 import { cn, getAnimationStyleVariables } from '@renderui/utils'
-import React from 'react'
 
 const HoverCardContent = (props: HoverCardContentProps) => {
 	const {
-		align = 'center',
-		sideOffset = 4,
-		side = 'bottom',
 		children,
 		className,
 		style,
@@ -21,6 +18,12 @@ const HoverCardContent = (props: HoverCardContentProps) => {
 		animationTimingFunction,
 		animationInTimingFunction,
 		animationOutTimingFunction,
+		arrowContainerProps,
+		arrowProps,
+		align = 'center',
+		side = 'bottom',
+		sideOffset = 4,
+		hasArrow = true,
 		...restProps
 	} = props
 
@@ -29,7 +32,7 @@ const HoverCardContent = (props: HoverCardContentProps) => {
 			align={align}
 			sideOffset={sideOffset}
 			side={side}
-			className={cn(DEFAULT_HOVER_CARD_CONTENT_CLASSNAME, className)}
+			className={cn(DEFAULT_POPOVER_CONTENT_CLASSNAME, className)}
 			style={{
 				...getAnimationStyleVariables({
 					animationDuration,
@@ -46,7 +49,11 @@ const HoverCardContent = (props: HoverCardContentProps) => {
 			{...restProps}
 		>
 			{children}
-			<HoverCardArrowPrimitive />
+			{hasArrow ? (
+				<HoverCardArrowPrimitive asChild>
+					<ContentArrow arrowContainerProps={arrowContainerProps} arrowProps={arrowProps} />
+				</HoverCardArrowPrimitive>
+			) : null}
 		</HoverCardContentPrimitive>
 	)
 }
