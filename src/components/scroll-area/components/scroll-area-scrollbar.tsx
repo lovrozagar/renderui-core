@@ -5,7 +5,6 @@ import {
 	ScrollAreaThumb as ScrollAreaThumbPrimitive,
 } from '@radix-ui/react-scroll-area'
 import { chain, cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_SCROLL_AREA_SCROLLBAR_BASE_CLASSNAME,

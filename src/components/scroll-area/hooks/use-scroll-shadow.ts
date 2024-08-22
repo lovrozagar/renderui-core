@@ -10,7 +10,7 @@ import { setScrollAttributes } from '@/components/scroll-area/utils/set-scroll-a
 type ScrollShadowVisibility = ScrollAreaProps['scrollShadowVisibility']
 
 type UseDataScrollOverflowProps = {
-	ref?: React.RefObject<HTMLElement>
+	ref?: React.RefObject<HTMLElement | null>
 	overflowCheck?: ScrollAreaProps['orientation']
 	visibility?: ScrollShadowVisibility
 	isEnabled?: boolean

@@ -1,5 +1,4 @@
 import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME,
@@ -31,7 +30,6 @@ const CardFooter = (props: CardFooterProps) => {
 
 	return (
 		<ContentComponent
-			ref={ref}
 			data-slot='footer'
 			className={cn(DEFAULT_CARD_FOOTER_CHILDREN_CLASSNAME, contentClassName)}
 			{...restProps}

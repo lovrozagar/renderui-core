@@ -33,7 +33,7 @@ const ScrollArea = (props: ScrollAreaProps) => {
 		...restProps
 	} = props
 
-	const scrollViewportRef = React.useRef<HTMLDivElement | null>(null)
+	const scrollViewportRef = React.useRef<HTMLElement | null>(null)
 
 	const {
 		className: viewportClassName,
@@ -64,8 +64,8 @@ const ScrollArea = (props: ScrollAreaProps) => {
 		if (orientation === 'vertical' || orientation === 'horizontal') {
 			return (
 				<ScrollAreaScrolllbar
-					orientation={orientation}
 					viewportRef={scrollViewportRef}
+					orientation={orientation}
 					thumbProps={thumbProps}
 					{...scrollbarProps}
 				/>
@@ -77,8 +77,8 @@ const ScrollArea = (props: ScrollAreaProps) => {
 				{SCROLL_AREA_ORIENTATIONS.map((orientation) => (
 					<ScrollAreaScrolllbar
 						key={orientation}
-						orientation={orientation}
 						viewportRef={scrollViewportRef}
+						orientation={orientation}
 						thumbProps={thumbProps}
 						{...scrollbarProps}
 					/>
@@ -90,7 +90,6 @@ const ScrollArea = (props: ScrollAreaProps) => {
 	return (
 		<ScrollAreaPrimitive className={cn(DEFAULT_SCROLL_AREA_CLASSNAME, className)} {...restProps}>
 			<ScrollAreaViewportPrimitive
-				ref={scrollViewportRef}
 				data-orientation={orientation}
 				className={cn(viewportClassName, DEFAULT_SCROLL_AREA_VIEWPORT_CLASSNAME)}
 				style={mergedViewportStyle}

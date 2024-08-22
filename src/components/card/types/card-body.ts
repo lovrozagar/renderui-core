@@ -5,4 +5,4 @@ import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type CardBodyProps = Simplify<React.ComponentPropsWithRef<'div'> & AsChildProp>
 
-export type { CardBodyProps, CardBodyRef }
+export type { CardBodyProps }

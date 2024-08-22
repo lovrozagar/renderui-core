@@ -1,4 +1,3 @@
-import type { ButtonProps } from '@/components/button/types/button'
 import type { ComboboxProps } from '@/components/combobox/types/combobox'
 
 type ComboboxContext = {
@@ -7,7 +6,7 @@ type ComboboxContext = {
 	value: ComboboxProps['value']
 	focusValue: ComboboxProps['value']
 	label: React.ReactNode
-	triggerRef: React.RefObject<ButtonProps['ref']> | undefined
+	triggerRef: React.Ref<HTMLButtonElement> | undefined
 	hasCheckIcon: boolean
 	isDisabled: boolean | undefined
 	isInvalid: boolean | undefined

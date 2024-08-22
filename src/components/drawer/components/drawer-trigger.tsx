@@ -3,7 +3,6 @@
 import { Button } from '@/components/button'
 import type { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
 import { cn } from '@renderui/utils'
-import React from 'react'
 import { Drawer as DrawerPrimitive } from 'vaul'
 
 const DrawerTrigger = (props: DrawerTriggerProps) => {

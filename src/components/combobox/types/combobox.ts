@@ -1,5 +1,5 @@
-import type { ButtonProps } from '@/button'
 import type { Simplify } from '@/components/_shared/types/simplify'
+import type { ButtonProps } from '@/components/button'
 
 import type { PopoverProps } from '@/components/popover'
 
@@ -11,7 +11,7 @@ type ComboboxCustomProps = {
 	value?: string | number
 	defaultValue?: string
 	inputProps?: React.ComponentPropsWithRef<'input'>
-	triggerRef?: React.RefObject<ButtonProps['ref']>
+	triggerRef?: ButtonProps['ref']
 	hasCheckIcon?: boolean
 	isDisabled?: boolean | undefined
 	isInvalid?: boolean | undefined
