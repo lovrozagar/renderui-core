@@ -5,7 +5,6 @@ import {
 	AccordionTrigger as AccordionTriggerPrimitive,
 } from '@radix-ui/react-accordion'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import {

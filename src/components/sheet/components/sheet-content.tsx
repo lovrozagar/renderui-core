@@ -5,7 +5,6 @@ import {
 	DialogPortal as SheetPortalPrimitive,
 } from '@radix-ui/react-dialog'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'

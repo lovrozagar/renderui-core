@@ -1,7 +1,6 @@
 'use client'
 
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { Aria } from '@/components/aria'
 import { NumberSpinButton } from '@/components/number-input/components/number-spin-button'

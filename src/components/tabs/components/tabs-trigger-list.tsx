@@ -2,7 +2,6 @@
 
 import { TabsList as TabsTriggerListPrimitive } from '@radix-ui/react-tabs'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { tabsTriggerListClasses } from '@/components/tabs/classes/tabs-trigger-list-classes'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'

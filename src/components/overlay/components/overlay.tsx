@@ -2,7 +2,6 @@
 
 import { DialogOverlay } from '@radix-ui/react-dialog'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_OVERLAY_CLASSNAME } from '@/components/overlay/constants/constants'
 import type { OverlayProps } from '@/components/overlay/types/overlay'

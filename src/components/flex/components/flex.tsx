@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { FlexProps } from '@/components/flex/types/flex'
 import { getMergedClassName } from '@/components/flex/utils/get-merged-class-name'

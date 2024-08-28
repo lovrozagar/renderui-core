@@ -2,7 +2,6 @@
 
 import { NavigationMenuLink as NavigationMenuLinkPrimitive } from '@radix-ui/react-navigation-menu'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { Button } from '@/components/button'
 import { DEFAULT_NAVIGATION_MENU_LINK_CLASSNAME } from '@/components/navigation-menu/constants/constants'

@@ -5,7 +5,6 @@ import {
 	DialogPortal as DialogPortalPrimitive,
 } from '@radix-ui/react-dialog'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { Button } from '@/components/button/components/button'

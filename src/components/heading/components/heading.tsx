@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { headingClasses } from '@/components/heading/classes/heading-classes'
 import type { HeadingProps } from '@/components/heading/types/heading'

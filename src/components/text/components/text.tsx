@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { textClasses } from '@/components/text/classes/text-classes'
 import type { TextProps } from '@/components/text/types/text'

@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { SeparatorProps } from '@/components/separator/types/separator'
 import { getMergedClassName } from '@/components/separator/utils/get-merged-class-name'

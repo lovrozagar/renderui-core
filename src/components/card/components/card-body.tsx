@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_CARD_BODY_CLASSNAME } from '@/components/card/constants/constants'
 import type { CardBodyProps } from '@/components/card/types/card-body'

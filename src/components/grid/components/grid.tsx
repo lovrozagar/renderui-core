@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { GridProps } from '@/components/grid/types/grid'
 import { getMergedStyles } from '@/components/grid/utils/get-merged-styles'

@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { cardClasses } from '@/components/card/classes/card-classes'
 import type { CardProps } from '@/components/card/types/card'

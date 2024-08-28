@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { SkeletonProps } from '@/components/skeleton/types/skeleton'
 import { getMergedClassName } from '@/components/skeleton/utils/get-merged-class-name'

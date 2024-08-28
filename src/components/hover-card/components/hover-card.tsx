@@ -2,7 +2,6 @@ import { useControllableState } from '@/components/_shared/hooks/use-controllabl
 import { HoverCardProvider } from '@/components/hover-card/contexts/hover-card-context'
 import type { HoverCardProps } from '@/components/hover-card/types/hover-card'
 import { HoverCard as HoverCardPrimitive } from '@radix-ui/react-hover-card'
-import React from 'react'
 
 const HoverCard = (props: HoverCardProps) => {
 	const {

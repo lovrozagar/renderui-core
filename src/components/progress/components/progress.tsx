@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { EMPTY_OBJECT } from '@/components/_shared/constants/constants'
 import { DEFAULT_PROGRESS_CLASSNAME } from '@/components/progress/constants/constants'

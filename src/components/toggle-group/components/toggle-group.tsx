@@ -2,7 +2,6 @@
 
 import { ToggleGroup as ToggleGroupPrimitive } from '@radix-ui/react-toggle-group'
 import { cn, functionCallOrValue } from '@renderui/utils'
-import React from 'react'
 
 import { EMPTY_ARRAY } from '@/components/_shared/constants/constants'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'

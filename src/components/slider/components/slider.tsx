@@ -6,7 +6,6 @@ import {
 	SliderTrack as SliderTrackPrimitive,
 } from '@radix-ui/react-slider'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import { SliderThumb } from '@/components/slider/components/slider-thumb'
 import {

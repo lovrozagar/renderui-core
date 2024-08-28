@@ -2,7 +2,6 @@
 
 import { TabsTrigger as TabsTriggerPrimitive } from '@radix-ui/react-tabs'
 import { cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 import { chain } from 'react-aria'
 
 import { Button } from '@/components/button'

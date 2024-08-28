@@ -2,7 +2,6 @@
 
 import { cn } from '@renderui/utils'
 import { CommandList as CommandListPrimitive } from 'cmdk'
-import React from 'react'
 
 import { DEFAULT_COMMAND_LIST_CLASSNAME } from '@/components/command/constants/constants'
 import type { CommandListProps } from '@/components/command/types/command-list'

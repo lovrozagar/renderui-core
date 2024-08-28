@@ -1,5 +1,4 @@
 import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_CARD_HEADER_CHILDREN_CLASSNAME,

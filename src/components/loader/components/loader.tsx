@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { loaderClasses } from '@/components/loader/classes/loader-classes'
 import { LoaderDot } from '@/components/loader/components/loader-dot'

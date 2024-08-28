@@ -1,5 +1,4 @@
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import { EyeNoneIcon } from '@/components/_shared/components/icons/eye-none-icon'
 import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'

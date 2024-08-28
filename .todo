@@ -36,3 +36,8 @@
 
 -refactor: collapsible to use css height: calc-size(auto) when better browser support
 -also see what can be done with starting style and and transition behaviour when better browser support
+
+- fix: react ref types in hooks
+- refactor: make prop naming more consistend, modal/isModal, open/isOpen...
+
+- refactor: remove barrell imports to better support treeshaking with different bundlers/frameworks

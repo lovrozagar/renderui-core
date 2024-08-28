@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { AspectRatioProps } from '@/components/aspect-ratio/types/aspect-ratio'
 import { getMergedStyles } from '@/components/aspect-ratio/utils/get-merged-styles'

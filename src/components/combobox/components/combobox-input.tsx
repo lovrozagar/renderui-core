@@ -1,7 +1,6 @@
 'use client'
 
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import type { ComboboxInputProps } from '@/components/combobox/types/combobox-input'
 import { CommandInput } from '@/components/command/components/command-input'

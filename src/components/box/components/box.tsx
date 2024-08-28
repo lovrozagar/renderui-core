@@ -1,5 +1,4 @@
 import { polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import type { BoxProps } from '@/components/box/types/box'
 import { getMergedClassName } from '@/components/box/utils/get-merged-class-name'

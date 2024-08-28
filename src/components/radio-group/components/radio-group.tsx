@@ -1,7 +1,6 @@
 'use client'
 
 import { cx, functionCallOrValue } from '@renderui/utils'
-import React from 'react'
 
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { DEFAULT_RADIO_GROUP_CLASSNAME } from '@/components/radio-group/constants/constants'

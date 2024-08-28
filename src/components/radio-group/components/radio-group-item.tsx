@@ -1,7 +1,6 @@
 'use client'
 
 import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_RADIO_GROUP_ITEM_CLASSNAME,

@@ -2,7 +2,6 @@
 
 import { cn } from '@renderui/utils'
 import { CommandEmpty as CommandEmptyPrimitive } from 'cmdk'
-import React from 'react'
 
 import { DEFAULT_COMMAND_EMPTY_CLASSNAME } from '@/components/command/constants/constants'
 import type { CommandEmptyProps } from '@/components/command/types/command-empty'

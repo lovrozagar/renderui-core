@@ -1,5 +1,4 @@
-// biome-ignore lint/style/useImportType: react import needed here
-import React from 'react'
+import type React from 'react'
 
 const CrossSmallIcon = (props: React.ComponentPropsWithRef<'svg'>) => {
 	return (

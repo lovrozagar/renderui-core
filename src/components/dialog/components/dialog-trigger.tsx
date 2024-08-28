@@ -2,7 +2,6 @@
 
 import { DialogTrigger as DialogTriggerPrimitive } from '@radix-ui/react-dialog'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { Button } from '@/components/button/components/button'
 import { DEFAULT_DIALOG_TRIGGER_CLASSNAME } from '@/components/dialog/constants/constants'

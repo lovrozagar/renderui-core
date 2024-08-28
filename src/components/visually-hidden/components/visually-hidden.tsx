@@ -1,5 +1,4 @@
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import type { VisuallyHiddenProps } from '@/components/visually-hidden/types/visually-hidden'
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { AnimatePresence, m } from 'framer-motion'
-import React from 'react'
 
 import { useRipple } from '@/components/ripple/hooks/use-ripple'
 import type { RippleProps } from '@/components/ripple/types/ripple'

@@ -1,5 +1,4 @@
 import { cx } from '@renderui/utils'
-import React from 'react'
 
 import { Command } from '@/components/command/components/command'
 import {

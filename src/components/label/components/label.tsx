@@ -1,7 +1,6 @@
 'use client'
 
 import { chain, cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_LABEL_CLASSNAME } from '@/components/label/constants/constants'
 import type { LabelProps } from '@/components/label/types/label'

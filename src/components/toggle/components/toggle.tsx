@@ -2,7 +2,6 @@
 
 import { Toggle as TogglePrimitive } from '@radix-ui/react-toggle'
 import { cn, functionCallOrValue } from '@renderui/utils'
-import React from 'react'
 
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { Button } from '@/components/button'

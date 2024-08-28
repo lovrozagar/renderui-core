@@ -1,14 +1,11 @@
 'use client'
 
 import { Dialog as SheetPrimitive } from '@radix-ui/react-dialog'
-import React from 'react'
 
 import type { SheetProps } from '@/components/sheet/types/sheet'
 
 const Sheet = (props: SheetProps) => {
-	const { isModal, ...restProps } = props
-
-	return <SheetPrimitive modal={isModal} {...restProps} />
+	return <SheetPrimitive {...props} />
 }
 
 export { Sheet }

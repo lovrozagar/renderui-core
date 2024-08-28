@@ -2,7 +2,6 @@
 
 import { Accordion as AccordionPrimitive } from '@radix-ui/react-accordion'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import type { AccordionProps } from '@/components/accordion/types/accordion'
 

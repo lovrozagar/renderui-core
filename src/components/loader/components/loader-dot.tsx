@@ -1,5 +1,4 @@
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_LOADER_DOT_CLASSNAME,

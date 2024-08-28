@@ -1,7 +1,6 @@
 'use client'
 
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
 import { DEFAULT_KBD_CLASSNAME } from '@/components/kbd/constants/constants'

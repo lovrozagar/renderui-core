@@ -2,7 +2,6 @@
 
 import { SliderThumb as SliderThumbPrimitive } from '@radix-ui/react-slider'
 import { cn } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_SLIDER_THUMB_CLASSNAME } from '@/components/slider/constants/constants'
 import type { SliderThumbProps } from '@/components/slider/types/slider-thumb'

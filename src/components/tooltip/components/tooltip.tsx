@@ -1,7 +1,6 @@
 'use client'
 
 import { Tooltip as TooltipPrimitive, TooltipProvider } from '@radix-ui/react-tooltip'
-import React from 'react'
 
 import type { TooltipProps } from '@/components/tooltip/types/tooltip'
 

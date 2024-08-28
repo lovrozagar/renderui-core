@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Combobox, type ComboboxProps } from '@/components/combobox'
 
 const Select = (props: ComboboxProps) => {

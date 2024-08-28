@@ -1,5 +1,4 @@
 import { cn, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import { DEFAULT_SUB_LAYER_CLASSNAME } from '@/components/sub-layer/constants/constants'
 import type { SubLayerProps } from '@/components/sub-layer/types/sub-layer'

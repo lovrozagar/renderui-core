@@ -18,7 +18,10 @@ type UseNumberSpinArgs = {
 	onSpinDecrement: NumberInputProps['onSpinDecrement']
 }
 
-function useNumberSpin(args: UseNumberSpinArgs, inputRef: React.RefObject<HTMLInputElement>) {
+function useNumberSpin(
+	args: UseNumberSpinArgs,
+	inputRef: React.RefObject<HTMLInputElement | null>,
+) {
 	const { value, min, max, step, pattern, setValue, onSpin, onSpinIncrement, onSpinDecrement } =
 		args
 

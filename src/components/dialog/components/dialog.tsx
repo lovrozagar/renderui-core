@@ -1,16 +1,11 @@
 'use client'
 
 import { Dialog as DialogPrimitive } from '@radix-ui/react-dialog'
-import React from 'react'
 
 import type { DialogProps } from '@/components/dialog/types/dialog'
 
 const Dialog = (props: DialogProps) => {
-	const { isModal, ...restProps } = props
-
-	return <DialogPrimitive modal={isModal} {...restProps} />
+	return <DialogPrimitive {...props} />
 }
-
-Dialog.displayName = 'Dialog'
 
 export { Dialog }

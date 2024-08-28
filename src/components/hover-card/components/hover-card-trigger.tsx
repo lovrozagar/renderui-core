@@ -3,7 +3,6 @@ import { useHoverCardContext } from '@/components/hover-card/contexts/hover-card
 import type { HoverCardTriggerProps } from '@/components/hover-card/types/hover-card-trigger'
 import { HoverCardTrigger as HoverCardTriggerPrimitive } from '@radix-ui/react-hover-card'
 import { chain } from '@renderui/utils'
-import React from 'react'
 
 const HoverCardTrigger = (props: HoverCardTriggerProps) => {
 	const { variant = 'plain', onPress, ...restProps } = props

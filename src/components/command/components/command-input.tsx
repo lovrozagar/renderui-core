@@ -2,7 +2,6 @@
 
 import { cn, getOptionalObject, polymorphic } from '@renderui/utils'
 import { CommandInput as CommandInputPrimitive } from 'cmdk'
-import React from 'react'
 
 import { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'

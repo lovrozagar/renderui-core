@@ -7,7 +7,6 @@ import {
 	NavigationMenuViewport as NavigationMenuViewportPrimitive,
 } from '@radix-ui/react-navigation-menu'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_NAVIGATION_MENU_ARROW_CLASSNAME,

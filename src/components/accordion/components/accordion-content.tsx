@@ -2,7 +2,6 @@
 
 import { AccordionContent as AccordionContentPrimitive } from '@radix-ui/react-accordion'
 import { cn, getAnimationStyleVariables, getOptionalObject, polymorphic } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_ACCORDION_CONTENT_CHILDREN_CONTAINER_CLASSNAME,

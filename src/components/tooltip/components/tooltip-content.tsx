@@ -5,7 +5,6 @@ import {
 	TooltipContent as TooltipContentPrimitive,
 } from '@radix-ui/react-tooltip'
 import { cn, getOptionalObject } from '@renderui/utils'
-import React from 'react'
 
 import {
 	DEFAULT_SIDE_OFFSET,
