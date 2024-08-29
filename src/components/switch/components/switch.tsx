@@ -4,7 +4,7 @@ import { chain, cn, cx, functionCallOrValue, getOptionalObject, polymorphic } fr
 import type React from 'react'
 
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { SwitchThumb } from '@/components/switch/components/switch-thumb'
 import {
 	DEFAULT_HIDDEN_SWITCH_INPUT_CLASSNAME,

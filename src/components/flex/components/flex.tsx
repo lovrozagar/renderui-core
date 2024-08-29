@@ -1,7 +1,7 @@
-import { polymorphic } from '@renderui/utils'
+'use client'
 
 import type { FlexProps } from '@/components/flex/types/flex'
-import { getMergedClassName } from '@/components/flex/utils/get-merged-class-name'
+import { cn, polymorphic } from '@renderui/utils'
 
 const Flex = (props: FlexProps) => {
 	const { asChild, children, growChildren, center, className, ...restProps } = props
@@ -9,7 +9,15 @@ const Flex = (props: FlexProps) => {
 	const Component = polymorphic(asChild, 'div')
 
 	return (
-		<Component className={getMergedClassName(growChildren, center, className)} {...restProps}>
+		<Component
+			className={cn(
+				'render-ui-flex flex',
+				growChildren ? 'grow-children' : '',
+				center ? 'justify-center items-center' : '',
+				className,
+			)}
+			{...restProps}
+		>
 			{children}
 		</Component>
 	)

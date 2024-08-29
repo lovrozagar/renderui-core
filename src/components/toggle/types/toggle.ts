@@ -1,6 +1,5 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
-
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 
 type TogglePrimitiveProps = Omit<ButtonProps, 'children'>
 

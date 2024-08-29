@@ -3,7 +3,7 @@
 import { ToggleGroupItem as ToggleGroupItemPrimitive } from '@radix-ui/react-toggle-group'
 import { cn, functionCallOrValue } from '@renderui/utils'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { useToggleGroupContext } from '@/components/toggle-group/contexts/toggle-group-context'
 import type { ToggleGroupItemProps } from '@/components/toggle-group/types/toggle-group-item'
 import {

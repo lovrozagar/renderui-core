@@ -4,7 +4,7 @@ import { TabsTrigger as TabsTriggerPrimitive } from '@radix-ui/react-tabs'
 import { cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
 import { chain } from 'react-aria'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { TabsCursor } from '@/components/tabs/components/tabs-cursor'
 import { TabsTriggerChildrenContainer } from '@/components/tabs/components/tabs-trigger-children-container'
 import {

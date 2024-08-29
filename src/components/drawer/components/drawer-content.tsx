@@ -1,8 +1,9 @@
-import { Button } from '@/components/button'
 import type { DrawerContentProps } from '@/components/drawer/types/drawer-content'
 import { cn, cx, getOptionalObject } from '@renderui/utils'
 import { Drawer as DrawerPrimitive } from 'vaul'
 
+import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
+import { Button } from '@/components/button/components/button'
 import { DrawerClose } from '@/components/drawer/components/drawer-close'
 import {
 	DEFAULT_DRAWER_CLOSE_BUTTON_CLASSNAME,
@@ -11,7 +12,6 @@ import {
 	DEFAULT_DRAWER_INDICATOR_CLASSNAME,
 } from '@/components/drawer/constant/constants'
 import { Overlay } from '@/components/overlay/components/overlay'
-import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 
 const DrawerContent = (props: DrawerContentProps) => {

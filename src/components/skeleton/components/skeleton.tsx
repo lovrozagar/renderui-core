@@ -1,8 +1,8 @@
-import { polymorphic } from '@renderui/utils'
+'use client'
 
 import type { SkeletonProps } from '@/components/skeleton/types/skeleton'
 import { getMergedClassName } from '@/components/skeleton/utils/get-merged-class-name'
-import { getAnimationStyleVariables } from '@renderui/utils'
+import { getAnimationStyleVariables, polymorphic } from '@renderui/utils'
 
 const Skeleton = (props: SkeletonProps) => {
 	const {

@@ -1,4 +1,4 @@
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 
 type DrawerTriggerProps = ButtonProps
 

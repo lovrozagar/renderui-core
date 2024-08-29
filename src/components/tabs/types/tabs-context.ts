@@ -1,5 +1,5 @@
 import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 import type { TabsProps } from '@/components/tabs/types/tabs'
 

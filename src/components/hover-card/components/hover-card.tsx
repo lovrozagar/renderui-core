@@ -1,3 +1,5 @@
+'use client'
+
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 import { HoverCardProvider } from '@/components/hover-card/contexts/hover-card-context'
 import type { HoverCardProps } from '@/components/hover-card/types/hover-card'

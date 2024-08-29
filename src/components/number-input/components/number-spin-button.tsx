@@ -1,9 +1,8 @@
 import { cx } from '@renderui/utils'
-import React from 'react'
 
 import { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
 import { ChevronUpIcon } from '@/components/_shared/components/icons/chevron-up-icon'
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import {
 	DEFAULT_NUMBER_SPIN_BUTTON_CLASSNAME,
 	DEFAULT_NUMBER_SPIN_BUTTON_ICON_CLASSNAME,

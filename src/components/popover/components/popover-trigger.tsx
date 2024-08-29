@@ -3,7 +3,7 @@
 import { PopoverTrigger as PopoverTriggerPrimitive } from '@radix-ui/react-popover'
 import { cx } from '@renderui/utils'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { DEFAULT_POPOVER_TRIGGER_CLASSNAME } from '@/components/popover/constants/constants'
 import type { PopoverTriggerProps } from '@/components/popover/types/popover-trigger'
 

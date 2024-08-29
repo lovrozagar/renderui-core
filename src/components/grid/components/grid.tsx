@@ -1,7 +1,6 @@
-import { polymorphic } from '@renderui/utils'
-
 import type { GridProps } from '@/components/grid/types/grid'
 import { getMergedStyles } from '@/components/grid/utils/get-merged-styles'
+import { polymorphic } from '@renderui/utils'
 
 const Grid = (props: GridProps) => {
 	const { asChild, className, style, cols, autoFit, autoFill, ...restProps } = props

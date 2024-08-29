@@ -1,3 +1,5 @@
+'use client'
+
 import { cn, polymorphic } from '@renderui/utils'
 
 import { textClasses } from '@/components/text/classes/text-classes'

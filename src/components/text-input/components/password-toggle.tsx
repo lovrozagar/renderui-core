@@ -2,7 +2,7 @@ import { cn, getOptionalObject } from '@renderui/utils'
 
 import { EyeNoneIcon } from '@/components/_shared/components/icons/eye-none-icon'
 import { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import {
 	DEFAULT_TEXT_INPUT_BASE_PASSWORD_TOGGLE_ICON_CLASSNAME,
 	DEFAULT_TEXT_INPUT_PASSWORD_TOGGLE_CLASSNAME,

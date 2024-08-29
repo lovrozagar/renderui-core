@@ -1,3 +1,5 @@
+'use client'
+
 import { cn, polymorphic } from '@renderui/utils'
 
 import { EMPTY_OBJECT } from '@/components/_shared/constants/constants'

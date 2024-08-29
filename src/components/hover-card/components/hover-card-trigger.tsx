@@ -1,4 +1,6 @@
-import { Button } from '@/components/button'
+'use client'
+
+import { Button } from '@/components/button/components/button'
 import { useHoverCardContext } from '@/components/hover-card/contexts/hover-card-context'
 import type { HoverCardTriggerProps } from '@/components/hover-card/types/hover-card-trigger'
 import { HoverCardTrigger as HoverCardTriggerPrimitive } from '@radix-ui/react-hover-card'

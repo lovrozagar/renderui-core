@@ -6,7 +6,7 @@ import type {
 import type React from 'react'
 
 import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { AnimationStyleVariables } from '@renderui/utils'
 
 type DialogContentPrimitiveProps = React.ComponentPropsWithRef<typeof DialogContentPrimitive>

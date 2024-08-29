@@ -1,3 +1,5 @@
+'use client'
+
 import { cn, polymorphic } from '@renderui/utils'
 
 import { loaderClasses } from '@/components/loader/classes/loader-classes'

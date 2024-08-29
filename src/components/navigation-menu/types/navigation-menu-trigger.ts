@@ -1,5 +1,5 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
 
 type NavigationMenuTriggerRenderProps = {

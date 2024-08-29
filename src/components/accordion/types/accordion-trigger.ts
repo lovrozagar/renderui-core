@@ -3,7 +3,7 @@ import type { AccordionHeader as AccordionHeaderPrimitive } from '@radix-ui/reac
 import type React from 'react'
 
 import type { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 
 type AccordionTriggerButtonProps = Omit<ButtonProps, 'children'>
 

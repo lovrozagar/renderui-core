@@ -1,7 +1,6 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { NavigationMenuLink as NavigationMenuLinkPrimitive } from '@radix-ui/react-navigation-menu'
-
-import type { ButtonProps } from '@/components/button'
 
 type NavigationMenuLinkPrimitiveProps = React.ComponentPropsWithRef<
 	typeof NavigationMenuLinkPrimitive

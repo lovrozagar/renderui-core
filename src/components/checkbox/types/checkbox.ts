@@ -3,7 +3,7 @@ import type { Primitive as primitive } from '@radix-ui/react-primitive'
 import type React from 'react'
 
 import type { AsChildProp } from '@/components/_shared/types/as-child'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 
 type CheckboxButtonProps = Omit<
 	ButtonProps,

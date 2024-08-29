@@ -3,7 +3,7 @@
 import { DialogTrigger as SheetTriggerPrimitive } from '@radix-ui/react-dialog'
 import { cn } from '@renderui/utils'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { DEFAULT_SHEET_TRIGGER_CLASSNAME } from '@/components/sheet/constants/constants'
 import type { SheetTriggerProps } from '@/components/sheet/types/sheet-trigger'
 

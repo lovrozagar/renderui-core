@@ -1,8 +1,8 @@
 - fix: scroll area scroll shadow visible when scrolled to end
 - feat: combobox select, auto scroll shadow per item count prop, max items prop
 - fix: kbd, no exproted hook
-- refactor(maybe): slight close timeout on combobox/select value select
-- feat: add skeleton animation duration
+- (done) refactor(maybe): slight close timeout on combobox/select value select
+- (done) feat: add skeleton animation duration
 - fix: higher specificty needed to change text color on button
 - fix: button loader not being visible
 - feat: scroll-area, combobox select, auto scroll shadow per item count prop
@@ -38,5 +38,5 @@
 - fix: react ref types in hooks
 - refactor: make prop naming more consistend, modal/isModal, open/isOpen...
 
-- refactor: remove barrell imports to better support treeshaking with different bundlers/frameworks
-- feat: add polymorphic ability wherever not possible but could be
+- (done) refactor: remove barrell imports to better support treeshaking with different bundlers/frameworks
+- (for some reason polymorphic only makes container a client component and use client needs to be used) feat: add polymorphic ability wherever not possible but could be

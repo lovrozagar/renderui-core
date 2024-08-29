@@ -1,7 +1,8 @@
-import { polymorphic } from '@renderui/utils'
+'use client'
 
 import type { AspectRatioProps } from '@/components/aspect-ratio/types/aspect-ratio'
 import { getMergedStyles } from '@/components/aspect-ratio/utils/get-merged-styles'
+import { polymorphic } from '@renderui/utils'
 
 const AspectRatio = (props: AspectRatioProps) => {
 	const { asChild, ratio, className, style, ...restProps } = props

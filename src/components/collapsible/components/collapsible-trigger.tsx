@@ -2,9 +2,8 @@
 
 import { CollapsibleTrigger as CollapsibleTriggerPrimitive } from '@radix-ui/react-collapsible'
 import { cx } from '@renderui/utils'
-import React from 'react'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import type { CollapsibleTriggerProps } from '@/components/collapsible/types/collapsible-trigger'
 
 const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {

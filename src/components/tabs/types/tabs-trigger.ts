@@ -1,7 +1,7 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type React from 'react'
 
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { TabsCursor } from '@/components/tabs/components/tabs-cursor'
 import type { TabsTriggerChildrenContainer } from '@/components/tabs/components/tabs-trigger-children-container'
 

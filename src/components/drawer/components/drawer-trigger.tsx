@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import type { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
 import { cn } from '@renderui/utils'
 import { Drawer as DrawerPrimitive } from 'vaul'

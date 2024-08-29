@@ -1,5 +1,5 @@
 import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import type { ButtonProps } from '@/components/button'
+import type { ButtonProps } from '@/components/button/types/button'
 import type { OverlayProps } from '@/components/overlay/types/overlay'
 import type { Drawer as DrawerPrimitive } from 'vaul'
 

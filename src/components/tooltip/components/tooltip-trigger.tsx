@@ -4,7 +4,7 @@ import { TooltipTrigger as TooltipTriggerPrimitive } from '@radix-ui/react-toolt
 import { chain, cx } from '@renderui/utils'
 import React from 'react'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { DEFAULT_TOOLTIP_TRIGGER_CLASSNAME } from '@/components/tooltip/constants/constants'
 import type { TooltipTriggerProps } from '@/components/tooltip/types/tooltip-trigger'
 

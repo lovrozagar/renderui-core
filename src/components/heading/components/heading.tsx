@@ -1,3 +1,5 @@
+'use client'
+
 import { cn, polymorphic } from '@renderui/utils'
 
 import { headingClasses } from '@/components/heading/classes/heading-classes'

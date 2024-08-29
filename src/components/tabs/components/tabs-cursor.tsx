@@ -19,6 +19,8 @@ const TabsCursor = (props: TabsCursorProps) => {
 
 	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	React.useEffect(() => {
+		// @TODO
+		// @ts-ignore error is expected until react 19 is official
 		hasCursorAppearedRef.current = true
 	}, [])
 

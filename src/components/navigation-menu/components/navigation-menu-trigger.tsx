@@ -3,7 +3,7 @@
 import { NavigationMenuTrigger as NavigationMenuTriggerPrimitive } from '@radix-ui/react-navigation-menu'
 import { chain, cn } from '@renderui/utils'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/button/components/button'
 import { NavigationMenuTriggerIndicator } from '@/components/navigation-menu/components/navigation-menu-trigger-indicator'
 import { DEFAULT_NAVIGATION_MENU_TRIGGER_CLASSNAME } from '@/components/navigation-menu/constants/constants'
 import type { NavigationMenuTriggerProps } from '@/components/navigation-menu/types/navigation-menu-trigger'

@@ -1,3 +1,5 @@
+'use client'
+
 import { ContentArrow } from '@/components/_shared/components/content-arrow/content-arrow'
 import type { HoverCardContentProps } from '@/components/hover-card/types/hover-card-content'
 import { DEFAULT_POPOVER_CONTENT_CLASSNAME } from '@/components/popover/constants/constants'
