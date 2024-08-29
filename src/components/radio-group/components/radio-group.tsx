@@ -6,7 +6,7 @@ import { useControllableState } from '@/components/_shared/hooks/use-controllabl
 import { DEFAULT_RADIO_GROUP_CLASSNAME } from '@/components/radio-group/constants/constants'
 import { RadioGroupProvider } from '@/components/radio-group/contexts/radio-group-context'
 import type { RadioGroupProps } from '@/components/radio-group/types/radio-group'
-import { ToggleGroup } from '@/components/toggle-group'
+import { ToggleGroup } from '@/components/toggle-group/components/toggle-group'
 
 const RadioGroup = (props: RadioGroupProps) => {
 	const {

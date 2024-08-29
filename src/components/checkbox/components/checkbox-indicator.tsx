@@ -4,7 +4,7 @@ import { m } from 'framer-motion'
 import { DEFAULT_CHECKBOX_INDICATOR_CLASSNAME } from '@/components/checkbox/constants/constants'
 import type { CheckboxIndicatorProps } from '@/components/checkbox/types/checkbox-indicator'
 import { getMergedIndicatorVariantAnimation } from '@/components/checkbox/utils/get-merged-indicator-variant-animation'
-import { LazyMotionDomAnimationProvider } from '@/providers'
+import { LazyMotionDomAnimationProvider } from '@/providers/lazy-motion-dom-animation-provider/lazy-motion-dom-animation'
 
 const CheckboxIndicator = (props: CheckboxIndicatorProps) => {
 	const {

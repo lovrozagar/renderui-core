@@ -1,6 +1,0 @@
-export * from '@/components/popover/components/popover'
-export * from '@/components/popover/components/popover-content'
-export * from '@/components/popover/components/popover-trigger'
-export * from '@/components/popover/types/popover'
-export * from '@/components/popover/types/popover-content'
-export * from '@/components/popover/types/popover-trigger'

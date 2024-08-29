@@ -11,7 +11,7 @@ import {
 	DEFAULT_SWITCH_CLASSNAME,
 } from '@/components/switch/constants/constants'
 import type { SwitchProps } from '@/components/switch/types/switch'
-import { VisuallyHidden } from '@/components/visually-hidden'
+import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 
 const Switch = (props: SwitchProps) => {
 	const {

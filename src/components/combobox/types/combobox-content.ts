@@ -1,15 +1,12 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
+import type { Command } from '@/components/command/components/command'
+import type { CommandEmpty } from '@/components/command/components/command-empty'
+import type { CommandGroup } from '@/components/command/components/command-group'
+import type { CommandInput } from '@/components/command/components/command-input'
+import type { CommandList } from '@/components/command/components/command-list'
+import type { PopoverContentProps } from '@/components/popover/types/popover-content'
+import type { ScrollArea } from '@/components/scroll-area/components/scroll-area'
 import type React from 'react'
-
-import type {
-	Command,
-	CommandEmpty,
-	CommandGroup,
-	CommandInput,
-	CommandList,
-} from '@/components/command'
-import type { PopoverContentProps } from '@/components/popover'
-import type { ScrollArea } from '@/components/scroll-area'
 
 type ComboboxContentPopoverContentProps = PopoverContentProps
 

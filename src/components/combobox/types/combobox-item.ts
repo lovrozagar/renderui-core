@@ -1,6 +1,5 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
-
-import type { CommandItemProps } from '@/components/command'
+import type { CommandItemProps } from '@/components/command/types/command-item'
 
 type ComboboxItemCommandItemProps = Omit<CommandItemProps, 'value' | 'children'>
 

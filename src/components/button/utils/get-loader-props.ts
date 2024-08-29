@@ -1,6 +1,5 @@
+import type { LoaderProps } from '@/components/loader/types/loader'
 import { cx, getOptionalObject } from '@renderui/utils'
-
-import type { LoaderProps } from '@/components/loader'
 
 type GetLoaderPropsArgs = {
 	loaderProps: LoaderProps | undefined

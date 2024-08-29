@@ -1,7 +1,6 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
+import type { ToggleGroup } from '@/components/toggle-group/components/toggle-group'
 import type React from 'react'
-
-import type { ToggleGroup } from '@/components/toggle-group'
 
 type RadioGroupPrimitive = typeof ToggleGroup
 

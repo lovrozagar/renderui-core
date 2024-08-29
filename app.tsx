@@ -1,69 +1,41 @@
-import {
-	HoverCard,
-	HoverCardContent,
-	HoverCardTrigger,
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from '@/components'
-import { Drawer, DrawerContent, DrawerTrigger } from '@/components/drawer'
-import { DrawerDescription } from '@/components/drawer/components/drawer-description'
-import { DrawerHeader } from '@/components/drawer/components/drawer-header'
-import { DrawerTitle } from '@/components/drawer/components/drawer-title'
-import React, { useState } from 'react'
-
 const App = () => {
-	const [state, setValue] = useState('')
-
 	return (
 		<div className='h-screen w-full flex justify-center items-center gap-8'>
-			{/* <Popover shouldForwardOutsideInteraction>
-        <PopoverTrigger>Trigger</PopoverTrigger>
-        <PopoverContent>
-          <Button>Button</Button>
-        </PopoverContent>
-      </Popover>
-      <Popover>
-        <PopoverTrigger>Trigger</PopoverTrigger>
-        <PopoverContent>
-          <Button>Button</Button>
-        </PopoverContent>
-      </Popover>
-      <Select>
-        <SelectTrigger>Trigger</SelectTrigger>
-        <SelectContent hasScroll={false}>
-          <SelectItem value='item-1'>Item</SelectItem>
-          <SelectItem value='item-2'>Item 2</SelectItem>
-        </SelectContent>
-      </Select> */}
-			{/* <Combobox>
-        <ComboboxTrigger>Trigger</ComboboxTrigger>
-        <ComboboxContent hasScroll={false} emptyContent={'No data.'}>
-          <ComboboxItem value='item-1'>Item</ComboboxItem>
-          <ComboboxItem value='item-2'>Item 2</ComboboxItem>
-        </ComboboxContent>
-      </Combobox> */}
-			<Drawer>
-				<DrawerTrigger>Trigger</DrawerTrigger>
-				<DrawerContent className='min-h-[600px]'>
-					<DrawerHeader>
-						<DrawerTitle>Title</DrawerTitle>
-						<DrawerDescription>Description</DrawerDescription>
-					</DrawerHeader>
-				</DrawerContent>
-			</Drawer>
-			<Popover>
-				<PopoverTrigger>Trigger</PopoverTrigger>
-				<PopoverContent>Content</PopoverContent>
-			</Popover>
-			<HoverCard shouldTriggerToggleOpen>
-				<HoverCardTrigger>Trigger</HoverCardTrigger>
-				<HoverCardContent>
-					<div className='max-w-[100px]'>
-						feiaojfpijeap apej fpeaij paej peaj epai jpia jfaepij fpeiaj pieajfp
-					</div>
-				</HoverCardContent>
-			</HoverCard>
+			{/* <div className='w-[300px]'>
+				<Carousel>
+					{({ scrollTo }) => (
+						<div>
+							<CarouselViewport>
+								<CarouselSlider>
+									{[1, 2, 3].map((_, index) => (
+										<CarouselItem key={index}>
+											<img
+												src='https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*'
+												alt=''
+												className='w-[300px]'
+											/>
+										</CarouselItem>
+									))}
+								</CarouselSlider>
+
+								<CarouselPrevious>
+									<ChevronLeftIcon />
+								</CarouselPrevious>
+
+								<CarouselNext>
+									<ChevronRightIcon />
+								</CarouselNext>
+
+								<CarouselIndicators />
+								<CarouselProgress />
+							</CarouselViewport>
+							<div onClick={() => scrollTo(0)}>1</div>
+							<div onClick={() => scrollTo(1)}>2</div>
+							<div onClick={() => scrollTo(2)}>3</div>
+						</div>
+					)}
+				</Carousel>
+			</div> */}
 		</div>
 	)
 }

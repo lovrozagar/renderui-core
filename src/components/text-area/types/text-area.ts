@@ -2,7 +2,7 @@ import type { Simplify } from '@/components/_shared/types/simplify'
 import type React from 'react'
 
 import type { AsChildProp } from '@/components/_shared/types/as-child'
-import type { Aria } from '@/components/aria'
+import type { Aria } from '@/components/aria/components/aria'
 
 type TextAreaHTMLProps = Omit<
 	React.ComponentPropsWithRef<'textarea'>,

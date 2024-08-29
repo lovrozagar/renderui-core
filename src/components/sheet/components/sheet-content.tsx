@@ -9,15 +9,15 @@ import { cn, cx, getOptionalObject } from '@renderui/utils'
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'
 import { Button } from '@/components/button'
-import { Overlay } from '@/components/overlay'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
 import {
 	DEFAULT_SHEET_CLOSE_BUTTON_CLASSNAME,
 	DEFAULT_SHEET_CLOSE_BUTTON_ICON_CLASSNAME,
 } from '@/components/sheet/constants/constants'
 import type { SheetContentProps } from '@/components/sheet/types/sheet-content'
-import { VisuallyHidden } from '@/components/visually-hidden'
 import { getAnimationStyleVariables } from '@renderui/utils'
+import { Overlay } from '@/components/overlay/components/overlay'
+import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 
 const SheetContent = (props: SheetContentProps) => {
 	const {

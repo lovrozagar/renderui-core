@@ -1,6 +1,5 @@
+import type { RippleProps } from '@/components/ripple/types/ripple'
 import { getOptionalObject } from '@renderui/utils'
-
-import type { RippleProps } from '@/components/ripple'
 
 type GetRipplePropsArgs = {
 	rippleProps: RippleProps | undefined

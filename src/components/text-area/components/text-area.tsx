@@ -5,12 +5,12 @@ import type React from 'react'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
-import { Aria } from '@/components/aria'
 import {
 	DEFAULT_TEXT_AREA_CLASSNAME,
 	DEFAULT_TEXT_AREA_CONTAINER_CLASSNAME,
 } from '@/components/text-area/constants/constants'
 import type { TextAreaProps } from '@/components/text-area/types/text-area'
+import { Aria } from '@/components/aria/components/aria'
 
 const TextArea = (props: TextAreaProps) => {
 	const {

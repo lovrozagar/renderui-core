@@ -8,7 +8,7 @@ import { useControllableState } from '@/components/_shared/hooks/use-controllabl
 import { DEFAULT_TABS_CLASSNAME } from '@/components/tabs/constants/constants'
 import { TabsProvider } from '@/components/tabs/context/tabs-context'
 import type { TabsProps } from '@/components/tabs/types/tabs'
-import { LazyMotionDomMaxProvider } from '@/providers'
+import { LazyMotionDomMaxProvider } from '@/providers/lazy-motion-dom-max-provider/lazy-motion-dom-max'
 
 const Tabs = (props: TabsProps) => {
 	const {

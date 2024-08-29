@@ -9,8 +9,8 @@ import {
 } from '@/components/radio-group/constants/constants'
 import { useRadioGroupContext } from '@/components/radio-group/contexts/radio-group-context'
 import type { RadioGroupItemProps } from '@/components/radio-group/types/radio-group-item'
-import { ToggleGroupItem } from '@/components/toggle-group'
-import { VisuallyHidden } from '@/components/visually-hidden'
+import { ToggleGroupItem } from '@/components/toggle-group/components/toggle-group-item'
+import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 
 const RadioGroupItem = (props: RadioGroupItemProps) => {
 	const {

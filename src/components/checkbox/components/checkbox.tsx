@@ -11,7 +11,7 @@ import {
 	DEFAULT_CHECKBOX_HIDDEN_INPUT_CLASSNAME,
 } from '@/components/checkbox/constants/constants'
 import type { CheckboxProps } from '@/components/checkbox/types/checkbox'
-import { VisuallyHidden } from '@/components/visually-hidden'
+import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 
 const Checkbox = (props: CheckboxProps) => {
 	const {

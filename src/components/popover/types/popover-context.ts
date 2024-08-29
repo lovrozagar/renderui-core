@@ -1,7 +1,7 @@
 import type React from 'react'
 
 type PopoverContext = {
-	contentRef: React.RefObject<HTMLDivElement | null>
+	contentRef: React.Ref<HTMLDivElement>
 }
 
 export type { PopoverContext }

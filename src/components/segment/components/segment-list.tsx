@@ -1,1 +1,1 @@
-export { TabsTriggerList as SegmentList } from '@/components/tabs'
+export { TabsTriggerList as SegmentList } from '@/components/tabs/components/tabs-trigger-list'

@@ -24,9 +24,7 @@
 - feat: context menu
 - feat: calendar
 - feat: date picker
-- feat: drawer
 - feat: dropdown menu
-- feat: hover card
 - feat: otp input
 - feat: menubar
 - feat: pagination
@@ -41,3 +39,4 @@
 - refactor: make prop naming more consistend, modal/isModal, open/isOpen...
 
 - refactor: remove barrell imports to better support treeshaking with different bundlers/frameworks
+- feat: add polymorphic ability wherever not possible but could be

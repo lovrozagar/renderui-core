@@ -15,7 +15,7 @@ import {
 import { useComboboxContext } from '@/components/combobox/contexts/combobox-context'
 import type { ComboboxTriggerProps } from '@/components/combobox/types/combobox-trigger'
 import { getHandleKeyDownCapture } from '@/components/combobox/utils/get-handle-keydown-capture'
-import { PopoverTrigger } from '@/components/popover'
+import { PopoverTrigger } from '@/components/popover/components/popover-trigger'
 
 const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 	const {

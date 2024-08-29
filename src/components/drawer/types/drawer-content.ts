@@ -1,6 +1,6 @@
-import type { CrossSmallIcon } from '@/components/_shared/components/icons'
+import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import type { ButtonProps } from '@/components/button'
-import type { OverlayProps } from '@/components/overlay'
+import type { OverlayProps } from '@/components/overlay/types/overlay'
 import type { Drawer as DrawerPrimitive } from 'vaul'
 
 type DrawerContentProps = React.ComponentPropsWithRef<typeof DrawerPrimitive.Content> & {

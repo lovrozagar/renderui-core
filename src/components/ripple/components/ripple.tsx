@@ -4,8 +4,8 @@ import { AnimatePresence, m } from 'framer-motion'
 
 import { useRipple } from '@/components/ripple/hooks/use-ripple'
 import type { RippleProps } from '@/components/ripple/types/ripple'
-import { SubLayer } from '@/components/sub-layer'
-import { LazyMotionDomAnimationProvider } from '@/providers'
+import { SubLayer } from '@/components/sub-layer/components/sub-layer'
+import { LazyMotionDomAnimationProvider } from '@/providers/lazy-motion-dom-animation-provider/lazy-motion-dom-animation'
 
 const Ripple = (props: RippleProps) => {
 	// @TODO FIX

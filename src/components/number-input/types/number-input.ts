@@ -4,9 +4,9 @@ import type React from 'react'
 import type { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import type { AsChildProp } from '@/components/_shared/types/as-child'
 import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import type { Aria } from '@/components/aria'
 import type { ButtonProps } from '@/components/button'
-import type { SeparatorProps } from '@/components/separator'
+import type { SeparatorProps } from '@/components/separator/types/separator'
+import type { Aria } from '@/components/aria/components/aria'
 
 type NumberInputPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'input'>,

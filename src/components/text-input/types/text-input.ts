@@ -5,8 +5,8 @@ import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross
 import type { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import type { AsChildProp } from '@/components/_shared/types/as-child'
 import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
-import type { Aria } from '@/components/aria'
 import type { ButtonProps } from '@/components/button'
+import type { Aria } from '@/components/aria/components/aria'
 
 type TextInputRef = HTMLInputElement
 

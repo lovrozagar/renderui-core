@@ -1,7 +1,6 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type { ButtonProps } from '@/components/button'
-
-import type { PopoverProps } from '@/components/popover'
+import type { PopoverProps } from '@/components/popover/types/popover'
 
 type ComboboxPopoverProps = PopoverProps
 

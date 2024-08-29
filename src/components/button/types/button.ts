@@ -6,9 +6,9 @@ import type { AsChildProp } from '@/components/_shared/types/as-child'
 import type { Color } from '@/components/_shared/types/colors'
 import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
 import type { buttonClasses } from '@/components/button/classes/button-classes'
-import type { LoaderProps } from '@/components/loader'
-import type { RippleProps } from '@/components/ripple'
-import type { SubLayerProps } from '@/components/sub-layer'
+import type { LoaderProps } from '@/components/loader/types/loader'
+import type { RippleProps } from '@/components/ripple/types/ripple'
+import type { SubLayerProps } from '@/components/sub-layer/types/sub-layer'
 
 type ButtonPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'button'>,

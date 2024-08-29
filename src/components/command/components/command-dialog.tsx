@@ -6,7 +6,8 @@ import {
 	COMMAND_DIALOG_CONTENT_CLASSNAME,
 } from '@/components/command/constants/constants'
 import type { CommandDialogProps } from '@/components/command/types/command-dialog'
-import { Dialog, DialogContent } from '@/components/dialog'
+import { Dialog } from '@/components/dialog/components/dialog'
+import { DialogContent } from '@/components/dialog/components/dialog-content'
 
 const CommandDialog = (props: CommandDialogProps) => {
 	const { children, ...restProps } = props

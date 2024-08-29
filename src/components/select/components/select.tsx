@@ -1,4 +1,5 @@
-import { Combobox, type ComboboxProps } from '@/components/combobox'
+import { Combobox } from '@/components/combobox/components/combobox'
+import type { ComboboxProps } from '@/components/combobox/types/combobox'
 
 const Select = (props: ComboboxProps) => {
 	const { type = 'select', ...restProps } = props

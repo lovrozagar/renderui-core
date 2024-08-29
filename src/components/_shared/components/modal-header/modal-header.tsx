@@ -1,6 +1,6 @@
+import { Grid } from '@/components/grid/components/grid'
+import type { GridProps } from '@/components/grid/types/grid'
 import { cx } from '@renderui/utils'
-
-import { Grid, type GridProps } from '@/components/grid'
 
 const ModalHeader = (props: GridProps) => {
 	const { className, ...restProps } = props

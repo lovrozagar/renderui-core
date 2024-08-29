@@ -1,6 +1,6 @@
+import { Text } from '@/components/text/components/text'
+import type { TextProps } from '@/components/text/types/text'
 import { cx } from '@renderui/utils'
-
-import { Text, type TextProps } from '@/components/text'
 
 const ModalDescription = (props: TextProps) => {
 	const { className, size = 'sm', ...restProps } = props

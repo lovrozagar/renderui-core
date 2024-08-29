@@ -3,11 +3,11 @@
 import { polymorphic } from '@renderui/utils'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import { Aria } from '@/components/aria'
 import { Button } from '@/components/button'
 import { PasswordToggle } from '@/components/text-input/components/password-toggle'
 import { useTextInput } from '@/components/text-input/hooks/use-text-input'
 import type { TextInputProps } from '@/components/text-input/types/text-input'
+import { Aria } from '@/components/aria/components/aria'
 
 const TextInput = (props: TextInputProps) => {
 	const {
