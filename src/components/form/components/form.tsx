@@ -1,3 +1,5 @@
+'use client'
+
 import { cn, polymorphic } from '@renderui/utils'
 
 import type { FormProps } from '@/components/form/types/form'
