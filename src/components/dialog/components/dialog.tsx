@@ -5,8 +5,8 @@ import { Dialog as DialogPrimitive } from '@radix-ui/react-dialog'
 import type { DialogProps } from '@/components/dialog/types/dialog'
 import React from 'react'
 import { useContentOutsideClick } from '@/components/_shared/hooks/use-content-outside-click'
-import { useControllableState } from '../../../../dist'
 import { ContentRefProvider } from '@/components/_shared/contexts/content-ref-context'
+import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 
 const Dialog = (props: DialogProps) => {
 	const {
