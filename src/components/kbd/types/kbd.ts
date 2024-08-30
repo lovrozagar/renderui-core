@@ -3,7 +3,7 @@ import type { Simplify } from '@/components/_shared/types/simplify'
 
 type KbdHTMLProps = React.ComponentPropsWithRef<'kbd'>
 
-type KbdRenderUIProps = {
+type KbdCustomProps = {
 	asChild?: boolean
 	hasIcon?: boolean
 	iconPosition?: 'start' | 'end'
@@ -15,6 +15,6 @@ type KbdRenderUIProps = {
 	onKeyCombinationMatch?: Parameters<typeof useKeyboardHotkey>[0]['onKeyCombinationMatch']
 }
 
-type KbdProps = Simplify<KbdHTMLProps & KbdRenderUIProps>
+type KbdProps = Simplify<KbdHTMLProps & KbdCustomProps>
 
 export type { KbdProps }

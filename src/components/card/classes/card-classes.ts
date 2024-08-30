@@ -1,7 +1,7 @@
 import { cva } from '@renderui/utils'
 
 const cardClasses = cva(
-	'render-ui-card dark:border-mode-accent-high relative flex w-fit flex-col justify-between overflow-hidden rounded-lg border border-mode-accent bg-card text-foreground shadow-sm transition-all duration-fast',
+	'_card dark:border-mode-accent-high relative flex w-fit flex-col justify-between overflow-hidden rounded-lg border border-mode-accent bg-card text-foreground shadow-sm transition-all duration-fast',
 	{
 		variants: {
 			hasShadowOnHover: {

@@ -18,9 +18,12 @@ import {
 import type { SheetContentProps } from '@/components/sheet/types/sheet-content'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 import { getAnimationStyleVariables } from '@renderui/utils'
+import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const SheetContent = (props: SheetContentProps) => {
 	const {
+		ref,
 		className,
 		style,
 		children,
@@ -50,10 +53,15 @@ const SheetContent = (props: SheetContentProps) => {
 	const { className: closeButtonIconClassName, ...restCloseButtonIconProps } =
 		getOptionalObject(closeButtonIconProps)
 
+	const { contentRef } = useContentRefContext()
+
+	const mergedRefCallback = useMergedRef([contentRef, ref])
+
 	return (
 		<SheetPortalPrimitive {...portalProps}>
 			<Overlay {...overlayProps} />
 			<SheetContentPrimitive
+				ref={mergedRefCallback}
 				className={cn(sheetClasses({ side }), className)}
 				style={{
 					...getAnimationStyleVariables({

@@ -11,7 +11,7 @@ const Flex = (props: FlexProps) => {
 	return (
 		<Component
 			className={cn(
-				'render-ui-flex flex',
+				'_flex flex',
 				growChildren ? 'grow-children' : '',
 				center ? 'justify-center items-center' : '',
 				className,

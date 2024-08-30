@@ -7,7 +7,7 @@ function getMergedClassName(
 	orientation: SeparatorProps['orientation'],
 ) {
 	return cn(
-		'render-ui-separator shrink-0 border-separator transition-[background-color]',
+		'_separator shrink-0 border-separator transition-[background-color]',
 		orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
 		className,
 	)

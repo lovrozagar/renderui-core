@@ -1,6 +1,6 @@
 import { cva } from '@renderui/utils'
 
-const loaderClasses = cva(['render-ui-loader box-border inline-block aspect-square'], {
+const loaderClasses = cva(['_loader box-border inline-block aspect-square'], {
 	variants: {
 		isPaused: {
 			true: '!animate-none',

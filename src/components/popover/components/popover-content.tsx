@@ -18,9 +18,9 @@ import {
 	POPOVER_CONTENT_TRIGGER_MIN_WIDTH_CLASSNAME,
 	POPOVER_CONTENT_TRIGGER_WIDTH_CLASSNAME,
 } from '@/components/popover/constants/constants'
-import { usePopoverContext } from '@/components/popover/contexts/popover-context'
 import type { PopoverContentProps } from '@/components/popover/types/popover-content'
 import { getAnimationStyleVariables } from '@renderui/utils'
+import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
 
 const PopoverContent = (props: PopoverContentProps) => {
 	const {
@@ -50,7 +50,7 @@ const PopoverContent = (props: PopoverContentProps) => {
 		...restProps
 	} = props
 
-	const { contentRef } = usePopoverContext()
+	const { contentRef } = useContentRefContext()
 
 	const mergedRefCallback = useMergedRef([contentRef, ref])
 

@@ -4,10 +4,10 @@ import type { AsChildProp } from '../../_shared/types/as-child'
 
 type SeparatorHTMLProps = React.ComponentPropsWithRef<'hr'>
 
-type SeparatorRenderUIProps = {
+type SeparatorCustomProps = {
 	orientation?: 'horizontal' | 'vertical'
 }
 
-type SeparatorProps = Simplify<SeparatorHTMLProps & SeparatorRenderUIProps & AsChildProp>
+type SeparatorProps = Simplify<SeparatorHTMLProps & SeparatorCustomProps & AsChildProp>
 
 export type { SeparatorProps }

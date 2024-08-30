@@ -8,7 +8,7 @@ function getMergedStyles(
 	style: AspectRatioProps['style'],
 ) {
 	return {
-		mergedClassName: cn('render-ui-aspect-ratio aspect-[var(--ratio)] overflow-hidden', className),
+		mergedClassName: cn('_aspect-ratio aspect-[var(--ratio)] overflow-hidden', className),
 		mergedStyle: ratio ? { '--ratio': ratio, ...style } : style,
 	}
 }

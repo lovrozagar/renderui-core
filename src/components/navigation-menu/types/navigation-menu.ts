@@ -30,7 +30,7 @@ type NavigationMenuViewportContainerProps = React.ComponentPropsWithRef<'div'>
 type NavigationMenuViewportPrimitiveProps =
 	React.ComponentPropsWithRef<NavigationMenuViewportPrimitiveType>
 
-type NavigationMenuRenderUIProps = {
+type NavigationMenuCustomProps = {
 	listProps?: NavigationMenuListPrimitiveProps
 	isFullScreen?: boolean
 	viewportContainerProps?: NavigationMenuViewportContainerProps
@@ -40,6 +40,6 @@ type NavigationMenuRenderUIProps = {
 	indicatorArrowProps?: NavigationMenuIndicatorArrowProps
 } & AnimationStyleVariables
 
-type NavigationMenuProps = Simplify<NavigationMenuPrimitiveProps & NavigationMenuRenderUIProps>
+type NavigationMenuProps = Simplify<NavigationMenuPrimitiveProps & NavigationMenuCustomProps>
 
 export type { NavigationMenuProps }

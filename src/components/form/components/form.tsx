@@ -19,7 +19,7 @@ const Form = (props: FormProps) => {
 
 	return (
 		<Component
-			className={cn('render-ui-form', className)}
+			className={cn('_form', className)}
 			{...getSubmitProps(isDefaultPreventedOnSubmit, onSubmit, onSubmitWithFields)}
 			{...restProps}
 		/>

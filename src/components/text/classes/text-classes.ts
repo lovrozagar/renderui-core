@@ -6,7 +6,7 @@ import { textOverflowVariants } from '@/components/_shared/variants/text-overflo
 import { textShadowVariants } from '@/components/_shared/variants/text-shadow'
 import { textSizeVariants } from '@/components/_shared/variants/text-size'
 
-const textClasses = cva('render-ui-text box-border whitespace-normal text-mode-contrast', {
+const textClasses = cva('_text box-border whitespace-normal text-mode-contrast', {
 	variants: {
 		as: {
 			span: '',

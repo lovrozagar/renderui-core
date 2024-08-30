@@ -12,7 +12,7 @@
 - feat: RHF combobox max items
 - feat: hasContentOnLoading button, inspect and rework, seems to not be working
 - feat: isDisabledonloading button
-- refactor: unify variable or inline render-ui-\* classname
+- refactor: unify variable or inline _\* classname
 - fix: combobox/select content, inspect and fix empty content
 - refactor (imports): separate import from utils lib
 - fix: combobox search (in new cmdk group list now must be used)

@@ -9,11 +9,7 @@ const Accordion = (props: AccordionProps) => {
 	const { className, ...restProps } = props
 
 	return (
-		<AccordionPrimitive
-			data-slot='base'
-			className={cn('render-ui-accordion', className)}
-			{...restProps}
-		/>
+		<AccordionPrimitive data-slot='base' className={cn('_accordion', className)} {...restProps} />
 	)
 }
 

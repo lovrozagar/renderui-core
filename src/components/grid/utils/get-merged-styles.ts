@@ -72,7 +72,7 @@ function getMergedStyles(
 	const autoStyle = getColsStyle(style, cols, autoFit, autoFill)
 
 	return {
-		mergedClassName: cn('render-ui-grid grid', autoClassName, className),
+		mergedClassName: cn('_grid grid', autoClassName, className),
 		mergedStyle: autoStyle,
 	}
 }

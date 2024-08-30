@@ -18,9 +18,12 @@ import type { DialogContentProps } from '@/components/dialog/types/dialog-conten
 import { Overlay } from '@/components/overlay/components/overlay'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 import { getAnimationStyleVariables } from '@renderui/utils'
+import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const DialogContent = (props: DialogContentProps) => {
 	const {
+		ref,
 		className,
 		style,
 		children,
@@ -47,10 +50,15 @@ const DialogContent = (props: DialogContentProps) => {
 	const { className: closeButtonIconClassName, ...restCloseButtonIconProps } =
 		getOptionalObject(closeButtonIconProps)
 
+	const { contentRef } = useContentRefContext()
+
+	const mergedRefCallback = useMergedRef([contentRef, ref])
+
 	return (
 		<DialogPortalPrimitive>
 			<Overlay />
 			<DialogContentPrimitive
+				ref={mergedRefCallback}
 				className={cn(DFEAULT_DIALOG_CONTENT_CLASSNAME, className)}
 				style={{
 					...getAnimationStyleVariables({

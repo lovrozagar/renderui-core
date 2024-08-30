@@ -8,7 +8,7 @@ type DialogCloseProps = React.ComponentProps<typeof DialogClosePrimitive>
 const ModalClose = (props: DialogCloseProps) => {
 	const { className, ...restProps } = props
 
-	return <DialogClosePrimitive className={cn('render-ui-modal-close', className)} {...restProps} />
+	return <DialogClosePrimitive className={cn('_modal-close', className)} {...restProps} />
 }
 
 export { ModalClose }

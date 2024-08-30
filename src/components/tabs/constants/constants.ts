@@ -7,13 +7,12 @@ const DEFAULT_TABS_CURSOR_TRANISTION = {
 	duration: 0.35,
 } as const
 
-const DEFAULT_TABS_CLASSNAME = 'render-ui-tabs'
+const DEFAULT_TABS_CLASSNAME = '_tabs'
 
-const DEFAULT_TABS_TRIGGER_CLASSNAME =
-	'render-ui-tabs-trigger bg-transparent before:hidden after:hidden'
+const DEFAULT_TABS_TRIGGER_CLASSNAME = '_tabs-trigger bg-transparent before:hidden after:hidden'
 
 const DEFAULT_TABS_CONTENT_CLASSNAME =
-	'render-ui-tabs-content outline-none ring-ring-color ring-offset-background focus-visible:ring-ring-width focus-visible:ring-offset-offset transition-colors duration-fast'
+	'_tabs-content outline-none ring-ring-color ring-offset-background focus-visible:ring-ring-width focus-visible:ring-offset-offset transition-colors duration-fast'
 
 const DEFAULT_TABS_CURSOR_CLASSNAME = 'transition-none'
 

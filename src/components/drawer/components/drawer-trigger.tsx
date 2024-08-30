@@ -13,7 +13,7 @@ const DrawerTrigger = (props: DrawerTriggerProps) => {
 			<Button
 				color={color}
 				variant={variant}
-				className={cn('render-ui-drawer-trigger', className)}
+				className={cn('_drawer-trigger', className)}
 				{...restProps}
 			>
 				{children}

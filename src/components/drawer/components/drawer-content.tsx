@@ -13,9 +13,12 @@ import {
 } from '@/components/drawer/constant/constants'
 import { Overlay } from '@/components/overlay/components/overlay'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
+import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const DrawerContent = (props: DrawerContentProps) => {
 	const {
+		ref,
 		className,
 		children,
 		indicatorProps,
@@ -40,10 +43,15 @@ const DrawerContent = (props: DrawerContentProps) => {
 	const { className: closeButtonIconClassName, ...restCloseButtonIconProps } =
 		getOptionalObject(closeButtonIconProps)
 
+	const { contentRef } = useContentRefContext()
+
+	const mergedRefCallback = useMergedRef([contentRef, ref])
+
 	return (
 		<DrawerPrimitive.Portal>
 			<Overlay {...overlayProps} />
 			<DrawerPrimitive.Content
+				ref={mergedRefCallback}
 				className={cn(DEFAULT_DRAWER_CONTENT_CLASSNAME, className)}
 				{...restProps}
 			>

@@ -1,7 +1,7 @@
 import { cn } from '@renderui/utils'
 
 const DEFAULT_LINK_CLASSES =
-	'render-ui-link tap-highlight-transparent appearence-none m-0 box-border inline-flex cursor-pointer items-center bg-transparent p-0 text-base text-primary underline-offset-2 outline-none ring-ring-color ring-offset-background transition-[color,box-shadow] duration-fast focus-visible:ring-[2px] focus-visible:ring-offset-offset active:text-primary/80'
+	'_link tap-highlight-transparent appearence-none m-0 box-border inline-flex cursor-pointer items-center bg-transparent p-0 text-base text-primary underline-offset-2 outline-none ring-ring-color ring-offset-background transition-[color,box-shadow] duration-fast focus-visible:ring-[2px] focus-visible:ring-offset-offset active:text-primary/80'
 
 const UNDERLINE_CLASSES = {
 	none: '',

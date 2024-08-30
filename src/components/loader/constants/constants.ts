@@ -1,5 +1,5 @@
 const DEFAULT_LOADER_DOT_CLASSNAME =
-	'render-ui-loader-dot box-border inline-block size-1 animate-[blink_1400ms_linear_infinite] rounded-full bg-current'
+	'_loader-dot box-border inline-block size-1 animate-[blink_1400ms_linear_infinite] rounded-full bg-current'
 
 const LOADER_DOT_PAUSED_CLASSNAME = '!animate-none'
 

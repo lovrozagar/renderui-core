@@ -11,7 +11,7 @@ import type { AnimationStyleVariables } from '@renderui/utils'
 
 type DialogContentPrimitiveProps = React.ComponentPropsWithRef<typeof DialogContentPrimitive>
 
-type DialogContentRenderUIProps = {
+type DialogContentCustomProps = {
 	portalProps?: React.ComponentPropsWithRef<typeof DialogPortalPrimitive>
 	overlayProps?: React.ComponentPropsWithRef<typeof DialogPortalPrimitive>
 	closeButtonProps?: ButtonProps
@@ -19,7 +19,7 @@ type DialogContentRenderUIProps = {
 	hasCloseButton?: boolean
 }
 
-type DialogContentProps = Simplify<DialogContentPrimitiveProps & DialogContentRenderUIProps> &
+type DialogContentProps = Simplify<DialogContentPrimitiveProps & DialogContentCustomProps> &
 	AnimationStyleVariables
 
 export type { DialogContentProps }

@@ -6,8 +6,7 @@ const DEFAULT_DRAWER_INDICATOR_CLASSNAME = 'mx-auto mt-4 h-2 w-[100px] rounded-f
 const DEFAULT_DRAWER_CLOSE_BUTTON_CLASSNAME =
 	'redner-ui-drawer-close absolute z-[1] top-4 right-4 p-2'
 
-const DEFAULT_DRAWER_CLOSE_BUTTON_ICON_CLASSNAME =
-	'render-ui-drawer-close-button-icon h-4 w-4 opacity-70'
+const DEFAULT_DRAWER_CLOSE_BUTTON_ICON_CLASSNAME = '_drawer-close-button-icon h-4 w-4 opacity-70'
 
 export {
 	DEFAULT_DRAWER_CLOSE_BUTTON_CLASSNAME,

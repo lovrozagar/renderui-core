@@ -14,7 +14,7 @@ import type { AnimationStyleVariables } from '@renderui/utils'
 
 type SheetContentPrimitiveProps = React.ComponentPropsWithRef<typeof SheetContentPrimitive>
 
-type SheetContentRenderUIProps = NonNullableVariantProps<typeof sheetClasses> & {
+type SheetContentCustomProps = NonNullableVariantProps<typeof sheetClasses> & {
 	portalProps?: React.ComponentPropsWithRef<typeof SheetPortalPrimitive>
 	overlayProps?: OverlayProps
 	closeButtonProps?: ButtonProps
@@ -22,6 +22,6 @@ type SheetContentRenderUIProps = NonNullableVariantProps<typeof sheetClasses> & 
 	hasCloseButton?: boolean
 } & AnimationStyleVariables
 
-type SheetContentProps = Simplify<SheetContentPrimitiveProps & SheetContentRenderUIProps>
+type SheetContentProps = Simplify<SheetContentPrimitiveProps & SheetContentCustomProps>
 
 export type { SheetContentProps }

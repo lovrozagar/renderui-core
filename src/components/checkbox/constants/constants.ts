@@ -1,10 +1,10 @@
 const DEFAULT_CHECKBOX_CLASSNAME =
-	'render-ui-checkbox p-0.5 bg-transparent rounded-md min-w-0 h-fit w-fit aspect-square shrink-0 text-white data-[state=checked]:bg-primary data-[invalid=true]:ring-destructive'
+	'_checkbox p-0.5 bg-transparent rounded-md min-w-0 h-fit w-fit aspect-square shrink-0 text-white data-[state=checked]:bg-primary data-[invalid=true]:ring-destructive'
 
 const DEFAULT_CHECKBOX_INDICATOR_CLASSNAME =
-	'render-ui-checkbox-indicator h-[0.85rem] w-[0.85rem] stroke-white stroke-[2.5]'
+	'_checkbox-indicator h-[0.85rem] w-[0.85rem] stroke-white stroke-[2.5]'
 
-const DEFAULT_CHECKBOX_HIDDEN_INPUT_CLASSNAME = 'render-ui-checkbox-hidden-input'
+const DEFAULT_CHECKBOX_HIDDEN_INPUT_CLASSNAME = '_checkbox-hidden-input'
 
 const DEFEAULT_MOTION_PROPS = {
 	checked: {

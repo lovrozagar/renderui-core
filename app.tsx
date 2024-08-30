@@ -1,3 +1,13 @@
+import {
+	Button,
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
+	Sheet,
+	SheetContent,
+	SheetTrigger,
+} from '@/index'
+
 const App = () => {
 	return (
 		<div className='h-screen w-full flex justify-center items-center gap-8'>
@@ -36,6 +46,20 @@ const App = () => {
 					)}
 				</Carousel>
 			</div> */}
+			<Popover>
+				<PopoverTrigger>Trigger 1</PopoverTrigger>
+				<PopoverContent>Content 1</PopoverContent>
+			</Popover>
+			<Popover>
+				<PopoverTrigger>Trigger 2</PopoverTrigger>
+				<PopoverContent>Content 2</PopoverContent>
+			</Popover>
+			<Sheet>
+				<SheetTrigger>eafa</SheetTrigger>
+				<SheetContent>
+					<Button>bUTTON</Button>
+				</SheetContent>
+			</Sheet>
 		</div>
 	)
 }

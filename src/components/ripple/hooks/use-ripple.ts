@@ -97,7 +97,7 @@ function useRipple(props: Omit<RippleProps, 'subLayerProps'>): UseRippleReturnTy
 			transition,
 			style,
 			'data-slot': 'ripple',
-			className: cn('render-ui-ripple bg-current', className),
+			className: cn('_ripple bg-current', className),
 			onAnimationComplete: (definition: AnimationDefinition) =>
 				onAnimationComplete(ripple, definition),
 			...restProps,

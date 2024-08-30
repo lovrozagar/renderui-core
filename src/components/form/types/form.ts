@@ -5,11 +5,11 @@ import type { AsChildProp } from '@/components/_shared/types/as-child'
 
 type FormPrimitiveProps = React.ComponentPropsWithRef<'form'>
 
-type FormRenderUIProps = {
+type FormCustomProps = {
 	isDefaultPreventedOnSubmit?: boolean
 	onSubmitWithFields?: (formData?: { [k: string]: FormDataEntryValue }, event?: FormEvent) => void
 }
 
-type FormProps = Simplify<FormPrimitiveProps & FormRenderUIProps & AsChildProp>
+type FormProps = Simplify<FormPrimitiveProps & FormCustomProps & AsChildProp>
 
 export type { FormProps }

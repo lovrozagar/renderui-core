@@ -5,10 +5,10 @@ import type { AsChildProp } from '../../_shared/types/as-child'
 
 type ContainerPrimitiveProps = React.ComponentPropsWithRef<'div'>
 
-type ContainerRenderUIProps = {
+type ContainerCustomProps = {
 	isFullHeight?: boolean
 }
 
-type ContainerProps = Simplify<ContainerPrimitiveProps & ContainerRenderUIProps & AsChildProp>
+type ContainerProps = Simplify<ContainerPrimitiveProps & ContainerCustomProps & AsChildProp>
 
 export type { ContainerProps }

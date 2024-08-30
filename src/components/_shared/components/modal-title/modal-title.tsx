@@ -1,4 +1,4 @@
-import { cx } from '@renderui/utils'
+import { cn } from '@renderui/utils'
 import type { ComponentPropsWithRef } from 'react'
 
 import { DialogTitle } from '@radix-ui/react-dialog'
@@ -9,7 +9,7 @@ const ModalTitle = (props: ComponentPropsWithRef<typeof DialogTitle>) => {
 	return (
 		<DialogTitle
 			data-slot='title'
-			className={cx('render-ui-modal-title font-semibold text-mode-contrast', className)}
+			className={cn('_modal-title font-semibold text-mode-contrast', className)}
 			{...restProps}
 		/>
 	)

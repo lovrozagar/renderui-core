@@ -7,13 +7,13 @@ import type { textClasses } from '@/components/text/classes/text-classes'
 
 type TextPrimitiveProps = React.ComponentPropsWithRef<'span'>
 
-type TextRenderUIProps = {
+type TextCustomProps = {
 	hasStartSpace?: boolean
 	hasEndSpace?: boolean
 }
 
 type TextProps = Simplify<
-	TextPrimitiveProps & TextRenderUIProps & NonNullableVariantProps<typeof textClasses> & AsChildProp
+	TextPrimitiveProps & TextCustomProps & NonNullableVariantProps<typeof textClasses> & AsChildProp
 >
 
 export type { TextProps }

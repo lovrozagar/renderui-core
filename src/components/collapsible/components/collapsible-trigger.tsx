@@ -15,7 +15,7 @@ const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
 				data-slot='trigger'
 				variant={variant}
 				color={color}
-				className={cx('render-ui-collapsible-trigger', className)}
+				className={cx('_collapsible-trigger', className)}
 				{...props}
 			/>
 		</CollapsibleTriggerPrimitive>

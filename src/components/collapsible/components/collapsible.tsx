@@ -10,7 +10,7 @@ const Collapsible = (props: CollapsibleProps) => {
 	return (
 		<CollapsiblePrimitive
 			data-slot='base'
-			className={cn('render-ui-collapsible', className)}
+			className={cn('_collapsible', className)}
 			{...restProps}
 		/>
 	)

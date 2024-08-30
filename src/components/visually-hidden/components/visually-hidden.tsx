@@ -5,7 +5,7 @@ import type { VisuallyHiddenProps } from '@/components/visually-hidden/types/vis
 const VisuallyHidden = (props: VisuallyHiddenProps) => {
 	const { className, ...restProps } = props
 
-	return <span className={cn('render-ui-visually-hidden sr-only', className)} {...restProps} />
+	return <span className={cn('_visually-hidden sr-only', className)} {...restProps} />
 }
 
 export { VisuallyHidden }

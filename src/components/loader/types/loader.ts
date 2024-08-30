@@ -6,8 +6,8 @@ import type { loaderClasses } from '@/components/loader/classes/loader-classes'
 
 type LoaderPrimitiveProps = React.ComponentPropsWithRef<'span'>
 
-type LodaerRenderUIProps = NonNullableVariantProps<typeof loaderClasses>
+type LodaerCustomProps = NonNullableVariantProps<typeof loaderClasses>
 
-type LoaderProps = Simplify<LoaderPrimitiveProps & LodaerRenderUIProps & AsChildProp>
+type LoaderProps = Simplify<LoaderPrimitiveProps & LodaerCustomProps & AsChildProp>
 
 export type { LoaderProps }

@@ -10,11 +10,11 @@ type TooltipContentPrimitiveType = typeof TooltipContentPrimitive
 
 type TooltipContentPrimitiveProps = React.ComponentPropsWithRef<TooltipContentPrimitiveType>
 
-type TooltioContentRenderUIProps = {
+type TooltioContentCustomProps = {
 	hasArrow?: boolean
 	arrowProps?: React.ComponentPropsWithRef<typeof TooltipArrowPrimitive>
 } & AnimationStyleVariables
 
-type TooltipContentProps = Simplify<TooltipContentPrimitiveProps & TooltioContentRenderUIProps>
+type TooltipContentProps = Simplify<TooltipContentPrimitiveProps & TooltioContentCustomProps>
 
 export type { TooltipContentProps }

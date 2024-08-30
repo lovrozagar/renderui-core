@@ -1,7 +1,7 @@
 import { cva } from '@renderui/utils'
 
 const buttonClasses = cva(
-	'render-ui-button group relative box-border inline-flex cursor-pointer select-none appearance-none items-center justify-center gap-3 whitespace-nowrap rounded text-sm font-medium outline-none ring-ring-color ring-offset-background transition-[box-shadow,background-color,transform,opacity] duration-fast disabled:cursor-not-allowed disabled:opacity-40 data-[loading=true]:cursor-default [&_.render-ui-loader]:opacity-0',
+	'_button group relative box-border inline-flex cursor-pointer select-none appearance-none items-center justify-center gap-3 whitespace-nowrap rounded text-sm font-medium outline-none ring-ring-color ring-offset-background transition-[box-shadow,background-color,transform,opacity] duration-fast disabled:cursor-not-allowed disabled:opacity-40 data-[loading=true]:cursor-default [&_._loader]:opacity-0',
 	{
 		variants: {
 			variant: {
@@ -41,13 +41,13 @@ const buttonClasses = cva(
 				false: '',
 			},
 			hasLoaderOnLoading: {
-				true: '[&[data-loading=true]_.render-ui-loader]:opacity-100',
+				true: '[&[data-loading=true]_._loader]:opacity-100',
 				false: '',
 			},
 			hasContentOnLoading: {
-				true: '[&[data-loading=true]_.render-ui-loader]:flex [&_.render-ui-loader]:hidden',
+				true: '[&[data-loading=true]_._loader]:flex [&_._loader]:hidden',
 				false: [
-					'[&[data-loading=true]]:!text-transparent [&[data-loading=true]_*]:[transition:all_150ms,color_0s] [&[data-loading=true]_.render-ui-ripple]:opacity-100 [&[data-loading=true]_.render-ui-sub-layer]:opacity-100 [&[data-loading=true]_>_*]:opacity-0',
+					'[&[data-loading=true]]:!text-transparent [&[data-loading=true]_*]:[transition:all_150ms,color_0s] [&[data-loading=true]_._ripple]:opacity-100 [&[data-loading=true]_._sub-layer]:opacity-100 [&[data-loading=true]_>_*]:opacity-0',
 				],
 			},
 		},
