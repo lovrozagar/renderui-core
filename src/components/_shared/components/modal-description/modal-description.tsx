@@ -1,15 +1,15 @@
-import { Text } from '@/components/text/components/text'
-import type { TextProps } from '@/components/text/types/text'
 import { cx } from '@renderui/utils'
 
-const ModalDescription = (props: TextProps) => {
-	const { className, size = 'sm', ...restProps } = props
+import { DialogTitle } from '@radix-ui/react-dialog'
+import type { ComponentPropsWithRef } from 'react'
+
+const ModalDescription = (props: ComponentPropsWithRef<typeof DialogTitle>) => {
+	const { className, ...restProps } = props
 
 	return (
-		<Text
+		<DialogTitle
 			data-slot='description'
-			size={size}
-			className={cx('render-ui-modal-description text-muted', className)}
+			className={cx('render-ui-modal-description text-muted text-sm', className)}
 			{...restProps}
 		/>
 	)
