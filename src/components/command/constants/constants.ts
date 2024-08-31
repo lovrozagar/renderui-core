@@ -29,7 +29,7 @@ const RADIX_FOCUS_GUARD_ATTRUBUTE = '[data-radix-focus-guard]'
 
 const COMMAND_ATTRIBUTE = '[data-command-popover-root]'
 
-const COMMAND_ITEM_CLASSNAME_SELECTOR = '._command-item'
+const COMMAND_ITEM_CLASSNAME_SELECTOR = '_command-item'
 
 const SEARCH_PAUSE_DURATION = 750
 

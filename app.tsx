@@ -60,6 +60,7 @@ const App = () => {
 					<Button>bUTTON</Button>
 				</SheetContent>
 			</Sheet>
+			<Button>Loading</Button>
 		</div>
 	)
 }

@@ -68,7 +68,13 @@ const Button = (props: ButtonProps) => {
 					? loader ?? <Loader {...loaderProps} data-slot='loader' />
 					: null}
 				{functionCallOrValue(endContent, { isPressed, isKeyboardPressed })}
-				{hasRipple ? <Ripple {...subLayerProps} {...rippleProps} data-slot='ripple' /> : null}
+				{hasRipple ? (
+					<Ripple
+						data-slot='ripple'
+						subLayerProps={{ ...subLayerProps, 'data-slot': 'sub-layer' }}
+						{...rippleProps}
+					/>
+				) : null}
 			</>
 		)
 	}

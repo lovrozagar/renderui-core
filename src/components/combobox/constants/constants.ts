@@ -26,9 +26,9 @@ const COMBOBOX_INPUT_CONTAINER_CLASSNAME = '_combobox-input-container'
 
 const SELECT_INPUT_CONTAINER_CLASSNAME = '_select-input-container sr-only'
 
-const ITEM_CLASSNAME = '._combobox-item'
+const ITEM_CLASSNAME = '_combobox-item'
 
-const ACTIVE_ITEM_CLASSNAME = '._combobox-item[data-selected="true"]'
+const ACTIVE_ITEM_CLASSNAME = '_combobox-item[data-selected="true"]'
 
 const ALLOWED_SELECT_KEYS = ['ArrowUp', 'ArrowDown', 'Enter', 'Escape'] as const
 

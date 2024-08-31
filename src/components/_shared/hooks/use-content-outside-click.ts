@@ -19,19 +19,13 @@ function useContentOutsideClick(props: UseContentOutsideClickProps) {
 		event: 'pointerdown',
 		enabled,
 		handler: (event) => {
-			console.log(event)
-
 			if (!(event.target instanceof Node)) {
 				return
 			}
 
-			console.log('a')
-
 			if (contentRef.current?.contains(event.target)) {
 				return
 			}
-
-			console.log('b')
 
 			setOpen(false)
 			onPointerDownOutside?.(event)
