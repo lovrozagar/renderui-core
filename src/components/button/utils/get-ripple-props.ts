@@ -18,7 +18,7 @@ const getRippleProps = (props: GetRipplePropsArgs): any => {
 		'ref': ref,
 		'data-slot': 'ripple',
 		'className': isLoading ? '!text-[rgba(var(--button-color))]' : undefined,
-		isDisabled,
+		'data-disabled': isDisabled,
 		...restRippleProps,
 	}
 }

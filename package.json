@@ -1,6 +1,6 @@
 {
 	"name": "@renderui/core",
-	"version": "1.7.2",
+	"version": "1.7.3",
 	"private": false,
 	"sideEffects": false,
 	"description": "React UI library with highly modular and ready-out-of-the-box components",
