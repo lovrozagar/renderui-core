@@ -55,11 +55,11 @@ function useSearch(value: string, setValue: React.Dispatch<React.SetStateAction<
 		)
 	}, [htmlDocument?.querySelector])
 
-	useMutationObserver(
-		htmlDocument?.documentElement ?? null,
-		storeCommandItems,
-		SEARCH_OBSERVER_OPTIONS,
-	)
+	useMutationObserver({
+		node: htmlDocument?.documentElement ?? null,
+		callback: storeCommandItems,
+		options: SEARCH_OBSERVER_OPTIONS,
+	})
 
 	React.useEffect(() => {
 		setTimeout(storeCommandItems, 0)

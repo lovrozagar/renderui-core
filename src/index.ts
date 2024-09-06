@@ -379,6 +379,7 @@ export { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 export { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
 export { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 export { useMutationObserver } from '@/components/_shared/hooks/use-mutation-observer'
+export { useIntersectionObserver } from '@/components/_shared/hooks/use-intersection-observer'
 export { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 export {
 	useUncontrolledState,
