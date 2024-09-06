@@ -1,5 +1,8 @@
 import {
 	Button,
+	HoverCard,
+	HoverCardContent,
+	HoverCardTrigger,
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
@@ -46,21 +49,10 @@ const App = () => {
 					)}
 				</Carousel>
 			</div> */}
-			<Popover>
-				<PopoverTrigger>Trigger 1</PopoverTrigger>
-				<PopoverContent>Content 1</PopoverContent>
-			</Popover>
-			<Popover>
-				<PopoverTrigger>Trigger 2</PopoverTrigger>
-				<PopoverContent>Content 2</PopoverContent>
-			</Popover>
-			<Sheet>
-				<SheetTrigger>eafa</SheetTrigger>
-				<SheetContent>
-					<Button>bUTTON</Button>
-				</SheetContent>
-			</Sheet>
-			<Button>Loading</Button>
+			<HoverCard>
+				<HoverCardTrigger>Trigger</HoverCardTrigger>
+				<HoverCardContent>Content</HoverCardContent>
+			</HoverCard>
 		</div>
 	)
 }
