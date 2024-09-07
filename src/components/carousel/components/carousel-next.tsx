@@ -1,9 +1,9 @@
 'use client'
 
 import { Button } from '@/components/button/components/button'
+import { carouselNextClasses } from '@/components/carousel/classes/carousel-next-classes'
 import { useCarouselContext } from '@/components/carousel/contexts/carousel-context'
 import type { CarouselNextProps } from '@/components/carousel/types/carousel-next'
-import { carouselNextVariants } from '@/components/carousel/variants/carousel-next-variants'
 import { cn } from '@renderui/utils'
 import { chain } from 'react-aria'
 
@@ -14,10 +14,11 @@ const CarouselNext = (props: CarouselNextProps) => {
 
 	return (
 		<Button
+			data-slot='progress'
 			size={size}
 			variant={variant}
 			isDisabled={!canScrollNext}
-			className={cn(carouselNextVariants({ hasControlsOnHoverOnly, orientation }), className)}
+			className={cn(carouselNextClasses({ hasControlsOnHoverOnly, orientation }), className)}
 			onPress={chain(onPress, scrollNext)}
 			{...restProps}
 		>

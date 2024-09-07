@@ -10,23 +10,27 @@ type UseIntersectionObserverProps<T extends HTMLElement> = {
 }
 
 function useIntersectionObserver<T extends HTMLElement>(props: UseIntersectionObserverProps<T>) {
-	const freshProps = useFreshRef(props)
+	const { node, callback, options } = props
 
-	const node = freshProps.current.node
+	const freshCallback = useFreshRef(callback)
+	const freshOptions = useFreshRef(options)
 
-	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
+	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern */
 	React.useEffect(() => {
-		if (!node) return undefined
+		const element = node
 
-		const observer = new IntersectionObserver(
-			freshProps.current.callback,
-			freshProps.current.options,
-		)
+		if (!element) return
 
-		observer.observe(node)
+		const observer = new IntersectionObserver(freshCallback.current, freshOptions.current)
+
+		if (element) {
+			observer.observe(element)
+		}
 
 		return () => {
-			observer.disconnect()
+			if (element) {
+				observer.unobserve(element)
+			}
 		}
 	}, [node])
 }

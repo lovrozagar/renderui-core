@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-const carouselPreviousVariants = cva('render-ui-carousel-previous absolute top-1/2 rounded-full', {
+const carouselPreviousClasses = cva('_carousel-previous absolute top-1/2 rounded-full', {
 	variants: {
 		orientation: {
 			horizontal: 'left-2 top-1/2 -translate-y-1/2',
@@ -13,4 +13,4 @@ const carouselPreviousVariants = cva('render-ui-carousel-previous absolute top-1
 	},
 })
 
-export { carouselPreviousVariants }
+export { carouselPreviousClasses }

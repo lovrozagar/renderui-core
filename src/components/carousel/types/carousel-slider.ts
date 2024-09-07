@@ -1,12 +1,12 @@
 import type { AsChildProp } from '@/components/_shared/types/as-child'
 import type { Simplify } from '@/components/_shared/types/simplify'
-import type { carouselSliderVariants } from '@/components/carousel/variants/carousel-slider-variants'
+import type { carouselSliderClasses } from '@/components/carousel/classes/carousel-slider-classes'
 import type { VariantProps } from '@renderui/utils'
 import type React from 'react'
 
 type CarouselSliderPrimitiveProps = React.ComponentPropsWithRef<'ul'>
 
-type CarouselSliderCustomProps = VariantProps<typeof carouselSliderVariants> & {
+type CarouselSliderCustomProps = VariantProps<typeof carouselSliderClasses> & {
 	containerProps?: React.ComponentPropsWithRef<'div'>
 }
 

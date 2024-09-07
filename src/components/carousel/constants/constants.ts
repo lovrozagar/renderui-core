@@ -15,22 +15,22 @@ const DEFAULT_CAROUSEL_DURATION = 16.5
 const DEFAULT_CAROUSEL_ALIGN = 'start'
 const DEFAULT_CAROUSEL_LOOP = true
 
-const DEFAULT_CAROUSEL_CLASSNAME = 'render-ui-carousel group/carousel relative inline-block'
+const DEFAULT_CAROUSEL_CLASSNAME = 'carousel group/carousel relative inline-block'
 
 const DEFAULT_CAROUSEL_ITEM_CHILDREN_CONTAINER_CLASSNAME =
-	'render-ui-carousel-item-children-container overflow-hidden rounded'
+	'carousel-item-children-container overflow-hidden rounded'
 
-const DEFAULT_CAROUSEL_GALLERY_CONTENT_CLASSNAME = 'render-ui-carousel-gallery-content mt-2'
+const DEFAULT_CAROUSEL_GALLERY_CONTENT_CLASSNAME = 'carousel-gallery-content mt-2'
 
-const DEFAULT_CAROUSEL_GALLERY_ROOT_CLASSNAME = 'render-ui-carousel-gallery-root overflow-hidden'
+const DEFAULT_CAROUSEL_GALLERY_ROOT_CLASSNAME = 'carousel-gallery-root overflow-hidden'
 
-const DEFAULT_CAROUSEL_GALLERY_CLASSNAME = 'render-ui-carousel-gallery flex py-2'
+const DEFAULT_CAROUSEL_GALLERY_CLASSNAME = 'carousel-gallery flex py-2'
 
 const DEFAULT_CAROUSEL_GALLERY_PREVIOUS_CLASSNAME =
-	'render-ui-carousel-gallery-previous absolute left-0 top-0 h-full z-[1] w-[20px] p-0 rounded-r-none bg-mode-contrast/60 ring-inset data-[focus-visible=true]:ring-offset-[0px]'
+	'carousel-gallery-previous absolute left-0 top-0 h-full z-[1] w-[20px] p-0 rounded-r-none bg-mode-contrast/60 ring-inset data-[focus-visible=true]:ring-offset-[0px]'
 
 const DEFAULT_CAROUSEL_GALLERY_NEXT_CLASSNAME =
-	'render-ui-carousel-gallery-next absolute right-0 top-0 h-full z-[1] w-[20px] p-0 rounded-l-none bg-mode-contrast/60 ring-inset  data-[focus-visible=true]:ring-offset-[0px]'
+	'carousel-gallery-next absolute right-0 top-0 h-full z-[1] w-[20px] p-0 rounded-l-none bg-mode-contrast/60 ring-inset  data-[focus-visible=true]:ring-offset-[0px]'
 
 export {
 	CAROUSEL_ACCESSIBILITY_PROPS,

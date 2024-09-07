@@ -66,6 +66,7 @@ const Carousel = (props: CarouselProps) => {
 			}}
 		>
 			<Component
+				data-slot='base'
 				className={cn(DEFAULT_CAROUSEL_CLASSNAME, className)}
 				{...CAROUSEL_ACCESSIBILITY_PROPS}
 				{...restProps}

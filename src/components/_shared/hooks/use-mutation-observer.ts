@@ -10,17 +10,18 @@ type UseMutationObserverProps<T extends HTMLElement> = {
 }
 
 function useMutationObserver<T extends HTMLElement>(props: UseMutationObserverProps<T>) {
-	const freshProps = useFreshRef(props)
+	const { node, callback, options } = props
 
-	const node = freshProps.current.node
+	const freshCallback = useFreshRef(callback)
+	const freshOptions = useFreshRef(options)
 
 	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	React.useEffect(() => {
 		if (!node) return undefined
 
-		const observer = new MutationObserver(freshProps.current.callback)
+		const observer = new MutationObserver(freshCallback.current)
 
-		observer.observe(node, freshProps.current.options)
+		observer.observe(node, freshOptions.current)
 
 		return () => {
 			observer.disconnect()

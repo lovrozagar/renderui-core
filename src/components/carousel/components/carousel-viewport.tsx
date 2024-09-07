@@ -15,6 +15,7 @@ const CarouselViewport = (props: CarouselViewportProps) => {
 
 	return (
 		<Component
+			data-slot='viewport'
 			tabIndex={0}
 			className={cn(CAROUSEL_VIEWPORT_CLASSNAME, className)}
 			onKeyDownCapture={chain(handleKeyDown, onKeyDownCapture)}

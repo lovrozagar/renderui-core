@@ -1,5 +1,8 @@
 import {
 	Button,
+	Dialog,
+	DialogContent,
+	DialogTrigger,
 	HoverCard,
 	HoverCardContent,
 	HoverCardTrigger,
@@ -53,6 +56,10 @@ const App = () => {
 				<HoverCardTrigger>Trigger</HoverCardTrigger>
 				<HoverCardContent>Content</HoverCardContent>
 			</HoverCard>
+			<Dialog>
+				<DialogTrigger>Trigger</DialogTrigger>
+				<DialogContent>Content</DialogContent>
+			</Dialog>
 		</div>
 	)
 }

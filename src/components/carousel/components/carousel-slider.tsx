@@ -1,8 +1,8 @@
 'use client'
 
+import { carouselSliderClasses } from '@/components/carousel/classes/carousel-slider-classes'
 import { useCarouselContext } from '@/components/carousel/contexts/carousel-context'
 import type { CarouselSliderProps } from '@/components/carousel/types/carousel-slider'
-import { carouselSliderVariants } from '@/components/carousel/variants/carousel-slider-variants'
 import { cn, cx, getOptionalObject, polymorphic } from '@renderui/utils'
 
 const CarouselSlider = (props: CarouselSliderProps) => {
@@ -16,12 +16,14 @@ const CarouselSlider = (props: CarouselSliderProps) => {
 
 	return (
 		<div
+			data-slot='slider-container'
 			ref={carouselRef}
 			className={cx('overflow-hidden', containerClassName)}
 			{...restContainerProps}
 		>
 			<Component
-				className={cn(carouselSliderVariants({ orientation, slidesInView }), className)}
+				data-slot='slider-slider'
+				className={cn(carouselSliderClasses({ orientation, slidesInView }), className)}
 				{...restProps}
 			/>
 		</div>
