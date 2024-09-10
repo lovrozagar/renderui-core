@@ -80,7 +80,7 @@ const DialogContent = (props: DialogContentProps) => {
 						<Button
 							variant={variant}
 							color={color}
-							className={cx(DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME, closeButtonClassName, className)}
+							className={cx(DEFAULT_DIALOG_CLOSE_BUTTON_CLASSNAME, closeButtonClassName)}
 							{...restCloseButtonProps}
 						>
 							<CrossSmallIcon

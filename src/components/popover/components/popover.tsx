@@ -30,7 +30,7 @@ const Popover = (props: PopoverProps) => {
 		enabled: open,
 		contentRef,
 		shouldForwardOutsideInteraction,
-		setOpen,
+		setOpen: undefined,
 		onPointerDownOutside,
 	})
 

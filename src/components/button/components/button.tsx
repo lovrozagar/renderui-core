@@ -1,22 +1,10 @@
 'use client'
 
-import React from 'react'
-
 import { useButton } from '@/components/button/hooks/use-button'
 import type { ButtonProps } from '@/components/button/types/button'
+import { Loader } from '@/components/loader/components/loader'
+import { Ripple } from '@/components/ripple/components/ripple'
 import { functionCallOrValue, polymorphic } from '@renderui/utils'
-
-const Loader = React.lazy(() =>
-	import('@/components/loader/components/loader').then((module) => ({
-		default: module.Loader,
-	})),
-)
-
-const Ripple = React.lazy(() =>
-	import('@/components/ripple/components/ripple').then((module) => ({
-		default: module.Ripple,
-	})),
-)
 
 const Button = (props: ButtonProps) => {
 	const { buttonProps, subLayerProps, rippleProps, loaderProps, utility } = useButton(props)

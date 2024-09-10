@@ -7,12 +7,12 @@ type UseContentOutsideClickProps = {
 	enabled: boolean
 	contentRef: React.RefObject<HTMLDivElement | null>
 	shouldForwardOutsideInteraction: boolean
-	setOpen: (value: React.SetStateAction<boolean>) => void
+	setOpen: ((value: React.SetStateAction<boolean>) => void) | undefined
 	onPointerDownOutside: ((event: PointerEvent) => void) | undefined
 }
 
 function useContentOutsideClick(props: UseContentOutsideClickProps) {
-	const { enabled, setOpen, contentRef, shouldForwardOutsideInteraction, onPointerDownOutside } =
+	const { enabled, contentRef, shouldForwardOutsideInteraction, setOpen, onPointerDownOutside } =
 		props
 
 	useEventListener({
@@ -27,7 +27,10 @@ function useContentOutsideClick(props: UseContentOutsideClickProps) {
 				return
 			}
 
-			setOpen(false)
+			if (setOpen) {
+				setOpen(false)
+			}
+
 			onPointerDownOutside?.(event)
 
 			if (shouldForwardOutsideInteraction && event.target instanceof HTMLElement) {

@@ -52,6 +52,10 @@ const App = () => {
 					)}
 				</Carousel>
 			</div> */}
+			<Popover>
+				<PopoverTrigger>Trigger</PopoverTrigger>
+				<PopoverContent>Content</PopoverContent>
+			</Popover>
 			<HoverCard>
 				<HoverCardTrigger>Trigger</HoverCardTrigger>
 				<HoverCardContent>Content</HoverCardContent>

@@ -1,7 +1,7 @@
 'use client'
 
 import { cx, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import { ComboboxInput } from '@/components/combobox/components/combobox-input'
 import {
@@ -115,26 +115,28 @@ const ComboboxContent = (props: ComboboxContentProps) => {
 				/>
 
 				{hasScroll ? (
-					<ScrollArea
-						data-slot='scroll-area'
-						scrollbarProps={
-							{
-								'data-slot': 'scrollbar',
-								className: cx(DEFAULT_COMBOBOX_SCROLL_AREA_CLASSNAME, scrollbarClassName),
-								...restScrollbarProps,
-							} as unknown as ScrollAreaScrollbarProps
-						}
-						className={cx(DEFAULT_COMBOBOX_SCROLL_AREA_SCROLLBAR_CLASSNAME, scrollAreaClassName)}
-						{...restScrollAreaProps}
-					>
-						<CommandGroup
-							data-slot='group'
-							className={cx(DEFAULT_COMBOBOX_COMMAND_GROUP_CLASSNAME, commandGroupClassName)}
-							{...restCommandGroupClassName}
+					<Suspense>
+						<ScrollArea
+							data-slot='scroll-area'
+							scrollbarProps={
+								{
+									'data-slot': 'scrollbar',
+									className: cx(DEFAULT_COMBOBOX_SCROLL_AREA_CLASSNAME, scrollbarClassName),
+									...restScrollbarProps,
+								} as unknown as ScrollAreaScrollbarProps
+							}
+							className={cx(DEFAULT_COMBOBOX_SCROLL_AREA_SCROLLBAR_CLASSNAME, scrollAreaClassName)}
+							{...restScrollAreaProps}
 						>
-							<CommandList {...commandListProps}>{children}</CommandList>
-						</CommandGroup>
-					</ScrollArea>
+							<CommandGroup
+								data-slot='group'
+								className={cx(DEFAULT_COMBOBOX_COMMAND_GROUP_CLASSNAME, commandGroupClassName)}
+								{...restCommandGroupClassName}
+							>
+								<CommandList {...commandListProps}>{children}</CommandList>
+							</CommandGroup>
+						</ScrollArea>
+					</Suspense>
 				) : (
 					<CommandGroup
 						data-slot='group'

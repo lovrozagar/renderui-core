@@ -9,6 +9,8 @@ import type { buttonClasses } from '@/components/button/classes/button-classes'
 import type { LoaderProps } from '@/components/loader/types/loader'
 import type { RippleProps } from '@/components/ripple/types/ripple'
 import type { SubLayerProps } from '@/components/sub-layer/types/sub-layer'
+import type { Ripple } from '@/components/ripple/components/ripple'
+import type { Loader } from '@/components/loader/components/loader'
 
 type ButtonPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'button'>,
@@ -21,8 +23,8 @@ type ButtonContentRenderPropsProps = {
 }
 
 type ButtonChildrenRenderPropsProps = ButtonContentRenderPropsProps & {
-	Loader: React.LazyExoticComponent<(props: LoaderProps) => React.JSX.Element>
-	Ripple: React.LazyExoticComponent<(props: RippleProps) => React.JSX.Element>
+	Loader: typeof Loader
+	Ripple: typeof Ripple
 }
 
 type ButtonContentRenderProps =
