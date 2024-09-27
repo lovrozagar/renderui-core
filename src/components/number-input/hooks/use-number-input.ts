@@ -211,7 +211,7 @@ function useNumberInput(props: NumberInputProps) {
 		spinButtonContainerProps: {
 			className: cn(
 				DFEAULT_NUMBER_INPUT_SPIN_BUTTON_CONTAINER_CLASSNAME,
-				forcedVariant === 'outline' ? 'border-mode-accent' : 'border-separator',
+				forcedVariant === 'outline' ? 'border-mode-accent' : 'border-mode-750',
 				spinButtonContainerClassName,
 			),
 			'data-slot': 'spin-button-container',

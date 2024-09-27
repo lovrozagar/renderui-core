@@ -9,6 +9,25 @@
     --timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     --background: 255, 255, 255;
     --foreground: 10, 10, 10;
+    --mode-50: 20, 20, 20;
+    --mode-100: 25, 25, 25;
+    --mode-150: 38, 38, 38;
+    --mode-200: 51, 51, 51;
+    --mode-250: 64, 64, 64;
+    --mode-300: 76, 76, 76;
+    --mode-350: 89, 89, 89;
+    --mode-400: 102, 102, 102;
+    --mode-450: 115, 115, 115;
+    --mode-500: 127, 127, 127;
+    --mode-550: 140, 140, 140;
+    --mode-600: 153, 153, 153;
+    --mode-650: 166, 166, 166;
+    --mode-700: 178, 178, 178;
+    --mode-750: 191, 191, 191;
+    --mode-800: 204, 204, 204;
+    --mode-850: 217, 217, 217;
+    --mode-900: 230, 230, 230;
+    --mode-950: 245, 245, 245;
     --mode: 255, 255, 255;
     --mode-foreground: 10, 10, 10;
     --mode-contrast: 10, 10, 10;
@@ -50,15 +69,29 @@
     --muted: 245, 245, 245;
     --muted-foreground: 115, 115, 115;
     --radius: 0.5rem;
-    --border: 228, 228, 228;
-
-    /* components */
-    --card: 254, 254, 254;
-    --skeleton: 16, 16, 235;
   }
   .dark {
     --background: 10, 10, 10;
     --foreground: 255, 255, 255;
+    --mode-50: 240, 240, 240;
+    --mode-100: 230, 230, 230;
+    --mode-150: 220, 220, 220;
+    --mode-200: 204, 204, 204;
+    --mode-250: 190, 190, 190;
+    --mode-300: 178, 178, 178;
+    --mode-350: 165, 165, 165;
+    --mode-400: 153, 153, 153;
+    --mode-450: 140, 140, 140;
+    --mode-500: 127, 127, 127;
+    --mode-550: 115, 115, 115;
+    --mode-600: 102, 102, 102;
+    --mode-650: 89, 89, 89;
+    --mode-700: 76, 76, 76;
+    --mode-750: 64, 64, 64;
+    --mode-800: 51, 51, 51;
+    --mode-850: 38, 38, 38;
+    --mode-900: 25, 25, 25;
+    --mode-950: 15, 15, 15;
     --mode: 10, 10, 10;
     --mode-foreground: 255, 255, 255;
     --mode-contrast: 255, 255, 255;
@@ -67,8 +100,6 @@
     --mode-accent-foreground: 255, 255, 255;
     --mode-contrast-accent: 235, 235, 235;
     --mode-contrast-accent-foreground: 10, 10, 10;
-    --mode-accent-high: 64, 64, 64;
-    --mode-contrast-accent-high: 191, 191, 191;
     --neutral: 87, 87, 87;
     --neutral-foreground: 255, 255, 255;
     --primary: 0, 112, 240;
@@ -100,12 +131,6 @@
     --screen-lg: 1024px;
     --screen-xl: 1280px;
     --screen-2xl: 1536px;
-
-    /* Components */
-    --card: 26, 26, 26;
-    --border: 38, 38, 38;
-    --separator: 64, 64, 64;
-    --skeleton: 64, 64, 64;
   }
 
   * {

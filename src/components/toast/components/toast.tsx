@@ -102,7 +102,7 @@ const toastFactory = (styles: ToastClasses) => {
 }
 
 const toastDefault = toastFactory({
-	container: 'bg-mode border-neutral',
+	container: 'bg-mode border-mode-500',
 	title: 'text-mode-contrast',
 	description: 'text-mode-contrast-accent',
 	button: 'text-mode-contrast',

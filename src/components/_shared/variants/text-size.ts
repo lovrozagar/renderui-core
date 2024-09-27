@@ -2,7 +2,7 @@ const textSizeVariants = {
 	'xs': 'text-xs',
 	'sm': 'text-sm',
 	'base': 'text-base',
-	'md': 'text-1.0675rem leading-1.5675rem',
+	'md': 'text-[1.0675rem] leading-[1.5675rem]',
 	'lg': 'text-lg',
 	'xl': 'text-xl',
 	'2xl': 'text-2xl',

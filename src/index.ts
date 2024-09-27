@@ -5,6 +5,9 @@ export { Accordion } from '@/components/accordion/components/accordion'
 export { AccordionContent } from '@/components/accordion/components/accordion-content'
 export { AccordionItem } from '@/components/accordion/components/accordion-item'
 export { AccordionTrigger } from '@/components/accordion/components/accordion-trigger'
+
+export { AccordionTrigger as AccordionTriggerPrimitive } from '@radix-ui/react-accordion'
+
 export type { AccordionProps } from '@/components/accordion/types/accordion'
 export type { AccordionContentProps } from '@/components/accordion/types/accordion-content'
 export type { AccordionItemProps } from '@/components/accordion/types/accordion-item'
@@ -23,8 +26,8 @@ export { Box } from '@/components/box/components/box'
 export type { BoxProps } from '@/components/box/types/box'
 
 /* Button */
-export { Button } from '@/components/button/components/button'
 export { buttonClasses } from '@/components/button/classes/button-classes'
+export { Button } from '@/components/button/components/button'
 export type { ButtonProps } from '@/components/button/types/button'
 
 /* Card */
@@ -43,21 +46,21 @@ export type { CardTitleProps } from '@/components/card/types/card-title'
 
 /* Carousel */
 export { Carousel } from '@/components/carousel/components/carousel'
-export { CarouselViewport } from '@/components/carousel/components/carousel-viewport'
-export { CarouselSlider } from '@/components/carousel/components/carousel-slider'
-export { CarouselItem } from '@/components/carousel/components/carousel-item'
-export { CarouselPrevious } from '@/components/carousel/components/carousel-previous'
-export { CarouselNext } from '@/components/carousel/components/carousel-next'
 export { CarouselIndicators } from '@/components/carousel/components/carousel-indicators'
+export { CarouselItem } from '@/components/carousel/components/carousel-item'
+export { CarouselNext } from '@/components/carousel/components/carousel-next'
+export { CarouselPrevious } from '@/components/carousel/components/carousel-previous'
 export { CarouselProgress } from '@/components/carousel/components/carousel-progress'
+export { CarouselSlider } from '@/components/carousel/components/carousel-slider'
+export { CarouselViewport } from '@/components/carousel/components/carousel-viewport'
 export type { CarouselProps } from '@/components/carousel/types/carousel'
-export type { CarouselViewportProps } from '@/components/carousel/types/carousel-viewport'
-export type { CarouselSliderProps } from '@/components/carousel/types/carousel-slider'
-export type { CarouselItemProps } from '@/components/carousel/types/carousel-item'
-export type { CarouselPreviousProps } from '@/components/carousel/types/carousel-previous'
-export type { CarouselNextProps } from '@/components/carousel/types/carousel-next'
 export type { CarouselIndicatorsProps } from '@/components/carousel/types/carousel-indicators'
+export type { CarouselItemProps } from '@/components/carousel/types/carousel-item'
+export type { CarouselNextProps } from '@/components/carousel/types/carousel-next'
+export type { CarouselPreviousProps } from '@/components/carousel/types/carousel-previous'
 export type { CarouselProgressProps } from '@/components/carousel/types/carousel-progress'
+export type { CarouselSliderProps } from '@/components/carousel/types/carousel-slider'
+export type { CarouselViewportProps } from '@/components/carousel/types/carousel-viewport'
 
 /* Checkbox */
 export { Checkbox } from '@/components/checkbox/components/checkbox'
@@ -69,6 +72,9 @@ export type { CheckboxIndicatorProps } from '@/components/checkbox/types/checkbo
 export { Collapsible } from '@/components/collapsible/components/collapsible'
 export { CollapsibleContent } from '@/components/collapsible/components/collapsible-content'
 export { CollapsibleTrigger } from '@/components/collapsible/components/collapsible-trigger'
+
+export { CollapsibleTrigger as CollapsibleTriggerPrimitive } from '@radix-ui/react-collapsible'
+
 export type { CollapsibleProps } from '@/components/collapsible/types/collapsible'
 export type { CollapsibleContentProps } from '@/components/collapsible/types/collapsible-content'
 export type { CollapsibleTriggerProps } from '@/components/collapsible/types/collapsible-trigger'
@@ -79,6 +85,9 @@ export { ComboboxContent } from '@/components/combobox/components/combobox-conte
 export { ComboboxInput } from '@/components/combobox/components/combobox-input'
 export { ComboboxItem } from '@/components/combobox/components/combobox-item'
 export { ComboboxTrigger } from '@/components/combobox/components/combobox-trigger'
+
+export { PopoverTrigger as ComboboxTriggerPrimitive } from '@radix-ui/react-popover'
+
 export type { ComboboxProps } from '@/components/combobox/types/combobox'
 export type { ComboboxContentProps } from '@/components/combobox/types/combobox-content'
 export type { ComboboxInputProps } from '@/components/combobox/types/combobox-input'
@@ -114,20 +123,58 @@ export { DialogFooter } from '@/components/dialog/components/dialog-footer'
 export { DialogHeader } from '@/components/dialog/components/dialog-header'
 export { DialogTitle } from '@/components/dialog/components/dialog-title'
 export { DialogTrigger } from '@/components/dialog/components/dialog-trigger'
+
+export { DialogTrigger as DialogTriggerPrimitive } from '@radix-ui/react-dialog'
+
 export type { DialogProps } from '@/components/dialog/types/dialog'
 export type { DialogContentProps } from '@/components/dialog/types/dialog-content'
 export type { DialogTriggerProps } from '@/components/dialog/types/dialog-trigger'
 
 /* Drawer */
 export { Drawer } from '@/components/drawer/components/drawer'
-export { DrawerTrigger } from '@/components/drawer/components/drawer-trigger'
 export { DrawerContent } from '@/components/drawer/components/drawer-content'
+export { DrawerDescription } from '@/components/drawer/components/drawer-description'
 export { DrawerHeader } from '@/components/drawer/components/drawer-header'
 export { DrawerTitle } from '@/components/drawer/components/drawer-title'
-export { DrawerDescription } from '@/components/drawer/components/drawer-description'
+export { DrawerTrigger } from '@/components/drawer/components/drawer-trigger'
+
+import { Drawer as DrawerPrimitive } from 'vaul'
+export const DrawerTriggerPrimitive = DrawerPrimitive.Trigger
+
 export type { DrawerProps } from '@/components/drawer/types/drawer'
-export type { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
 export type { DrawerContentProps } from '@/components/drawer/types/drawer-content'
+export type { DrawerTriggerProps } from '@/components/drawer/types/drawer-trigger'
+
+/* Dropdown menu */
+export { DropdownMenu } from '@/components/dropdown-menu/components/dropdown-menu'
+export { DropdownMenuCheckboxItem } from '@/components/dropdown-menu/components/dropdown-menu-checkbox-item'
+export { DropdownMenuContent } from '@/components/dropdown-menu/components/dropdown-menu-content'
+export { DropdownMenuGroup } from '@/components/dropdown-menu/components/dropdown-menu-group'
+export { DropdownMenuItem } from '@/components/dropdown-menu/components/dropdown-menu-item'
+export { DropdownMenuLabel } from '@/components/dropdown-menu/components/dropdown-menu-label'
+export { DropdownMenuPortal } from '@/components/dropdown-menu/components/dropdown-menu-portal'
+export { DropdownMenuRadioGroup } from '@/components/dropdown-menu/components/dropdown-menu-radio-group'
+export { DropdownMenuRadioItem } from '@/components/dropdown-menu/components/dropdown-menu-radio-item'
+export { DropdownMenuSeparator } from '@/components/dropdown-menu/components/dropdown-menu-separator'
+export { DropdownMenuSub } from '@/components/dropdown-menu/components/dropdown-menu-sub'
+export { DropdownMenuSubContent } from '@/components/dropdown-menu/components/dropdown-menu-sub-content'
+export { DropdownMenuSubTrigger } from '@/components/dropdown-menu/components/dropdown-menu-sub-trigger'
+export { DropdownMenuTrigger } from '@/components/dropdown-menu/components/dropdown-menu-trigger'
+
+export type { DropdownMenuProps } from '@/components/dropdown-menu/types/dropdown-menu'
+export type { DropdownMenuCheckboxItemProps } from '@/components/dropdown-menu/types/dropdown-menu-checkbox-item'
+export type { DropdownMenuContentProps } from '@/components/dropdown-menu/types/dropdown-menu-content'
+export type { DropdownMenuGroupProps } from '@/components/dropdown-menu/types/dropdown-menu-group'
+export type { DropdownMenuItemProps } from '@/components/dropdown-menu/types/dropdown-menu-item'
+export type { DropdownMenuLabelProps } from '@/components/dropdown-menu/types/dropdown-menu-label'
+export type { DropdownMenuPortalProps } from '@/components/dropdown-menu/types/dropdown-menu-portal'
+export type { DropdownMenuRadioGroupProps } from '@/components/dropdown-menu/types/dropdown-menu-radio-group'
+export type { DropdownMenuRadioItemProps } from '@/components/dropdown-menu/types/dropdown-menu-radio-item'
+export type { DropdownMenuSeparatorProps } from '@/components/dropdown-menu/types/dropdown-menu-separator'
+export type { DropdownMenuSubProps } from '@/components/dropdown-menu/types/dropdown-menu-sub'
+export type { DropdownMenuSubContentProps } from '@/components/dropdown-menu/types/dropdown-menu-sub-content'
+export type { DropdownMenuSubTriggerProps } from '@/components/dropdown-menu/types/dropdown-menu-sub-trigger'
+export type { DropdownMenuTriggerProps } from '@/components/dropdown-menu/types/dropdown-menu-trigger'
 
 /* Flex */
 export { Flex } from '@/components/flex/components/flex'
@@ -148,11 +195,11 @@ export type { HeadingProps } from '@/components/heading/types/heading'
 
 /* Hover card */
 export { HoverCard } from '@/components/hover-card/components/hover-card'
-export { HoverCardTrigger } from '@/components/hover-card/components/hover-card-trigger'
 export { HoverCardContent } from '@/components/hover-card/components/hover-card-content'
+export { HoverCardTrigger } from '@/components/hover-card/components/hover-card-trigger'
 export type { HoverCardProps } from '@/components/hover-card/types/hover-card'
-export type { HoverCardTriggerProps } from '@/components/hover-card/types/hover-card-trigger'
 export type { HoverCardContentProps } from '@/components/hover-card/types/hover-card-content'
+export type { HoverCardTriggerProps } from '@/components/hover-card/types/hover-card-trigger'
 
 /* Label */
 export { Label } from '@/components/label/components/label'
@@ -166,6 +213,38 @@ export { loaderClasses } from '@/components/loader/classes/loader-classes'
 export { Loader } from '@/components/loader/components/loader'
 export type { LoaderProps } from '@/components/loader/types/loader'
 export type { LoaderDotProps } from '@/components/loader/types/loader-dot'
+
+/* Menubar */
+export { Menubar } from '@/components/menubar/components/menubar'
+export { MenubarCheckboxItem } from '@/components/menubar/components/menubar-checkbox-item'
+export { MenubarContent } from '@/components/menubar/components/menubar-content'
+export { MenubarGroup } from '@/components/menubar/components/menubar-group'
+export { MenubarItem } from '@/components/menubar/components/menubar-item'
+export { MenubarLabel } from '@/components/menubar/components/menubar-label'
+export { MenubarMenu } from '@/components/menubar/components/menubar-menu'
+export { MenubarPortal } from '@/components/menubar/components/menubar-portal'
+export { MenubarRadioGroup } from '@/components/menubar/components/menubar-radio-group'
+export { MenubarRadioItem } from '@/components/menubar/components/menubar-radio-item'
+export { MenubarSeparator } from '@/components/menubar/components/menubar-separator'
+export { MenubarSub } from '@/components/menubar/components/menubar-sub'
+export { MenubarSubContent } from '@/components/menubar/components/menubar-sub-content'
+export { MenubarSubTrigger } from '@/components/menubar/components/menubar-sub-trigger'
+export { MenubarTrigger } from '@/components/menubar/components/menubar-trigger'
+export type { MenubarProps } from '@/components/menubar/types/menubar'
+export type { MenubarCheckboxItemProps } from '@/components/menubar/types/menubar-checkbox-item'
+export type { MenubarContentProps } from '@/components/menubar/types/menubar-content'
+export type { MenubarGroupProps } from '@/components/menubar/types/menubar-group'
+export type { MenubarItemProps } from '@/components/menubar/types/menubar-item'
+export type { MenubarLabelProps } from '@/components/menubar/types/menubar-label'
+export type { MenubarMenuProps } from '@/components/menubar/types/menubar-menu'
+export type { MenubarPortalProps } from '@/components/menubar/types/menubar-portal'
+export type { MenubarRadioGroupProps } from '@/components/menubar/types/menubar-radio-group'
+export type { MenubarRadioItemProps } from '@/components/menubar/types/menubar-radio-item'
+export type { MenubarSeparatorProps } from '@/components/menubar/types/menubar-separator'
+export type { MenubarSubProps } from '@/components/menubar/types/menubar-sub'
+export type { MenubarSubContentProps } from '@/components/menubar/types/menubar-sub-content'
+export type { MenubarSubTriggerProps } from '@/components/menubar/types/menubar-sub-trigger'
+export type { MenubarTriggerProps } from '@/components/menubar/types/menubar-trigger'
 
 /* Navigation menu */
 export { NavigationMenu } from '@/components/navigation-menu/components/navigation-menu'
@@ -218,8 +297,8 @@ export type { ScrollAreaProps } from '@/components/scroll-area/types/scroll-area
 
 /* Segment */
 export { Segment } from '@/components/segment/components/segment'
-export { SegmentList } from '@/components/segment/components/segment-list'
 export { SegmentItem } from '@/components/segment/components/segment-item'
+export { SegmentList } from '@/components/segment/components/segment-list'
 
 /* Select */
 export { Select } from '@/components/select/components/select'
@@ -268,6 +347,24 @@ export { SwitchThumb } from '@/components/switch/components/switch-thumb'
 export type { SwitchProps } from '@/components/switch/types/switch'
 export type { SwitchThumbProps } from '@/components/switch/types/switch-thumb'
 
+/* Table */
+export { Table } from '@/components/table/components/table'
+export { TableBody } from '@/components/table/components/table-body'
+export { TableCaption } from '@/components/table/components/table-caption'
+export { TableCell } from '@/components/table/components/table-cell'
+export { TableFooter } from '@/components/table/components/table-footer'
+export { TableHead } from '@/components/table/components/table-head'
+export { TableHeader } from '@/components/table/components/table-header'
+export { TableRow } from '@/components/table/components/table-row'
+export type { TableProps } from '@/components/table/types/table'
+export type { TableBodyProps } from '@/components/table/types/table-body'
+export type { TableCaptionProps } from '@/components/table/types/table-caption'
+export type { TableCellProps } from '@/components/table/types/table-cell'
+export type { TableFooterProps } from '@/components/table/types/table-footer'
+export type { TableHeadProps } from '@/components/table/types/table-head'
+export type { TableHeaderProps } from '@/components/table/types/table-header'
+export type { TableRowProps } from '@/components/table/types/table-row'
+
 /* Tabs */
 export { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 export { tabsTriggerListClasses } from '@/components/tabs/classes/tabs-trigger-list-classes'
@@ -275,6 +372,9 @@ export { Tabs } from '@/components/tabs/components/tabs'
 export { TabsContent } from '@/components/tabs/components/tabs-content'
 export { TabsTrigger } from '@/components/tabs/components/tabs-trigger'
 export { TabsTriggerList } from '@/components/tabs/components/tabs-trigger-list'
+
+export { TabsTrigger as TabsTriggerPrimitive } from '@radix-ui/react-tabs'
+
 export type { TabsProps } from '@/components/tabs/types/tabs'
 export type { TabsContentProps } from '@/components/tabs/types/tabs-content'
 export type { TabsTriggerProps } from '@/components/tabs/types/tabs-trigger'
@@ -319,6 +419,9 @@ export type { ToggleGroupItemProps } from '@/components/toggle-group/types/toggl
 export { Tooltip } from '@/components/tooltip/components/tooltip'
 export { TooltipContent } from '@/components/tooltip/components/tooltip-content'
 export { TooltipTrigger } from '@/components/tooltip/components/tooltip-trigger'
+
+export { TooltipTrigger as TooltipTriggerPrimitive } from '@radix-ui/react-tooltip'
+
 export type { TooltipProps } from '@/components/tooltip/types/tooltip'
 export type { TooltipContentProps } from '@/components/tooltip/types/tooltip-content'
 export type { TooltipTriggerProps } from '@/components/tooltip/types/tooltip-trigger'
@@ -339,9 +442,9 @@ export { useMode } from '@/providers/mode-provider/hooks/use-mode'
 export { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
 export { CheckIcon } from '@/components/_shared/components/icons/check-icon'
 export { ChevronDownIcon } from '@/components/_shared/components/icons/chevron-down-icon'
-export { ChevronUpIcon } from '@/components/_shared/components/icons/chevron-up-icon'
 export { ChevronLeftIcon } from '@/components/_shared/components/icons/chevron-left-icon'
 export { ChevronRightIcon } from '@/components/_shared/components/icons/chevron-right-icon'
+export { ChevronUpIcon } from '@/components/_shared/components/icons/chevron-up-icon'
 export { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 export { EyeNoneIcon } from '@/components/_shared/components/icons/eye-none-icon'
 export { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
@@ -350,20 +453,20 @@ export { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magni
 /* UTILS */
 
 export {
-	cn,
-	cx,
-	cva,
-	noop,
-	chain,
 	capitalize,
-	isFunction,
-	mergeProps,
-	polymorphic,
+	chain,
+	cn,
+	cva,
+	cx,
 	functionCallOrValue,
 	getAnimationStyleVariables,
 	getNestedChildrenTextContent,
 	getOptionalObject,
 	initializeContext,
+	isFunction,
+	mergeProps,
+	noop,
+	polymorphic,
 	type AnimationStyleVariables,
 	type CxOptions,
 	type CxReturn,
@@ -376,15 +479,15 @@ export { useAriaHandlers } from '@/components/_shared/hooks/use-aria-handlers'
 export { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
 export { useEventListener } from '@/components/_shared/hooks/use-event-listener'
 export { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
+export { useIntersectionObserver } from '@/components/_shared/hooks/use-intersection-observer'
+export { useIsOnline } from '@/components/_shared/hooks/use-is-online'
+export { useIsomorphicLayoutEffect } from '@/components/_shared/hooks/use-isomorphic-layout-effect'
 export { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
+export { useMediaQuery } from '@/components/_shared/hooks/use-media-query'
 export { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 export { useMutationObserver } from '@/components/_shared/hooks/use-mutation-observer'
-export { useIntersectionObserver } from '@/components/_shared/hooks/use-intersection-observer'
 export { useOnClickOutside } from '@/components/_shared/hooks/use-on-click-outside'
 export {
 	useUncontrolledState,
 	type UseControllableStateProps,
 } from '@/components/_shared/hooks/use-uncontrolled-state'
-export { useIsomorphicLayoutEffect } from '@/components/_shared/hooks/use-isomorphic-layout-effect'
-export { useMediaQuery } from '@/components/_shared/hooks/use-media-query'
-export { useIsOnline } from '@/components/_shared/hooks/use-is-online'

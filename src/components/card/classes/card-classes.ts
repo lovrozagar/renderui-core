@@ -1,7 +1,7 @@
 import { cva } from '@renderui/utils'
 
 const cardClasses = cva(
-	'_card dark:border-mode-accent-high relative flex w-fit flex-col justify-between overflow-hidden rounded-lg border border-mode-accent bg-card text-foreground shadow-sm transition-all duration-fast',
+	'_card border-mode-800 relative flex w-fit flex-col justify-between overflow-hidden rounded-lg border bg-mode-900 dark:bg-mode-850 text-foreground shadow-sm transition-all duration-fast',
 	{
 		variants: {
 			hasShadowOnHover: {
@@ -10,7 +10,7 @@ const cardClasses = cva(
 			},
 			isBlurred: {
 				true: ['bg-foreground/80', 'backdrop-blur-md', 'backdrop-saturate-150'],
-				false: [],
+				false: '',
 			},
 		},
 		defaultVariants: {

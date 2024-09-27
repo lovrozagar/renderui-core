@@ -40,3 +40,7 @@
 
 - (done) refactor: remove barrell imports to better support treeshaking with different bundlers/frameworks
 - (for some reason polymorphic only makes container a client component and use client needs to be used) feat: add polymorphic ability wherever not possible but could be
+- ring-offset-offset is possibly wrong in buttonClasses
+
+export trigger primitives as well as triggers
+fix: badge border color
