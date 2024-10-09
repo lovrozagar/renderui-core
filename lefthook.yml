@@ -9,15 +9,15 @@ pre-commit:
   commands:
     1_lint_check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: yarn biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
+      run: bunx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
     2_type_check:
       glob: "*.{json,js,ts,tsx}"
-      run: yarn tsc --noEmit -p ./tsconfig.json
+      run: bunx tsc --noEmit -p ./tsconfig.json
     3_build:
-      run: yarn build
+      run: bunx build
 
 pre-push:
   commands:
     check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: yarn biome check --no-errors-on-unmatched --files-ignore-unknown=true {push_files}
+      run: bunx biome check --no-errors-on-unmatched --files-ignore-unknown=true {push_files}
