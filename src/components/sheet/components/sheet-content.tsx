@@ -8,6 +8,8 @@ import { cn, cx, getOptionalObject } from '@renderui/utils'
 
 import { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import { ModalClose } from '@/components/_shared/components/modal-close/modal-close'
+import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { Button } from '@/components/button/components/button'
 import { Overlay } from '@/components/overlay/components/overlay'
 import { sheetClasses } from '@/components/sheet/classes/sheet-classes'
@@ -18,8 +20,6 @@ import {
 import type { SheetContentProps } from '@/components/sheet/types/sheet-content'
 import { VisuallyHidden } from '@/components/visually-hidden/components/visually-hidden'
 import { getAnimationStyleVariables } from '@renderui/utils'
-import { useContentRefContext } from '@/components/_shared/contexts/content-ref-context'
-import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const SheetContent = (props: SheetContentProps) => {
 	const {
@@ -39,6 +39,7 @@ const SheetContent = (props: SheetContentProps) => {
 		animationOutTimingFunction,
 		hasCloseButton = true,
 		side = 'right',
+		smallSizeWidth = '3/4',
 		...restProps
 	} = props
 
@@ -62,7 +63,13 @@ const SheetContent = (props: SheetContentProps) => {
 			<Overlay {...overlayProps} />
 			<SheetContentPrimitive
 				ref={mergedRefCallback}
-				className={cn(sheetClasses({ side }), className)}
+				className={cn(
+					sheetClasses({ side }),
+					smallSizeWidth === '3/4' && (side === 'left' || side === 'right')
+						? 'smallSizeWidth'
+						: undefined,
+					className,
+				)}
 				style={{
 					...getAnimationStyleVariables({
 						animationDuration,

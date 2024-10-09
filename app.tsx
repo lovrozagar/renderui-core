@@ -15,7 +15,6 @@ import {
 	MenubarContent,
 	MenubarItem,
 	MenubarMenu,
-	MenubarPortal,
 	MenubarRadioGroup,
 	MenubarRadioItem,
 	MenubarSeparator,

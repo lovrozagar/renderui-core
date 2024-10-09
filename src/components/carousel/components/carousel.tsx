@@ -38,7 +38,6 @@ const Carousel = (props: CarouselProps) => {
 		scrollNext,
 		handleKeyDown,
 	} = useCarouselControl({
-		options,
 		plugins,
 		orientation: contextOrientation,
 		setApi,

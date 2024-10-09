@@ -54,6 +54,7 @@ export { CarouselProgress } from '@/components/carousel/components/carousel-prog
 export { CarouselSlider } from '@/components/carousel/components/carousel-slider'
 export { CarouselViewport } from '@/components/carousel/components/carousel-viewport'
 export type { CarouselProps } from '@/components/carousel/types/carousel'
+export type { CarouselApi } from '@/components/carousel/types/carousel-api'
 export type { CarouselIndicatorsProps } from '@/components/carousel/types/carousel-indicators'
 export type { CarouselItemProps } from '@/components/carousel/types/carousel-item'
 export type { CarouselNextProps } from '@/components/carousel/types/carousel-next'
@@ -480,6 +481,7 @@ export { useControllableState } from '@/components/_shared/hooks/use-controllabl
 export { useEventListener } from '@/components/_shared/hooks/use-event-listener'
 export { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 export { useIntersectionObserver } from '@/components/_shared/hooks/use-intersection-observer'
+export { useIsMounted } from '@/components/_shared/hooks/use-is-mounted'
 export { useIsOnline } from '@/components/_shared/hooks/use-is-online'
 export { useIsomorphicLayoutEffect } from '@/components/_shared/hooks/use-isomorphic-layout-effect'
 export { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
@@ -491,3 +493,4 @@ export {
 	useUncontrolledState,
 	type UseControllableStateProps,
 } from '@/components/_shared/hooks/use-uncontrolled-state'
+export { useWindowFocus } from '@/components/_shared/hooks/use-window-focus'

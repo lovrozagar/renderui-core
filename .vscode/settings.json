@@ -38,5 +38,9 @@
 	},
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.suggest.autoImports": true,
-	"typescript.updateImportsOnFileMove.enabled": "always"
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.colorCustomizations": {
+		"minimap.background": "#00000000",
+		"scrollbar.shadow": "#00000000"
+	}
 }

@@ -27,7 +27,7 @@ const TabsTrigger = (props: TabsTriggerProps) => {
 		isDisabled,
 		childrenContainerProps,
 		onPress,
-		variant = 'solid',
+		variant = 'plain',
 		hasRipple = false,
 		hasDefaultHoverStyles = false,
 		hasDefaultPressedStyles = false,

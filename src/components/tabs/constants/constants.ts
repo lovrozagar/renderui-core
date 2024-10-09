@@ -9,12 +9,12 @@ const DEFAULT_TABS_CURSOR_TRANISTION = {
 
 const DEFAULT_TABS_CLASSNAME = '_tabs'
 
-const DEFAULT_TABS_TRIGGER_CLASSNAME = '_tabs-trigger bg-transparent before:hidden after:hidden'
+const DEFAULT_TABS_TRIGGER_CLASSNAME = '_tabs-trigger before:hidden after:hidden'
 
 const DEFAULT_TABS_CONTENT_CLASSNAME =
 	'_tabs-content outline-none ring-ring-color ring-offset-background focus-visible:ring-ring-width focus-visible:ring-offset-offset transition-colors duration-fast'
 
-const DEFAULT_TABS_CURSOR_CLASSNAME = 'transition-none'
+const DEFAULT_TABS_CURSOR_CLASSNAME = '_tabs-cursor transition-none'
 
 const NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS: Partial<
 	NonNullableVariantProps<typeof tabsCursorClasses>['variant']
@@ -30,7 +30,7 @@ const NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS: Partial<
 const NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME = 'rounded-none'
 
 const INACTIVE_TABS_TRIGGER_CLASSNAME =
-	'text-mode-contrast transition-[color] duration-fast data-[hover="true"]:data-[state="inactive"]:text-primary'
+	'text-mode-contrast transition-[color] duration-fast data-[hover=true]:data-[state=inactive]:text-primary'
 
 const DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME =
 	'absolute inset-0 z-[2] flex size-full items-center justify-center gap-3 text-[inherit]'

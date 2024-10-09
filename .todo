@@ -44,3 +44,5 @@
 
 export trigger primitives as well as triggers
 fix: badge border color
+feat: add cursor props
+- add tabs animation duration property

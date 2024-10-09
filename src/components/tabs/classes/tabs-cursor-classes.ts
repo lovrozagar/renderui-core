@@ -2,7 +2,7 @@ import { cva } from '@renderui/utils'
 
 import { TABS_SHARED_ORIENTATIONS, TABS_SHARED_VARIANTS } from '@/components/tabs/classes/shared'
 
-const tabsCursorClasses = cva('_tabs-cursor absolute inset-0 z-[1] size-full rounded', {
+const tabsCursorClasses = cva('_tabs-cursor absolute inset-0 z-[1] size-full rounded-[inherit]', {
 	variants: {
 		variant: TABS_SHARED_VARIANTS,
 		orientation: TABS_SHARED_ORIENTATIONS,

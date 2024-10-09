@@ -20,6 +20,7 @@ type SheetContentCustomProps = NonNullableVariantProps<typeof sheetClasses> & {
 	closeButtonProps?: ButtonProps
 	closeButtonIconProps?: React.ComponentPropsWithRef<typeof CrossSmallIcon>
 	hasCloseButton?: boolean
+	smallSizeWidth?: '3/4' | 'full'
 } & AnimationStyleVariables
 
 type SheetContentProps = Simplify<SheetContentPrimitiveProps & SheetContentCustomProps>

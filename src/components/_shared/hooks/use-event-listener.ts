@@ -77,11 +77,13 @@ function useEventListener<
 		/* Create event listener that calls handler function stored in ref */
 		const listener: typeof handler = (event) => freshHandler.current(event)
 
-		targetElement.addEventListener(event, listener, freshOptions.current)
+		const options = freshOptions.current
+
+		targetElement.addEventListener(event, listener, options)
 
 		/* Remove event listener on cleanup */
 		return () => {
-			targetElement.removeEventListener(event, listener, freshOptions.current)
+			targetElement.removeEventListener(event, listener, options)
 		}
 	}, [event, element, enabled])
 }
