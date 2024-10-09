@@ -453,6 +453,8 @@ export { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magni
 
 /* UTILS */
 
+export { preloadComponents, type ModulePath } from '@/utils/preload-modules'
+
 export {
 	capitalize,
 	chain,
@@ -471,7 +473,6 @@ export {
 	type AnimationStyleVariables,
 	type CxOptions,
 	type CxReturn,
-	type VariantProps,
 } from '@renderui/utils'
 
 /* HOOKS */
@@ -494,3 +495,11 @@ export {
 	type UseControllableStateProps,
 } from '@/components/_shared/hooks/use-uncontrolled-state'
 export { useWindowFocus } from '@/components/_shared/hooks/use-window-focus'
+
+/* TYPES */
+export type { UseAriaHandlersProps } from '@/components/_shared/types/aria'
+export type { Color } from '@/components/_shared/types/color'
+export type { OrUndefined } from '@/components/_shared/types/or-undefined'
+export type { Prettify } from '@/components/_shared/types/prettify'
+export type { Simplify } from '@/components/_shared/types/simplify'
+export type { NonNullableVariantProps as VariantProps } from '@/components/_shared/types/variant'
