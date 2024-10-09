@@ -158,3 +158,5 @@ function preloadComponents(modulePaths: ModulePath[]) {
 }
 
 export { preloadComponents }
+
+export type { ModulePath }
