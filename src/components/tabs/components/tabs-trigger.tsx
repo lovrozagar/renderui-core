@@ -49,7 +49,7 @@ const TabsTrigger = (props: TabsTriggerProps) => {
 	} = useTabsContext()
 
 	const isSelected = activeTab === value
-	const activeColor = color ?? rootColor ?? 'primary'
+	const activeColor = color ?? rootColor
 
 	return (
 		<TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@renderui/utils'
+import { cn, getOptionalObject } from '@renderui/utils'
 import { m } from 'framer-motion'
 import React from 'react'
 
@@ -8,14 +8,14 @@ import { buttonClasses } from '@/components/button/classes/button-classes'
 import { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 import { DEFAULT_TABS_CURSOR_CLASSNAME } from '@/components/tabs/constants/constants'
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
-import type { TabsCursorProps } from '@/components/tabs/types/tabs-cursor'
 import { getMergedCursorTransition } from '@/components/tabs/utils/get-merged-cursor-transition'
 
-const TabsCursor = (props: TabsCursorProps) => {
-	const { className, transition, initial, animate, ...restProps } = props
+const TabsCursor = () => {
 
-	const { layoutId, orientation, variant, animationDuration, hasCursorAppearedRef } =
-		useTabsContext()
+	const { layoutId, orientation, variant, animationDuration, hasCursorAppearedRef, cursorProps } =
+	useTabsContext()
+
+	const { className, initial,  animate, transition, ...restProps } = getOptionalObject(cursorProps)
 
 	/* biome-ignore lint/correctness/useExhaustiveDependencies: using fresh ref pattern, ref dep not needed */
 	React.useEffect(() => {

@@ -4,7 +4,7 @@ import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-cl
 const DEFAULT_TABS_CURSOR_TRANISTION = {
 	type: 'spring',
 	bounce: 0,
-	duration: 0.35,
+	duration: 0.3,
 } as const
 
 const DEFAULT_TABS_CLASSNAME = '_tabs'
