@@ -17,8 +17,9 @@ const Progress = (props: ProgressProps) => {
 		indicatorRef,
 		indicatorProps,
 		spotCount,
-		orientation = 'horizontal',
+		color = 'primary',
 		variant = 'path',
+		orientation = 'horizontal',
 		...restProps
 	} = props
 
@@ -57,15 +58,20 @@ const Progress = (props: ProgressProps) => {
 				data-slot='indicator'
 				role='progressbar'
 				className={cn(getProgressIndicatorClassName(isIndeterminate), indicatorClassName)}
-				style={getTranslateXStyleByValue({
-					isIndeterminate,
-					orientation,
-					variant,
-					value,
-					definedValue,
-					spotCount,
-					indicatorStyle,
-				})}
+				style={
+					{
+						...getTranslateXStyleByValue({
+							isIndeterminate,
+							orientation,
+							variant,
+							value,
+							definedValue,
+							spotCount,
+						}),
+						...indicatorStyle,
+						'--indicator-color': `var(--${color})`,
+					} as React.CSSProperties
+				}
 				{...restIndicatorProps}
 			/>
 		</ProgressContainerComponent>
