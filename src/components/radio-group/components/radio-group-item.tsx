@@ -21,13 +21,13 @@ const RadioGroupItem = (props: RadioGroupItemProps) => {
 		variant,
 		indicatorProps,
 		onClick,
+		color,
 		role = 'radio',
-		color = 'primary',
 		hasRipple = false,
 		...restProps
 	} = props
 
-	const { name, isInvalid, value: rootValue, setValue } = useRadioGroupContext()
+	const { name, color: rootColor, isInvalid, value: rootValue, setValue } = useRadioGroupContext()
 
 	const {
 		asChild: indicatorAsChild,
@@ -44,7 +44,7 @@ const RadioGroupItem = (props: RadioGroupItemProps) => {
 			id={id}
 			role={role}
 			value={value as string}
-			color={isInvalid ? 'destructive' : color}
+			color={isInvalid ? 'destructive' : color ?? rootColor}
 			variant={variant ?? isChecked ? 'solid' : 'outline'}
 			hasRipple={hasRipple}
 			aria-checked={isChecked}

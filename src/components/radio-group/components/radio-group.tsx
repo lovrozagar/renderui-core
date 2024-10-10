@@ -22,6 +22,7 @@ const RadioGroup = (props: RadioGroupProps) => {
 		isRequired,
 		onValueChange,
 		defaultValue = '',
+		color = 'primary',
 		role = 'radiogroup',
 		...restProps
 	} = props
@@ -49,7 +50,7 @@ const RadioGroup = (props: RadioGroupProps) => {
 			/* enforce single type */
 			type='single'
 		>
-			<RadioGroupProvider value={{ name, isInvalid, value, setValue }}>
+			<RadioGroupProvider value={{ name, color, isInvalid, value, setValue }}>
 				{functionCallOrValue(startContent, value)}
 				{functionCallOrValue(children, value)}
 				{functionCallOrValue(endContent, value)}

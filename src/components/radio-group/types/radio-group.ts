@@ -1,3 +1,4 @@
+import type { Color } from '@/components/_shared/types/color'
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type { ToggleGroup } from '@/components/toggle-group/components/toggle-group'
 import type React from 'react'
@@ -6,13 +7,14 @@ type RadioGroupPrimitive = typeof ToggleGroup
 
 type RadioGroupPrimitiveProps = Omit<
 	React.ComponentProps<RadioGroupPrimitive>,
-	'children' | 'disabled' | 'readonly' | 'required' | 'type' | 'value' | 'onValueChange'
+	'children' | 'disabled' | 'readonly' | 'required' | 'type' | 'color' | 'value' | 'onValueChange'
 >
 
 type RadioGroupCustomProps = {
 	startContent?: React.ReactNode | ((value: unknown) => React.ReactNode)
 	children?: React.ReactNode | ((value: unknown) => React.ReactNode)
 	endContent?: React.ReactNode | ((value: unknown) => React.ReactNode)
+	color?: Color
 	name?: string
 	value?: string | number
 	defaultValue?: string | number | undefined
