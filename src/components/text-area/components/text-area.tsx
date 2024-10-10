@@ -28,6 +28,7 @@ const TextArea = (props: TextAreaProps) => {
 		inputContainerProps,
 		onChange,
 		onValueChange,
+		color = 'primary',
 		variant = 'solid',
 		defaultValue = '',
 		minHeight = 80,
@@ -72,6 +73,7 @@ const TextArea = (props: TextAreaProps) => {
 					...style,
 					'--min-height': `${minHeight}px`,
 					'--max-height': `${maxHeight}px`,
+					'--container-color': `var(--${color})`,
 				} as React.CSSProperties
 			}
 			{...restInputContainerProps}
