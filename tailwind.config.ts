@@ -16,6 +16,7 @@ const config: Config = {
 			},
 
 			maxWidth: {
+				'screen-2xs': 'var(--screen-2xs)',
 				'screen-xs': 'var(--screen-xs)',
 				'screen-sm': 'var(--screen-sm)',
 				'screen-md': 'var(--screen-md)',
@@ -24,10 +25,6 @@ const config: Config = {
 				'screen-2xl': 'var(--screen-2xl)',
 			},
 			colors: {
-				'background': 'rgba(var(--background))',
-				'foreground': 'rgba(var(--foreground))',
-				'ring-color': 'rgba(var(--ring-color))',
-				'separator': 'rgba(var(--separator))',
 				'mode-50': 'rgba(var(--mode-50))',
 				'mode-100': 'rgba(var(--mode-100))',
 				'mode-150': 'rgba(var(--mode-150))',
@@ -47,67 +44,39 @@ const config: Config = {
 				'mode-850': 'rgba(var(--mode-850))',
 				'mode-900': 'rgba(var(--mode-900))',
 				'mode-950': 'rgba(var(--mode-950))',
-				'mode': {
-					DEFAULT: 'rgba(var(--mode))',
-					foreground: 'rgba(var(--mode-foreground))',
-				},
-				'mode-contrast': {
-					DEFAULT: 'rgba(var(--mode-contrast))',
-					foreground: 'rgba(var(--mode-contrast-foreground))',
-				},
-				'mode-accent': {
-					DEFAULT: 'rgba(var(--mode-accent))',
-					foreground: 'rgba(var(--mode-accent-foreground))',
-				},
-				'mode-contrast-accent': {
-					DEFAULT: 'rgba(var(--mode-contrast-accent))',
-					foreground: 'rgba(var(--mode-contrast-accent-foreground))',
-				},
-				'primary': {
-					DEFAULT: 'rgba(var(--primary))',
-					foreground: 'rgba(var(--primary-foreground))',
-				},
-				'secondary': {
-					DEFAULT: 'rgba(var(--secondary))',
-					foreground: 'rgba(var(--secondary-foreground))',
-				},
-				'destructive': {
-					DEFAULT: 'rgba(var(--destructive))',
-					foreground: 'rgba(var(--destructive-foreground))',
-				},
-				'success': {
-					DEFAULT: 'rgba(var(--success))',
-					foreground: 'rgba(var(--success-foreground))',
-				},
-				'warning': {
-					DEFAULT: 'rgba(var(--warning))',
-					foreground: 'rgba(var(--warning-foreground))',
-				},
-				'info': {
-					DEFAULT: 'rgba(var(--info))',
-					foreground: 'rgba(var(--info-foreground))',
-				},
-				'help': {
-					DEFAULT: 'rgba(var(--help))',
-					foreground: 'rgba(var(--help-foreground))',
-				},
-				'brand': {
-					DEFAULT: 'rgba(var(--brand))',
-					foreground: 'rgba(var(--brand-foreground))',
-				},
-				'muted': {
-					DEFAULT: 'rgba(var(--muted))',
-					foreground: 'rgba(var(--muted-foreground))',
-				},
-				'accent': {
-					DEFAULT: 'rgba(var(--accent))',
-					high: 'rgba(var(--accent-high))',
-					foreground: 'rgba(var(--accent-foreground))',
-				},
-				'popover': {
-					DEFAULT: 'rgba(var(--popover))',
-					foreground: 'rgba(var(--popover-foreground))',
-				},
+				'mode': 'rgba(var(--mode))',
+				'mode-foreground': 'rgba(var(--mode-foreground))',
+				'mode-contrast': 'rgba(var(--mode-contrast))',
+				'mode-contrast-foreground': 'rgba(var(--mode-contrast-foreground))',
+				'mode-accent': 'rgba(var(--mode-accent))',
+				'mode-accent-foreground': 'rgba(var(--mode-accent-foreground))',
+				'mode-contrast-accent': 'rgba(var(--mode-contrast-accent))',
+				'mode-contrast-accent-foreground': 'rgba(var(--mode-contrast-accent-foreground))',
+				'primary': 'rgba(var(--primary))',
+				'primary-foreground': 'rgba(var(--primary-foreground))',
+				'secondary': 'rgba(var(--secondary))',
+				'secondary-foreground': 'rgba(var(--secondary-foreground))',
+				'destructive': 'rgba(var(--destructive))',
+				'destructive-foreground': 'rgba(var(--destructive-foreground))',
+				'success': 'rgba(var(--success))',
+				'success-foreground': 'rgba(var(--success-foreground))',
+				'warning': 'rgba(var(--warning))',
+				'warning-foreground': 'rgba(var(--warning-foreground))',
+				'info': 'rgba(var(--info))',
+				'info-foreground': 'rgba(var(--info-foreground))',
+				'help': 'rgba(var(--help))',
+				'help-foreground': 'rgba(var(--help-foreground))',
+				'brand': 'rgba(var(--brand))',
+				'brand-foreground': 'rgba(var(--brand-foreground))',
+				'muted': 'rgba(var(--muted))',
+				'muted-foreground': 'rgba(var(--muted-foreground))',
+				'white': 'rgba(var(--white))',
+				'white-foreground': 'rgba(var(--white-foreground))',
+				'black': 'rgba(var(--black))',
+				'black-foreground': 'rgba(var(--black-foreground))',
+				'background': 'rgba(var(--background))',
+				'foreground': 'rgba(var(--foreground))',
+				'ring-color': 'rgba(var(--ring-color))',
 			},
 			borderRadius: {
 				'largest': 'calc(var(--radius) * 1.8)',
@@ -157,11 +126,6 @@ const config: Config = {
 			},
 
 			keyframes: {
-				'blink': {
-					'0%': { opacity: '0.2' },
-					'20%': { opacity: '1' },
-					'100% ': { opacity: '0.2' },
-				},
 				'accordion-down': {
 					'0%': { height: '0' },
 					'100%': { height: 'var(--radix-accordion-content-height)' },
@@ -306,15 +270,6 @@ const config: Config = {
 					'0%': { opacity: '1' },
 					'100%': { opacity: '0' },
 				},
-				'ripple-animation': {
-					'0%': {
-						transform: 'scale(0)',
-					},
-					'100%': {
-						transform: 'scale(1)',
-						opacity: '0',
-					},
-				},
 				'infinite-progress': {
 					'0%': {
 						width: '33%',
@@ -335,6 +290,11 @@ const config: Config = {
 					'100%': {
 						transform: 'translateX(100%)',
 					},
+				},
+				'blink': {
+					'0%': { opacity: '0.2' },
+					'20%': { opacity: '1' },
+					'100% ': { opacity: '0.2' },
 				},
 			},
 			animation: {
@@ -404,7 +364,6 @@ const config: Config = {
 					'overlay-fade-out var(--animation-out-duration) var(--animation-out-timing-function)',
 				'slide': 'slide var(--animation-in-duration) var(--animation-in-timing-function) infinite',
 				'infinite-progress': 'infinite-progress 1.25s linear infinite',
-				'ripple-animation': 'ripple-animation 0.5s linear forwards',
 				'blink': 'blink 1s both infinite',
 			},
 		},

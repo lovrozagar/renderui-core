@@ -1,4 +1,6 @@
 type Color =
+	| 'white'
+	| 'black'
 	| 'mode'
 	| 'mode-accent'
 	| 'mode-contrast'
