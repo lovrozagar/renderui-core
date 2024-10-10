@@ -4,12 +4,11 @@ function useMode() {
 	const theme = useTheme()
 
 	return {
-		mode: theme.theme,
+		mode: theme.resolvedTheme,
 		setMode: theme.setTheme,
 		modes: theme.themes,
 		forcedMode: theme.forcedTheme,
 		systemMode: theme.systemTheme,
-		resolvedMode: theme.resolvedTheme,
 	}
 }
 

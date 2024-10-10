@@ -21,6 +21,7 @@ import {
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
+	Link,
 	Menubar,
 	MenubarCheckboxItem,
 	MenubarContent,
@@ -37,6 +38,13 @@ import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
+	Progress,
+	RadioGroup,
+	RadioGroupItem,
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
 	Separator,
 	Skeleton,
 	Switch,
@@ -51,7 +59,13 @@ import {
 	Tabs,
 	TabsTrigger,
 	TabsTriggerList,
+	TextArea,
 	TextInput,
+	Toggle,
+	ToggleGroup,
+	ToggleGroupItem,
+	cn,
+	linkClasses,
 } from '@/index'
 
 const App = () => {
@@ -184,7 +198,7 @@ const App = () => {
 				<CardBody>aefeaea</CardBody>
 			</Card>
 			<div className='max-w-[300px] grid gap-4 justify-items-start p-8'>
-				<Tabs color='primary' defaultValue={1}>
+				<Tabs color='destructive' defaultValue={1} animationDuration={300}>
 					<TabsTriggerList>
 						<TabsTrigger value={1}>Trigger</TabsTrigger>
 						<TabsTrigger value={2}>Trigger</TabsTrigger>
@@ -199,6 +213,13 @@ const App = () => {
 						<PopoverContent>Content</PopoverContent>
 					</Popover>
 				</div>
+				<Select color='destructive'>
+					<SelectTrigger>Triger</SelectTrigger>
+					<SelectContent>
+						<SelectItem value={'item 1'}>Item 1</SelectItem>
+						<SelectItem value={'item 2'}>Item 2</SelectItem>
+					</SelectContent>
+				</Select>
 				<Combobox color='destructive'>
 					<ComboboxTrigger>Triger</ComboboxTrigger>
 					<ComboboxContent>
@@ -220,8 +241,27 @@ const App = () => {
 				</Command>
 				<TextInput color='destructive' placeholder='Enter text here' />
 				<TextInput color='destructive' variant='outline' placeholder='Enter text here' />
-				<NumberInput placeholder='Enter number here' />
+				<NumberInput color='destructive' placeholder='Enter number here' />
 				<Aria>afe</Aria>
+				<a href='/' className={cn(linkClasses())}>
+					Link
+				</a>
+				<Link color='destructive' href='/'>
+					Link
+				</Link>
+				<Progress color='success' value={50} />
+				<RadioGroup color='destructive'>
+					<RadioGroupItem value={1} color='success' />
+					<RadioGroupItem value={2} />
+				</RadioGroup>
+				<TextArea color='success' />
+				<Toggle color='destructive' className='rounded-full' hasRipple>
+					Toggle
+				</Toggle>
+				<ToggleGroup type='multiple' color='success'>
+					<ToggleGroupItem value={1}>Item 1</ToggleGroupItem>
+					<ToggleGroupItem value={2}>Item 2</ToggleGroupItem>
+				</ToggleGroup>
 			</div>
 		</div>
 	)

@@ -208,6 +208,8 @@ export type { LabelProps } from '@/components/label/types/label'
 
 /* Link */
 export { linkClasses } from '@/components/link/classes/link-classes'
+export { Link } from '@/components/link/components/link'
+export type { LinkProps } from '@/components/link/types/link'
 
 /* Loader */
 export { loaderClasses } from '@/components/loader/classes/loader-classes'
@@ -453,7 +455,7 @@ export { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magni
 
 /* UTILS */
 
-export { preloadComponents, type ModulePath } from '@/utils/preload-modules'
+export { preloadModules, type ModulePath } from '@/utils/preload-modules'
 
 export {
 	capitalize,

@@ -47,5 +47,6 @@ fix: badge border color
 feat: add cursor props
 - add tabs animation duration property
 - fix popover/modal/dialog/sheet click out
-- color: tabs trigger, switch - done, TextInput, NumberInput, badge, combobox/select
+- color: tabs trigger, switch - done, TextInput - done, NumberInput - done, badge - done, combobox/select - done, link - done ?
 - fix: spin arrows not working on number input
+- css variables for accent colors
