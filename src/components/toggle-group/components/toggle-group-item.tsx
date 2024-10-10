@@ -17,13 +17,12 @@ const ToggleGroupItem = (props: ToggleGroupItemProps) => {
 		className,
 		children,
 		variant,
-		hasRipple = false,
 		hasToggledOffRing = false,
-		color = 'primary',
+		color,
 		...restProps
 	} = props
 
-	const { value: rootValue } = useToggleGroupContext()
+	const { value: rootValue, color: rootColor } = useToggleGroupContext()
 
 	const isOn = Array.isArray(rootValue)
 		? Boolean(rootValue.includes(value as never))
@@ -33,9 +32,8 @@ const ToggleGroupItem = (props: ToggleGroupItemProps) => {
 		<ToggleGroupItemPrimitive asChild value={value as string}>
 			<Button
 				data-slot='item'
-				color={color}
+				color={color ?? rootColor}
 				variant={variant ?? (isOn ? 'solid' : 'plain')}
-				hasRipple={hasRipple}
 				className={cn(
 					DEFAUL_TOGGLE_CLASSNAME,
 					hasToggledOffRing ? TOGGLED_OFF_RING_CLASSNAME : undefined,

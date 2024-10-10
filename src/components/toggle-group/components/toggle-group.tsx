@@ -15,12 +15,13 @@ const ToggleGroup = (props: ToggleGroupProps) => {
 		value: valueProp,
 		className,
 		children,
+		color = 'primary',
 		type = 'multiple',
 		defaultValue = type === 'multiple' ? (EMPTY_ARRAY as string[]) : '',
 		...restProps
 	} = props
 
-	/* biome-ignore lint/suspicious/noExplicitAny: generic */
+	/* biome-ignore lint/suspicious/noExplicitAny: support single and multiple */
 	const [value, onValueChange] = useControllableState<any>({
 		onChange: onValueChangeProp,
 		defaultProp: defaultValue,
@@ -30,15 +31,15 @@ const ToggleGroup = (props: ToggleGroupProps) => {
 	return (
 		<ToggleGroupPrimitive
 			data-slot='group'
-			/* biome-ignore lint/suspicious/noExplicitAny: generic */
+			/* biome-ignore lint/suspicious/noExplicitAny: support single and multiple */
 			value={value as any}
-			/* biome-ignore lint/suspicious/noExplicitAny: generic */
+			/* biome-ignore lint/suspicious/noExplicitAny: support single and multiple */
 			type={type as any}
 			onValueChange={onValueChange}
 			className={cn(DEFAULT_TOGGLE_GROUP_CLASSNAME, className)}
 			{...restProps}
 		>
-			<ToggleGroupProvider value={{ value }}>
+			<ToggleGroupProvider value={{ value, color }}>
 				{functionCallOrValue(children, { value, onValueChange })}
 			</ToggleGroupProvider>
 		</ToggleGroupPrimitive>
