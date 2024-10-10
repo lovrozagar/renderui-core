@@ -1,3 +1,6 @@
 node_modules
 dist
 app.tsx
+.DS_Store
+.env
+.todo
