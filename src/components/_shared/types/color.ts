@@ -9,5 +9,7 @@ type Color =
 	| 'success'
 	| 'warning'
 	| 'info'
+	| 'help'
+	| 'brand'
 
 export type { Color }

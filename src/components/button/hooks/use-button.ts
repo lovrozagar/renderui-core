@@ -6,7 +6,6 @@ import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 import { splitAriaProps } from '@/components/_shared/utils/split-aria-props'
 import { buttonClasses } from '@/components/button/classes/button-classes'
 import type { ButtonProps } from '@/components/button/types/button'
-import { getColorVariables } from '@/components/button/utils/get-color-variables'
 import { getLoaderProps } from '@/components/button/utils/get-loader-props'
 import { getRippleProps } from '@/components/button/utils/get-ripple-props'
 
@@ -74,7 +73,8 @@ function useButton(props: ButtonProps) {
 	const memoizedStyleWithColorVariable = React.useMemo(
 		() => ({
 			...style,
-			...getColorVariables(color),
+			'--button-bg': `var(--${color})`,
+			'--button-color': `var(--${color}-foreground)`,
 		}),
 		[style, color],
 	)

@@ -1,7 +1,7 @@
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type { Tabs as TabsPrimitive } from '@radix-ui/react-tabs'
 
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { ButtonProps } from '@/components/button/types/button'
 import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 

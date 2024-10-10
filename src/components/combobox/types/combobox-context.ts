@@ -1,9 +1,11 @@
+import type { Color } from '@/components/_shared/types/color'
 import type { ComboboxProps } from '@/components/combobox/types/combobox'
 
 type ComboboxContext = {
 	type: NonNullable<ComboboxProps['type']>
 	open: ComboboxProps['open']
 	value: ComboboxProps['value']
+	color: Color
 	focusValue: ComboboxProps['value']
 	label: React.ReactNode
 	triggerRef: React.Ref<HTMLButtonElement> | undefined

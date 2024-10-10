@@ -1,11 +1,13 @@
+import type { Color } from '@/components/_shared/types/color'
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type { ButtonProps } from '@/components/button/types/button'
 import type { PopoverProps } from '@/components/popover/types/popover'
 
-type ComboboxPopoverProps = PopoverProps
+type ComboboxPopoverProps = Omit<PopoverProps, 'color'>
 
 type ComboboxCustomProps = {
 	type?: 'select' | 'combobox'
+	color?: Color
 	name?: string
 	value?: string | number
 	defaultValue?: string

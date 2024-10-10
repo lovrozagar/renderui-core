@@ -16,12 +16,14 @@ import {
 import { useTabsContext } from '@/components/tabs/context/tabs-context'
 import type { TabsTriggerProps } from '@/components/tabs/types/tabs-trigger'
 import { getHandleTriggerPress } from '@/components/tabs/utils/get-handdle-trigger-press'
+import type { CSSProperties } from 'react'
 
 const TabsTrigger = (props: TabsTriggerProps) => {
 	const {
 		asChild,
 		value,
 		className,
+		style,
 		children,
 		color,
 		isDisabled,
@@ -47,6 +49,7 @@ const TabsTrigger = (props: TabsTriggerProps) => {
 	} = useTabsContext()
 
 	const isSelected = activeTab === value
+	const activeColor = color ?? rootColor ?? 'primary'
 
 	return (
 		<TabsTriggerPrimitive asChild disabled={isDisabled} value={value as string}>
@@ -54,7 +57,7 @@ const TabsTrigger = (props: TabsTriggerProps) => {
 				asChild={asChild}
 				data-slot='trigger'
 				data-selected={isSelected}
-				color={color ?? rootColor}
+				color={activeColor}
 				variant={variant}
 				hasRipple={hasRipple}
 				hasDefaultHoverStyles={hasDefaultHoverStyles}
@@ -71,6 +74,12 @@ const TabsTrigger = (props: TabsTriggerProps) => {
 						: undefined,
 					className,
 				)}
+				style={
+					{
+						...style,
+						'--trigger-color': `var(--${color})`,
+					} as CSSProperties
+				}
 				{...restProps}
 			>
 				{asChild ? (

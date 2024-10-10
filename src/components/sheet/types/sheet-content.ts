@@ -6,7 +6,7 @@ import type {
 import type React from 'react'
 
 import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { ButtonProps } from '@/components/button/types/button'
 import type { OverlayProps } from '@/components/overlay/types/overlay'
 import type { sheetClasses } from '@/components/sheet/classes/sheet-classes'

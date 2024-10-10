@@ -23,7 +23,7 @@ const DEFAULT_COMMAND_GROUP_CLASSNAME =
 	'_command-dialog-group overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground'
 
 const DEFAULT_COMMAND_ITEM_CLASSNAME =
-	'_command-item relative rounded flex cursor-default select-none items-center rounded-md px-2 py-1.5 text-sm outline-none aria-selected:bg-primary aria-selected:text-white data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50'
+	'_command-item relative rounded flex cursor-default select-none items-center rounded-md px-2 py-1.5 text-sm outline-none aria-selected:bg-[rgba(var(--item-color))] aria-selected:text-white data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50'
 
 const RADIX_FOCUS_GUARD_ATTRUBUTE = '[data-radix-focus-guard]'
 

@@ -1,5 +1,5 @@
 import { cn, cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import React, { type CSSProperties } from 'react'
 import { chain } from 'react-aria'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
@@ -48,6 +48,7 @@ function useTextInput(props: TextInputProps) {
 		variant = 'solid',
 		size = 'md',
 		type = 'text',
+		color = 'primary',
 		...restProps
 	} = props
 
@@ -86,6 +87,7 @@ function useTextInput(props: TextInputProps) {
 
 	const {
 		className: inputContainerClassName,
+		style: inputContainerStyle,
 		onClick: inputContainerOnClick,
 		onPointerDown: inputContainerOnPointerDown,
 		isTextInput = true,
@@ -137,6 +139,10 @@ function useTextInput(props: TextInputProps) {
 				inputContainerClasses({ size, variant: forcedVariant }),
 				inputContainerClassName,
 			),
+			style: {
+				...inputContainerStyle,
+				'--container-color': `var(--${color})`,
+			} as CSSProperties,
 			onPointerDown: chain(
 				(event: React.PointerEvent<HTMLDivElement> | React.PointerEvent<Element>) =>
 					event.preventDefault(),

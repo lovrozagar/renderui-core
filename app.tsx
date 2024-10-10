@@ -1,9 +1,20 @@
 import { Badge } from '@/components/badge/components/badge'
 import {
+	Aria,
+	Button,
 	Card,
 	CardBody,
 	CardFooter,
 	CardHeader,
+	Combobox,
+	ComboboxContent,
+	ComboboxItem,
+	ComboboxTrigger,
+	Command,
+	CommandGroup,
+	CommandInput,
+	CommandItem,
+	CommandList,
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
@@ -22,8 +33,13 @@ import {
 	MenubarSubContent,
 	MenubarSubTrigger,
 	MenubarTrigger,
+	NumberInput,
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
 	Separator,
 	Skeleton,
+	Switch,
 	Table,
 	TableBody,
 	TableCaption,
@@ -32,6 +48,10 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
+	Tabs,
+	TabsTrigger,
+	TabsTriggerList,
+	TextInput,
 } from '@/index'
 
 const App = () => {
@@ -145,7 +165,9 @@ const App = () => {
 				<CardFooter>Footer</CardFooter>
 			</Card>
 			<div className='pt-4'>
-				<Badge tabIndex={0}>Badge</Badge>
+				<Badge color='primary' tabIndex={0}>
+					Badge
+				</Badge>
 			</div>
 			<DropdownMenu>
 				<DropdownMenuTrigger>Open</DropdownMenuTrigger>
@@ -161,6 +183,46 @@ const App = () => {
 			<Card>
 				<CardBody>aefeaea</CardBody>
 			</Card>
+			<div className='max-w-[300px] grid gap-4 justify-items-start p-8'>
+				<Tabs color='primary' defaultValue={1}>
+					<TabsTriggerList>
+						<TabsTrigger value={1}>Trigger</TabsTrigger>
+						<TabsTrigger value={2}>Trigger</TabsTrigger>
+					</TabsTriggerList>
+				</Tabs>
+				<Button color='destructive'>Button</Button>
+				<Switch color='destructive' />
+				<Badge>Badge</Badge>
+				<div>
+					<Popover>
+						<PopoverTrigger>Trigger</PopoverTrigger>
+						<PopoverContent>Content</PopoverContent>
+					</Popover>
+				</div>
+				<Combobox color='destructive'>
+					<ComboboxTrigger>Triger</ComboboxTrigger>
+					<ComboboxContent>
+						<ComboboxItem value={'item 1'}>Item 1</ComboboxItem>
+						<ComboboxItem value={'item 2'}>Item 2</ComboboxItem>
+					</ComboboxContent>
+				</Combobox>
+				<Command color='destructive'>
+					<CommandInput />
+					<CommandList>
+						<CommandGroup>
+							<CommandItem value='2' color='info'>
+								Item
+							</CommandItem>
+							<CommandItem value='3'>Item</CommandItem>
+							<CommandItem value='4'>Item3</CommandItem>
+						</CommandGroup>
+					</CommandList>
+				</Command>
+				<TextInput color='destructive' placeholder='Enter text here' />
+				<TextInput color='destructive' variant='outline' placeholder='Enter text here' />
+				<NumberInput placeholder='Enter number here' />
+				<Aria>afe</Aria>
+			</div>
 		</div>
 	)
 }

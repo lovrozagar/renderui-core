@@ -1,4 +1,4 @@
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { tabsCursorClasses } from '@/components/tabs/classes/tabs-cursor-classes'
 
 const DEFAULT_TABS_CURSOR_TRANISTION = {
@@ -30,7 +30,7 @@ const NO_BORDER_RADIUS_ON_TRIGGER_VARIANTS: Partial<
 const NO_BORDER_RADIUS_TABS_TRIGGER_CLASSNAME = 'rounded-none'
 
 const INACTIVE_TABS_TRIGGER_CLASSNAME =
-	'text-mode-contrast transition-[color] duration-fast data-[hover=true]:data-[state=inactive]:text-primary'
+	'text-mode-contrast transition-[color] duration-fast data-[hover=true]:data-[state=inactive]:text-[rgba(var(--button-bg))]'
 
 const DEFAULT_TABS_TRIGGER_CHILDREN_CONTAINER_CLASSNAME =
 	'absolute inset-0 z-[2] flex size-full items-center justify-center gap-3 text-[inherit]'

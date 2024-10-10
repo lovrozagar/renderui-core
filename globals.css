@@ -6,7 +6,28 @@
 
 @layer base {
   :root {
+    /* common */
+    --radius: 0.5rem;
+    --ring-width: 2px;
+    --ring-offset: 2px;
+    --border-width: 2px;
+    --active-pressed-scale: 0.97;
+    --duration-fast: 150ms;
+    --duration-fast-medium: 200ms;
+    --duration-faster-medium: 250ms;
+    --duration-medium: 300ms;
+    --duration-medium-slow: 350ms;
+    --duration-medium-slower: 400ms;
     --timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    --screen-2xs: 375px;
+    --screen-xs: 480px;
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1536px;
+
+    /* colors */
     --background: 255, 255, 255;
     --foreground: 10, 10, 10;
     --mode-50: 20, 20, 20;
@@ -55,22 +76,12 @@
     --brand: 187, 0, 187;
     --brand-foreground: 250, 250, 250;
     --ring-color: 174, 0, 174;
-    --ring-width: 2px;
-    --ring-offset: 2px;
-    --border-width: 2px;
-    --active-pressed-scale: 0.97;
-    --duration-fast: 150ms;
-    --duration-fast-medium: 200ms;
-    --duration-faster-medium: 250ms;
-    --duration-medium: 300ms;
-    --duration-medium-slow: 350ms;
-    --duration-medium-slower: 400ms;
     --duration-slow: 400ms;
     --muted: 245, 245, 245;
     --muted-foreground: 115, 115, 115;
-    --radius: 0.5rem;
   }
   .dark {
+    /* colors */
     --background: 10, 10, 10;
     --foreground: 255, 255, 255;
     --mode-50: 240, 240, 240;
@@ -119,18 +130,8 @@
     --brand: 75, 0, 130;
     --brand-foreground: 250, 250, 250;
     --ring-color: 0, 112, 240;
-    --ring-width: 2px;
-    --ring-offset: 2px;
-    --active-pressed-scale: 0.97;
     --muted: 161, 161, 170;
     --muted-foreground: 163, 163, 163;
-    --radius: 0.5rem;
-    --screen-xs: 480px;
-    --screen-sm: 640px;
-    --screen-md: 768px;
-    --screen-lg: 1024px;
-    --screen-xl: 1280px;
-    --screen-2xl: 1536px;
   }
 
   * {

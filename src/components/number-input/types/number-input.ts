@@ -3,17 +3,19 @@ import type React from 'react'
 
 import type { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import type { AsChildProp } from '@/components/_shared/types/as-child'
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { Aria } from '@/components/aria/components/aria'
 import type { ButtonProps } from '@/components/button/types/button'
 import type { SeparatorProps } from '@/components/separator/types/separator'
+import type { Color } from '@/components/_shared/types/color'
 
 type NumberInputPrimitiveProps = Omit<
 	React.ComponentPropsWithRef<'input'>,
-	'children' | 'disabled' | 'readonly' | 'required'
+	'color' | 'children' | 'disabled' | 'readonly' | 'required'
 >
 
 type NumberInputCustomProps = {
+	color?: Color
 	isRequired?: boolean
 	isDisabled?: boolean
 	isInvalid?: boolean

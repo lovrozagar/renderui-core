@@ -1,7 +1,7 @@
 'use client'
 
 import { chain, cn, cx, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import React, { type CSSProperties } from 'react'
 
 import { CaretSortIcon } from '@/components/_shared/components/icons/caret-sort-icon'
 import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
@@ -21,6 +21,7 @@ const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 	const {
 		ref,
 		className,
+		style,
 		children,
 		iconProps,
 		endContent,
@@ -47,6 +48,7 @@ const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 		isInvalid,
 		isReadonly,
 		isRequired,
+		color: rootColor,
 		setOpen,
 		setFocusValue,
 	} = useComboboxContext()
@@ -100,6 +102,12 @@ const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 				className,
 				'relative',
 			)}
+			style={
+				{
+					...style,
+					'--root-color': `var(--${rootColor})`,
+				} as CSSProperties
+			}
 			onKeyDownCapture={chain(
 				onKeyDownCapture,
 				getHandleKeyDownCapture({

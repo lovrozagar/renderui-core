@@ -20,6 +20,7 @@ const Command = (props: CommandProps) => {
 		filter,
 		loop = true,
 		type = 'combobox',
+		color = 'primary',
 		...restProps
 	} = props
 
@@ -29,7 +30,10 @@ const Command = (props: CommandProps) => {
 		onChange: onValueChange,
 	})
 
-	const memoizedProviderValue = React.useMemo(() => ({ type, setValue }), [type, setValue])
+	const memoizedProviderValue = React.useMemo(
+		() => ({ type, color, setValue }),
+		[type, color, setValue],
+	)
 
 	return (
 		<CommandPrimitive

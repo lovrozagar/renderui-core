@@ -1,5 +1,5 @@
 import { chain, cn, cx, functionCallOrValue, getOptionalObject } from '@renderui/utils'
-import React from 'react'
+import React, { type CSSProperties } from 'react'
 
 import { inputContainerClasses } from '@/components/_shared/classes/input-container-classes'
 import { useControllableState } from '@/components/_shared/hooks/use-controllable-state'
@@ -51,6 +51,7 @@ function useNumberInput(props: NumberInputProps) {
 		step = '1',
 		size = 'md',
 		variant = 'solid',
+		color = 'primary',
 		defaultValue = '',
 		hasSpinButtons = true,
 		...restProps
@@ -96,6 +97,7 @@ function useNumberInput(props: NumberInputProps) {
 
 	const {
 		className: inputContainerClassName,
+		style: inputContainerStyle,
 		onPointerDown: inputContainerOnPointerDown,
 		onClick: inputContainerOnClick,
 		isTextInput = true,
@@ -147,6 +149,10 @@ function useNumberInput(props: NumberInputProps) {
 				inputContainerClasses({ size, variant: forcedVariant }),
 				inputContainerClassName,
 			),
+			style: {
+				...inputContainerStyle,
+				'--container-color': `var(--${color})`,
+			} as CSSProperties,
 			onPointerDown: chain(
 				(event: React.PointerEvent<HTMLDivElement>) => event.preventDefault(),
 				inputContainerOnPointerDown,

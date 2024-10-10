@@ -2,7 +2,7 @@ import type { Simplify } from '@/components/_shared/types/simplify'
 import type React from 'react'
 
 import type { AsChildProp } from '@/components/_shared/types/as-child'
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { headingClasses } from '@/components/heading/classes/heading-classes'
 
 type HeadingPrimitiveProps = React.ComponentPropsWithRef<'h1'>

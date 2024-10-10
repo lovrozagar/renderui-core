@@ -4,19 +4,28 @@ import type { inputContainerClasses } from '@/components/_shared/classes/input-c
 import type { CrossSmallIcon } from '@/components/_shared/components/icons/cross-small-icon'
 import type { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon'
 import type { AsChildProp } from '@/components/_shared/types/as-child'
-import type { NonNullableVariantProps } from '@/components/_shared/types/variants'
+import type { NonNullableVariantProps } from '@/components/_shared/types/variant'
 import type { Aria } from '@/components/aria/components/aria'
 import type { ButtonProps } from '@/components/button/types/button'
+import type { Color } from '@/components/_shared/types/color'
 
 type TextInputRef = HTMLInputElement
 
 type TextInputHTMLProps = Omit<
 	React.ComponentPropsWithRef<'input'>,
-	'type' | 'children' | 'startContent' | 'endContent' | 'disabled' | 'readonly' | 'required'
+	| 'type'
+	| 'color'
+	| 'children'
+	| 'startContent'
+	| 'endContent'
+	| 'disabled'
+	| 'readonly'
+	| 'required'
 >
 
 type TextInputCustomProps = {
 	type?: 'text' | 'password' | 'email' | 'search' | 'tel' | 'url'
+	color?: Color
 	children?: React.ReactNode | ((value: string) => React.ReactNode)
 	startContent?: React.ReactNode | ((value: string) => React.ReactNode)
 	endContent?: React.ReactNode | ((value: string) => React.ReactNode)

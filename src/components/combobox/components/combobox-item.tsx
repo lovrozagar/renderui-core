@@ -22,6 +22,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 		startContent,
 		endContent,
 		value,
+		color,
 		onSelect,
 		role = 'option',
 		...restProps
@@ -33,6 +34,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 		label,
 		hasCheckIcon,
 		closeTimeout,
+		color: rootColor,
 		setOpen,
 		setValue,
 		setLabel,
@@ -74,6 +76,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 		<CommandItem
 			data-slot='item'
 			role={role}
+			color={color ?? rootColor ?? 'primary'}
 			onSelect={chain(onSelect, handleSelect)}
 			className={cn(DEFAULT_COMBOBOX_ITEM_CLASSNAME, open ? '' : 'pointer-events-none', className)}
 			data-input-value={value}

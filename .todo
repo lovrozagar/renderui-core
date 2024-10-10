@@ -46,3 +46,6 @@ export trigger primitives as well as triggers
 fix: badge border color
 feat: add cursor props
 - add tabs animation duration property
+- fix popover/modal/dialog/sheet click out
+- color: tabs trigger, switch - done, TextInput, NumberInput, badge, combobox/select
+- fix: spin arrows not working on number input
