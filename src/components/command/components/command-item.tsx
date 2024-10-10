@@ -21,7 +21,7 @@ const CommandItem = (props: CommandItemProps) => {
 			style={
 				{
 					...style,
-					'--item-color': `var(--${color ?? rootColor ?? 'primary'})`,
+					'--item-color': `var(--${color ?? rootColor})`,
 				} as CSSProperties
 			}
 			{...restProps}

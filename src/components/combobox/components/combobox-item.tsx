@@ -76,7 +76,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 		<CommandItem
 			data-slot='item'
 			role={role}
-			color={color ?? rootColor ?? 'primary'}
+			color={color ?? rootColor}
 			onSelect={chain(onSelect, handleSelect)}
 			className={cn(DEFAULT_COMBOBOX_ITEM_CLASSNAME, open ? '' : 'pointer-events-none', className)}
 			data-input-value={value}
