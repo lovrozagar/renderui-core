@@ -1,3 +1,4 @@
+import type { Color } from '@/components/_shared/types/color'
 import type { Simplify } from '@/components/_shared/types/simplify'
 import type {
 	TooltipArrow as TooltipArrowPrimitive,
@@ -8,9 +9,13 @@ import type React from 'react'
 
 type TooltipContentPrimitiveType = typeof TooltipContentPrimitive
 
-type TooltipContentPrimitiveProps = React.ComponentPropsWithRef<TooltipContentPrimitiveType>
+type TooltipContentPrimitiveProps = Omit<
+	React.ComponentPropsWithRef<TooltipContentPrimitiveType>,
+	'color'
+>
 
 type TooltioContentCustomProps = {
+	color?: Color
 	hasArrow?: boolean
 	arrowProps?: React.ComponentPropsWithRef<typeof TooltipArrowPrimitive>
 } & AnimationStyleVariables

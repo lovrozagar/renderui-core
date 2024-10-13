@@ -13,6 +13,7 @@ import {
 } from '@/components/tooltip/constants/constants'
 import type { TooltipContentProps } from '@/components/tooltip/types/tooltip-content'
 import { getAnimationStyleVariables } from '@renderui/utils'
+import type { CSSProperties } from 'react'
 
 const TooltipContent = (props: TooltipContentProps) => {
 	const {
@@ -27,6 +28,7 @@ const TooltipContent = (props: TooltipContentProps) => {
 		animationInTimingFunction,
 		animationOutTimingFunction,
 		side = 'top',
+		color = 'mode-contrast',
 		hasArrow = true,
 		avoidCollisions = true,
 		sideOffset = DEFAULT_SIDE_OFFSET,
@@ -41,19 +43,23 @@ const TooltipContent = (props: TooltipContentProps) => {
 			side={side}
 			sideOffset={sideOffset}
 			className={cn(DEFAULT_TOOLTIP_CONTENT_CLASSNAME, className)}
-			style={{
-				...getAnimationStyleVariables({
-					animationDuration,
-					animationInDuration,
-					animationOutDuration,
-					animationTimingFunction,
-					animationInTimingFunction,
-					animationOutTimingFunction,
-					defaultAnimationDuration: 200,
-					defaultAnimationTimingFunction: 'ease',
-				}),
-				...style,
-			}}
+			style={
+				{
+					...getAnimationStyleVariables({
+						animationDuration,
+						animationInDuration,
+						animationOutDuration,
+						animationTimingFunction,
+						animationInTimingFunction,
+						animationOutTimingFunction,
+						defaultAnimationDuration: 200,
+						defaultAnimationTimingFunction: 'ease',
+					}),
+					...style,
+					'--content-bg': `var(--${color})`,
+					'--content-color': `var(--${color}-foreground)`,
+				} as CSSProperties
+			}
 			{...restProps}
 		>
 			{children}
