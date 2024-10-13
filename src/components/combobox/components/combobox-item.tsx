@@ -78,7 +78,11 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 			role={role}
 			color={color ?? rootColor}
 			onSelect={chain(onSelect, handleSelect)}
-			className={cn(DEFAULT_COMBOBOX_ITEM_CLASSNAME, open ? '' : 'pointer-events-none', className)}
+			className={cn(
+				DEFAULT_COMBOBOX_ITEM_CLASSNAME,
+				open ? undefined : 'pointer-events-none',
+				className,
+			)}
 			data-input-value={value}
 			value={childrenTextContent}
 			data-label={childrenTextContent}
@@ -92,7 +96,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
 				<CheckIcon
 					className={cn(
 						DEFAULT_COMBOBOX_ITEM_CHECK_ICON_CLASSNAME,
-						childrenTextContent === label ? COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME : '',
+						childrenTextContent === label ? COMBOBOX_ITEM_CHECK_ICON_CHECKED_CLASSNAME : undefined,
 					)}
 				/>
 			) : null}

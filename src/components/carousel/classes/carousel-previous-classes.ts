@@ -8,7 +8,7 @@ const carouselPreviousClasses = cva('_carousel-previous absolute top-1/2 rounded
 		},
 		hasControlsOnHoverOnly: {
 			true: 'opacity-0 group-hover/carousel:opacity-100',
-			false: '',
+			false: undefined,
 		},
 	},
 })

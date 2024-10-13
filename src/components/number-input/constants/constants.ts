@@ -21,7 +21,7 @@ const DFEAULT_NUMBER_INPUT_SPIN_BUTTON_CONTAINER_CLASSNAME =
 	'_number-input-spin-button-container _number-input-increment absolute right-0 top-0 flex h-full flex-col border-l p-0'
 
 const DEFAULT_NUMBER_SPIN_BUTTON_CLASSNAME =
-	'_number-input-spin-button flex-1 rounded-none px-2 py-0 data-[hover=true]:bg-mode-accent/50 data-[pressed=true]:bg-mode-accent data-[long-pressed=true]:bg-mode-accent'
+	'_number-input-spin-button relative z-[1] flex-1 rounded-none px-2 py-0 data-[hover=true]:bg-mode-accent/50 data-[pressed=true]:bg-mode-accent data-[long-pressed=true]:bg-mode-accent'
 
 const DEFAULT_NUMBER_INPUT_INCREMENT_BUTTON_CLASSNAME =
 	'_number-input-increment-button _number-input-spin-button top-[1px]'

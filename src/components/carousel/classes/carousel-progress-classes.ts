@@ -3,30 +3,30 @@ import { cva } from 'class-variance-authority'
 const carouselProgressClasses = cva('_carousel-progress absolute h-[3px] pointer-events-none', {
 	variants: {
 		orientation: {
-			horizontal: '',
-			vertical: '',
+			horizontal: undefined,
+			vertical: undefined,
 		},
 		position: {
-			top: '',
-			left: '',
-			bottom: '',
-			right: '',
+			top: undefined,
+			left: undefined,
+			bottom: undefined,
+			right: undefined,
 		},
 		variant: {
-			path: '',
+			path: undefined,
 			spot: 'bg-transparent',
 		},
 		size: {
-			full: '',
-			compact: '',
+			full: undefined,
+			compact: undefined,
 		},
 		hasRing: {
 			true: 'ring-[1px] ring-mode/70 ring-[1px] ring-offset-0',
-			false: '',
+			false: undefined,
 		},
 		hasProgressOnHoverOnly: {
 			true: 'opacity-0 group-hover/carousel:opacity-100',
-			false: '',
+			false: undefined,
 		},
 	},
 	compoundVariants: [

@@ -4,26 +4,26 @@ const loaderClasses = cva(['_loader box-border inline-block aspect-square'], {
 	variants: {
 		isPaused: {
 			true: '!animate-none',
-			false: '',
+			false: undefined,
 		},
 		variant: {
-			base: '',
-			half: '',
-			edge: '',
-			ring: '',
+			base: undefined,
+			half: undefined,
+			edge: undefined,
+			ring: undefined,
 			dots: 'top-[1px] flex h-full items-center gap-0.5',
 		},
 		size: {
 			sm: 'size-4',
 			md: 'size-5',
 			lg: 'size-6',
-			auto: '',
+			auto: undefined,
 		},
 		position: {
-			'relative': '',
-			'absolute-center': '',
-			'absolute-start': '',
-			'absolute-end': '',
+			'relative': undefined,
+			'absolute-center': undefined,
+			'absolute-start': undefined,
+			'absolute-end': undefined,
 		},
 	},
 	compoundVariants: [

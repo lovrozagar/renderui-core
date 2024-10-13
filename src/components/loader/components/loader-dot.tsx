@@ -32,7 +32,7 @@ const LoaderDot = (props: LoaderDotProps) => {
 			data-slot='dot'
 			className={cn(
 				DEFAULT_LOADER_DOT_CLASSNAME,
-				isPaused ? LOADER_DOT_PAUSED_CLASSNAME : '',
+				isPaused ? LOADER_DOT_PAUSED_CLASSNAME : undefined,
 				className,
 			)}
 			style={getMergedStyle()}

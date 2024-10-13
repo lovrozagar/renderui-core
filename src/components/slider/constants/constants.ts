@@ -6,7 +6,7 @@ const HORIZONTAL_SLIDER_CLASSNAME = 'w-full'
 const VERTICAL_SLIDER_CLASSNAME = 'inline-flex flex-col h-[200px]'
 
 const DEFAULT_SLIDER_TRACK_CLASSNAME =
-	'_slider-track relative h-1.5 grow overflow-hidden rounded-full bg-primary/20'
+	'_slider-track relative h-1.5 flex-1 overflow-hidden rounded-full bg-primary/20'
 
 const HORIZONTAL_SLIDER_TRACK_CLASSNAME = 'h-1.5 w-full'
 

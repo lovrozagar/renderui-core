@@ -9,9 +9,9 @@ import { textSizeVariants } from '@/components/_shared/variants/text-size'
 const textClasses = cva('_text box-border whitespace-normal text-mode-contrast', {
 	variants: {
 		as: {
-			span: '',
-			div: '',
-			p: '',
+			span: undefined,
+			div: undefined,
+			p: undefined,
 		},
 		size: textSizeVariants,
 		textBreak: textBreakVariants,

@@ -12,8 +12,8 @@ const Flex = (props: FlexProps) => {
 		<Component
 			className={cn(
 				'_flex flex',
-				growChildren ? 'grow-children' : '',
-				center ? 'justify-center items-center' : '',
+				growChildren ? 'grow-children' : undefined,
+				center ? 'justify-center items-center' : undefined,
 				className,
 			)}
 			{...restProps}

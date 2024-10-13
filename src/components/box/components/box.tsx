@@ -8,7 +8,12 @@ const Box = (props: BoxProps) => {
 
 	return (
 		<Component
-			className={cn('_box', grow ? 'grow' : '', noShrink ? 'shrink-0' : '', className)}
+			className={cn(
+				'_box',
+				grow ? 'grow' : undefined,
+				noShrink ? 'shrink-0' : undefined,
+				className,
+			)}
 			{...restProps}
 		/>
 	)

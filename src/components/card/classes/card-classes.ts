@@ -6,11 +6,11 @@ const cardClasses = cva(
 		variants: {
 			hasShadowOnHover: {
 				true: 'hover:shadow',
-				false: '',
+				false: undefined,
 			},
 			isBlurred: {
 				true: ['bg-foreground/80', 'backdrop-blur-md', 'backdrop-saturate-150'],
-				false: '',
+				false: undefined,
 			},
 		},
 		defaultVariants: {

@@ -8,7 +8,7 @@ const carouselNextClasses = cva('_carousel-next absolute rounded-full', {
 		},
 		hasControlsOnHoverOnly: {
 			true: 'opacity-0 group-hover/carousel:opacity-100',
-			false: '',
+			false: undefined,
 		},
 	},
 })
