@@ -19,7 +19,7 @@ const NumberSpinButton = (props: NumberSpinButtonProps) => {
 		longPressTreshold = 100,
 		isLongPressDisabled = false,
 		preventFocusOnPress = true,
-		hasDefaultPressedStyles = false,
+		hasDefaultPressedStyles = true,
 		...restProps
 	} = props
 

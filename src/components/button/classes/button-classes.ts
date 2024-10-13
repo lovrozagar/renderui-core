@@ -6,15 +6,15 @@ const buttonClasses = cva(
 		variants: {
 			variant: {
 				plain: 'text-mode-foreground',
-				solid: '',
-				outline: '',
-				reveal: '',
+				solid: undefined,
+				outline: undefined,
+				reveal: undefined,
 				text: 'data-[hover=true]:text-[rgba(var(--button-bg),0.8)]',
 				ghost: 'data-[hover=true]:bg-[rgba(var(--button-bg),0.15)]',
 				shadow: 'shadow-lg [&]:shadow-[rgba(var(--button-bg),0.5)]',
 			},
 			size: {
-				auto: '',
+				auto: undefined,
 				icon: 'apsect-square min-size-4 p-1',
 				sm: 'px-4.5 py-2 text-xs',
 				md: 'px-5 py-2.5 text-sm',
@@ -22,27 +22,31 @@ const buttonClasses = cva(
 			},
 			hasDefaultFocusVisibleStyles: {
 				true: 'data-[focus-visible=true]:ring-ring-width data-[focus-visible=true]:ring-offset-offset',
-				false: '',
+				false: undefined,
 			},
 			hasRingOnAnyFocus: {
 				true: 'data-[focus=true]:ring-ring-width data-[focus=true]:ring-offset-offset',
-				false: '',
+				false: undefined,
+			},
+			hasDefaultInnerRing: {
+				true: undefined,
+				false: undefined,
 			},
 			hasDefaultPressedStyles: {
 				true: 'data-[pressed=true]:scale-[0.97]',
-				false: '',
+				false: undefined,
 			},
 			hasDefaultHoverStyles: {
-				true: '',
-				false: '',
+				true: undefined,
+				false: undefined,
 			},
 			hasLowerOpacityOnLoading: {
 				true: 'data-[loading=true]:opacity-70',
-				false: '',
+				false: undefined,
 			},
 			hasLoaderOnLoading: {
 				true: '[&[data-loading=true]_[data-slot=loader]]:opacity-100',
-				false: '',
+				false: undefined,
 			},
 			hasContentOnLoading: {
 				true: '[&[data-loading=true]_[data-slot=loader]]:flex [&_[data-slot=loader]]:hidden',
@@ -59,8 +63,12 @@ const buttonClasses = cva(
 			},
 			{
 				variant: ['solid', 'shadow'],
+				className: 'bg-[rgba(var(--button-bg))] text-[rgba(var(--button-color))]',
+			},
+			{
+				variant: ['solid', 'shadow'],
 				className:
-					'bg-[rgba(var(--button-bg))] text-[rgba(var(--button-color))] before:absolute before:z-[0] before:shadow-[shadow:inset_0_1px_theme(colors.white/15%)] after:pointer-events-none after:absolute after:inset-0 after:z-[0] after:inline-block after:size-full after:rounded-[inherit] after:ring after:ring-[0.5px] after:ring-inset after:ring-offset-[0px] after:content-[""] data-[color=mode-contrast]:before:hidden data-[color=mode]:before:hidden data-[color=mode-accent]:before:shadow-[shadow:inset_0_1px_theme(colors.white/10%)] data-[color=mode]:after:hidden [&]:after:ring-white/[5%]',
+					'before:absolute before:z-[0] before:shadow-[shadow:inset_0_1px_theme(colors.white/15%)] after:pointer-events-none after:absolute after:inset-0 after:z-[0] after:inline-block after:size-full after:rounded-[inherit] after:ring after:ring-[0.5px] after:ring-inset after:ring-offset-[0px] after:content-[""] data-[color=mode-contrast]:before:hidden data-[color=mode]:before:hidden data-[color=mode-accent]:before:shadow-[shadow:inset_0_1px_theme(colors.white/10%)] data-[color=mode]:after:hidden [&]:after:ring-white/[5%]',
 			},
 			{
 				hasDefaultHoverStyles: true,
