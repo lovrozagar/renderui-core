@@ -12,9 +12,12 @@ import {
 } from '@/components/command/constants/constants'
 import { useSearch } from '@/components/command/hooks/use-search'
 import type { CommandInputProps } from '@/components/command/types/command-input'
+import { useCommandDialogContext } from '@/components/command/contexts/command-dialog-context'
+import { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 
 const CommandInput = (props: CommandInputProps) => {
 	const {
+		ref,
 		asChild,
 		className,
 		containerProps,
@@ -41,6 +44,10 @@ const CommandInput = (props: CommandInputProps) => {
 
 	const { type, handleValueChangeWithSearch } = useSearch(value, setValue)
 
+	const { isDialog, inputRef } = useCommandDialogContext() ?? {}
+
+	const mergedRefCallback = useMergedRef([inputRef, ref])
+
 	const InputContainerComponent = polymorphic(inputContainerAsChild, 'div')
 
 	const InputComponent = polymorphic(asChild, 'input')
@@ -60,15 +67,17 @@ const CommandInput = (props: CommandInputProps) => {
 			{type === 'select' ? (
 				<InputComponent
 					data-slot='input'
+					ref={inputRef}
 					value={value}
 					onChange={(event) => handleValueChangeWithSearch(event.target.value)}
-					className={cn(COMMAND_INPUT_CLASSNAME, className)}
+					className={cn(COMMAND_INPUT_CLASSNAME, isDialog ? 'pr-8' : undefined, className)}
 					{...restProps}
 				/>
 			) : (
 				<CommandInputPrimitive
 					data-slot='input'
-					className={cn(COMMAND_INPUT_CLASSNAME, className)}
+					ref={inputRef}
+					className={cn(COMMAND_INPUT_CLASSNAME, isDialog ? 'pr-8' : undefined, className)}
 					{...restProps}
 				/>
 			)}

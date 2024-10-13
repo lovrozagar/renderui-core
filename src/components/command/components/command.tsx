@@ -9,6 +9,7 @@ import { DEFAULT_COMMAND_CLASSNAME } from '@/components/command/constants/consta
 import { CommandProvider } from '@/components/command/contexts/command-context'
 import type { CommandProps } from '@/components/command/types/command'
 import { defaultFilter } from '@/components/command/utils/default-filter'
+import { useFreshRef } from '@/components/_shared/hooks/use-fresh-ref'
 
 const Command = (props: CommandProps) => {
 	const {
@@ -17,6 +18,7 @@ const Command = (props: CommandProps) => {
 		value: valueProp,
 		defaultValue,
 		onValueChange,
+		onSelect,
 		filter,
 		loop = true,
 		type = 'combobox',
@@ -30,8 +32,11 @@ const Command = (props: CommandProps) => {
 		onChange: onValueChange,
 	})
 
+	const freshOnSelect = useFreshRef(onSelect)
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	const memoizedProviderValue = React.useMemo(
-		() => ({ type, color, setValue }),
+		() => ({ type, color, setValue, onSelect: freshOnSelect.current }),
 		[type, color, setValue],
 	)
 

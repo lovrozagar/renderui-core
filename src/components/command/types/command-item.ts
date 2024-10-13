@@ -6,12 +6,13 @@ type CommandItemPrimitiveType = typeof CommandItemPrimitive
 
 type CommandItemPrimtiveProps = Omit<
 	React.ComponentPropsWithRef<CommandItemPrimitiveType>,
-	'value' | 'color'
+	'value' | 'color' | 'onSelect'
 >
 
 type CommandItemCustomProps = {
 	value: string | number
 	color?: Color
+	onSelect?: (value: unknown) => void
 }
 
 type CommandItemProps = Simplify<CommandItemPrimtiveProps & CommandItemCustomProps>

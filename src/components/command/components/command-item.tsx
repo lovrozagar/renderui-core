@@ -1,17 +1,17 @@
 'use client'
 
-import { cn } from '@renderui/utils'
+import { chain, cn } from '@renderui/utils'
 import { CommandItem as CommandItemPrimitive } from 'cmdk'
 
 import { DEFAULT_COMMAND_ITEM_CLASSNAME } from '@/components/command/constants/constants'
+import { useCommandContext } from '@/components/command/contexts/command-context'
 import type { CommandItemProps } from '@/components/command/types/command-item'
 import type { CSSProperties } from 'react'
-import { useCommandContext } from '@/components/command/contexts/command-context'
 
 const CommandItem = (props: CommandItemProps) => {
-	const { value, className, style, color, ...restProps } = props
+	const { value, className, style, color, onSelect, ...restProps } = props
 
-	const { color: rootColor } = useCommandContext()
+	const { color: rootColor, onSelect: rootOnSelect } = useCommandContext()
 
 	return (
 		<CommandItemPrimitive
@@ -24,6 +24,7 @@ const CommandItem = (props: CommandItemProps) => {
 					'--item-color': `var(--${color ?? rootColor})`,
 				} as CSSProperties
 			}
+			onSelect={chain(rootOnSelect, onSelect)}
 			{...restProps}
 		/>
 	)

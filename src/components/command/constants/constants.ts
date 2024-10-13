@@ -15,7 +15,7 @@ const COMMAND_INPUT_CLASSNAME =
 const COMMAND_INPUT_ICON_CLASSNAME = '_command-input-icon mr-2 h-4 w-4 shrink-0 opacity-50'
 
 const DEFAULT_COMMAND_LIST_CLASSNAME =
-	'_command-list max-h-[300px] overflow-y-auto overflow-x-hidden'
+	'_command-list max-h-[400px] overflow-y-auto overflow-x-hidden'
 
 const DEFAULT_COMMAND_EMPTY_CLASSNAME = '_command-dialog-empty py-6 text-center text-sm'
 
