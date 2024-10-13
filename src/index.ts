@@ -202,6 +202,10 @@ export type { HoverCardProps } from '@/components/hover-card/types/hover-card'
 export type { HoverCardContentProps } from '@/components/hover-card/types/hover-card-content'
 export type { HoverCardTriggerProps } from '@/components/hover-card/types/hover-card-trigger'
 
+/* Kbd */
+export { Kbd } from '@/components/kbd/components/kbd'
+export type { KbdProps } from '@/components/kbd/types/kbd'
+
 /* Label */
 export { Label } from '@/components/label/components/label'
 export type { LabelProps } from '@/components/label/types/label'
@@ -454,9 +458,6 @@ export { EyeOpenIcon } from '@/components/_shared/components/icons/eye-open-icon
 export { MagnifyingGlassIcon } from '@/components/_shared/components/icons/magnifying-glass-icon'
 
 /* UTILS */
-
-export { preloadModules, type ModulePath } from '@/utils/preload-modules'
-
 export {
 	capitalize,
 	chain,
@@ -487,7 +488,6 @@ export { useIntersectionObserver } from '@/components/_shared/hooks/use-intersec
 export { useIsMounted } from '@/components/_shared/hooks/use-is-mounted'
 export { useIsOnline } from '@/components/_shared/hooks/use-is-online'
 export { useIsomorphicLayoutEffect } from '@/components/_shared/hooks/use-isomorphic-layout-effect'
-export { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
 export { useMediaQuery } from '@/components/_shared/hooks/use-media-query'
 export { useMergedRef } from '@/components/_shared/hooks/use-merged-ref'
 export { useMutationObserver } from '@/components/_shared/hooks/use-mutation-observer'

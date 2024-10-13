@@ -1,18 +1,13 @@
-import type { useKeyboardHotkey } from '@/components/_shared/hooks/use-keyboard-hotkey'
+import type { Color } from '@/components/_shared/types/color'
 import type { Simplify } from '@/components/_shared/types/simplify'
 
-type KbdHTMLProps = React.ComponentPropsWithRef<'kbd'>
+type KbdHTMLProps = Omit<React.ComponentPropsWithRef<'kbd'>, 'color'>
 
 type KbdCustomProps = {
 	asChild?: boolean
+	color?: Color
 	hasIcon?: boolean
 	iconPosition?: 'start' | 'end'
-	keyCombination?: Parameters<typeof useKeyboardHotkey>[0]['keyCombination']
-	keyCombinationOptions?: Parameters<typeof useKeyboardHotkey>[0]['keyCombinationOptions']
-	isKeyCombinationCasingIgnored?: Parameters<
-		typeof useKeyboardHotkey
-	>[0]['isKeyCombinationCasingIgnored']
-	onKeyCombinationMatch?: Parameters<typeof useKeyboardHotkey>[0]['onKeyCombinationMatch']
 }
 
 type KbdProps = Simplify<KbdHTMLProps & KbdCustomProps>
