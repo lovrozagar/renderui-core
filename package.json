@@ -1,6 +1,6 @@
 {
 	"name": "@renderui/core",
-	"version": "1.9.3",
+	"version": "1.9.8",
 	"private": false,
 	"sideEffects": false,
 	"description": "React UI library with highly modular and ready-out-of-the-box components",
@@ -53,7 +53,6 @@
 		"embla-carousel-react": "^8.2.0",
 		"next-themes": "^0.3.0",
 		"react-aria": "^3.33.1",
-		"react-hotkeys-hook": "^4.5.0",
 		"sonner": "^1.5.0",
 		"vaul": "^0.9.1"
 	},
