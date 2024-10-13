@@ -75,6 +75,7 @@ const DialogContent = (props: DialogContentProps) => {
 				}}
 				{...restProps}
 			>
+				{children}
 				{hasCloseButton ? (
 					<DialogClose asChild>
 						<Button
@@ -91,7 +92,6 @@ const DialogContent = (props: DialogContentProps) => {
 						</Button>
 					</DialogClose>
 				) : null}
-				{children}
 			</DialogContentPrimitive>
 		</DialogPortalPrimitive>
 	)
