@@ -47,7 +47,9 @@ function useNumberSpin(
 		}
 
 		clickTimeout.current = setTimeout(() => {
-			if (inputRef.current) focusInput(inputRef)
+			if (!inputRef.current) return
+
+			focusInput(inputRef)
 		}, SPIN_TIMEOUT)
 	}
 

@@ -2,7 +2,7 @@
 
 import type React from 'react'
 
-function focusInput(inputRef: React.RefObject<HTMLInputElement>) {
+function focusInput(inputRef: React.RefObject<HTMLInputElement | null>) {
 	if (!inputRef?.current) return
 
 	const { current: input } = inputRef
