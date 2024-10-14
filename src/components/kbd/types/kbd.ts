@@ -7,6 +7,7 @@ type KbdCustomProps = {
 	asChild?: boolean
 	color?: Color
 	hasIcon?: boolean
+	hasInnerRing?: boolean
 	iconPosition?: 'start' | 'end'
 }
 
