@@ -1,36 +1,5 @@
 {
-	"name": "@renderui/core",
-	"version": "1.9.8",
-	"private": false,
-	"sideEffects": false,
-	"description": "React UI library with highly modular and ready-out-of-the-box components",
-	"license": "MIT",
 	"author": "Lovro Žagar",
-	"type": "module",
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/index.d.ts",
-				"default": "./dist/index.js"
-			}
-		}
-	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"files": ["dist"],
-	"scripts": {
-		"build": "bunchee -m",
-		"dev": "vite dev",
-		"commitlint:init": "chmod +x .lefthook/commit-msg/commitlint.sh",
-		"lefthook:init": "npx lefthook install",
-		"type:check": "tsc --noEmit",
-		"type:coverage": "typescript-coverage-report",
-		"lint": "npx @biomejs/biome lint ./src",
-		"lint:check": "npx @biomejs/biome check ./src",
-		"lint:format": "npx @biomejs/biome format --write ./src",
-		"lint:fix": "npx @biomejs/biome lint --write ./src"
-	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "^1.2.0",
 		"@radix-ui/react-collapsible": "^1.1.0",
@@ -56,6 +25,7 @@
 		"sonner": "^1.5.0",
 		"vaul": "^0.9.1"
 	},
+	"description": "React UI library with highly modular and ready-out-of-the-box components",
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@changesets/cli": "^2.26.0",
@@ -69,13 +39,28 @@
 		"postcss": "^8.4.35",
 		"react": "19.0.0-rc-a960b92c-20240819",
 		"react-dom": "19.0.0-rc-a960b92c-20240819",
+		"tailwindcss": "^3.4.1",
 		"types-react": "^19.0.0-rc.1",
 		"types-react-dom": "^19.0.0-rc.1",
 		"typescript": "^5.5.4",
 		"typescript-coverage-report": "^1.0.0",
-		"tailwindcss": "^3.4.1",
 		"vite": "^5.1.4"
 	},
+	"exports": {
+		".": {
+			"import": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			}
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"name": "@renderui/core",
 	"peerDependencies": {
 		"framer-motion": "^11.3.28",
 		"react": "19.0.0-rc-a960b92c-20240819",
@@ -83,7 +68,28 @@
 		"types-react": "^19.0.0-rc.1",
 		"types-react-dom": "^19.0.0-rc.1"
 	},
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lovrozagar/renderui-core.git"
+	},
+	"scripts": {
+		"build": "bunchee -m",
+		"commitlint:init": "chmod +x .lefthook/commit-msg/commitlint.sh",
+		"dev": "vite dev",
+		"lefthook:init": "npx lefthook install",
+		"lint": "npx @biomejs/biome lint ./src",
+		"lint:check": "npx @biomejs/biome check ./src",
+		"lint:fix": "npx @biomejs/biome lint --write ./src",
+		"lint:format": "npx @biomejs/biome format --write ./src",
+		"type:check": "tsc --noEmit",
+		"type:coverage": "typescript-coverage-report"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"version": "1.9.8"
 }
