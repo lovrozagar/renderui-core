@@ -25,6 +25,10 @@ export type { AspectRatioProps } from '@/components/aspect-ratio/types/aspect-ra
 export { Box } from '@/components/box/components/box'
 export type { BoxProps } from '@/components/box/types/box'
 
+/* Badge */
+export { Badge } from '@/components/badge/components/badge'
+export type { BadgeProps } from '@/components/badge/types/badge'
+
 /* Button */
 export { buttonClasses } from '@/components/button/classes/button-classes'
 export { Button } from '@/components/button/components/button'

@@ -54,9 +54,7 @@
 			}
 		}
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"license": "MIT",
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
@@ -92,5 +90,5 @@
 	"sideEffects": false,
 	"type": "module",
 	"types": "./dist/index.d.ts",
-	"version": "1.9.8"
+	"version": "1.9.9"
 }
