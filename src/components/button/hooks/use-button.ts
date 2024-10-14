@@ -90,6 +90,7 @@ function useButton(props: ButtonProps) {
 					size,
 					variant,
 					hasRingOnAnyFocus,
+					hasDefaultInnerRing,
 					hasDefaultFocusVisibleStyles,
 					hasDefaultPressedStyles,
 					hasDefaultHoverStyles,
