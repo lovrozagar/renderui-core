@@ -25,7 +25,7 @@
 		"sonner": "^1.5.0",
 		"vaul": "^0.9.1"
 	},
-	"description": "React UI library with highly modular and ready-out-of-the-box components",
+	"description": "React ui library built on top of Radix, React Aria and TailwindCSS. SSR ready, highly modular and automatically treeshakable. React. Refine. Render.",
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@changesets/cli": "^2.26.0",
@@ -70,7 +70,8 @@
 	},
 	"private": false,
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"registry": "https://npm.pkg.github.com"
 	},
 	"repository": {
 		"type": "git",
